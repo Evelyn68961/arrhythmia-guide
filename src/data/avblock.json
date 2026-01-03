@@ -1,0 +1,291 @@
+{
+  "topic": {
+    "en": "Atrioventricular (AV) Block",
+    "zh": "房室傳導阻滯"
+  },
+  "definition": {
+    "en": "Delay or interruption of electrical conduction from the AV node to ventricles",
+    "zh": "AV block 是指心房的電訊號在房室結（AV node）至心室的傳導過程中出現延遲或阻斷，導致心房與心室收縮不同步。當房室傳導受阻時，可能造成心跳過慢（bradycardia）與血流不足等臨床表現。"
+  },
+  "etiology": {
+    "en": "Pathophysiology & Etiology",
+    "zh": "常見病因",
+    "causes": [
+      {
+        "en": "Idiopathic fibrosis (40%)",
+        "zh": "傳導系統退化性變化（最常見）：特發性纖維化及硬化（約40%）"
+      },
+      {
+        "en": "Ischemic heart disease (20%)",
+        "zh": "缺血性心臟病（約20%）"
+      },
+      {
+        "category": {
+          "en": "Medications",
+          "zh": "藥物影響"
+        },
+        "items": [
+          {
+            "en": "β-blockers",
+            "zh": "β受體阻斷劑（β-blockers）"
+          },
+          {
+            "en": "Calcium channel blockers (verapamil, diltiazem)",
+            "zh": "鈣離子通道阻斷劑（如 verapamil、diltiazem）"
+          },
+          {
+            "en": "Digoxin",
+            "zh": "Digoxin"
+          },
+          {
+            "en": "Amiodarone",
+            "zh": "Amiodarone"
+          }
+        ]
+      },
+      {
+        "en": "Increased vagal tone",
+        "zh": "迷走神經張力增加（副交感神經活化）"
+      },
+      {
+        "en": "Cardiac sarcoidosis",
+        "zh": "心臟肉芽腫性疾病：例如心臟結節病（Cardiac sarcoidosis）"
+      },
+      {
+        "en": "Valvular/Congenital heart disease",
+        "zh": "結構性或其他原因：瓣膜病變、先天性心臟病、遺傳性傳導系統異常"
+      }
+    ]
+  },
+  "classification": {
+    "en": "Classification by Severity",
+    "zh": "分類與嚴重程度",
+    "types": [
+      {
+        "degree": "first",
+        "name": {
+          "en": "First-degree AV block",
+          "zh": "第一度（First-degree AV block）"
+        },
+        "description": {
+          "en": "All impulses conducted but with delayed conduction. PR interval >200ms; QRS not dropped.",
+          "zh": "所有心房電訊號均能傳至心室，但傳導延遲。表現：PR 間期延長（>200 ms），但 QRS 不脫落。"
+        },
+        "ecg_findings": {
+          "en": "PR >200ms; All impulses conducted",
+          "zh": "PR 間期延長（>200 ms），QRS 不脫落"
+        }
+      },
+      {
+        "degree": "second",
+        "name": {
+          "en": "Second-degree AV block",
+          "zh": "第二度（Second-degree AV block）"
+        },
+        "description": {
+          "en": "Some atrial impulses fail to conduct to the ventricles",
+          "zh": "部分心房電訊號未能傳至心室"
+        },
+        "subtypes": [
+          {
+            "name": {
+              "en": "Mobitz Type I (Wenckebach)",
+              "zh": "Mobitz type I（Wenckebach）"
+            },
+            "description": {
+              "en": "Progressive PR prolongation until QRS drop. Usually occurs at AV node level.",
+              "zh": "PR 間期逐漸延長，直至 QRS 掉落。多見於 AV node 層級。"
+            },
+            "ecg_findings": {
+              "en": "Progressive PR until drop",
+              "zh": "PR 間期逐漸延長直至 QRS 掉落"
+            }
+          },
+          {
+            "name": {
+              "en": "Mobitz Type II",
+              "zh": "Mobitz type II"
+            },
+            "description": {
+              "en": "Sudden QRS drop without PR prolongation. Usually occurs at His-Purkinje system. Worse prognosis.",
+              "zh": "PR 間期固定，但不定期 QRS 脫落。通常發生於 His-Purkinje 系統，預後較差。"
+            },
+            "ecg_findings": {
+              "en": "Sudden drop without PR prolongation",
+              "zh": "PR 間期固定，不定期 QRS 脫落"
+            }
+          }
+        ]
+      },
+      {
+        "degree": "third",
+        "name": {
+          "en": "Third-degree AV block (Complete Heart Block)",
+          "zh": "第三度（Third-degree / Complete AV block）"
+        },
+        "description": {
+          "en": "Complete AV dissociation. Atria and ventricles beat independently. Ventricular rhythm driven by escape rhythm, often presenting with significant bradycardia and poor perfusion.",
+          "zh": "心房與心室完全分離（AV dissociation）。心室節律由逸搏（escape rhythm）主導，常表現為明顯心動過緩與灌流不足。"
+        },
+        "ecg_findings": {
+          "en": "AV Dissociation: Atria & Ventricles beat independently",
+          "zh": "房室分離：心房與心室各自獨立跳動"
+        }
+      }
+    ]
+  },
+  "treatment": {
+    "overview": {
+      "en": "Treatment Strategies of Atrioventricular (AV) Block",
+      "zh": "治療策略"
+    },
+    "core_approach": {
+      "en": "Based on severity classification: First address reversible causes, then determine permanent pacemaker necessity based on subsequent treatment response and outpatient follow-up.",
+      "zh": "依嚴重程度分類，先處理可逆性的病因，再根據後續治療和門診追蹤情況選擇是否有必要裝設心律調節器。"
+    },
+    "reversible_causes": {
+      "en": "Reversible Causes to Address",
+      "zh": "可逆性的病因",
+      "items": [
+        {
+          "en": "Drug-induced (β-blockers, CCBs, Digoxin, Amiodarone)",
+          "zh": "藥物引起（β受體阻斷劑、鈣離子通道阻斷劑、Digoxin、Amiodarone）"
+        },
+        {
+          "en": "Lyme myocarditis",
+          "zh": "萊姆病心肌炎"
+        },
+        {
+          "en": "Hyperkalemia [K+]↑",
+          "zh": "高血鉀症"
+        },
+        {
+          "en": "Myocardial ischemia",
+          "zh": "心肌缺血"
+        },
+        {
+          "en": "Increased vagal tone",
+          "zh": "迷走神經張力增加"
+        },
+        {
+          "en": "Hypothyroidism",
+          "zh": "甲狀腺功能低下"
+        }
+      ]
+    },
+    "by_classification": [
+      {
+        "degree": "first",
+        "name": {
+          "en": "First-degree AV block",
+          "zh": "第一度 AV block"
+        },
+        "management": {
+          "acute": {
+            "en": "Identify & treat reversible causes (ischemia, meds). Discontinue offending meds. Atropine IV (if AV nodal level).",
+            "zh": "應先識別並治療任何導致 AV block、具可逆性的原因（如缺血、先前使用的房室結阻滯藥物），對於缺血應進行治療，對於可疑藥物應停用。（Atropine IV 可抑制迷走神經、增強 AV node 傳導、縮短 PR 間期，可應用於阻滯位在 AV node 的患者）"
+          },
+          "long_term": {
+            "en": "Rarely symptomatic; usually no additional treatment.",
+            "zh": "First-degree AV block 很少有症狀，通常不需要額外治療。"
+          }
+        }
+      },
+      {
+        "degree": "second_type_I",
+        "name": {
+          "en": "Second-degree AV block: Mobitz Type I (Wenckebach)",
+          "zh": "第二度 AV block：Mobitz type I"
+        },
+        "management": {
+          "asymptomatic": {
+            "en": "Regular follow-up; no treatment (unless symptomatic bradycardia).",
+            "zh": "無症狀：多數患者不需治療，但仍需定期追蹤檢查。（除非阻滯引起症狀性心搏過緩）"
+          },
+          "symptomatic": {
+            "en": "Urgent treatment: Atropine + Transcutaneous/Transvenous Pacing (for instability, hypotension, shock).",
+            "zh": "有症狀：有症狀且血流動力學不穩定的患者（EX：低血壓、精神狀態改變、休克跡象、持續缺血性胸痛，以及急性肺水腫），應緊急接受 Atropine 及經皮或經靜脈起搏治療。"
+          }
+        }
+      },
+      {
+        "degree": "second_type_II",
+        "name": {
+          "en": "Second-degree AV block: Mobitz Type II",
+          "zh": "第二度 AV block：Mobitz type II"
+        },
+        "management": {
+          "hemodynamically_stable": {
+            "en": "Continuous monitoring + Transcutaneous Pacing standby.",
+            "zh": "血流動力學穩定：應持續監測，並使用經皮起搏以防惡化。"
+          },
+          "hemodynamically_unstable": {
+            "en": "Urgent: β-agonist (e.g., isoproterenol, dopamine) + Temporary Pacing.",
+            "zh": "血流動力學不穩定：若心肌缺血可能性不大，應緊急使用 β agonist 和暫時性心律調節器。"
+          }
+        },
+        "key_point": {
+          "en": "High risk of progression to Third-Degree. Permanent pacemaker usually indicated unless cause is transient/reversible.",
+          "zh": "因為 Mobitz type II 易進展為 Third-degree AV block（完全阻斷型），除非病因為短暫或可逆，通常後續需考慮裝設永久性心律調節器。"
+        }
+      },
+      {
+        "degree": "third",
+        "name": {
+          "en": "Third-degree AV block (Complete Heart Block)",
+          "zh": "第三度 AV block（完全阻斷型）"
+        },
+        "management": {
+          "hemodynamically_stable": {
+            "en": "Transcutaneous Pacing → Rule out reversible causes → If CHB persists, permanent pacemaker implantation",
+            "zh": "血流動力學穩定：經皮起搏 → 排除可逆病因 → 若 CHB 仍未解決，需裝設永久性心律調節器"
+          },
+          "hemodynamically_unstable": {
+            "en": "Atropine → Transcutaneous Pacing → (β-agonist → Transvenous pacing) → Rule out reversible causes → If CHB persists, permanent pacemaker implantation",
+            "zh": "血流動力學不穩定：Atropine 治療 → 經皮起搏 → （β agonist → 經靜脈起搏）→ 排除可逆病因 → 若 CHB 仍未解決，需裝設永久性心律調節器"
+          }
+        }
+      }
+    ],
+    "pacemaker_decision": {
+      "en": "Permanent Pacemaker Implantation Necessary?",
+      "zh": "是否需要裝設永久性心律調節器？",
+      "yes_criteria": {
+        "en": "Poor response, Persistent block",
+        "zh": "治療反應不佳、持續性阻滯"
+      },
+      "no_criteria": {
+        "en": "Good response, Reversible cause",
+        "zh": "治療反應良好、可逆性病因"
+      }
+    }
+  },
+  "anatomy": {
+    "conduction_pathway": [
+      {
+        "en": "SA Node (Pacemaker)",
+        "zh": "竇房結（起搏點）"
+      },
+      {
+        "en": "Atria",
+        "zh": "心房"
+      },
+      {
+        "en": "AV Node",
+        "zh": "房室結"
+      },
+      {
+        "en": "His-Purkinje System",
+        "zh": "浦金氏系統"
+      },
+      {
+        "en": "Ventricles",
+        "zh": "心室"
+      }
+    ],
+    "block_location": {
+      "en": "Delay/Interruption occurs at the AV Node level",
+      "zh": "延遲/阻斷發生於房室結"
+    }
+  }
+}

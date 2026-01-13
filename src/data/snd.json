@@ -1,0 +1,550 @@
+{
+  "topic": {
+    "en": "Sinus Node Dysfunction (Sick Sinus Syndrome)",
+    "zh": "竇房結功能異常（病竇症候群）"
+  },
+  "definition": {
+    "en": "The sinoatrial (SA) node fails to generate or conduct impulses at rates sufficient to meet the body's physiological demands. Diagnosis requires BOTH symptoms AND ECG abnormalities. Common manifestations include bradycardia, pauses, or alternating tachycardia-bradycardia.",
+    "zh": "竇房結（SA node）無法產生或傳導足以滿足身體生理需求的心跳速率，且必須同時具備症狀與心電圖異常才能成立診斷。常見表現包括心跳過慢、停搏、或心跳快慢交替。"
+  },
+  "etiology": {
+    "en": "Pathophysiology & Etiology",
+    "zh": "病因",
+    "intrinsic_causes": {
+      "en": "Intrinsic Causes",
+      "zh": "內在成因",
+      "items": [
+        {
+          "en": "SA node fibrosis (most common): Aging leads to replacement of SA node and surrounding atrial tissue with fibrous tissue",
+          "zh": "竇房結纖維化（最常見）：老化導致竇房結與周圍心房組織被纖維組織取代"
+        },
+        {
+          "en": "Ischemia: SA node artery stenosis, commonly seen in inferior myocardial infarction (Clinically, degenerative fibrosis is most common; isolated ischemic SA node injury is less frequent and usually accompanies inferior MI or direct SA node artery damage)",
+          "zh": "缺血：竇房結動脈狹窄，常見於下壁心肌梗塞（臨床上以退化性纖維化最常見，單純缺血性竇房結損傷則較少見，多伴隨下壁心肌梗塞或竇房結動脈直接受損）"
+        },
+        {
+          "en": "Infiltrative diseases: Amyloidosis, sarcoidosis, hemochromatosis",
+          "zh": "浸潤性疾病：澱粉樣變性、肉芽腫病（sarcoidosis）、血鐵沉積症"
+        },
+        {
+          "en": "Inflammatory diseases: Myocarditis, rheumatic fever",
+          "zh": "發炎性疾病：心肌炎、風濕熱"
+        },
+        {
+          "en": "Genetic mutations: SCN5A, HCN4 gene mutations",
+          "zh": "遺傳性：SCN5A、HCN4 基因突變"
+        }
+      ]
+    },
+    "extrinsic_causes": {
+      "en": "Extrinsic Causes (Reversible)",
+      "zh": "外在成因（可逆）",
+      "items": [
+        {
+          "category": {
+            "en": "Medications",
+            "zh": "藥物"
+          },
+          "items": [
+            {
+              "en": "β-blockers (e.g., metoprolol, atenolol)",
+              "zh": "β受體阻斷劑（如 metoprolol、atenolol）"
+            },
+            {
+              "en": "Non-dihydropyridine calcium channel blockers (verapamil, diltiazem)",
+              "zh": "非二氫吡啶類鈣離子通道阻斷劑（verapamil、diltiazem）"
+            },
+            {
+              "en": "Digoxin",
+              "zh": "Digoxin"
+            },
+            {
+              "en": "Antiarrhythmic drugs (amiodarone, dronedarone, sotalol)",
+              "zh": "抗心律不整藥（amiodarone、dronedarone、sotalol）"
+            },
+            {
+              "en": "Ivabradine",
+              "zh": "Ivabradine"
+            },
+            {
+              "en": "Clonidine, Methyldopa",
+              "zh": "Clonidine、Methyldopa"
+            },
+            {
+              "en": "Lithium",
+              "zh": "Lithium（鋰鹽）"
+            },
+            {
+              "en": "Acetylcholinesterase inhibitors (e.g., donepezil)",
+              "zh": "乙醯膽鹼酯酶抑制劑（如 donepezil）"
+            }
+          ]
+        },
+        {
+          "category": {
+            "en": "Electrolyte Abnormalities",
+            "zh": "電解質異常"
+          },
+          "items": [
+            {
+              "en": "Hyperkalemia",
+              "zh": "高血鉀"
+            },
+            {
+              "en": "Hypomagnesemia",
+              "zh": "低血鎂"
+            }
+          ]
+        },
+        {
+          "category": {
+            "en": "Metabolic / Physiological factors",
+            "zh": "代謝／生理因素"
+          },
+          "items": [
+            {
+              "en": "Hypothyroidism",
+              "zh": "甲狀腺功能低下"
+            },
+            {
+              "en": "Hypothermia",
+              "zh": "低溫"
+            },
+            {
+              "en": "Hypoxia",
+              "zh": "缺氧"
+            },
+            {
+              "en": "Increased vagal tone",
+              "zh": "迷走神經張力過高"
+            },
+            {
+              "en": "Obstructive sleep apnea",
+              "zh": "阻塞性睡眠呼吸中止症"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "classification": {
+    "en": "ECG Features & Classification",
+    "zh": "心電圖特徵與分類",
+    "types": [
+      {
+        "type": "sinus_bradycardia",
+        "name": {
+          "en": "Sinus Bradycardia",
+          "zh": "竇性心搏過緩"
+        },
+        "definition": {
+          "en": "SA node fires normally but at a slow rate (HR < 60 bpm); pathological when < 50 bpm or inappropriate for clinical context",
+          "zh": "竇房結發電正常，但頻率慢（HR < 60 bpm）；當 < 50 bpm 或不適合臨床情境時為病理性"
+        },
+        "ecg_findings": [
+          {
+            "en": "Normal waveform: Each QRS preceded by a normal P wave; PR interval normal (120–200 ms)",
+            "zh": "正常波形：每個 QRS 前必有正常 P 波，PR 間期正常（120–200 ms）"
+          },
+          {
+            "en": "Proportional prolongation: P–P and R–R intervals are regular and lengthen synchronously",
+            "zh": "等比例延長：P–P 與 R–R 間距整齊且同步延長"
+          }
+        ]
+      },
+      {
+        "type": "sinus_pause_arrest",
+        "name": {
+          "en": "Sinus Pause and Sinus Arrest",
+          "zh": "竇性暫止及停搏"
+        },
+        "definition": {
+          "en": "SA node automaticity failure; temporarily stops firing",
+          "zh": "竇房結自動性失效，暫時不發電"
+        },
+        "ecg_findings": [
+          {
+            "en": "Complete absence: P-QRS-T suddenly disappears, forming a long isoelectric line; significant if > 3 seconds",
+            "zh": "整段消失：P-QRS-T 突然消失，形成長段等電位線；> 3 秒具臨床意義"
+          },
+          {
+            "en": "Non-integer multiple: Pause duration has NO integer multiple relationship with baseline P–P interval (random pause)",
+            "zh": "非整數倍：停頓時間與基準 P–P 間期無整數倍數關係（隨機停）"
+          }
+        ]
+      },
+      {
+        "type": "sa_exit_block",
+        "name": {
+          "en": "SA Exit Block",
+          "zh": "竇房出口阻滯"
+        },
+        "definition": {
+          "en": "SA node fires but the impulse fails to conduct out (conduction disorder)",
+          "zh": "竇房結有發電，但訊號傳不出去（傳導障礙）"
+        },
+        "subtypes": [
+          {
+            "degree": "first",
+            "name": {
+              "en": "First-degree SA exit block",
+              "zh": "一度竇房出口阻滯"
+            },
+            "description": {
+              "en": "Conduction delayed but all impulses conducted. Cannot be diagnosed on ECG; only detectable by electrophysiology study.",
+              "zh": "傳導延遲但皆通過。ECG 無法診斷，僅能由電生理檢查發現。"
+            }
+          },
+          {
+            "degree": "second_type_I",
+            "name": {
+              "en": "Second-degree Type I (Wenckebach)",
+              "zh": "二度 I 型（Wenckebach）"
+            },
+            "description": {
+              "en": "P–P intervals progressively shorten until a beat is dropped; pause duration is LESS than 2× the sum of P–P intervals (grouped beating)",
+              "zh": "P–P 逐漸縮短直到脫落；停搏時間小於 2 倍 P–P 總和（心搏成組）"
+            }
+          },
+          {
+            "degree": "second_type_II",
+            "name": {
+              "en": "Second-degree Type II",
+              "zh": "二度 II 型"
+            },
+            "description": {
+              "en": "P–P intervals are fixed, then sudden P wave drop; pause duration is an INTEGER MULTIPLE of P–P (usually 2×)",
+              "zh": "P–P 間期固定，突然掉 P 波；停搏時間為 P–P 的整數倍（通常為 2 倍）"
+            }
+          },
+          {
+            "degree": "third",
+            "name": {
+              "en": "Third-degree SA exit block",
+              "zh": "三度竇房出口阻滯"
+            },
+            "description": {
+              "en": "Complete failure of impulse conduction out of SA node",
+              "zh": "訊號完全傳不出"
+            }
+          }
+        ]
+      },
+      {
+        "type": "tachy_brady_syndrome",
+        "name": {
+          "en": "Tachycardia–Bradycardia Syndrome",
+          "zh": "快慢症候群"
+        },
+        "definition": {
+          "en": "Alternating episodes of rapid atrial rhythms (AF, AFL, AT, SVT) with sinus or pacemaker-dependent bradycardia over time",
+          "zh": "指心房快速心律（如 AF、AFL、AT、SVT）與竇性或節律器依賴的心搏過緩在時間上互相交替"
+        }
+      },
+      {
+        "type": "chronotropic_incompetence",
+        "name": {
+          "en": "Chronotropic Incompetence",
+          "zh": "心跳反應不全"
+        },
+        "definition": {
+          "en": "Heart rate fails to increase adequately when physiological demand increases (e.g., during exercise)",
+          "zh": "生理需求增加（運動）時，心率升不上去"
+        },
+        "ecg_findings": [
+          {
+            "en": "Resting ECG may be completely normal; problem manifests during exercise testing or daily activities with inadequate heart rate increase",
+            "zh": "靜息 ECG 可完全正常；問題多在運動測試或日常活動時，心率上升幅度不足"
+          },
+          {
+            "en": "Exercise testing: Peak heart rate fails to reach 80% of predicted maximum (220 − age); or Heart Rate Reserve fails to reach 80%",
+            "zh": "運動測試：峰值心率未達預測最大值（220−年齡）的 80%；或 Heart Rate Reserve 未達 80%"
+          }
+        ]
+      }
+    ]
+  },
+  "treatment": {
+    "overview": {
+      "en": "Treatment Strategies for Sinus Node Dysfunction",
+      "zh": "治療策略"
+    },
+    "acute_management": {
+      "en": "Acute Management",
+      "zh": "疾病當下的處置（急性處理）",
+      "immediate_assessment": {
+        "en": "Immediate Assessment",
+        "zh": "即刻評估",
+        "symptomatic_bradycardia": {
+          "en": "Symptomatic Bradycardia Signs",
+          "zh": "症狀性心搏過緩徵象",
+          "items": [
+            {
+              "en": "Hypotension",
+              "zh": "低血壓"
+            },
+            {
+              "en": "Altered mental status",
+              "zh": "意識改變"
+            },
+            {
+              "en": "Chest pain",
+              "zh": "胸痛"
+            },
+            {
+              "en": "Poor perfusion / Signs of shock",
+              "zh": "灌流不足／休克徵象"
+            },
+            {
+              "en": "Acute heart failure",
+              "zh": "急性心衰竭"
+            }
+          ]
+        }
+      },
+      "reversible_causes": {
+        "en": "Rule Out and Correct Reversible Factors",
+        "zh": "排除及矯正可逆因素",
+        "items": [
+          {
+            "en": "Drug-induced: β-blockers, non-DHP CCBs, digoxin, amiodarone, clonidine, lithium, ivabradine → STOP OFFENDING AGENT",
+            "zh": "藥物誘發：β-阻斷劑、非 DHP CCBs、digoxin、amiodarone、clonidine、lithium、ivabradine → 停用致病藥物"
+          },
+          {
+            "en": "Electrolyte abnormalities: Hyperkalemia, hypomagnesemia → CORRECT IMBALANCE",
+            "zh": "電解質異常：高血鉀、低血鎂 → 矯正失衡"
+          },
+          {
+            "en": "Metabolic or systemic issues: Hypothyroidism, hypothermia, increased vagal tone, hypoxia → TREAT CONDITION",
+            "zh": "代謝或其他系統性問題：甲狀腺機能低下、低溫、迷走神經張力過高、低氧 → 治療根本病因"
+          },
+          {
+            "en": "Acute MI (particularly inferior MI affecting RCA supply to SA node) → REPERFUSION THERAPY",
+            "zh": "急性心肌梗塞（特別是影響 RCA 供應竇房結的下壁心梗）→ 再灌流治療"
+          }
+        ]
+      },
+      "pharmacotherapy": {
+        "en": "Pharmacological Management for Symptomatic Bradycardia",
+        "zh": "症狀性心搏過緩的藥物治療",
+        "agents": [
+          {
+            "agent": "Atropine",
+            "dose": {
+              "en": "0.5–1 mg IV, may repeat q3–5min (max 3 mg)",
+              "zh": "0.5–1 mg IV，可每 3–5 分鐘重複（最大 3 mg）"
+            },
+            "notes": {
+              "en": "First-line; less effective in denervated hearts or infranodal block",
+              "zh": "第一線用藥；對去神經化心臟或結下阻斷效果較差"
+            }
+          },
+          {
+            "agent": "Dopamine",
+            "dose": {
+              "en": "5–20 mcg/kg/min IV infusion",
+              "zh": "5–20 mcg/kg/min IV 輸注"
+            },
+            "notes": {
+              "en": "Chronotropic effect via β₁ stimulation",
+              "zh": "經由 β₁ 刺激產生正性變時作用"
+            }
+          },
+          {
+            "agent": "Epinephrine",
+            "dose": {
+              "en": "2–10 mcg/min IV infusion",
+              "zh": "2–10 mcg/min IV 輸注"
+            },
+            "notes": {
+              "en": "Alternative to dopamine",
+              "zh": "可作為 dopamine 的替代選擇"
+            }
+          },
+          {
+            "agent": "Isoproterenol",
+            "dose": {
+              "en": "2–10 mcg/min IV infusion",
+              "zh": "2–10 mcg/min IV 輸注"
+            },
+            "notes": {
+              "en": "Pure β-agonist; use cautiously in ischemia",
+              "zh": "純 β 致效劑；缺血時需謹慎使用"
+            }
+          }
+        ]
+      },
+      "temporary_pacing": {
+        "en": "Temporary Pacing",
+        "zh": "暫時性節律器",
+        "indications": [
+          {
+            "en": "Hemodynamic instability unresponsive to pharmacotherapy",
+            "zh": "藥物治療無效的血流動力學不穩定"
+          },
+          {
+            "en": "High-risk features: Syncope, prolonged pauses > 3 seconds while awake",
+            "zh": "高風險特徵：昏厥、清醒時停搏 > 3 秒"
+          },
+          {
+            "en": "Bridge to permanent pacemaker",
+            "zh": "作為永久性節律器植入前的過渡"
+          }
+        ],
+        "types": [
+          {
+            "type": "transcutaneous",
+            "name": {
+              "en": "Transcutaneous Pacing",
+              "zh": "經皮節律器"
+            },
+            "description": {
+              "en": "Immediate but uncomfortable – requires sedation/analgesia",
+              "zh": "可立即執行但不舒適 – 需要鎮靜/止痛"
+            }
+          },
+          {
+            "type": "transvenous",
+            "name": {
+              "en": "Transvenous Pacing",
+              "zh": "經靜脈節律器"
+            },
+            "description": {
+              "en": "More stable capture",
+              "zh": "較穩定的心臟擷取"
+            }
+          }
+        ]
+      }
+    },
+    "long_term_management": {
+      "en": "Long-term Treatment and Prevention Strategies",
+      "zh": "後續治療與長期預防策略",
+      "discontinue_offending_agents": {
+        "en": "Discontinue/Avoid Offending Agents When Possible",
+        "zh": "盡可能停用或避免致病藥物",
+        "agents": [
+          {
+            "en": "Beta-blockers (e.g., metoprolol, atenolol)",
+            "zh": "Beta-blockers（如 metoprolol、atenolol）"
+          },
+          {
+            "en": "Non-DHP Calcium Channel Blockers (e.g., diltiazem, verapamil)",
+            "zh": "非 DHP 鈣離子通道阻斷劑（如 diltiazem、verapamil）"
+          },
+          {
+            "en": "Digoxin",
+            "zh": "Digoxin"
+          },
+          {
+            "en": "Amiodarone, Dronedarone, Sotalol",
+            "zh": "Amiodarone、Dronedarone、Sotalol"
+          },
+          {
+            "en": "Ivabradine",
+            "zh": "Ivabradine"
+          },
+          {
+            "en": "Clonidine, Methyldopa",
+            "zh": "Clonidine、Methyldopa"
+          },
+          {
+            "en": "Lithium",
+            "zh": "Lithium"
+          },
+          {
+            "en": "Acetylcholinesterase inhibitors (e.g., donepezil)",
+            "zh": "乙醯膽鹼酯酶抑制劑（如 donepezil）"
+          }
+        ]
+      },
+      "tachy_brady_management": {
+        "en": "Tachycardia-Bradycardia Syndrome Management",
+        "zh": "快慢症候群處置",
+        "steps": [
+          {
+            "step": 1,
+            "en": "Pacemaker implantation FIRST",
+            "zh": "首先植入節律器"
+          },
+          {
+            "step": 2,
+            "en": "Initiate rate/rhythm control – allows safe use of AV nodal blocking agents",
+            "zh": "開始心率/節律控制 – 可安全使用房室結阻斷藥物"
+          },
+          {
+            "step": 3,
+            "en": "Catheter ablation for AF – may be considered in select patients",
+            "zh": "心房顫動導管消融術 – 可於特定患者考慮"
+          }
+        ]
+      },
+      "anticoagulation": {
+        "en": "Anticoagulation Considerations",
+        "zh": "抗凝血治療考量",
+        "items": [
+          {
+            "en": "Assess stroke risk using CHA₂DS₂-VASc score if concomitant AF",
+            "zh": "若合併心房顫動，使用 CHA₂DS₂-VASc 評分評估中風風險"
+          },
+          {
+            "en": "Anticoagulation decision based on AF burden, NOT pacemaker presence",
+            "zh": "抗凝血決策基於心房顫動負擔，而非節律器是否存在"
+          }
+        ]
+      },
+      "pacemaker": {
+        "en": "Permanent Pacemaker",
+        "zh": "永久性節律器",
+        "indication": {
+          "en": "Indicated for symptomatic sick sinus syndrome patients (fatigue, dizziness, syncope) after ruling out reversible causes",
+          "zh": "用於有症狀（疲倦、頭暈、昏厥）的病竇症候群患者，且已排除可逆病因"
+        }
+      },
+      "follow_up": {
+        "en": "Regular follow-up and cardiovascular comorbidity management",
+        "zh": "定期檢查、控制心血管共病"
+      }
+    },
+    "pacemaker_decision": {
+      "en": "Permanent Pacemaker Implantation Necessary?",
+      "zh": "是否需要裝設永久性心臟節律器？",
+      "yes_criteria": {
+        "en": "Symptomatic (fatigue, dizziness, syncope), reversible causes ruled out, persistent dysfunction",
+        "zh": "有症狀（疲倦、頭暈、昏厥）、已排除可逆病因、持續性功能異常"
+      },
+      "no_criteria": {
+        "en": "Asymptomatic, reversible cause identified and corrected",
+        "zh": "無症狀、可逆性病因已識別並矯正"
+      }
+    }
+  },
+  "anatomy": {
+    "conduction_pathway": [
+      {
+        "en": "SA Node (Primary Pacemaker)",
+        "zh": "竇房結（主要起搏點）"
+      },
+      {
+        "en": "Atria",
+        "zh": "心房"
+      },
+      {
+        "en": "AV Node",
+        "zh": "房室結"
+      },
+      {
+        "en": "His-Purkinje System",
+        "zh": "乙乙束-浦金氏系統"
+      },
+      {
+        "en": "Ventricles",
+        "zh": "心室"
+      }
+    ],
+    "dysfunction_location": {
+      "en": "Dysfunction occurs at the SA Node level (impulse generation or exit conduction)",
+      "zh": "功能異常發生於竇房結（電訊號產生或傳出）"
+    }
+  }
+}

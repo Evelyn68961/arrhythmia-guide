@@ -5,7 +5,7 @@ import strategyImg from '../assets/images/AVBlock-treatment-strategy.png'
 import classificationImg from '../assets/images/AVBlock-treatment-classification.png'
 
 export default function AVBlock() {
-  const [lang, setLang] = useState('zh')
+  const [lang, setLang] = useState('en')
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [
@@ -19,16 +19,16 @@ export default function AVBlock() {
       {/* Language Toggle */}
       <div className="lang-toggle">
         <button 
+          className={lang === 'en' ? 'active' : ''} 
+          onClick={() => setLang('en')}
+        >
+          Eng
+        </button>
+        <button 
           className={lang === 'zh' ? 'active' : ''} 
           onClick={() => setLang('zh')}
         >
           中文
-        </button>
-        <button 
-          className={lang === 'en' ? 'active' : ''} 
-          onClick={() => setLang('en')}
-        >
-          English
         </button>
       </div>
 
@@ -50,13 +50,35 @@ export default function AVBlock() {
 
       {/* Two Column Layout */}
       <div className="two-column">
-        <div className="column-left">
-          <img src={tabs[activeTab].img} alt="AV Block" />
+      <div className="column-left">
+        <div className={`tab-content ${activeTab === 0 ? 'active' : ''}`}>
+          <img src={introImg} alt="AV Block Overview" />
         </div>
+        <div className={`tab-content ${activeTab === 1 ? 'active' : ''}`}>
+          <img src={strategyImg} alt="AV Block Strategy" />
+        </div>
+        <div className={`tab-content ${activeTab === 2 ? 'active' : ''}`}>
+          <img src={classificationImg} alt="AV Block Management" />
+        </div>
+        <div className="references">
+          <h4>{lang === 'en' ? 'References' : '參考資料'}</h4>
+          <ul>
+            <li>
+              <a href="https://www.msdmanuals.com/professional/cardiovascular-disorders/specific-cardiac-arrhythmias/atrioventricular-block" target="_blank" rel="noopener noreferrer">
+                MSD Manual - Atrioventricular Block
+              </a>
+            </li>
+            <li>
+              <a href="https://www.ncbi.nlm.nih.gov/books/NBK459147/" target="_blank" rel="noopener noreferrer">
+                NCBI - Atrioventricular Block
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
         <div className="column-right">
           {/* Tab 0: Overview */}
-          {activeTab === 0 && (
-            <>
+          <div className={`tab-content ${activeTab === 0 ? 'active' : ''}`}>
               <h3>{lang === 'zh' ? '定義' : 'Definition'}</h3>
               <p>{data.definition[lang]}</p>
 
@@ -76,12 +98,11 @@ export default function AVBlock() {
                   <p>{type.description[lang]}</p>
                 </div>
               ))}
-            </>
-          )}
+          </div>
 
           {/* Tab 1: Strategy */}
-          {activeTab === 1 && (
-            <>
+          <div className={`tab-content ${activeTab === 1 ? 'active' : ''}`}>
+          
               <h3>{data.treatment.overview[lang]}</h3>
               <p>{data.treatment.core_approach[lang]}</p>
 
@@ -95,12 +116,10 @@ export default function AVBlock() {
               <h4>{data.treatment.pacemaker_decision[lang]}</h4>
               <p>✓ {data.treatment.pacemaker_decision.yes_criteria[lang]}</p>
               <p>✗ {data.treatment.pacemaker_decision.no_criteria[lang]}</p>
-            </>
-          )}
+          </div>
 
           {/* Tab 2: Management */}
-          {activeTab === 2 && (
-            <>
+          <div className={`tab-content ${activeTab === 2 ? 'active' : ''}`}>
               <h3>{lang === 'zh' ? '依分類治療' : 'Treatment by Classification'}</h3>
               {data.treatment.by_classification.map((item) => (
                 <div key={item.degree} >
@@ -114,8 +133,7 @@ export default function AVBlock() {
                   {item.key_point && <p><strong>{item.key_point[lang]}</strong></p>}
                 </div>
               ))}
-            </>
-          )}
+          </div>
         </div>
       </div>
     </div>

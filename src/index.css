@@ -170,13 +170,20 @@ h2 {
 }
 
 .column-right h3 {
-  margin-top: 1.5rem;
+  margin-top: 1.8rem;
   margin-bottom: 0.5rem;
 }
 
 .column-right h4 {
+  font-size: 1.2rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+}
+
+.column-right h5 {
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
 }
 
 .column-right ul {
@@ -184,10 +191,17 @@ h2 {
   margin: 0.5rem 0;
 }
 
+.tabs-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  width: calc(50% - 1rem);  /* Match image column width */
+}
+
 .section-tabs {
   display: flex;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .section-tabs button {
@@ -209,6 +223,27 @@ h2 {
   background: #3498db;
   color: white;
 }
+
+.sub-tabs {
+  display: flex;              /* Arrange buttons side by side */
+  gap: 0.5rem;                /* Gap between buttons */
+}
+
+.sub-tabs button {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sub-tabs button.active {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+
 
 .tab-content {
   display: none;

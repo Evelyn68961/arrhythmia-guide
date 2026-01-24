@@ -1,0 +1,457 @@
+{
+  "topic": {
+    "en": "Ventricular Fibrillation (VF)",
+    "zh": "心室顫動"
+  },
+  "definition": {
+    "en": "Ventricular fibrillation is a life-threatening cardiac arrhythmia characterized by completely disorganized, chaotic electrical activity in the ventricles, resulting in ineffective ventricular contraction and no cardiac output. VF is a form of cardiac arrest requiring immediate intervention.",
+    "zh": "心室顫動是一種危及生命的心律不整，特徵為心室電活動完全混亂、無組織，導致心室無法有效收縮，沒有心輸出量。VF 是心臟驟停的一種形式，需要立即介入處理。"
+  },
+  "ecg_characteristics": {
+    "en": "ECG Characteristics",
+    "zh": "心電圖特徵",
+    "general": {
+      "rate": {
+        "en": "300-500 bpm (unmeasurable)",
+        "zh": "300-500 bpm（無法測量）"
+      },
+      "rhythm": {
+        "en": "Grossly irregular, chaotic",
+        "zh": "節律完全混亂、無規則"
+      },
+      "p_waves": {
+        "en": "Absent",
+        "zh": "無 P 波"
+      },
+      "qrs_complex": {
+        "en": "No identifiable QRS, irregular morphology",
+        "zh": "QRS 無法辨識、形態不規則"
+      }
+    },
+    "types": [
+      {
+        "type": "coarse_vf",
+        "name": {
+          "en": "Coarse VF",
+          "zh": "粗顫動（Coarse VF）"
+        },
+        "description": {
+          "en": "Larger amplitude, early phase. Better response to defibrillation.",
+          "zh": "振幅較大，屬於早期階段。對電擊去顫反應較佳。"
+        }
+      },
+      {
+        "type": "fine_vf",
+        "name": {
+          "en": "Fine VF",
+          "zh": "細顫動（Fine VF）"
+        },
+        "description": {
+          "en": "Smaller amplitude, prolonged phase. May be confused with asystole.",
+          "zh": "振幅較小，屬於延長階段。可能與心搏停止（asystole）混淆。"
+        }
+      }
+    ]
+  },
+  "etiology": {
+    "en": "Classification & Etiology",
+    "zh": "分類與病因",
+    "primary": {
+      "en": "Idiopathic (Primary)",
+      "zh": "原發性（Idiopathic）",
+      "category": {
+        "en": "Genetic/Channelopathies",
+        "zh": "遺傳性離子通道病變"
+      },
+      "items": [
+        {
+          "en": "Long QT Syndrome (LQTS)",
+          "zh": "長 QT 症候群（Long QT Syndrome）"
+        },
+        {
+          "en": "Brugada Syndrome",
+          "zh": "布魯格達症候群（Brugada Syndrome）"
+        },
+        {
+          "en": "Catecholaminergic Polymorphic VT (CPVT)",
+          "zh": "兒茶酚胺敏感性多型性心室頻脈（CPVT）"
+        },
+        {
+          "en": "Short QT Syndrome",
+          "zh": "短 QT 症候群（Short QT Syndrome）"
+        }
+      ]
+    },
+    "secondary": {
+      "en": "Disease-Induced (Secondary)",
+      "zh": "疾病誘導（Secondary）",
+      "structural_heart_disease": {
+        "en": "Structural Heart Disease",
+        "zh": "結構性心臟疾病",
+        "items": [
+          {
+            "en": "Ischemic Cardiomyopathy / MI (Scar tissue)",
+            "zh": "缺血性心肌病變 / 心肌梗塞（疤痕組織）"
+          },
+          {
+            "en": "Hypertrophic Cardiomyopathy (HCM) - Disorganized fibers",
+            "zh": "肥厚性心肌病變（HCM）— 纖維排列紊亂"
+          },
+          {
+            "en": "Dilated Cardiomyopathy (DCM) - Stretched myocardium",
+            "zh": "擴張性心肌病變（DCM）— 心肌過度伸展"
+          },
+          {
+            "en": "Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC)",
+            "zh": "致心律失常性右心室心肌病變（ARVC）"
+          }
+        ]
+      },
+      "electrolyte_abnormalities": {
+        "en": "Electrolyte Abnormalities",
+        "zh": "電解質異常",
+        "items": [
+          {
+            "en": "Hypokalemia (Prolongs repolarization)",
+            "zh": "低血鉀（延長再極化）"
+          },
+          {
+            "en": "Hyperkalemia (Depresses conduction)",
+            "zh": "高血鉀（抑制傳導）"
+          },
+          {
+            "en": "Hypomagnesemia (Predisposes to afterdepolarizations)",
+            "zh": "低血鎂（易導致後去極化）"
+          }
+        ]
+      },
+      "metabolic_systemic_factors": {
+        "en": "Metabolic & Systemic Factors",
+        "zh": "代謝與全身性因素",
+        "items": [
+          {
+            "en": "Acidosis",
+            "zh": "酸中毒"
+          },
+          {
+            "en": "Hypoxemia",
+            "zh": "低血氧"
+          },
+          {
+            "en": "Hypothermia",
+            "zh": "低體溫"
+          }
+        ]
+      }
+    }
+  },
+  "clinical_presentation": {
+    "en": "Clinical Presentation (Pulseless Arrest)",
+    "zh": "臨床表現（無脈搏心臟驟停）",
+    "warning": {
+      "en": "IMMEDIATE INTERVENTION REQUIRED. VF = CARDIAC ARREST",
+      "zh": "需立即介入處理。VF = 心臟驟停"
+    },
+    "signs": [
+      {
+        "en": "Sudden loss of consciousness (within seconds)",
+        "zh": "突然意識喪失（數秒內）"
+      },
+      {
+        "en": "No pulse",
+        "zh": "無脈搏"
+      },
+      {
+        "en": "No blood pressure",
+        "zh": "無血壓"
+      },
+      {
+        "en": "Agonal respirations or apnea",
+        "zh": "瀕死呼吸或呼吸停止"
+      },
+      {
+        "en": "Found unresponsive (if unwitnessed)",
+        "zh": "發現時已無反應（若未目擊）"
+      }
+    ]
+  },
+  "treatment": {
+    "overview": {
+      "en": "Management of Ventricular Fibrillation (ACLS Protocol)",
+      "zh": "心室顫動處置（ACLS 流程）"
+    },
+    "immediate_actions": {
+      "en": "Immediate Actions",
+      "zh": "緊急處置",
+      "steps": [
+        {
+          "step": 1,
+          "en": "Call for help & activate EMS",
+          "zh": "呼救並啟動緊急醫療系統"
+        },
+        {
+          "step": 2,
+          "en": "Start CPR",
+          "zh": "開始心肺復甦術（CPR）"
+        },
+        {
+          "step": 3,
+          "en": "Defibrillation (Shock) ASAP",
+          "zh": "儘速電擊去顫"
+        }
+      ],
+      "note": {
+        "en": "Time is critical for survival",
+        "zh": "時間對存活率至關重要"
+      }
+    },
+    "defibrillation": {
+      "en": "Defibrillation - The Definitive Treatment",
+      "zh": "電擊去顫 — 決定性治療",
+      "energy_settings": {
+        "biphasic": {
+          "en": "120-200 J (device-specific)",
+          "zh": "120-200 焦耳（依機型而定）"
+        },
+        "monophasic": {
+          "en": "360 J",
+          "zh": "360 焦耳"
+        }
+      },
+      "protocol": [
+        {
+          "en": "Defibrillate AS SOON AS VF is identified",
+          "zh": "一旦確認 VF 立即電擊"
+        },
+        {
+          "en": "Resume CPR IMMEDIATELY after shock",
+          "zh": "電擊後立即恢復 CPR"
+        }
+      ]
+    },
+    "high_quality_cpr": {
+      "en": "High-Quality CPR",
+      "zh": "高品質心肺復甦術",
+      "parameters": [
+        {
+          "parameter": "rate",
+          "en": "Rate: 100-120 compressions/minute",
+          "zh": "速率：每分鐘 100-120 次按壓"
+        },
+        {
+          "parameter": "depth",
+          "en": "Depth: At least 5 cm (2 inches)",
+          "zh": "深度：至少 5 公分（2 英寸）"
+        },
+        {
+          "parameter": "recoil",
+          "en": "Allow full chest recoil",
+          "zh": "允許胸廓完全回彈"
+        },
+        {
+          "parameter": "interruptions",
+          "en": "Minimize interruptions",
+          "zh": "盡量減少中斷"
+        }
+      ]
+    },
+    "pharmacotherapy": {
+      "en": "Pharmacotherapy",
+      "zh": "藥物治療",
+      "agents": [
+        {
+          "drug": "Epinephrine",
+          "dose": {
+            "en": "1 mg IV/IO",
+            "zh": "1 mg IV/IO"
+          },
+          "timing": {
+            "en": "Every 3-5 minutes",
+            "zh": "每 3-5 分鐘"
+          }
+        },
+        {
+          "drug": "Amiodarone",
+          "dose": {
+            "en": "300 mg IV/IO first dose; 150 mg second dose",
+            "zh": "首劑 300 mg IV/IO；第二劑 150 mg"
+          },
+          "timing": {
+            "en": "After 2-3 shocks",
+            "zh": "在 2-3 次電擊後給予"
+          },
+          "note": {
+            "en": "Significantly improves survival to hospital admission",
+            "zh": "顯著增加到院存活率"
+          }
+        },
+        {
+          "drug": "Lidocaine",
+          "dose": {
+            "en": "1-1.5 mg/kg first dose; 0.5-0.75 mg/kg subsequent",
+            "zh": "首劑 1-1.5 mg/kg；後續劑量 0.5-0.75 mg/kg"
+          },
+          "timing": {
+            "en": "Alternative to amiodarone",
+            "zh": "作為 Amiodarone 的替代選擇"
+          }
+        }
+      ]
+    },
+    "reversible_causes": {
+      "en": "Address Reversible Causes (H's and T's)",
+      "zh": "評估與矯正可能誘發 VF 的因素（H's and T's）",
+      "h_causes": {
+        "en": "H's",
+        "zh": "H's（五個 H）",
+        "items": [
+          {
+            "en": "Hypovolemia",
+            "zh": "低血容量（Hypovolemia）"
+          },
+          {
+            "en": "Hypoxia",
+            "zh": "缺氧（Hypoxia）"
+          },
+          {
+            "en": "Hydrogen ion (acidosis)",
+            "zh": "酸中毒（Hydrogen ion / Acidosis）"
+          },
+          {
+            "en": "Hypo/hyperkalemia",
+            "zh": "低/高血鉀（Hypo/hyperkalemia）"
+          },
+          {
+            "en": "Hypothermia",
+            "zh": "低體溫（Hypothermia）"
+          }
+        ]
+      },
+      "t_causes": {
+        "en": "T's",
+        "zh": "T's（四個 T）",
+        "items": [
+          {
+            "en": "Tension pneumothorax",
+            "zh": "張力性氣胸（Tension pneumothorax）"
+          },
+          {
+            "en": "Tamponade (cardiac)",
+            "zh": "心包填塞（Cardiac tamponade）"
+          },
+          {
+            "en": "Toxins",
+            "zh": "毒物（Toxins）"
+          },
+          {
+            "en": "Thrombosis (coronary or pulmonary)",
+            "zh": "血栓（冠狀動脈或肺動脈）— 包含心肌梗塞與肺栓塞"
+          }
+        ]
+      }
+    }
+  },
+  "prevention": {
+    "en": "Prevention of Ventricular Fibrillation",
+    "zh": "心室顫動的預防",
+    "primary_prevention": {
+      "en": "Primary Prevention (High-risk patients without prior VF)",
+      "zh": "初級預防（高風險但無 VF 病史的患者）",
+      "indications_for_icd": {
+        "en": "Indications for ICD Implantation",
+        "zh": "植入式心律去顫器（ICD）適應症",
+        "items": [
+          {
+            "en": "EF ≤ 35% & NYHA Class II-III Heart Failure",
+            "zh": "射出分率 ≤ 35% 且 NYHA 第 II-III 級心衰竭"
+          },
+          {
+            "en": "Prior MI with EF ≤ 30%",
+            "zh": "心肌梗塞後射出分率 ≤ 30%"
+          },
+          {
+            "en": "Inherited Channelopathies (High-risk features)",
+            "zh": "遺傳性離子通道病變（具高風險特徵者，如 Long QT、Brugada、CPVT）"
+          },
+          {
+            "en": "Hypertrophic Cardiomyopathy (Risk factors)",
+            "zh": "肥厚性心肌病變（合併猝死風險因子）"
+          }
+        ]
+      },
+      "goal": {
+        "en": "VF Prevention Goal",
+        "zh": "預防 VF 發生"
+      }
+    },
+    "secondary_prevention": {
+      "en": "Secondary Prevention (Survivors of VF arrest)",
+      "zh": "次級預防（VF 心臟驟停存活者）",
+      "goal": {
+        "en": "Reduce Recurrence",
+        "zh": "減少復發"
+      },
+      "strategies": [
+        {
+          "en": "ICD Implantation (Class I recommendation)",
+          "zh": "植入式心律去顫器（ICD）— Class I 建議"
+        },
+        {
+          "en": "Antiarrhythmic Therapy (Amiodarone, Sotalol)",
+          "zh": "抗心律不整藥物治療（Amiodarone、Sotalol）"
+        },
+        {
+          "en": "Beta-blockers",
+          "zh": "β 受體阻斷劑（減少交感神經觸發）"
+        },
+        {
+          "en": "Treatment of Underlying Heart Disease",
+          "zh": "治療潛在心臟疾病"
+        },
+        {
+          "en": "Electrolyte Optimization",
+          "zh": "電解質優化"
+        }
+      ]
+    },
+    "antiarrhythmic_therapy": {
+      "en": "Antiarrhythmic Medications for VF Prevention",
+      "zh": "預防 VF 的抗心律不整藥物",
+      "agents": [
+        {
+          "drug": "Amiodarone",
+          "efficacy": {
+            "en": "Most effective",
+            "zh": "最有效"
+          }
+        },
+        {
+          "drug": "Sotalol",
+          "efficacy": {
+            "en": "Moderate efficacy; may induce Torsades de Pointes (TdP)",
+            "zh": "中等效果，可能誘發尖端扭轉型心室頻脈（TdP）"
+          }
+        },
+        {
+          "drug": "Beta-blockers",
+          "efficacy": {
+            "en": "Reduces sympathetic triggers",
+            "zh": "減少交感神經觸發"
+          }
+        }
+      ]
+    }
+  },
+  "pathophysiology": {
+    "en": "Pathophysiology",
+    "zh": "病理生理學",
+    "mechanism": {
+      "en": "Chaotic ventricular activity: Multiple re-entrant circuits cause disorganized electrical activity throughout the ventricles, preventing coordinated contraction.",
+      "zh": "心室電活動混亂：多重折返迴路導致心室內電活動完全紊亂，無法產生協調的收縮。"
+    },
+    "consequence": {
+      "en": "No effective cardiac output → Immediate hemodynamic collapse → Death within minutes without intervention",
+      "zh": "無有效心輸出量 → 立即血流動力學崩潰 → 若不介入將在數分鐘內死亡"
+    }
+  }
+}

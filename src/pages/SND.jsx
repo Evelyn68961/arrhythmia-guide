@@ -86,7 +86,7 @@ export default function SND() {
           </button>
         </div>
       </div>
-      
+
       {/* Two Column Layout */}
       <div className="two-column">
         {/* LEFT COLUMN - All Images */}
@@ -106,6 +106,21 @@ export default function SND() {
 
           <div className={`tab-content ${activeTab === 3 ? 'active' : ''}`}>
             <img src={longtermImg} alt="Long-term Treatment" />
+          </div>
+          <div className="references">
+            <h4>{lang === 'en' ? 'References' : '參考資料'}</h4>
+            <ul>
+              <li>
+                <a href="https://www.msdmanuals.com/professional/cardiovascular-disorders/specific-cardiac-arrhythmias/sick-sinus-syndrome" target="_blank" rel="noopener noreferrer">
+                  MSD Manual - Sick Sinus Syndrome (Sinus Node Dysfunction)
+                </a>
+              </li>
+              <li>
+                <a href="https://www.ncbi.nlm.nih.gov/books/NBK470599/" target="_blank" rel="noopener noreferrer">
+                  NCBI - Sick Sinus Syndrome (Sinus Node Dysfunction)
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 

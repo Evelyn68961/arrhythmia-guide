@@ -8,8 +8,6 @@ import AF from './pages/AF'
 import VT from './pages/VT'
 import VF from './pages/VF'
 import Brady from './pages/Brady'
-import SND from './pages/SND'
-import AVBlock from './pages/AVBlock'
 import NotFound from './pages/NotFound'
 
 function App() {
@@ -30,10 +28,7 @@ function App() {
           </Route>
           
           {/* Bradyarrhythmias - nested routes */}
-          <Route path="/bradyarrhythmias" element={<Brady />}>
-            <Route path="snd" element={<SND />} />
-            <Route path="av-block" element={<AVBlock />} />
-          </Route>
+          <Route path="/bradyarrhythmias" element={<Brady />} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>

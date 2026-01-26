@@ -139,7 +139,7 @@ h2 {
   display: flex;
   gap: 2rem;
   margin: 1.5rem 0;
-  align-items: flex-start;
+  height: 560px;  /* Set fixed height for the row */
 }
 
 .column-left {
@@ -147,12 +147,13 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-height: 600px;
+  height: 100%;  /* Fill the container */
 }
 
 .column-left img {
   width: 100%;
-  height: auto;
+  max-height: 100%;
+  object-fit: contain;  /* Image fits within without stretching */
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-top: 0;
@@ -160,18 +161,22 @@ h2 {
 
 .column-right {
   flex: 1;
-  overflow-y: auto;
+  height: 100%;         /* Match left column height */
+  overflow-y: auto;     /* Scroll when content overflows */
   padding: 1.5rem;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  min-height: 600px;
-  max-height: 800px;
 }
 
 .column-right h3 {
+  font-size: 1.5rem;
   margin-top: 1.8rem;
   margin-bottom: 0.5rem;
+}
+
+.column-right h3:first-child {
+  margin-top: 0;
 }
 
 .column-right h4 {

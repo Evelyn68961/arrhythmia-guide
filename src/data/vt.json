@@ -1,0 +1,861 @@
+{
+  "topic": {
+    "en": "Ventricular Tachycardia (VT)",
+    "zh": "心室頻脈"
+  },
+  "definition": {
+    "en": "Ventricular tachycardia is a wide complex tachycardia (QRS ≥ 120 ms) originating from the ventricles at a rate of 100-250 bpm. It is defined as three or more consecutive ventricular beats at a rate greater than 100 beats per minute. VT is a potentially life-threatening arrhythmia and is responsible for a significant proportion of sudden cardiac deaths.",
+    "zh": "心室頻脈是一種源自心室的寬 QRS 波快速心律不整（QRS ≥ 120 ms），心率為 100-250 bpm。定義為連續三個或以上的心室搏動，速率超過每分鐘 100 次。VT 是一種可能危及生命的心律不整，是猝死的重要原因之一。"
+  },
+  "ecg_characteristics": {
+    "en": "ECG Characteristics",
+    "zh": "心電圖特徵",
+    "general": {
+      "rate": {
+        "en": "100-250 bpm",
+        "zh": "100-250 bpm"
+      },
+      "rhythm": {
+        "en": "Usually regular",
+        "zh": "通常規則"
+      },
+      "qrs_complex": {
+        "en": "Wide QRS (≥ 120 ms), morphology depends on origin",
+        "zh": "QRS 波寬（≥ 120 ms），形態依起源部位而異"
+      }
+    },
+    "features_suggesting_vt": {
+      "en": "Features Suggesting VT",
+      "zh": "提示 VT 的特徵",
+      "items": [
+        {
+          "feature": "av_dissociation",
+          "en": "AV dissociation (P waves independent of QRS)",
+          "zh": "房室分離（P 波與 QRS 波獨立）"
+        },
+        {
+          "feature": "fusion_capture_beats",
+          "en": "Fusion beats / Capture beats",
+          "zh": "融合波 / 奪取波（Fusion / Capture beats）"
+        },
+        {
+          "feature": "very_wide_qrs",
+          "en": "Very wide QRS (> 160 ms)",
+          "zh": "極寬 QRS 波（> 160 ms）"
+        },
+        {
+          "feature": "concordance",
+          "en": "Concordance (V1-V6 all positive or all negative)",
+          "zh": "V1-V6 同向性（全正向或全負向）"
+        }
+      ]
+    },
+    "brugada_criteria": {
+      "en": "Brugada Criteria (Brief)",
+      "zh": "布魯格達準則（簡述）",
+      "note": {
+        "en": "If any criterion is met, diagnosis is VT",
+        "zh": "若符合任一項，診斷為 VT"
+      },
+      "items": [
+        {
+          "en": "No RS complex in precordial leads (V1-V6)",
+          "zh": "V1-V6 無 RS 波型（全正或全負向）"
+        },
+        {
+          "en": "RS interval > 100 ms in any precordial lead",
+          "zh": "任一胸前導程 RS 間距 > 100 ms"
+        },
+        {
+          "en": "AV dissociation present",
+          "zh": "有房室分離"
+        },
+        {
+          "en": "Morphology criteria for VT in V1-V2 and V6",
+          "zh": "V1-V2 及 V6 符合 VT 形態學準則"
+        }
+      ]
+    },
+    "clinical_pearl": {
+      "en": "When uncertain whether a wide QRS tachycardia is VT or SVT with aberrancy, TREAT AS VT. This is safer.",
+      "zh": "當無法確定寬 QRS 波心搏過速是 VT 或 SVT 併傳導異常時，先當作 VT 處理。這樣比較安全。"
+    }
+  },
+  "classification": {
+    "by_duration": {
+      "en": "Classification by Duration",
+      "zh": "依持續時間分類",
+      "types": [
+        {
+          "type": "nsvt",
+          "name": {
+            "en": "Non-Sustained VT (NSVT)",
+            "zh": "非持續性心室頻脈（NSVT）"
+          },
+          "description": {
+            "en": "Duration < 30 seconds, self-terminating. May be asymptomatic; marker of risk.",
+            "zh": "持續時間 < 30 秒，可自行終止。可能無症狀；為風險標記。"
+          }
+        },
+        {
+          "type": "sustained_vt",
+          "name": {
+            "en": "Sustained VT",
+            "zh": "持續性心室頻脈"
+          },
+          "description": {
+            "en": "Duration ≥ 30 seconds OR requires intervention due to hemodynamic instability.",
+            "zh": "持續時間 ≥ 30 秒，或因血流動力學不穩定而需介入處理。"
+          }
+        }
+      ]
+    },
+    "by_morphology": {
+      "en": "Classification by Morphology",
+      "zh": "依形態分類",
+      "types": [
+        {
+          "type": "monomorphic_vt",
+          "name": {
+            "en": "Monomorphic VT",
+            "zh": "單型性心室頻脈"
+          },
+          "description": {
+            "en": "Uniform QRS morphology. Usually reentry around scar tissue.",
+            "zh": "QRS 形態一致。通常為疤痕組織周圍的折返性機轉。"
+          }
+        },
+        {
+          "type": "polymorphic_vt",
+          "name": {
+            "en": "Polymorphic VT",
+            "zh": "多型性心室頻脈"
+          },
+          "description": {
+            "en": "Varying QRS morphology. Often ischemia or channelopathy related.",
+            "zh": "QRS 形態不一致。常與缺血或離子通道病變相關。"
+          }
+        },
+        {
+          "type": "torsades_de_pointes",
+          "name": {
+            "en": "Torsades de Pointes",
+            "zh": "尖端扭轉型心室頻脈（Torsades de Pointes）"
+          },
+          "description": {
+            "en": "Twisting QRS around baseline. QT prolongation-related.",
+            "zh": "QRS 波繞基線扭轉。與 QT 延長相關。"
+          }
+        }
+      ]
+    }
+  },
+  "etiology": {
+    "en": "Classification & Etiology",
+    "zh": "分類與病因",
+    "structural_heart_disease": {
+      "en": "Structural Heart Disease (Most Common)",
+      "zh": "結構性心臟疾病（最常見）",
+      "items": [
+        {
+          "en": "Coronary artery disease / Prior MI (Scar-related reentry)",
+          "zh": "冠狀動脈疾病 / 心肌梗塞後（疤痕相關折返）"
+        },
+        {
+          "en": "Dilated Cardiomyopathy (DCM)",
+          "zh": "擴張性心肌病變（DCM）"
+        },
+        {
+          "en": "Hypertrophic Cardiomyopathy (HCM)",
+          "zh": "肥厚性心肌病變（HCM）"
+        },
+        {
+          "en": "Arrhythmogenic Right Ventricular Cardiomyopathy (ARVC)",
+          "zh": "致心律失常性右心室心肌病變（ARVC）"
+        }
+      ]
+    },
+    "idiopathic_channelopathies": {
+      "en": "Idiopathic / Channelopathies / Reversible",
+      "zh": "原發性 / 離子通道病變 / 可逆性",
+      "idiopathic_vt": {
+        "en": "Idiopathic VT",
+        "zh": "原發性心室頻脈",
+        "items": [
+          {
+            "en": "RVOT VT (Right Ventricular Outflow Tract)",
+            "zh": "右心室流出道心室頻脈（RVOT VT）"
+          },
+          {
+            "en": "Fascicular VT (Left posterior fascicle most common)",
+            "zh": "束支性心室頻脈（最常見為左後分支）"
+          }
+        ]
+      },
+      "channelopathies": {
+        "en": "Channelopathies",
+        "zh": "離子通道病變",
+        "items": [
+          {
+            "en": "Long QT Syndrome",
+            "zh": "長 QT 症候群"
+          },
+          {
+            "en": "Brugada Syndrome",
+            "zh": "布魯格達症候群"
+          },
+          {
+            "en": "Catecholaminergic Polymorphic VT (CPVT)",
+            "zh": "兒茶酚胺敏感性多型性心室頻脈（CPVT）"
+          }
+        ]
+      },
+      "reversible_causes": {
+        "en": "Reversible Causes",
+        "zh": "可逆性因素",
+        "items": [
+          {
+            "en": "Electrolyte abnormalities (Hypokalemia, Hypomagnesemia, Hypocalcemia)",
+            "zh": "電解質異常（低血鉀、低血鎂、低血鈣）"
+          },
+          {
+            "en": "Drug toxicity (Digoxin, QT-prolonging agents)",
+            "zh": "藥物毒性（毛地黃、QT 延長藥物）"
+          },
+          {
+            "en": "Acute ischemia",
+            "zh": "急性缺血"
+          }
+        ]
+      }
+    }
+  },
+  "pathophysiology": {
+    "en": "Pathophysiology (Mechanisms of VT)",
+    "zh": "病理生理學（VT 機轉）",
+    "mechanisms": [
+      {
+        "type": "reentry",
+        "name": {
+          "en": "Reentry (Most Common)",
+          "zh": "折返（最常見）"
+        },
+        "description": {
+          "en": "Electrical signals circulate around scar or diseased tissue (post-MI, cardiomyopathy). Requires slow conduction and unidirectional block.",
+          "zh": "電訊號繞著疤痕或病變組織不斷循環（心肌梗塞後、心肌病變）。需要緩慢傳導及單向阻斷。"
+        }
+      },
+      {
+        "type": "triggered_activity",
+        "name": {
+          "en": "Triggered Activity",
+          "zh": "觸發活動"
+        },
+        "subtypes": [
+          {
+            "type": "ead",
+            "name": {
+              "en": "Early Afterdepolarizations (EADs)",
+              "zh": "早期後去極化（EAD）"
+            },
+            "description": {
+              "en": "Phase 2/3. Prolonged AP (Long QT). Triggers Torsades.",
+              "zh": "發生於動作電位 Phase 2/3。延長的動作電位（Long QT）。觸發 Torsades。"
+            }
+          },
+          {
+            "type": "dad",
+            "name": {
+              "en": "Delayed Afterdepolarizations (DADs)",
+              "zh": "延遲後去極化（DAD）"
+            },
+            "description": {
+              "en": "Phase 4. Ca²⁺ overload (CPVT, digitalis toxicity). Triggers VT.",
+              "zh": "發生於動作電位 Phase 4。細胞內鈣離子過多（CPVT、毛地黃中毒）。觸發 VT。"
+            }
+          }
+        ]
+      },
+      {
+        "type": "enhanced_automaticity",
+        "name": {
+          "en": "Enhanced Automaticity",
+          "zh": "自動性增強"
+        },
+        "description": {
+          "en": "Abnormal spontaneous depolarization. Seen in ischemia, electrolyte abnormalities.",
+          "zh": "異常的自發去極化。見於缺血、電解質異常。"
+        }
+      }
+    ]
+  },
+  "clinical_presentation": {
+    "en": "Clinical Presentation",
+    "zh": "臨床表現",
+    "hemodynamically_stable": {
+      "en": "Hemodynamically Stable",
+      "zh": "血流動力學穩定",
+      "symptoms": [
+        {
+          "en": "Palpitations",
+          "zh": "心悸"
+        },
+        {
+          "en": "Chest discomfort",
+          "zh": "胸部不適"
+        },
+        {
+          "en": "Dyspnea",
+          "zh": "呼吸困難"
+        },
+        {
+          "en": "Lightheadedness",
+          "zh": "頭暈"
+        }
+      ]
+    },
+    "hemodynamically_unstable": {
+      "en": "Hemodynamically Unstable",
+      "zh": "血流動力學不穩定",
+      "symptoms": [
+        {
+          "en": "Hypotension (SBP < 90 mmHg)",
+          "zh": "低血壓（收縮壓 < 90 mmHg）"
+        },
+        {
+          "en": "Altered mental status",
+          "zh": "意識改變"
+        },
+        {
+          "en": "Acute heart failure / Pulmonary edema",
+          "zh": "急性心衰竭 / 肺水腫"
+        },
+        {
+          "en": "Ischemic chest pain",
+          "zh": "缺血性胸痛"
+        },
+        {
+          "en": "Signs of shock",
+          "zh": "休克徵象"
+        }
+      ]
+    },
+    "pulseless_vt": {
+      "en": "Pulseless VT (Cardiac Arrest)",
+      "zh": "無脈搏心室頻脈（心臟驟停）",
+      "warning": {
+        "en": "IMMEDIATE ACLS INTERVENTION REQUIRED",
+        "zh": "需立即進行高級心臟救命術（ACLS）"
+      },
+      "signs": [
+        {
+          "en": "Unresponsive",
+          "zh": "無反應"
+        },
+        {
+          "en": "No pulse",
+          "zh": "無脈搏"
+        },
+        {
+          "en": "Apnea or agonal respirations",
+          "zh": "呼吸停止或瀕死呼吸"
+        }
+      ]
+    }
+  },
+  "treatment": {
+    "overview": {
+      "en": "Management of Ventricular Tachycardia: Acute Treatment Strategy",
+      "zh": "心室頻脈處置：急性期治療策略"
+    },
+    "fundamental_principle": {
+      "en": "Treat Wide QRS Tachycardia as VT when diagnosis is uncertain (whether VT is confirmed or not).",
+      "zh": "當診斷不確定時，將寬 QRS 波快速節律當作 VT 處理（無論 VT 是否已確診）。"
+    },
+    "pulseless_or_unstable": {
+      "en": "1. Pulseless VT or Hemodynamically Unstable",
+      "zh": "1. 無脈搏 VT 或血流動力學不穩定",
+      "acls_protocol": {
+        "en": "Immediate ACLS Protocol",
+        "zh": "緊急 ACLS 流程",
+        "steps": [
+          {
+            "en": "Prioritize CPR for Pulseless VT",
+            "zh": "無脈搏 VT 優先進行 CPR"
+          },
+          {
+            "en": "Unsynchronized shock (Defibrillation) for Pulseless VT",
+            "zh": "無脈搏 VT 使用非同步電擊（去顫）"
+          },
+          {
+            "en": "Synchronized cardioversion for UNSTABLE VT with PULSE (Start at 100 J biphasic, escalate if needed)",
+            "zh": "不穩定但有脈搏的 VT 使用同步電擊（雙相波從 100 J 開始，必要時提高能量）"
+          }
+        ]
+      },
+      "defibrillation_energy": {
+        "biphasic": {
+          "en": "120-200 J (device-specific)",
+          "zh": "120-200 J（依機型而定）"
+        },
+        "monophasic": {
+          "en": "360 J",
+          "zh": "360 J"
+        }
+      }
+    },
+    "stable_sustained_vt": {
+      "en": "2. Stable but Sustained VT (Hemodynamically Stable with Pulse)",
+      "zh": "2. 穩定但持續性 VT（血流動力學穩定且有脈搏）",
+      "approach": {
+        "en": "Intravenous Antiarrhythmic Therapy",
+        "zh": "靜脈抗心律不整藥物治療"
+      },
+      "agents": [
+        {
+          "drug": "Amiodarone",
+          "dose": {
+            "en": "150 mg IV over 10 min, then 1 mg/min × 6h, then 0.5 mg/min",
+            "zh": "150 mg IV 於 10 分鐘內給予，之後 1 mg/min × 6 小時，再 0.5 mg/min"
+          },
+          "notes": {
+            "en": "First-line agent; broad spectrum; preferred especially with reduced EF",
+            "zh": "第一線用藥；廣效；尤其適用於射出分率降低者"
+          }
+        },
+        {
+          "drug": "Lidocaine",
+          "dose": {
+            "en": "1-1.5 mg/kg bolus, then 1-4 mg/min infusion",
+            "zh": "1-1.5 mg/kg 靜脈推注，之後 1-4 mg/min 持續輸注"
+          },
+          "notes": {
+            "en": "Alternative; consider in acute ischemia/MI setting",
+            "zh": "替代選擇；急性缺血/心肌梗塞時可考慮"
+          }
+        },
+        {
+          "drug": "Procainamide",
+          "dose": {
+            "en": "20-50 mg/min until arrhythmia suppressed, max 17 mg/kg",
+            "zh": "20-50 mg/min 直到心律不整終止，最大劑量 17 mg/kg"
+          },
+          "notes": {
+            "en": "Monitor for hypotension and QRS widening; avoid in severe HF",
+            "zh": "監測低血壓及 QRS 波寬度；嚴重心衰竭時避免使用"
+          }
+        }
+      ]
+    },
+    "electrical_cardioversion": {
+      "en": "3. Electrical Cardioversion for Stable VT",
+      "zh": "3. 穩定 VT 的電擊心律轉復",
+      "description": {
+        "en": "Preferred over medications in some situations",
+        "zh": "某些情況下優於藥物治療"
+      },
+      "key_points": [
+        {
+          "en": "Always use SYNCHRONIZED MODE for VT with PULSE",
+          "zh": "有脈搏的 VT 必須使用同步模式"
+        },
+        {
+          "en": "SEDATION REQUIRED if patient conscious",
+          "zh": "若病患清醒，需先給予鎮靜"
+        }
+      ]
+    },
+    "address_reversible_factors": {
+      "en": "4. Address Electrolytes and Reversible Factors",
+      "zh": "4. 評估電解質與可逆因素",
+      "critical_corrections": [
+        {
+          "factor": "hypokalemia",
+          "en": "Hypokalemia: Target K⁺ > 4.0 mEq/L in arrhythmia patients",
+          "zh": "低血鉀：心律不整病患目標 K⁺ > 4.0 mEq/L"
+        },
+        {
+          "factor": "hypomagnesemia",
+          "en": "Hypomagnesemia: Replete Mg²⁺ (especially important in Torsades)",
+          "zh": "低血鎂：補充 Mg²⁺（對 Torsades 尤為重要）"
+        },
+        {
+          "factor": "hypocalcemia",
+          "en": "Hypocalcemia: Correct if present",
+          "zh": "低血鈣：如有則矯正"
+        },
+        {
+          "factor": "drug_toxicity",
+          "en": "Eliminate Drug Toxicity: Discontinue QT-prolonging agents, digoxin if toxic",
+          "zh": "排除藥物毒性：停用延長 QT 藥物；若毛地黃中毒則停藥"
+        }
+      ],
+      "drug_selection_considerations": {
+        "en": "Drug Selection Considerations",
+        "zh": "藥物選擇考量",
+        "items": [
+          {
+            "en": "Amiodarone: First-line, reduced EF",
+            "zh": "Amiodarone：第一線，適用於射出分率降低者"
+          },
+          {
+            "en": "Lidocaine: Ischemia/MI setting",
+            "zh": "Lidocaine：缺血/心肌梗塞情況"
+          },
+          {
+            "en": "Procainamide: Monitor QRS/BP, avoid in severe HF",
+            "zh": "Procainamide：監測 QRS 及血壓，嚴重心衰竭時避免"
+          }
+        ]
+      }
+    },
+    "pulseless_vt_acls": {
+      "en": "Pulseless VT - ACLS Algorithm",
+      "zh": "無脈搏 VT — ACLS 流程",
+      "pharmacotherapy": {
+        "en": "Pharmacotherapy during CPR",
+        "zh": "CPR 期間藥物治療",
+        "agents": [
+          {
+            "drug": "Epinephrine",
+            "dose": {
+              "en": "1 mg IV/IO every 3-5 minutes",
+              "zh": "1 mg IV/IO 每 3-5 分鐘"
+            }
+          },
+          {
+            "drug": "Amiodarone",
+            "dose": {
+              "en": "300 mg IV/IO first dose after 2-3 shocks; 150 mg second dose",
+              "zh": "首劑 300 mg IV/IO（在 2-3 次電擊後）；第二劑 150 mg"
+            }
+          },
+          {
+            "drug": "Lidocaine",
+            "dose": {
+              "en": "1-1.5 mg/kg first dose; 0.5-0.75 mg/kg subsequent (alternative to amiodarone)",
+              "zh": "首劑 1-1.5 mg/kg；後續 0.5-0.75 mg/kg（作為 Amiodarone 的替代選擇）"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "prevention": {
+    "en": "Long-Term Prevention of Ventricular Tachycardia",
+    "zh": "心室頻脈的長期預防",
+    "icd": {
+      "en": "1. Implantable Cardioverter-Defibrillator (ICD)",
+      "zh": "1. 植入式心律去顫器（ICD）",
+      "purpose": {
+        "en": "Reduce sudden cardiac death risk by providing immediate defibrillation",
+        "zh": "提供即時電擊去顫，降低心因性猝死風險"
+      },
+      "primary_prevention": {
+        "en": "Primary Prevention (Heart Failure)",
+        "zh": "初級預防（心衰竭）",
+        "indications": [
+          {
+            "en": "EF ≤ 35% with NYHA Class II-III heart failure",
+            "zh": "射出分率 ≤ 35% 合併 NYHA II-III 級心衰竭"
+          },
+          {
+            "en": "Prior MI with EF ≤ 30%",
+            "zh": "心肌梗塞後射出分率 ≤ 30%"
+          },
+          {
+            "en": "High-risk cardiomyopathy (HCM, ARVC with risk factors)",
+            "zh": "高風險心肌病變（HCM、合併危險因子的 ARVC）"
+          }
+        ]
+      },
+      "secondary_prevention": {
+        "en": "Secondary Prevention (Survivors of VT/VF)",
+        "zh": "次級預防（VT/VF 存活者）",
+        "indications": [
+          {
+            "en": "Sustained VT/VF survivors",
+            "zh": "持續性 VT/VF 存活者"
+          },
+          {
+            "en": "Not completely reversible cause",
+            "zh": "非完全可逆的原因"
+          }
+        ]
+      }
+    },
+    "antiarrhythmic_drug_therapy": {
+      "en": "2. Antiarrhythmic Drug Therapy",
+      "zh": "2. 抗心律不整藥物治療",
+      "agents": [
+        {
+          "drug": "Amiodarone",
+          "role": {
+            "en": "Most effective for reducing VT recurrence",
+            "zh": "減少 VT 復發最有效"
+          },
+          "considerations": {
+            "en": "Significant long-term toxicity: thyroid, pulmonary, hepatic",
+            "zh": "長期使用有明顯毒性：甲狀腺、肺部、肝臟"
+          }
+        },
+        {
+          "drug": "Sotalol",
+          "role": {
+            "en": "Combined β-blocker and Class III effects",
+            "zh": "合併 β 受體阻斷劑及第三類抗心律不整作用"
+          },
+          "considerations": {
+            "en": "Proarrhythmic risk; requires QT monitoring",
+            "zh": "有致心律不整風險；需監測 QT"
+          }
+        },
+        {
+          "drug": "Beta-blockers",
+          "role": {
+            "en": "First-line adjunct therapy, reduce sympathetic triggers",
+            "zh": "第一線輔助用藥，減少交感神經觸發"
+          },
+          "considerations": {
+            "en": "Mortality benefit in heart failure",
+            "zh": "心衰竭病患有死亡率效益"
+          }
+        },
+        {
+          "drug": "Mexiletine",
+          "role": {
+            "en": "Adjunct to amiodarone",
+            "zh": "Amiodarone 的輔助用藥"
+          },
+          "considerations": {
+            "en": "Useful in refractory cases",
+            "zh": "用於難治性病例"
+          }
+        }
+      ]
+    },
+    "catheter_ablation": {
+      "en": "3. Catheter Ablation",
+      "zh": "3. 導管消融術",
+      "description": {
+        "en": "Highly effective for VT with identifiable foci",
+        "zh": "對於具有明確病灶的 VT 療效佳"
+      },
+      "success_rates": [
+        {
+          "vt_type": "idiopathic_rvot_vt",
+          "name": {
+            "en": "Idiopathic RVOT VT",
+            "zh": "原發性右心室流出道 VT"
+          },
+          "success_rate": "> 90%"
+        },
+        {
+          "vt_type": "fascicular_vt",
+          "name": {
+            "en": "Fascicular VT",
+            "zh": "束支性 VT"
+          },
+          "success_rate": "> 90%"
+        },
+        {
+          "vt_type": "scar_related_vt",
+          "name": {
+            "en": "Scar-related VT",
+            "zh": "疤痕相關 VT"
+          },
+          "success_rate": "50-80% (reduces burden)"
+        }
+      ],
+      "indications": [
+        {
+          "en": "Scar-related VT with recurrent ICD shocks",
+          "zh": "疤痕相關 VT 合併反覆 ICD 電擊"
+        },
+        {
+          "en": "Idiopathic VT as potential cure",
+          "zh": "原發性 VT 可作為根治性治療"
+        },
+        {
+          "en": "Drug-refractory VT",
+          "zh": "藥物難治性 VT"
+        },
+        {
+          "en": "Incessant VT or VT storm",
+          "zh": "持續不斷的 VT 或 VT 風暴"
+        }
+      ]
+    },
+    "novel_refractory_management": {
+      "en": "4. Novel & Refractory VT Management",
+      "zh": "4. 新式療法及難治性 VT 處置",
+      "star": {
+        "name": {
+          "en": "Stereotactic Arrhythmia Radioablation (STAR)",
+          "zh": "立體定位心律不整放射消融術（STAR）"
+        },
+        "description": {
+          "en": "Uses focused radiation to ablate arrhythmogenic tissue. Non-invasive approach.",
+          "zh": "使用聚焦放射線消融致心律不整組織。非侵入性方法。"
+        },
+        "indications": [
+          {
+            "en": "Failed catheter ablation",
+            "zh": "導管消融術失敗"
+          },
+          {
+            "en": "Not candidates for invasive procedures",
+            "zh": "不適合侵入性手術者"
+          }
+        ]
+      },
+      "lcsd": {
+        "name": {
+          "en": "Left Cardiac Sympathetic Denervation (LCSD)",
+          "zh": "左側心臟交感神經切斷術（LCSD）"
+        },
+        "description": {
+          "en": "Surgical denervation of left stellate ganglion.",
+          "zh": "外科切斷左側星狀神經節。"
+        },
+        "indications": [
+          {
+            "en": "Useful in catecholaminergic VT (CPVT) and refractory VT storm",
+            "zh": "適用於兒茶酚胺敏感性 VT（CPVT）及難治性 VT 風暴"
+          },
+          {
+            "en": "Long QT syndrome with recurrent events despite beta-blockers",
+            "zh": "長 QT 症候群使用 β 阻斷劑後仍反覆發作者"
+          }
+        ]
+      }
+    }
+  },
+  "special_considerations": {
+    "vt_storm": {
+      "en": "VT Storm",
+      "zh": "VT 風暴",
+      "definition": {
+        "en": "≥ 3 separate episodes of sustained VT within 24 hours, each requiring intervention",
+        "zh": "24 小時內發生 ≥ 3 次獨立的持續性 VT 發作，每次均需介入處理"
+      },
+      "management": [
+        {
+          "en": "Aggressive electrolyte correction",
+          "zh": "積極矯正電解質"
+        },
+        {
+          "en": "IV amiodarone",
+          "zh": "靜脈 Amiodarone"
+        },
+        {
+          "en": "Beta-blocker (esmolol or propranolol IV)",
+          "zh": "β 阻斷劑（esmolol 或 propranolol IV）"
+        },
+        {
+          "en": "Deep sedation/intubation if needed",
+          "zh": "必要時深度鎮靜/插管"
+        },
+        {
+          "en": "Consider urgent catheter ablation",
+          "zh": "考慮緊急導管消融術"
+        }
+      ]
+    },
+    "torsades_de_pointes": {
+      "en": "Torsades de Pointes Management",
+      "zh": "尖端扭轉型心室頻脈處置",
+      "key_treatments": [
+        {
+          "en": "Magnesium sulfate 1-2 g IV (first-line)",
+          "zh": "硫酸鎂 1-2 g IV（第一線）"
+        },
+        {
+          "en": "Discontinue QT-prolonging drugs",
+          "zh": "停用延長 QT 的藥物"
+        },
+        {
+          "en": "Correct hypokalemia",
+          "zh": "矯正低血鉀"
+        },
+        {
+          "en": "Consider overdrive pacing if refractory",
+          "zh": "難治者考慮超速起搏"
+        },
+        {
+          "en": "Isoproterenol for pause-dependent Torsades",
+          "zh": "暫停依賴型 Torsades 可用 Isoproterenol"
+        }
+      ],
+      "avoid": {
+        "en": "AVOID Amiodarone, Sotalol, Procainamide (all prolong QT)",
+        "zh": "避免使用 Amiodarone、Sotalol、Procainamide（均會延長 QT）"
+      }
+    }
+  },
+  "summary_table": {
+    "en": "VT Management Quick Reference",
+    "zh": "VT 處置快速參考",
+    "scenarios": [
+      {
+        "scenario": {
+          "en": "Pulseless VT",
+          "zh": "無脈搏 VT"
+        },
+        "action": {
+          "en": "CPR + Defibrillation (unsynchronized) + Epinephrine + Amiodarone/Lidocaine",
+          "zh": "CPR + 電擊去顫（非同步）+ Epinephrine + Amiodarone/Lidocaine"
+        }
+      },
+      {
+        "scenario": {
+          "en": "Unstable VT with pulse",
+          "zh": "不穩定有脈搏 VT"
+        },
+        "action": {
+          "en": "Synchronized cardioversion (sedate if possible)",
+          "zh": "同步電擊（可能時先鎮靜）"
+        }
+      },
+      {
+        "scenario": {
+          "en": "Stable monomorphic VT",
+          "zh": "穩定單型性 VT"
+        },
+        "action": {
+          "en": "Antiarrhythmics (Amiodarone, Lidocaine, Procainamide) or elective cardioversion",
+          "zh": "抗心律不整藥（Amiodarone、Lidocaine、Procainamide）或擇期電擊轉復"
+        }
+      },
+      {
+        "scenario": {
+          "en": "Polymorphic VT with normal QT",
+          "zh": "正常 QT 的多型性 VT"
+        },
+        "action": {
+          "en": "Treat as ischemia; beta-blockers; consider amiodarone",
+          "zh": "當作缺血處理；β 阻斷劑；可考慮 Amiodarone"
+        }
+      },
+      {
+        "scenario": {
+          "en": "Torsades de Pointes (prolonged QT)",
+          "zh": "Torsades de Pointes（QT 延長）"
+        },
+        "action": {
+          "en": "Magnesium IV; stop QT drugs; consider pacing",
+          "zh": "硫酸鎂 IV；停用 QT 延長藥物；考慮起搏"
+        }
+      }
+    ]
+  },
+  "references": {
+    "guidelines": [
+      "2017 AHA/ACC/HRS Guideline for Management of Patients With Ventricular Arrhythmias and the Prevention of Sudden Cardiac Death",
+      "2022 ESC Guidelines for the Management of Patients With Ventricular Arrhythmias and the Prevention of Sudden Cardiac Death",
+      "2020 AHA Guidelines for CPR and Emergency Cardiovascular Care",
+      "2018 AHA Focused Update on ACLS Use of Antiarrhythmic Drugs",
+      "2025 AHA ACLS Guidelines Update"
+    ]
+  }
+}

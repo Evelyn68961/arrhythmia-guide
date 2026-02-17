@@ -95,8 +95,8 @@
     }
   },
   "etiology": {
-    "en": "Classification & Etiology",
-    "zh": "分類與病因",
+    "en": "Etiology",
+    "zh": "病因",
     "structural_heart_disease": {
       "en": "Structural Heart Disease (Most Common)",
       "zh": "結構性心臟疾病（最常見）",
@@ -336,16 +336,6 @@
             "zh": "不穩定但有脈搏的 VT 使用同步電擊（雙相波從 100 J 開始，必要時提高能量）"
           }
         ]
-      },
-      "defibrillation_energy": {
-        "biphasic": {
-          "en": "120-200 J (device-specific)",
-          "zh": "120-200 J（依機型而定）"
-        },
-        "monophasic": {
-          "en": "360 J",
-          "zh": "360 J"
-        }
       }
     },
     "stable_sustained_vt": {
@@ -585,51 +575,28 @@
         "en": "Highly effective for VT with identifiable foci",
         "zh": "對於具有明確病灶的 VT 療效佳"
       },
-      "success_rates": [
-        {
-          "vt_type": "idiopathic_rvot_vt",
-          "name": {
-            "en": "Idiopathic RVOT VT",
-            "zh": "原發性右心室流出道 VT"
+      "indications": {
+        "en": "Indications for Catheter Ablation",
+        "zh": "導管消融術適應症",
+        "items": [
+          {
+            "en": "Scar-related VT with recurrent ICD shocks",
+            "zh": "疤痕相關 VT 合併反覆 ICD 電擊"
           },
-          "success_rate": "> 90%"
-        },
-        {
-          "vt_type": "fascicular_vt",
-          "name": {
-            "en": "Fascicular VT",
-            "zh": "束支性 VT"
+          {
+            "en": "Idiopathic VT as potential cure",
+            "zh": "原發性 VT 可作為根治性治療"
           },
-          "success_rate": "> 90%"
-        },
-        {
-          "vt_type": "scar_related_vt",
-          "name": {
-            "en": "Scar-related VT",
-            "zh": "疤痕相關 VT"
+          {
+            "en": "Drug-refractory VT",
+            "zh": "藥物難治性 VT"
           },
-          "success_rate": "50-80% (reduces burden)"
-        }
-      ],
-      "indications": [
-        {
-          "en": "Scar-related VT with recurrent ICD shocks",
-          "zh": "疤痕相關 VT 合併反覆 ICD 電擊"
-        },
-        {
-          "en": "Idiopathic VT as potential cure",
-          "zh": "原發性 VT 可作為根治性治療"
-        },
-        {
-          "en": "Drug-refractory VT",
-          "zh": "藥物難治性 VT"
-        },
-        {
-          "en": "Incessant VT or VT storm",
-          "zh": "持續不斷的 VT 或 VT 風暴"
-        }
-      ]
-    },
+          {
+            "en": "Incessant VT or VT storm",
+            "zh": "持續不斷的 VT 或 VT 風暴"
+          }
+        ]
+      },
     "novel_refractory_management": {
       "en": "4. Novel & Refractory VT Management",
       "zh": "4. 新式療法及難治性 VT 處置",
@@ -792,6 +759,7 @@
         }
       }
     ]
+  }
   },
   "references": {
     "guidelines": [

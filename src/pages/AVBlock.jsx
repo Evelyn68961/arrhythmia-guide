@@ -50,32 +50,32 @@ export default function AVBlock() {
 
       {/* Two Column Layout */}
       <div className="two-column">
-      <div className="column-left">
-        <div className={`tab-content ${activeTab === 0 ? 'active' : ''}`}>
-          <img src={introImg} alt="AV Block Overview" />
+        <div className="column-left">
+          <div className={`tab-content ${activeTab === 0 ? 'active' : ''}`}>
+            <img src={introImg} alt="AV Block Overview" />
+          </div>
+          <div className={`tab-content ${activeTab === 1 ? 'active' : ''}`}>
+            <img src={strategyImg} alt="AV Block Strategy" />
+          </div>
+          <div className={`tab-content ${activeTab === 2 ? 'active' : ''}`}>
+            <img src={classificationImg} alt="AV Block Management" />
+          </div>
+          <div className="references">
+            <h4>{lang === 'en' ? 'References' : '參考資料'}</h4>
+            <ul>
+              <li>
+                <a href="https://www.msdmanuals.com/professional/cardiovascular-disorders/specific-cardiac-arrhythmias/atrioventricular-block" target="_blank" rel="noopener noreferrer">
+                  MSD Manual - Atrioventricular Block
+                </a>
+              </li>
+              <li>
+                <a href="https://www.ncbi.nlm.nih.gov/books/NBK459147/" target="_blank" rel="noopener noreferrer">
+                  NCBI - Atrioventricular Block
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className={`tab-content ${activeTab === 1 ? 'active' : ''}`}>
-          <img src={strategyImg} alt="AV Block Strategy" />
-        </div>
-        <div className={`tab-content ${activeTab === 2 ? 'active' : ''}`}>
-          <img src={classificationImg} alt="AV Block Management" />
-        </div>
-        <div className="references">
-          <h4>{lang === 'en' ? 'References' : '參考資料'}</h4>
-          <ul>
-            <li>
-              <a href="https://www.msdmanuals.com/professional/cardiovascular-disorders/specific-cardiac-arrhythmias/atrioventricular-block" target="_blank" rel="noopener noreferrer">
-                MSD Manual - Atrioventricular Block
-              </a>
-            </li>
-            <li>
-              <a href="https://www.ncbi.nlm.nih.gov/books/NBK459147/" target="_blank" rel="noopener noreferrer">
-                NCBI - Atrioventricular Block
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
         <div className="column-right">
           {/* Tab 0: Overview */}
           <div className={`tab-content ${activeTab === 0 ? 'active' : ''}`}>

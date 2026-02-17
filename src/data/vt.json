@@ -23,62 +23,6 @@
         "en": "Wide QRS (≥ 120 ms), morphology depends on origin",
         "zh": "QRS 波寬（≥ 120 ms），形態依起源部位而異"
       }
-    },
-    "features_suggesting_vt": {
-      "en": "Features Suggesting VT",
-      "zh": "提示 VT 的特徵",
-      "items": [
-        {
-          "feature": "av_dissociation",
-          "en": "AV dissociation (P waves independent of QRS)",
-          "zh": "房室分離（P 波與 QRS 波獨立）"
-        },
-        {
-          "feature": "fusion_capture_beats",
-          "en": "Fusion beats / Capture beats",
-          "zh": "融合波 / 奪取波（Fusion / Capture beats）"
-        },
-        {
-          "feature": "very_wide_qrs",
-          "en": "Very wide QRS (> 160 ms)",
-          "zh": "極寬 QRS 波（> 160 ms）"
-        },
-        {
-          "feature": "concordance",
-          "en": "Concordance (V1-V6 all positive or all negative)",
-          "zh": "V1-V6 同向性（全正向或全負向）"
-        }
-      ]
-    },
-    "brugada_criteria": {
-      "en": "Brugada Criteria (Brief)",
-      "zh": "布魯格達準則（簡述）",
-      "note": {
-        "en": "If any criterion is met, diagnosis is VT",
-        "zh": "若符合任一項，診斷為 VT"
-      },
-      "items": [
-        {
-          "en": "No RS complex in precordial leads (V1-V6)",
-          "zh": "V1-V6 無 RS 波型（全正或全負向）"
-        },
-        {
-          "en": "RS interval > 100 ms in any precordial lead",
-          "zh": "任一胸前導程 RS 間距 > 100 ms"
-        },
-        {
-          "en": "AV dissociation present",
-          "zh": "有房室分離"
-        },
-        {
-          "en": "Morphology criteria for VT in V1-V2 and V6",
-          "zh": "V1-V2 及 V6 符合 VT 形態學準則"
-        }
-      ]
-    },
-    "clinical_pearl": {
-      "en": "When uncertain whether a wide QRS tachycardia is VT or SVT with aberrancy, TREAT AS VT. This is safer.",
-      "zh": "當無法確定寬 QRS 波心搏過速是 VT 或 SVT 併傳導異常時，先當作 VT 處理。這樣比較安全。"
     }
   },
   "classification": {

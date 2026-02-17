@@ -34,27 +34,27 @@ body {
 }
 
 /* ==================== */
-/* Bradyarrhythmias     */
+/* Shared Section Layout */
 /* ==================== */
 
-.brady-header {
+.section-header {
   display: flex;
   align-items: center;
   gap: 2rem;
   padding: 1.5rem 2rem;
 }
 
-.brady-header h1 {
+.section-header h1 {
   padding: 0;
   margin: 0;
 }
 
-.brady-nav {
+.section-nav {
   display: flex;
   gap: 1.5rem;
 }
 
-.brady-nav button {
+.section-nav button {
   background: none;
   border: none;
   color: #2c3e50;
@@ -63,11 +63,19 @@ body {
   padding: 0;
 }
 
-.brady-nav button:hover {
+.section-nav button:hover {
   color: #3498db;
 }
 
-.brady-section {
+.nav-label {
+  color: #2c3e50;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section-wrapper {
   background: #f8f9fb;
   border-radius: 0;
   margin: 0 2rem;
@@ -75,23 +83,13 @@ body {
   box-shadow: none;
 }
 
-.brady-section:first-of-type {
-  margin-top: 2rem;
-  border-radius: 12px 12px 0 0;
-}
-
-.brady-section:last-of-type {
-  margin-bottom: 2rem;
-  border-radius: 0 0 12px 12px;
-}
-
-.brady-section:first-of-type {
+.section-wrapper:first-of-type {
   margin-top: 2rem;
   border-radius: 12px 12px 0 0;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.04);
 }
 
-.brady-section:last-of-type {
+.section-wrapper:last-of-type {
   margin-bottom: 2rem;
   border-radius: 0 0 12px 12px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);

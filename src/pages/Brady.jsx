@@ -26,11 +26,11 @@ export default function Brady() {
 
   return (
     <div>
-      <div className="brady-header">
+      <div className="section-header">
         <h1>Bradyarrhythmias</h1>
-        <nav className="brady-nav">
+        <nav className="section-nav">
           <button onClick={() => scrollToSection('snd')}>
-            Sinus Node Dysfunction
+            Sinus Node Dysfunction (SND)
           </button>
           <button onClick={() => scrollToSection('avblock')}>
             AV Block
@@ -39,12 +39,12 @@ export default function Brady() {
       </div>
 
       {/* SND Section */}
-      <section id="snd" className="brady-section">
+      <section id="snd" className="section-wrapper">
         <SND />
       </section>
 
       {/* AV Block Section */}
-      <section id="avblock" className="brady-section">
+      <section id="avblock" className="section-wrapper">
         <AVBlock />
       </section>
     </div>

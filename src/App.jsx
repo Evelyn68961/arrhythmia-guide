@@ -3,10 +3,6 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Fundamentals from './pages/Fundamentals'
 import Tachy from './pages/Tachy'
-import SVT from './pages/SVT'
-import AF from './pages/AF'
-import VT from './pages/VT'
-import VF from './pages/VF'
 import Brady from './pages/Brady'
 import NotFound from './pages/NotFound'
 
@@ -20,12 +16,7 @@ function App() {
           <Route path="/fundamentals" element={<Fundamentals />} />
           
           {/* Tachyarrhythmias - nested routes */}
-          <Route path="/tachyarrhythmias" element={<Tachy />}>
-            <Route path="svt" element={<SVT />} />
-            <Route path="af" element={<AF />} />
-            <Route path="vt" element={<VT />} />
-            <Route path="vf" element={<VF />} />
-          </Route>
+          <Route path="/tachyarrhythmias" element={<Tachy />} />
           
           {/* Bradyarrhythmias - nested routes */}
           <Route path="/bradyarrhythmias" element={<Brady />} />

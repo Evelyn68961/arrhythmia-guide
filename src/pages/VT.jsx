@@ -276,11 +276,23 @@ export default function VT() {
               {data.prevention.catheter_ablation.indications.items.map((item, index) => (
                 <li key={index}>{item[lang]}</li>
               ))}
-            </ul> 
+            </ul>
 
-
-
-
+            <h4>{data.prevention.novel_refractory_management[lang]}</h4>
+            <h5>{data.prevention.novel_refractory_management.star.name[lang]}</h5>
+            <p>{data.prevention.novel_refractory_management.star.description[lang]}</p>
+            <ul>
+              {data.prevention.novel_refractory_management.star.indications.map((item, index) => (
+                <li key={index}>{item[lang]}</li>
+              ))}
+            </ul>
+            <h5>{data.prevention.novel_refractory_management.lcsd.name[lang]}</h5>
+            <p>{data.prevention.novel_refractory_management.lcsd.description[lang]}</p>
+            <ul>
+              {data.prevention.novel_refractory_management.lcsd.indications.map((item, index) => (
+                <li key={index}>{item[lang]}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

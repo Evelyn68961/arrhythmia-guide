@@ -596,7 +596,8 @@
             "zh": "持續不斷的 VT 或 VT 風暴"
           }
         ]
-      },
+      }
+    },
     "novel_refractory_management": {
       "en": "4. Novel & Refractory VT Management",
       "zh": "4. 新式療法及難治性 VT 處置",
@@ -760,14 +761,5 @@
       }
     ]
   }
-  },
-  "references": {
-    "guidelines": [
-      "2017 AHA/ACC/HRS Guideline for Management of Patients With Ventricular Arrhythmias and the Prevention of Sudden Cardiac Death",
-      "2022 ESC Guidelines for the Management of Patients With Ventricular Arrhythmias and the Prevention of Sudden Cardiac Death",
-      "2020 AHA Guidelines for CPR and Emergency Cardiovascular Care",
-      "2018 AHA Focused Update on ACLS Use of Antiarrhythmic Drugs",
-      "2025 AHA ACLS Guidelines Update"
-    ]
-  }
 }
+

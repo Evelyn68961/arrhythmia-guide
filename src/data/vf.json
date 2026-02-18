@@ -54,8 +54,8 @@
     ]
   },
   "etiology": {
-    "en": "Classification & Etiology",
-    "zh": "分類與病因",
+    "en": "Etiology",
+    "zh": "病因",
     "primary": {
       "en": "Idiopathic (Primary)",
       "zh": "原發性（Idiopathic）",
@@ -440,18 +440,6 @@
           }
         }
       ]
-    }
-  },
-  "pathophysiology": {
-    "en": "Pathophysiology",
-    "zh": "病理生理學",
-    "mechanism": {
-      "en": "Chaotic ventricular activity: Multiple re-entrant circuits cause disorganized electrical activity throughout the ventricles, preventing coordinated contraction.",
-      "zh": "心室電活動混亂：多重折返迴路導致心室內電活動完全紊亂，無法產生協調的收縮。"
-    },
-    "consequence": {
-      "en": "No effective cardiac output → Immediate hemodynamic collapse → Death within minutes without intervention",
-      "zh": "無有效心輸出量 → 立即血流動力學崩潰 → 若不介入將在數分鐘內死亡"
     }
   }
 }

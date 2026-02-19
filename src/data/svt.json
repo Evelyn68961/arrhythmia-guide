@@ -1,0 +1,859 @@
+{
+  "topic": {
+    "en": "Supraventricular Tachycardia (SVT)",
+    "zh": "心室上頻脈（SVT）"
+  },
+  "definition": {
+    "en": "Supraventricular tachycardia (SVT) is a group of tachyarrhythmias originating at or above the atrioventricular (AV) node, characterized by a narrow QRS complex (< 120 ms) with a heart rate typically ranging from 150 to 250 bpm. SVT primarily involves reentrant circuits through or around the AV node. It excludes atrial fibrillation and atrial flutter. SVT affects 168 to 332 per 100,000 individuals and accounts for approximately 50,000 emergency department visits per year in the United States.",
+    "zh": "心室上頻脈（SVT）是一類起源於房室結或房室結以上的快速心律不整，特徵為窄 QRS 波（< 120 ms），心率通常在 150-250 bpm 之間。SVT 主要機制為電氣訊號在房室結或副傳導路徑中形成折返迴路（Re-entry circuit）。不含心房顫動及心房撲動。SVT 發生率約為每 10 萬人中 168-332 例，美國每年約有 50,000 次急診就醫。"
+  },
+  "ecg_characteristics": {
+    "en": "ECG Characteristics",
+    "zh": "心電圖特徵",
+    "general": {
+      "rate": {
+        "en": "150-250 bpm",
+        "zh": "150-250 bpm"
+      },
+      "rhythm": {
+        "en": "Regular (most types); irregular in multifocal atrial tachycardia",
+        "zh": "通常規則（大多數類型）；多源性心房頻脈為不規則"
+      },
+      "qrs_complex": {
+        "en": "Narrow QRS (< 120 ms); may be wide if aberrant conduction or pre-excitation",
+        "zh": "QRS 波窄（< 120 ms）；若合併差異傳導或預激則可能變寬"
+      },
+      "p_waves": {
+        "en": "Variable depending on SVT type: absent/buried in QRS (AVNRT), retrograde after QRS (AVRT), abnormal morphology before QRS (Atrial Tachycardia)",
+        "zh": "因 SVT 類型而異：缺如或埋在 QRS 中（AVNRT）、QRS 後方可見逆行 P 波（AVRT）、QRS 前方可見形態異常 P 波（心房頻脈）"
+      }
+    },
+    "ecg_by_type": {
+      "title": {
+        "en": "ECG Features by Type",
+        "zh": "各類型心電圖特徵"
+      },
+      "items": [
+        {
+          "type": "typical_svt",
+          "name": {
+            "en": "Typical SVT",
+            "zh": "典型 SVT"
+          },
+          "description": {
+            "en": "Narrow QRS, regular rhythm, rate 150-250 bpm. No visible P waves or P waves buried in QRS complex.",
+            "zh": "窄 QRS 波、規則節律、心率 150-250 bpm。P 波不可見或埋在 QRS 波群中。"
+          }
+        },
+        {
+          "type": "avnrt",
+          "name": {
+            "en": "AVNRT",
+            "zh": "房室結折返性心動過速（AVNRT）"
+          },
+          "description": {
+            "en": "No visible P waves or P waves buried in QRS; may see pseudo r' in V1 or pseudo S in inferior leads.",
+            "zh": "P 波不可見或埋藏在 QRS 波中；V1 導程可見偽 r' 波或下壁導程可見偽 S 波。"
+          }
+        },
+        {
+          "type": "accessory_pathway_wpw",
+          "name": {
+            "en": "Accessory Pathway (WPW)",
+            "zh": "副傳導路徑（WPW）"
+          },
+          "description": {
+            "en": "Delta wave on baseline ECG (slurred upstroke of QRS). Short PR interval (< 120 ms). During orthodromic AVRT: narrow QRS with retrograde P waves after QRS.",
+            "zh": "基礎心電圖可見 Delta 波（QRS 起始模糊上升）。PR 間期短（< 120 ms）。順向性 AVRT 發作時：窄 QRS 波，QRS 後方可見逆行 P 波。"
+          }
+        },
+        {
+          "type": "preexcited_af",
+          "name": {
+            "en": "Pre-excited AF (Danger)",
+            "zh": "預激性心房顫動（危險）"
+          },
+          "description": {
+            "en": "Irregular wide-complex tachycardia with varying QRS morphology. Extremely dangerous — may degenerate into VF. AVOID ALL AV nodal blockers.",
+            "zh": "不規則寬 QRS 波心搏過速，QRS 形態多變。極度危險 — 可能惡化為心室顫動。禁用所有房室結阻斷劑。"
+          }
+        }
+      ]
+    }
+  },
+  "classification": {
+    "by_mechanism": {
+      "en": "Classification by Mechanism",
+      "zh": "依機制分類",
+      "types": [
+        {
+          "type": "avnrt",
+          "name": {
+            "en": "Atrioventricular Nodal Reentrant Tachycardia (AVNRT) — ~60%",
+            "zh": "房室結折返性心動過速（AVNRT）— 約 60%"
+          },
+          "description": {
+            "en": "Reentry within the AV node due to dual pathways (fast and slow pathways) with different conduction velocities and refractory periods. Most common form of paroxysmal SVT. More prevalent in women. Typical form: antegrade conduction via slow pathway, retrograde via fast pathway (slow-fast).",
+            "zh": "折返迴路位於房室結內，源於「快-慢雙徑路（Dual pathways）」，具有不同的傳導速度及不反應期。是陣發性 SVT 最常見的類型。女性較多。典型型態：順向經由慢徑傳導，逆向經由快徑傳導（slow-fast）。"
+          }
+        },
+        {
+          "type": "avrt",
+          "name": {
+            "en": "Atrioventricular Reentrant Tachycardia (AVRT) — ~30%",
+            "zh": "房室折返性心動過速（AVRT）— 約 30%"
+          },
+          "description": {
+            "en": "Reentry using an accessory pathway (e.g., Bundle of Kent in WPW syndrome) connecting atria and ventricles bypassing the AV node. Orthodromic AVRT (90%): antegrade via AV node, retrograde via accessory pathway (narrow QRS). Antidromic AVRT (10%): antegrade via accessory pathway, retrograde via AV node (wide QRS, fully pre-excited). Slightly more common in males.",
+            "zh": "利用房室結以外的副傳導路徑（如 WPW 症候群的乾乾束 Bundle of Kent）形成折返迴路。順向性 AVRT（90%）：順向經 AV node，逆向經副傳導路徑（窄 QRS）。逆向性 AVRT（10%）：順向經副傳導路徑，逆向經 AV node（寬 QRS，完全預激）。男性略多。"
+          }
+        },
+        {
+          "type": "atrial_tachycardia",
+          "name": {
+            "en": "Atrial Tachycardia (AT) — ~10%",
+            "zh": "心房頻脈（AT）— 約 10%"
+          },
+          "description": {
+            "en": "Focal ectopic firing in atrium from single or multiple ectopic foci. Mechanism may be automaticity, triggered activity, or micro-reentry. AV node is NOT part of the tachycardia circuit; therefore AV nodal blocking agents may slow ventricular rate but may not terminate the arrhythmia.",
+            "zh": "心房內單一或多個異位放電點（Ectopic foci）快速發放訊號。機轉可為自動性增強、觸發活動或微折返。房室結並非頻脈迴路的一部分，因此房室結阻斷劑可能減慢心室速率，但不一定能終止心律不整。"
+          }
+        }
+      ]
+    }
+  },
+  "etiology": {
+    "en": "Etiology & Triggers",
+    "zh": "病因與誘因",
+    "predisposing_factors": {
+      "en": "Predisposing Factors",
+      "zh": "易感因素",
+      "items": [
+        {
+          "en": "Dual AV nodal pathways (congenital — substrate for AVNRT)",
+          "zh": "房室結雙徑路（先天性 — AVNRT 的基質）"
+        },
+        {
+          "en": "Accessory pathway (congenital — substrate for AVRT/WPW)",
+          "zh": "副傳導路徑（先天性 — AVRT/WPW 的基質）"
+        },
+        {
+          "en": "Ectopic atrial foci (substrate for atrial tachycardia)",
+          "zh": "心房異位放電點（心房頻脈的基質）"
+        }
+      ]
+    },
+    "common_triggers": {
+      "en": "Common Triggers",
+      "zh": "常見誘因",
+      "items": [
+        {
+          "en": "Caffeine, alcohol, nicotine",
+          "zh": "咖啡因、酒精、尼古丁"
+        },
+        {
+          "en": "Emotional or physical stress",
+          "zh": "情緒或身體壓力"
+        },
+        {
+          "en": "Sleep deprivation",
+          "zh": "睡眠不足"
+        },
+        {
+          "en": "Electrolyte imbalance",
+          "zh": "電解質不平衡"
+        },
+        {
+          "en": "Stimulant drugs (amphetamines, cocaine)",
+          "zh": "興奮劑類藥物（安非他命、古柯鹼）"
+        },
+        {
+          "en": "Thyroid disease (hyperthyroidism)",
+          "zh": "甲狀腺疾病（甲狀腺亢進）"
+        }
+      ]
+    }
+  },
+  "pathophysiology": {
+    "en": "Pathophysiology (Mechanisms of SVT)",
+    "zh": "病理生理學（SVT 機轉）",
+    "mechanisms": [
+      {
+        "type": "reentry",
+        "name": {
+          "en": "Reentry (Most Common — AVNRT & AVRT)",
+          "zh": "折返（最常見 — AVNRT 及 AVRT）"
+        },
+        "description": {
+          "en": "Electrical impulse circulates in a closed loop (reentrant circuit). Requires two pathways with different conduction velocities and refractory periods, plus unidirectional block. In AVNRT: circuit is within the AV node (dual pathways). In AVRT: circuit involves the AV node and an accessory pathway.",
+          "zh": "電氣訊號在封閉迴路（折返迴路）中不斷循環。需要兩條具有不同傳導速度及不反應期的路徑，加上單向阻斷。AVNRT：迴路位於房室結內（雙徑路）。AVRT：迴路涉及房室結與副傳導路徑。"
+        }
+      },
+      {
+        "type": "enhanced_automaticity",
+        "name": {
+          "en": "Enhanced Automaticity (Some Atrial Tachycardias)",
+          "zh": "自動性增強（部分心房頻脈）"
+        },
+        "description": {
+          "en": "Abnormal spontaneous depolarization from ectopic atrial foci. The focus fires faster than the sinus node, taking over as the dominant pacemaker. May be exacerbated by catecholamines, electrolyte imbalances, or digoxin toxicity.",
+          "zh": "心房異位放電點發生異常自發去極化。該放電點發射速率快於竇房結，成為主導起搏點。兒茶酚胺、電解質不平衡或毛地黃中毒可加重。"
+        }
+      },
+      {
+        "type": "triggered_activity",
+        "name": {
+          "en": "Triggered Activity (Some Atrial Tachycardias)",
+          "zh": "觸發活動（部分心房頻脈）"
+        },
+        "description": {
+          "en": "Delayed afterdepolarizations (DADs) due to intracellular calcium overload. Seen in digitalis toxicity and catecholamine-sensitive atrial tachycardias. Responds to adenosine (unlike automatic AT).",
+          "zh": "因細胞內鈣離子過多導致延遲後去極化（DAD）。見於毛地黃中毒及兒茶酚胺敏感性心房頻脈。對 Adenosine 有反應（與自動性心房頻脈不同）。"
+        }
+      }
+    ]
+  },
+  "clinical_presentation": {
+    "en": "Clinical Presentation",
+    "zh": "臨床表現",
+    "demographics": {
+      "en": "Demographics",
+      "zh": "族群特徵",
+      "items": [
+        {
+          "en": "Common in young to middle-aged adults; approximately 50% of patients aged 45-64 years",
+          "zh": "常見於年輕至中年成人；約 50% 患者年齡在 45-64 歲"
+        },
+        {
+          "en": "AVNRT: More common in women (female-to-male ratio approximately 2:1)",
+          "zh": "AVNRT：女性較多（女性：男性約 2:1）"
+        },
+        {
+          "en": "AVRT/WPW: Slightly more common in males",
+          "zh": "AVRT/WPW：男性略多"
+        },
+        {
+          "en": "Overall 67.5% of SVT patients are female",
+          "zh": "整體 SVT 患者中 67.5% 為女性"
+        }
+      ]
+    },
+    "symptoms": {
+      "en": "Common Symptoms",
+      "zh": "常見症狀",
+      "items": [
+        {
+          "en": "Palpitations (86%) — abrupt onset/offset is characteristic",
+          "zh": "心悸（86%）— 特點是突發突止"
+        },
+        {
+          "en": "Chest discomfort (47%)",
+          "zh": "胸悶/胸部不適（47%）"
+        },
+        {
+          "en": "Dyspnea (38%)",
+          "zh": "呼吸困難（38%）"
+        },
+        {
+          "en": "Dizziness / lightheadedness",
+          "zh": "頭暈"
+        },
+        {
+          "en": "Polyuria (due to release of atrial natriuretic peptide)",
+          "zh": "多尿（因心房利鈉肽釋放）"
+        },
+        {
+          "en": "Anxiety / sense of impending doom",
+          "zh": "焦慮 / 瀕死感"
+        }
+      ]
+    },
+    "red_flags": {
+      "en": "Red Flags (Danger Signs)",
+      "zh": "危險徵兆",
+      "items": [
+        {
+          "en": "Syncope (suggests hemodynamic compromise or pre-excited AF)",
+          "zh": "暈厥（Syncope）— 提示血流動力學受損或預激性心房顫動"
+        },
+        {
+          "en": "Hypotension (SBP < 90 mmHg)",
+          "zh": "低血壓（收縮壓 < 90 mmHg）"
+        },
+        {
+          "en": "Heart failure symptoms (acute pulmonary edema)",
+          "zh": "心衰竭症狀（急性肺水腫）"
+        },
+        {
+          "en": "Known WPW with rapid irregular wide-complex tachycardia",
+          "zh": "已知 WPW 合併快速、不規則的寬 QRS 波心搏過速"
+        },
+        {
+          "en": "Tachycardia-mediated cardiomyopathy (~1% of SVT patients)",
+          "zh": "頻脈誘發心肌病變（約 1% 的 SVT 患者）"
+        }
+      ]
+    }
+  },
+  "treatment": {
+    "overview": {
+      "en": "Acute Management of Supraventricular Tachycardia",
+      "zh": "心室上頻脈的急性處置"
+    },
+    "hemodynamic_assessment": {
+      "en": "Step 1: Assess Hemodynamic Stability",
+      "zh": "步驟一：評估血流動力學穩定性",
+      "unstable_signs": {
+        "en": "Signs of Hemodynamic Instability",
+        "zh": "血流動力學不穩定徵兆",
+        "items": [
+          {
+            "en": "Hypotension",
+            "zh": "低血壓"
+          },
+          {
+            "en": "Altered mental status",
+            "zh": "意識改變"
+          },
+          {
+            "en": "Ischemic chest pain",
+            "zh": "缺血性胸痛"
+          },
+          {
+            "en": "Acute heart failure",
+            "zh": "急性心衰竭"
+          },
+          {
+            "en": "Signs of shock",
+            "zh": "休克徵象"
+          }
+        ]
+      },
+      "unstable_treatment": {
+        "en": "Treatment for Unstable SVT",
+        "zh": "不穩定 SVT 的處置",
+        "action": {
+          "en": "Immediate Synchronized Cardioversion: 50-100 J biphasic. Consider sedation if patient is conscious.",
+          "zh": "立即同步電擊整流（Synchronized Cardioversion）：50-100 焦耳（雙相波）。病患若清醒，考慮先給予鎮靜。"
+        }
+      }
+    },
+    "stable_treatment": {
+      "en": "Step 2: Hemodynamically Stable SVT — Sequential Management",
+      "zh": "步驟二：血流動力學穩定 SVT — 逐步處置",
+      "vagal_maneuvers": {
+        "en": "1. Vagal Maneuvers (First-Line)",
+        "zh": "1. 迷走神經刺激術（第一線）",
+        "methods": [
+          {
+            "method": "modified_valsalva",
+            "name": {
+              "en": "Modified Valsalva Maneuver",
+              "zh": "改良式乏氏動作（Modified Valsalva Maneuver）"
+            },
+            "description": {
+              "en": "Patient strains for 15 seconds in semi-recumbent position, then immediately repositioned supine with passive leg raise to 45°. Success rate approximately 43% — clinically superior to standard Valsalva.",
+              "zh": "患者半坐臥位用力 15 秒，隨後立即平躺並被動抬腿至 45°。成功率約 43% — 臨床實證優於傳統乏氏動作。"
+            }
+          },
+          {
+            "method": "carotid_sinus_massage",
+            "name": {
+              "en": "Carotid Sinus Massage",
+              "zh": "頸動脈竇按摩"
+            },
+            "description": {
+              "en": "Apply firm pressure over the carotid sinus for 5-10 seconds. Must first auscultate for bruits — CONTRAINDICATED if bruit present or history of stroke/TIA.",
+              "zh": "在頸動脈竇處施加穩定壓力 5-10 秒。需先聽診排除頸動脈雜音（Bruit）— 若有雜音或中風/TIA 病史則禁忌。"
+            }
+          }
+        ]
+      },
+      "first_line_drug": {
+        "en": "2. First-Line Drug: Adenosine (Diagnostic & Therapeutic)",
+        "zh": "2. 第一線藥物：Adenosine（診斷兼治療）",
+        "description": {
+          "en": "If vagal maneuvers unsuccessful, give adenosine immediately. Adenosine transiently blocks AV nodal conduction (half-life 10-20 seconds). Terminates approximately 91% of AV node-dependent SVTs (AVNRT, orthodromic AVRT). Also serves diagnostic purpose: response helps differentiate SVT mechanism.",
+          "zh": "若迷走神經刺激無效，立即給予 Adenosine。Adenosine 可短暫阻斷房室結傳導（半衰期 10-20 秒）。約可終止 91% 的房室結依賴型 SVT（AVNRT、順向性 AVRT）。亦具診斷作用：反應有助於鑑別 SVT 機轉。"
+        },
+        "dosing": {
+          "title": {
+            "en": "Dosing",
+            "zh": "劑量"
+          },
+          "initial": {
+            "en": "6 mg rapid IV push",
+            "zh": "6 mg 快速靜脈推注"
+          },
+          "subsequent": {
+            "en": "12 mg after 1-2 minutes if unsuccessful; may repeat 12 mg once more (maximum total 30 mg)",
+            "zh": "1-2 分鐘後若無效再給 12 mg；可再重複一次 12 mg（最大總劑量 30 mg）"
+          }
+        },
+        "administration": {
+          "title": {
+            "en": "Administration",
+            "zh": "給藥方式"
+          },
+          "en": "Rapid push with immediate 20 mL NS flush via large-bore peripheral IV (or reduce dose for central line). Must be given rapidly due to ultra-short half-life.",
+          "zh": "經由大口徑周邊靜脈管路快速推注，隨後立即以 20 mL 生理食鹽水沖管（中央靜脈導管需減量）。因半衰期極短，必須快速給予。"
+        },
+        "expected_effects": {
+          "title": {
+            "en": "Expected Effects",
+            "zh": "預期反應"
+          },
+          "en": "Expect transient symptoms: flushing, chest pain/pressure, dyspnea, sense of impending doom, brief asystole. These are EXPECTED and self-limiting (< 30 seconds).",
+          "zh": "預期會出現短暫症狀：臉潮紅、胸痛/壓迫感、呼吸困難、瀕死感、短暫心搏停止。這些為預期反應且會自行緩解（< 30 秒）。"
+        },
+        "cautions": {
+          "title": {
+            "en": "Cautions",
+            "zh": "注意事項"
+          },
+          "items": [
+            {
+              "en": "CAUTION in severe asthma (may trigger bronchospasm) — consider verapamil as alternative",
+              "zh": "嚴重氣喘者慎用（可能誘發支氣管痙攣）— 考慮改用 Verapamil"
+            },
+            {
+              "en": "Higher doses required in patients taking theophylline (competitive antagonist)",
+              "zh": "服用 Theophylline 的患者需要更高劑量（競爭性拮抗）"
+            },
+            {
+              "en": "Lower doses in patients taking dipyridamole or carbamazepine (potentiated effect)",
+              "zh": "服用 Dipyridamole 或 Carbamazepine 的患者需降低劑量（效果加強）"
+            },
+            {
+              "en": "Reduce dose for central line administration",
+              "zh": "經中央靜脈管路給予時需減量"
+            },
+            {
+              "en": "Use with caution if WPW suspected — may precipitate AF with rapid ventricular response via accessory pathway",
+              "zh": "懷疑 WPW 時慎用 — 可能誘發經副傳導路徑快速傳導的心房顫動"
+            }
+          ]
+        }
+      },
+      "second_line_drugs": {
+        "en": "3. Second-Line Drugs (If Adenosine Ineffective or Recurrence)",
+        "zh": "3. 第二線藥物（若 Adenosine 無效或復發）",
+        "calcium_channel_blockers": {
+          "en": "Non-Dihydropyridine Calcium Channel Blockers",
+          "zh": "非二氫吡啶類鈣離子通道阻斷劑",
+          "agents": [
+            {
+              "drug": "Verapamil",
+              "dose": {
+                "en": "2.5-5 mg IV over 2-3 minutes",
+                "zh": "2.5-5 mg IV 於 2-3 分鐘內給予"
+              },
+              "further_dosing": {
+                "en": "5-10 mg after 15-30 minutes if needed",
+                "zh": "必要時 15-30 分鐘後再給 5-10 mg"
+              },
+              "cautions": {
+                "en": "Avoid in HFrEF, hypotension, LVEF < 40%, suspicion of VT, pre-excited AF (WPW). Do not combine IV verapamil with IV beta-blockers.",
+                "zh": "HFrEF、低血壓、LVEF < 40%、懷疑 VT、預激性心房顫動（WPW）時避免使用。勿與 IV β 阻斷劑併用。"
+              }
+            },
+            {
+              "drug": "Diltiazem",
+              "dose": {
+                "en": "0.25 mg/kg IV over 2 minutes",
+                "zh": "0.25 mg/kg IV 於 2 分鐘內給予"
+              },
+              "further_dosing": {
+                "en": "0.35 mg/kg after 15 minutes if needed",
+                "zh": "必要時 15 分鐘後給予 0.35 mg/kg"
+              },
+              "cautions": {
+                "en": "Avoid in HFrEF, hypotension, LVEF < 40%, suspicion of VT, pre-excited AF. Slow infusion reduces hypotension risk.",
+                "zh": "HFrEF、低血壓、LVEF < 40%、懷疑 VT、預激性心房顫動時避免使用。緩慢輸注可降低低血壓風險。"
+              }
+            }
+          ]
+        },
+        "beta_blockers": {
+          "en": "Beta-Blockers",
+          "zh": "β 受體阻斷劑",
+          "agents": [
+            {
+              "drug": "Metoprolol",
+              "dose": {
+                "en": "5 mg IV over 1-2 minutes",
+                "zh": "5 mg IV 於 1-2 分鐘內給予"
+              },
+              "further_dosing": {
+                "en": "Repeat every 5 minutes up to 3 doses (max 15 mg total)",
+                "zh": "每 5 分鐘可重複給予，最多 3 劑（總量最多 15 mg）"
+              },
+              "cautions": {
+                "en": "EXTREME CAUTION in acute HFrEF (can precipitate decompensation). Avoid in decompensated heart failure. Caution in pre-excited AF. Avoid in severe asthma/COPD.",
+                "zh": "急性 HFrEF 時極度小心（可能促發失代償）。失代償性心衰竭時避免使用。預激性心房顫動時需謹慎。嚴重氣喘/COPD 時避免。"
+              }
+            },
+            {
+              "drug": "Esmolol",
+              "dose": {
+                "en": "500 mcg/kg IV bolus over 1 minute, then 50-200 mcg/kg/min infusion",
+                "zh": "500 mcg/kg IV 推注於 1 分鐘內，之後 50-200 mcg/kg/min 持續輸注"
+              },
+              "further_dosing": {
+                "en": "Titrate infusion to effect",
+                "zh": "依效果調整輸注速率"
+              },
+              "cautions": {
+                "en": "Ultra-short acting — advantage in hemodynamic uncertainty. Same contraindications as metoprolol.",
+                "zh": "超短效 — 在血流動力學不確定時有優勢。禁忌症同 Metoprolol。"
+              }
+            }
+          ]
+        }
+      },
+      "cardioversion": {
+        "en": "4. Synchronized Cardioversion (If Pharmacotherapy Fails)",
+        "zh": "4. 同步電擊整流（若藥物治療無效）",
+        "description": {
+          "en": "If all pharmacological approaches fail, perform synchronized cardioversion. Energy: 50-100 J biphasic, escalate if needed. Sedation required if patient is conscious.",
+          "zh": "若所有藥物治療皆無效，執行同步電擊整流。能量：50-100 焦耳雙相波，必要時提高。若病患清醒需先給予鎮靜。"
+        }
+      }
+    },
+    "critical_cautions": {
+      "en": "CRITICAL CAUTIONS",
+      "zh": "重要注意事項",
+      "items": [
+        {
+          "en": "Avoid ALL AV nodal blockers (adenosine, verapamil, diltiazem, beta-blockers, digoxin) in pre-excited AF (WPW with AF) — may cause VF and cardiac arrest",
+          "zh": "預激性心房顫動（WPW 合併 AF）時禁用所有房室結阻斷劑（adenosine、verapamil、diltiazem、β 阻斷劑、digoxin）— 可能導致心室顫動及心臟驟停"
+        },
+        {
+          "en": "For antidromic AVRT: if adenosine fails, consider ibutilide, procainamide, flecainide, or propafenone",
+          "zh": "逆向性 AVRT：若 Adenosine 無效，考慮 Ibutilide、Procainamide、Flecainide 或 Propafenone"
+        },
+        {
+          "en": "For pre-excited AF: use procainamide, ibutilide, or electrical cardioversion. NEVER use AV nodal blockers",
+          "zh": "預激性心房顫動：使用 Procainamide、Ibutilide 或電擊心律轉復。絕對不可使用房室結阻斷劑"
+        },
+        {
+          "en": "Do not combine IV calcium channel blockers with IV beta-blockers — risk of severe hypotension and bradycardia",
+          "zh": "勿合併使用靜脈鈣離子通道阻斷劑與靜脈 β 阻斷劑 — 有嚴重低血壓及心搏過緩風險"
+        }
+      ]
+    }
+  },
+  "prevention": {
+    "en": "Long-Term Prevention & Ongoing Management of SVT",
+    "zh": "SVT 的長期預防與持續管理",
+    "catheter_ablation": {
+      "en": "1. Catheter Ablation (Definitive Therapy)",
+      "zh": "1. 導管消融術（根治性治療）",
+      "description": {
+        "en": "Catheter ablation is the most effective long-term treatment for recurrent SVT, offering potential cure. It is recommended as first-line therapy for symptomatic, recurrent SVT (Class I recommendation). Single-procedure success rate: 94-98.5% overall. Ablation is superior to long-term pharmacotherapy (drug efficacy only 30-50%).",
+        "zh": "導管消融術是復發性 SVT 最有效的長期治療方式，可望達到根治。對於有症狀且反覆發作的 SVT，建議作為第一線治療（Class I 建議）。單次手術成功率：整體 94-98.5%。消融術優於長期藥物治療（藥物有效率僅 30-50%）。"
+      },
+      "success_rates": [
+        {
+          "type": "AVNRT",
+          "rate": {
+            "en": "Long-term arrhythmia-free survival ~97-98%. Recurrence rate 3-7%.",
+            "zh": "長期無心律不整存活率約 97-98%。復發率 3-7%。"
+          }
+        },
+        {
+          "type": "AVRT",
+          "rate": {
+            "en": "Long-term arrhythmia-free survival ~92%. Eliminates both SVT and risk of rapid accessory pathway conduction during AF.",
+            "zh": "長期無心律不整存活率約 92%。可同時消除 SVT 及心房顫動時經副傳導路徑快速傳導的風險。"
+          }
+        },
+        {
+          "type": "Focal AT",
+          "rate": {
+            "en": "Long-term arrhythmia-free survival ~80%. Success depends on accurate focus localization.",
+            "zh": "長期無心律不整存活率約 80%。成功與否取決於準確定位病灶。"
+          }
+        }
+      ],
+      "techniques": [
+        {
+          "name": {
+            "en": "Radiofrequency (RF) Ablation",
+            "zh": "射頻消融術"
+          },
+          "description": {
+            "en": "Gold standard. Uses high-frequency alternating current to create thermal lesions. Preferred for accessory pathways.",
+            "zh": "治療金標準。利用高頻交流電產生熱損傷。副傳導路徑的首選技術。"
+          }
+        },
+        {
+          "name": {
+            "en": "Cryoablation",
+            "zh": "冷凍消融術"
+          },
+          "description": {
+            "en": "Uses extreme cold to destroy tissue. Preferred for AVNRT when target is near the compact AV node — allows cryomapping to test effect before permanent ablation, reducing risk of iatrogenic AV block.",
+            "zh": "使用極低溫破壞組織。AVNRT 目標靠近緻密房室結時較佳 — 可先行冷凍標測測試效果，再決定永久消融，降低醫源性房室傳導阻斷風險。"
+          }
+        }
+      ],
+      "indications": [
+        {
+          "en": "Symptomatic recurrent SVT refractory to or intolerant of medications",
+          "zh": "有症狀且反覆發作的 SVT，對藥物無效或無法耐受"
+        },
+        {
+          "en": "Patient preference for definitive cure over long-term drug therapy",
+          "zh": "病患偏好根治性治療而非長期服藥"
+        },
+        {
+          "en": "WPW syndrome — especially with history of rapid AF or syncope (risk stratification)",
+          "zh": "WPW 症候群 — 特別是有快速心房顫動或暈厥病史者（風險分層）"
+        },
+        {
+          "en": "Tachycardia-mediated cardiomyopathy",
+          "zh": "頻脈誘發心肌病變"
+        },
+        {
+          "en": "Hemodynamic instability during SVT episodes",
+          "zh": "SVT 發作時血流動力學不穩定"
+        }
+      ],
+      "complications": {
+        "en": "Complication rate < 2%. Major complications include: AV block requiring pacemaker (0.8-1.0% for AVNRT), cardiac perforation/tamponade, vascular access complications. Mortality extremely low: AVNRT 0.01%, AVRT 0.1%.",
+        "zh": "併發症率 < 2%。主要併發症包括：需植入心律調節器的房室傳導阻斷（AVNRT 為 0.8-1.0%）、心臟穿孔/心包填塞、血管通路併發症。死亡率極低：AVNRT 0.01%、AVRT 0.1%。"
+      }
+    },
+    "pharmacotherapy": {
+      "en": "2. Long-Term Pharmacotherapy (If Ablation Not Pursued or as Bridge)",
+      "zh": "2. 長期藥物治療（若未進行消融或作為過渡治療）",
+      "note": {
+        "en": "Drug efficacy for SVT prevention is limited (30-50%). Catheter ablation is generally preferred for definitive management.",
+        "zh": "藥物預防 SVT 的有效率有限（30-50%）。通常建議導管消融術作為根治性治療。"
+      },
+      "agents": [
+        {
+          "drug": "Beta-blockers (Metoprolol, Atenolol)",
+          "role": {
+            "en": "First-line pharmacotherapy for SVT prevention in patients without WPW. Reduce AV nodal conduction and sympathetic triggers.",
+            "zh": "非 WPW 患者預防 SVT 的第一線藥物。降低房室結傳導及交感神經觸發。"
+          },
+          "considerations": {
+            "en": "Avoid in severe asthma/COPD. Avoid atenolol in pregnancy.",
+            "zh": "嚴重氣喘/COPD 避免使用。孕婦避免 Atenolol。"
+          }
+        },
+        {
+          "drug": "Calcium Channel Blockers (Verapamil, Diltiazem)",
+          "role": {
+            "en": "Alternative first-line for SVT prevention in non-WPW patients. Slow AV nodal conduction.",
+            "zh": "非 WPW 患者預防 SVT 的替代第一線藥物。減慢房室結傳導。"
+          },
+          "considerations": {
+            "en": "CONTRAINDICATED in WPW (may facilitate rapid accessory pathway conduction during AF). Avoid in HFrEF.",
+            "zh": "WPW 禁忌（心房顫動時可能促進副傳導路徑快速傳導）。HFrEF 避免使用。"
+          }
+        },
+        {
+          "drug": "Flecainide / Propafenone (Class IC)",
+          "role": {
+            "en": "Recommended for SVT prevention in WPW patients without ischemic or structural heart disease (Class IIa). Can also be used as 'pill-in-the-pocket' strategy for infrequent episodes.",
+            "zh": "建議用於無缺血性或結構性心臟疾病的 WPW 患者預防 SVT（Class IIa）。也可作為「口袋藥丸」策略用於不頻繁發作。"
+          },
+          "considerations": {
+            "en": "Avoid in structural heart disease or ischemic heart disease (proarrhythmic risk). 'Pill-in-the-pocket': Flecainide 200-300 mg PO at SVT onset.",
+            "zh": "結構性心臟疾病或缺血性心臟疾病時避免（有致心律不整風險）。「口袋藥丸」：SVT 發作時 Flecainide 200-300 mg 口服。"
+          }
+        },
+        {
+          "drug": "Amiodarone",
+          "role": {
+            "en": "Reserved for refractory cases when other agents fail. NOT recommended as routine therapy per 2019 ESC guidelines for narrow complex SVT.",
+            "zh": "保留給其他藥物無效的難治性病例。依 2019 ESC 指引，不建議作為窄 QRS 波 SVT 的常規治療。"
+          },
+          "considerations": {
+            "en": "Significant long-term toxicity: thyroid, pulmonary, hepatic, corneal, dermatologic. Should not be first-line for benign SVT.",
+            "zh": "長期使用有顯著毒性：甲狀腺、肺部、肝臟、角膜、皮膚。不應作為良性 SVT 的第一線治療。"
+          }
+        }
+      ]
+    }
+  },
+  "special_considerations": {
+    "wpw_and_preexcited_af": {
+      "en": "WPW Syndrome & Pre-excited AF",
+      "zh": "WPW 症候群與預激性心房顫動",
+      "definition": {
+        "en": "WPW syndrome: pre-excitation pattern on ECG (delta wave, short PR) PLUS documented arrhythmia episodes. WPW pattern: ECG findings without documented arrhythmia.",
+        "zh": "WPW 症候群：心電圖上有預激圖形（Delta 波、短 PR 間期）加上有紀錄的心律不整發作。WPW 圖形：僅有心電圖表現而無有紀錄的心律不整。"
+      },
+      "danger": {
+        "en": "Pre-excited AF is a life-threatening emergency. Rapid conduction through the accessory pathway during AF can lead to ventricular fibrillation and sudden cardiac death.",
+        "zh": "預激性心房顫動為危及生命的緊急狀況。心房顫動時經副傳導路徑快速傳導可導致心室顫動及心因性猝死。"
+      },
+      "management": [
+        {
+          "en": "AVOID ALL AV nodal blockers: adenosine, verapamil, diltiazem, beta-blockers, digoxin, amiodarone",
+          "zh": "禁用所有房室結阻斷劑：adenosine、verapamil、diltiazem、β 阻斷劑、digoxin、amiodarone"
+        },
+        {
+          "en": "Stable: Procainamide IV or Ibutilide IV",
+          "zh": "穩定：靜脈 Procainamide 或 Ibutilide"
+        },
+        {
+          "en": "Unstable: Immediate synchronized cardioversion",
+          "zh": "不穩定：立即同步電擊整流"
+        },
+        {
+          "en": "All WPW patients should be referred for electrophysiology study and ablation evaluation",
+          "zh": "所有 WPW 患者均應轉介電生理檢查及消融評估"
+        }
+      ]
+    },
+    "pregnancy": {
+      "en": "SVT in Pregnancy",
+      "zh": "孕期 SVT",
+      "management": [
+        {
+          "en": "Vagal maneuvers: First-line, safe in pregnancy",
+          "zh": "迷走神經刺激術：第一線，孕期安全"
+        },
+        {
+          "en": "Adenosine: Safe in pregnancy (does not cross placenta significantly)",
+          "zh": "Adenosine：孕期安全（不顯著穿越胎盤）"
+        },
+        {
+          "en": "Metoprolol or Propranolol: Preferred beta-blockers in pregnancy for ongoing management. Avoid atenolol (associated with fetal growth restriction).",
+          "zh": "Metoprolol 或 Propranolol：孕期持續管理的首選 β 阻斷劑。避免 Atenolol（與胎兒生長遲滯相關）。"
+        },
+        {
+          "en": "Avoid all antiarrhythmic drugs during first trimester if possible (2019 ESC)",
+          "zh": "第一孕期盡可能避免所有抗心律不整藥物（2019 ESC）"
+        },
+        {
+          "en": "Synchronized cardioversion is safe in pregnancy when indicated",
+          "zh": "有適應症時，同步電擊整流在孕期是安全的"
+        }
+      ]
+    }
+  },
+  "summary_table": {
+    "en": "SVT Acute Management Quick Reference",
+    "zh": "SVT 急性處置快速參考",
+    "drug_table": [
+      {
+        "drug": "Adenosine",
+        "initial_dose": {
+          "en": "6 mg rapid IV push",
+          "zh": "6 mg 快速靜脈推注"
+        },
+        "further_dosing": {
+          "en": "12 mg after 1-2 min if unsuccessful; may repeat 12 mg once more (max 30 mg total)",
+          "zh": "1-2 分鐘後若無效再給 12 mg；可再重複一次 12 mg（最大 30 mg）"
+        },
+        "key_notes": {
+          "en": "Rapid push with 20 mL NS flush. Expect transient symptoms (flushing, chest pain, asystole). Reduce dose for central line/transplant. Caution: severe asthma.",
+          "zh": "快速推注並以 20 mL NS 沖管。預期出現短暫症狀（潮紅、胸痛、心搏停止）。中央靜脈/移植後減量。注意：嚴重氣喘。"
+        }
+      },
+      {
+        "drug": "Verapamil",
+        "initial_dose": {
+          "en": "2.5-5 mg IV over 2-3 minutes",
+          "zh": "2.5-5 mg IV 於 2-3 分鐘內"
+        },
+        "further_dosing": {
+          "en": "5-10 mg after 15-30 minutes",
+          "zh": "15-30 分鐘後 5-10 mg"
+        },
+        "key_notes": {
+          "en": "Avoid in HFrEF, hypotension, LVEF < 40%, suspicion of VT, pre-excited AF.",
+          "zh": "HFrEF、低血壓、LVEF < 40%、懷疑 VT、預激性 AF 時避免。"
+        }
+      },
+      {
+        "drug": "Diltiazem",
+        "initial_dose": {
+          "en": "0.25 mg/kg IV over 2 minutes",
+          "zh": "0.25 mg/kg IV 於 2 分鐘內"
+        },
+        "further_dosing": {
+          "en": "0.35 mg/kg after 15 minutes",
+          "zh": "15 分鐘後 0.35 mg/kg"
+        },
+        "key_notes": {
+          "en": "Avoid in HFrEF, hypotension, LVEF < 40%, suspicion of VT, pre-excited AF.",
+          "zh": "HFrEF、低血壓、LVEF < 40%、懷疑 VT、預激性 AF 時避免。"
+        }
+      },
+      {
+        "drug": "Metoprolol",
+        "initial_dose": {
+          "en": "5 mg IV over 1-2 minutes",
+          "zh": "5 mg IV 於 1-2 分鐘內"
+        },
+        "further_dosing": {
+          "en": "Repeat every 5 min up to 3 doses (max 15 mg)",
+          "zh": "每 5 分鐘可重複，最多 3 劑（最多 15 mg）"
+        },
+        "key_notes": {
+          "en": "EXTREME CAUTION in acute HFrEF (can precipitate decompensation). Avoid in decompensated heart failure. Caution in pre-excited AF.",
+          "zh": "急性 HFrEF 極度小心（可能促發失代償）。失代償性心衰竭避免。預激性 AF 需謹慎。"
+        }
+      }
+    ],
+    "scenarios": [
+      {
+        "scenario": {
+          "en": "Unstable SVT",
+          "zh": "不穩定 SVT"
+        },
+        "action": {
+          "en": "Immediate synchronized cardioversion (50-100 J biphasic); sedation if conscious",
+          "zh": "立即同步電擊整流（50-100 J 雙相波）；清醒者先鎮靜"
+        }
+      },
+      {
+        "scenario": {
+          "en": "Stable SVT (AVNRT/AVRT)",
+          "zh": "穩定 SVT（AVNRT/AVRT）"
+        },
+        "action": {
+          "en": "Vagal maneuvers → Adenosine → Verapamil/Diltiazem or Beta-blocker → Cardioversion",
+          "zh": "迷走神經刺激 → Adenosine → Verapamil/Diltiazem 或 β 阻斷劑 → 電擊整流"
+        }
+      },
+      {
+        "scenario": {
+          "en": "Pre-excited AF (WPW + AF)",
+          "zh": "預激性心房顫動（WPW + AF）"
+        },
+        "action": {
+          "en": "AVOID AV nodal blockers. Procainamide or Ibutilide; if unstable → cardioversion",
+          "zh": "禁用房室結阻斷劑。Procainamide 或 Ibutilide；不穩定 → 電擊整流"
+        }
+      },
+      {
+        "scenario": {
+          "en": "Antidromic AVRT (wide complex)",
+          "zh": "逆向性 AVRT（寬 QRS）"
+        },
+        "action": {
+          "en": "Adenosine may be tried cautiously; if fails → Procainamide, Ibutilide, Flecainide, or Propafenone",
+          "zh": "可謹慎嘗試 Adenosine；若無效 → Procainamide、Ibutilide、Flecainide 或 Propafenone"
+        }
+      },
+      {
+        "scenario": {
+          "en": "Recurrent SVT (long-term)",
+          "zh": "反覆發作 SVT（長期）"
+        },
+        "action": {
+          "en": "Catheter ablation (preferred, success > 95%). Or: beta-blockers, CCBs, flecainide/propafenone (non-WPW)",
+          "zh": "導管消融術（首選，成功率 > 95%）。或：β 阻斷劑、CCBs、Flecainide/Propafenone（非 WPW）"
+        }
+      }
+    ]
+  }
+}

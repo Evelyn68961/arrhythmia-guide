@@ -209,6 +209,10 @@
       "en": "Defibrillation - The Definitive Treatment",
       "zh": "電擊去顫 — 決定性治療",
       "energy_settings": {
+        "title": {
+          "en": "Energy Settings",
+          "zh": "電擊能量設定"
+        },
         "biphasic": {
           "en": "120-200 J (device-specific)",
           "zh": "120-200 焦耳（依機型而定）"
@@ -218,16 +222,22 @@
           "zh": "360 焦耳"
         }
       },
-      "protocol": [
-        {
-          "en": "Defibrillate AS SOON AS VF is identified",
-          "zh": "一旦確認 VF 立即電擊"
+      "protocol": {
+        "title": {
+          "en": "Protocol",
+          "zh": "處理流程"
         },
-        {
-          "en": "Resume CPR IMMEDIATELY after shock",
-          "zh": "電擊後立即恢復 CPR"
-        }
-      ]
+        "steps": [
+          {
+            "en": "Defibrillate AS SOON AS VF is identified",
+            "zh": "一旦確認 VF 立即電擊"
+          },
+          {
+            "en": "Resume CPR IMMEDIATELY after shock",
+            "zh": "電擊後立即恢復 CPR"
+          }
+        ]
+      }
     },
     "high_quality_cpr": {
       "en": "High-Quality CPR",
@@ -357,86 +367,107 @@
     "primary_prevention": {
       "en": "Primary Prevention (High-risk patients without prior VF)",
       "zh": "初級預防（高風險但無 VF 病史的患者）",
+      
       "indications_for_icd": {
         "en": "Indications for ICD Implantation",
         "zh": "植入式心律去顫器（ICD）適應症",
+        "icd_role_title": {
+          "en": "What Does ICD Do?",
+          "zh": "ICD 的作用為何？"
+        },
+        "icd_role": {
+          "en": "ICD continuously monitors heart rhythm and automatically delivers a defibrillation shock if VF is detected — acting as an internal safety net to prevent sudden cardiac death before resuscitation can be performed",
+          "zh": "ICD 持續監測心律，一旦偵測到 VF 即自動發放去顫電擊，在院外無法立即急救的情況下作為預防心因性猝死的內建安全防護"
+        },
         "items": [
           {
-            "en": "EF ≤ 35% & NYHA Class II-III Heart Failure",
-            "zh": "射出分率 ≤ 35% 且 NYHA 第 II-III 級心衰竭"
+            "en": "EF ≤ 35% & NYHA Class II-III Heart Failure — severely reduced pumping function increases risk of fatal arrhythmia",
+            "zh": "射出分率 ≤ 35% 且 NYHA 第 II-III 級心衰竭 — 心臟泵血功能嚴重下降，致命性心律不整風險高"
           },
           {
-            "en": "Prior MI with EF ≤ 30%",
-            "zh": "心肌梗塞後射出分率 ≤ 30%"
+            "en": "Prior MI with EF ≤ 30% — scarred myocardium from infarction creates arrhythmogenic substrate for VF",
+            "zh": "心肌梗塞後射出分率 ≤ 30% — 梗塞後疤痕心肌形成易誘發 VF 的致心律不整基質"
           },
           {
-            "en": "Inherited Channelopathies (High-risk features)",
-            "zh": "遺傳性離子通道病變（具高風險特徵者，如 Long QT、Brugada、CPVT）"
+            "en": "Inherited Channelopathies (Long QT, Brugada, CPVT) — ion channel mutations predispose to spontaneous VF",
+            "zh": "遺傳性離子通道病變（Long QT、Brugada、CPVT）— 離子通道基因突變易自發性誘發 VF"
           },
           {
-            "en": "Hypertrophic Cardiomyopathy (Risk factors)",
-            "zh": "肥厚性心肌病變（合併猝死風險因子）"
+            "en": "Hypertrophic Cardiomyopathy with risk factors — abnormal myocardial architecture promotes re-entrant VF circuits",
+            "zh": "肥厚性心肌病變合併猝死風險因子 — 異常心肌結構促進折返性 VF 迴路形成"
           }
         ]
       },
       "goal": {
-        "en": "VF Prevention Goal",
-        "zh": "預防 VF 發生"
+        "en": "Goal: Prevent sudden cardiac death from VF before it can occur or be treated externally",
+        "zh": "目標：在 VF 發生或無法於院外即時急救前，預防心因性猝死"
       }
     },
     "secondary_prevention": {
       "en": "Secondary Prevention (Survivors of VF arrest)",
       "zh": "次級預防（VF 心臟驟停存活者）",
       "goal": {
-        "en": "Reduce Recurrence",
-        "zh": "減少復發"
+        "en": "Goal: Reduce VF Recurrence and prevent sudden cardiac death",
+        "zh": "目標：減少 VF 復發，預防心因性猝死"
+      },
+      "strategies_title": {
+        "en": "Management Strategies for Secondary Prevention",
+        "zh": "次級預防的治療策略"
       },
       "strategies": [
         {
-          "en": "ICD Implantation (Class I recommendation)",
-          "zh": "植入式心律去顫器（ICD）— Class I 建議"
+          "en": "ICD Implantation (Class I recommendation) — automatically detects and terminates recurrent VF episodes via internal shock, essential since survivors are at high risk of repeat arrest",
+          "zh": "植入式心律去顫器（ICD）— Class I 建議；自動偵測並以內部電擊終止復發 VF，因存活者再次心臟驟停風險極高"
         },
         {
-          "en": "Antiarrhythmic Therapy (Amiodarone, Sotalol)",
-          "zh": "抗心律不整藥物治療（Amiodarone、Sotalol）"
+          "en": "Antiarrhythmic Therapy (Amiodarone, Sotalol) — chronic oral therapy to suppress arrhythmic triggers and reduce VF recurrence frequency",
+          "zh": "抗心律不整藥物治療（Amiodarone、Sotalol）— 長期口服以抑制心律不整誘因，降低 VF 復發頻率"
         },
         {
-          "en": "Beta-blockers",
-          "zh": "β 受體阻斷劑（減少交感神經觸發）"
+          "en": "Beta-blockers — reduce sympathetic nervous system triggers that can precipitate VF",
+          "zh": "β 受體阻斷劑 — 減少可誘發 VF 的交感神經觸發因素"
         },
         {
-          "en": "Treatment of Underlying Heart Disease",
-          "zh": "治療潛在心臟疾病"
+          "en": "Treatment of Underlying Heart Disease — addressing root cause (e.g., revascularization, HF optimization) reduces arrhythmic substrate",
+          "zh": "治療潛在心臟疾病 — 針對根本原因治療（如血管重建、心衰竭優化）以減少致心律不整基質"
         },
         {
-          "en": "Electrolyte Optimization",
-          "zh": "電解質優化"
+          "en": "Electrolyte Optimization — maintain K⁺ ≥ 4.0 mEq/L and Mg²⁺ ≥ 2.0 mg/dL to stabilize myocardial electrical activity",
+          "zh": "電解質優化 — 維持 K⁺ ≥ 4.0 mEq/L 及 Mg²⁺ ≥ 2.0 mg/dL，以穩定心肌電氣活動"
         }
       ]
     },
     "antiarrhythmic_therapy": {
-      "en": "Antiarrhythmic Medications for VF Prevention",
-      "zh": "預防 VF 的抗心律不整藥物",
+      "en": "Antiarrhythmic Medications for Long-term VF Prevention (Chronic Oral Therapy)",
+      "zh": "用於長期預防 VF 的抗心律不整藥物（慢性口服治療）",
+      "note": {
+        "en": "These agents are used chronically to reduce recurrent VF episodes — NOT for acute VF termination",
+        "zh": "此處藥物用於長期減少 VF 復發，而非用於急性 VF 發作的即時終止"
+      },
+      "agents_title": {
+        "en": "Medications",
+        "zh": "藥物"
+      },
       "agents": [
         {
           "drug": "Amiodarone",
           "efficacy": {
-            "en": "Most effective",
-            "zh": "最有效"
+            "en": "Most effective for long-term VF suppression; also used IV acutely in ACLS",
+            "zh": "長期抑制 VF 最有效；急性期亦可靜脈注射用於 ACLS"
           }
         },
         {
           "drug": "Sotalol",
           "efficacy": {
-            "en": "Moderate efficacy; may induce Torsades de Pointes (TdP)",
-            "zh": "中等效果，可能誘發尖端扭轉型心室頻脈（TdP）"
+            "en": "Moderate long-term efficacy; risk of QT prolongation and Torsades de Pointes (TdP)",
+            "zh": "中等長期效果；有 QT 延長及尖端扭轉型心室頻脈（TdP）風險"
           }
         },
         {
           "drug": "Beta-blockers",
           "efficacy": {
-            "en": "Reduces sympathetic triggers",
-            "zh": "減少交感神經觸發"
+            "en": "Reduces sympathetic triggers; adjunct therapy, not standalone VF prevention",
+            "zh": "減少交感神經觸發；為輔助治療，非單獨預防 VF 的首選"
           }
         }
       ]

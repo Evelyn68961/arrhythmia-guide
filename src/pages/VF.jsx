@@ -85,9 +85,10 @@ export default function VF() {
           <div className={`tab-content ${activeTab === 0 ? 'active' : ''}`}>
               <h3>{data.topic[lang]}</h3>
               <p>{data.definition[lang]}</p>
+              <hr />
               
-              <h3>{data.clinical_presentation[lang]}</h3>
-              <strong>{data.clinical_presentation.warning[lang]}</strong>
+              <h4>{data.clinical_presentation[lang]}</h4>
+              <h5>{data.clinical_presentation.warning[lang]}</h5>
               <ul>
                 {data.clinical_presentation.signs.map((s, index) => (
                   <li key={index}>
@@ -95,8 +96,9 @@ export default function VF() {
                   </li>
                 ))}
               </ul>
+              <hr />
 
-              <h3>{data.ecg_characteristics[lang]}</h3>
+              <h4>{data.ecg_characteristics[lang]}</h4>
               <ul>
                 <li>{data.ecg_characteristics.general.rate[lang]}</li>
                 <li>{data.ecg_characteristics.general.rhythm[lang]}</li>
@@ -104,8 +106,7 @@ export default function VF() {
               </ul>
               {data.ecg_characteristics.types.map((item) => (
                 <div key={item.type} >
-                  <h4>{item.name[lang]}</h4>
-                  <p>{item.description[lang]}</p>
+                  <p><strong>{item.name[lang]}</strong>{" — "}{item.description[lang]}</p>
                 </div>
               ))}               
           </div> 
@@ -114,14 +115,15 @@ export default function VF() {
           <div className={`tab-content ${activeTab === 1 ? 'active' : ''}`}>
               <h3>{data.etiology[lang]}</h3>
               <h4>{data.etiology.primary[lang]}</h4>
-              <strong>{data.etiology.primary.category[lang]}</strong>
+              <h5>{data.etiology.primary.category[lang]}</h5>
               <ul>
                 {data.etiology.primary.items.map((s, index) => (
                   <li key={index}>
                     {s[lang]}
                   </li>
                 ))}
-              </ul>              
+              </ul>
+              <hr />              
               <h4>{data.etiology.secondary[lang]}</h4>
               <h5>{data.etiology.secondary.structural_heart_disease[lang]}</h5>
               <ul>
@@ -151,15 +153,41 @@ export default function VF() {
 
           {/* Tab 2: Treatment */}
           <div className={`tab-content ${activeTab === 2 ? 'active' : ''}`}>
-            <h3>{lang === 'zh' ? '治療' : 'Treatment'}</h3>
-            <h4>{data.treatment.overview[lang]}</h4>
+            <h3>{data.treatment.overview[lang]}</h3>
             <h4>{data.treatment.immediate_actions[lang]}</h4>
-            
-            <h4>{data.treatment.defibrillation[lang]}</h4>
             <ul>
-              <li>{data.treatment.defibrillation.energy_settings.biphasic[lang]}</li>
-              <li>{data.treatment.defibrillation.energy_settings.monophasic[lang]}</li>
-            </ul>
+              {data.treatment.immediate_actions.steps.map((s, index) => (
+                <li key={index}>
+                  {s[lang]}
+                </li>
+              ))}
+            </ul>              
+            <hr /> 
+
+            <h4>{data.treatment.defibrillation[lang]}</h4>
+            <div className='small-two-col'>
+              <div>
+                <h5>{data.treatment.defibrillation.energy_settings.title[lang]}</h5>
+                <ul>
+                  <li>{data.treatment.defibrillation.energy_settings.biphasic[lang]}</li>
+                  <li>{data.treatment.defibrillation.energy_settings.monophasic[lang]}</li>
+                </ul>
+              </div>
+              <div>
+                <h5>{data.treatment.defibrillation.protocol.title[lang]}</h5>
+                <ul>
+                  {data.treatment.defibrillation.protocol.steps.map((s, index) => (
+                    <li key={index}>
+                      {s[lang]}
+                    </li>
+                  ))}
+                </ul>               
+              </div>              
+            </div>
+
+ 
+            <hr /> 
+
             
             <h4>{data.treatment.high_quality_cpr[lang]}</h4>
             <ul>
@@ -168,36 +196,80 @@ export default function VF() {
                   {s[lang]}
                 </li>
               ))}
-            </ul>   
+            </ul> 
+            <hr />  
             
             <h4>{data.treatment.pharmacotherapy[lang]}</h4>
             {data.treatment.pharmacotherapy.agents.map((item) => (
               <div key={item.drug} >
                 <h5>{item.drug}</h5>
-                <p>{item.dose[lang]}</p>
-                <p>{item.timing[lang]}</p>
+                <p>{`dose: ${item.dose[lang]}`}</p>
+                <p>{`timing: ${item.timing[lang]}`}</p>
+              </div>
+            ))} 
+            <hr /> 
+            
+            <h4>{data.treatment.reversible_causes[lang]}</h4>
+            <div className='small-two-col'>
+              <div>
+                <h5>{data.treatment.reversible_causes.h_causes[lang]}</h5>
+                <ul>
+                  {data.treatment.reversible_causes.h_causes.items.map((s, index) => (
+                    <li key={index}>{s[lang]}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h5>{data.treatment.reversible_causes.t_causes[lang]}</h5>
+                <ul>
+                  {data.treatment.reversible_causes.t_causes.items.map((s, index) => (
+                    <li key={index}>{s[lang]}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Tab 3: Prevention */}
+          <div className={`tab-content ${activeTab === 3 ? 'active' : ''}`}>
+            <h3>{data.prevention[lang]}</h3>
+            <h4>{data.prevention.primary_prevention[lang]}</h4>
+            <p>{data.prevention.primary_prevention.goal[lang]}</p>
+            <h5>{data.prevention.primary_prevention.indications_for_icd.icd_role_title[lang]}</h5>
+            <p>{data.prevention.primary_prevention.indications_for_icd.icd_role[lang]}</p>
+            <h5>{data.prevention.primary_prevention.indications_for_icd[lang]}</h5>
+            <ul>
+              {data.prevention.primary_prevention.indications_for_icd.items.map((s, index) => (
+                <li key={index}>
+                  {s[lang]}
+                </li>
+              ))}
+            </ul> 
+            <hr /> 
+
+            <h4>{data.prevention.secondary_prevention[lang]}</h4>
+            <p>{data.prevention.secondary_prevention.goal[lang]}</p>
+            <h5>{data.prevention.secondary_prevention.strategies_title[lang]}</h5>
+            <ul>
+              {data.prevention.secondary_prevention.strategies.map((s, index) => (
+                <li key={index}>
+                  {s[lang]}
+                </li>
+              ))}
+            </ul> 
+            <hr /> 
+
+            <h4>{data.prevention.antiarrhythmic_therapy[lang]}</h4>
+            <p>{data.prevention.antiarrhythmic_therapy.note[lang]}</p>
+            <h5>{data.prevention.antiarrhythmic_therapy.agents_title[lang]}</h5>
+            {data.prevention.antiarrhythmic_therapy.agents.map((item) => (
+              <div key={item.drug}>
+                <p><strong>{item.drug}</strong>{":  "}{item.efficacy[lang]}</p>
               </div>
             ))}  
             
-            <h4>{data.treatment.reversible_causes[lang]}</h4>
-            <h5>{data.treatment.reversible_causes.h_causes[lang]}</h5>
-            <ul>
-              {data.treatment.reversible_causes.h_causes.items.map((s, index) => (
-                <li key={index}>
-                  {s[lang]}
-                </li>
-              ))}
-            </ul> 
-            <h5>{data.treatment.reversible_causes.t_causes[lang]}</h5>
-            <ul>
-              {data.treatment.reversible_causes.t_causes.items.map((s, index) => (
-                <li key={index}>
-                  {s[lang]}
-                </li>
-              ))}
-            </ul> 
-
           </div>
+
         </div>  
 
 

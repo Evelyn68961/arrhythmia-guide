@@ -160,7 +160,7 @@ export default function VT() {
                   {mech.description && <p>{mech.description[lang]}</p>}
                   {mech.subtypes && mech.subtypes.map((sub, i) => (
                     <div key={i} style={{ marginLeft: '1rem' }}>
-                      <strong>{sub.name[lang]}</strong>
+                      <h5>{sub.name[lang]}</h5>
                       <p>{sub.description[lang]}</p>
                     </div>
                   ))}
@@ -193,7 +193,7 @@ export default function VT() {
               <p>{data.treatment.fundamental_principle[lang]}</p>
 
               <h4>{data.treatment.pulseless_or_unstable[lang]}</h4>
-              <strong>{data.treatment.pulseless_or_unstable.acls_protocol[lang]}</strong>
+              <h5>{data.treatment.pulseless_or_unstable.acls_protocol[lang]}</h5>
               <ul>
                 {data.treatment.pulseless_or_unstable.acls_protocol.steps.map((item, index) => (
                   <li key={index}>{item[lang]}</li>
@@ -201,7 +201,7 @@ export default function VT() {
               </ul>
 
               <h4>{data.treatment.stable_sustained_vt[lang]}</h4>
-              <strong>{data.treatment.stable_sustained_vt.approach[lang]}</strong>
+              <h5>{data.treatment.stable_sustained_vt.approach[lang]}</h5>
               {data.treatment.stable_sustained_vt.agents.map((item) => (
                 <div key={item.drug} >
                   <h4>{item.drug}</h4>
@@ -224,7 +224,7 @@ export default function VT() {
                   <li key={index}>{item[lang]}</li>
                 ))}
               </ul>
-              <strong>{data.treatment.address_reversible_factors.drug_selection_considerations[lang]}</strong>
+              <h5>{data.treatment.address_reversible_factors.drug_selection_considerations[lang]}</h5>
               <ul>
                 {data.treatment.address_reversible_factors.drug_selection_considerations.items.map((item, index) => (
                   <li key={index}>{item[lang]}</li>
@@ -232,7 +232,7 @@ export default function VT() {
               </ul>   
               
               <h4>{data.treatment.pulseless_vt_acls[lang]}</h4>
-              <strong>{data.treatment.pulseless_vt_acls.pharmacotherapy[lang]}</strong>
+              <h5>{data.treatment.pulseless_vt_acls.pharmacotherapy[lang]}</h5>
               {data.treatment.pulseless_vt_acls.pharmacotherapy.agents.map((item) => (
                 <div key={item.drug} >
                   <h4>{item.drug}</h4>
@@ -271,7 +271,7 @@ export default function VT() {
 
             <h4>{data.prevention.catheter_ablation[lang]}</h4>
             <p>{data.prevention.catheter_ablation.description[lang]}</p>
-            <strong>{data.prevention.catheter_ablation.indications[lang]}</strong>
+            <h5>{data.prevention.catheter_ablation.indications[lang]}</h5>
             <ul>
               {data.prevention.catheter_ablation.indications.items.map((item, index) => (
                 <li key={index}>{item[lang]}</li>

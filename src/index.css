@@ -131,6 +131,11 @@ h2 {
 .content h3 {
   color: #2c3e50;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.content h4 {
+  font-size: 1.25rem;
 }
 
 .content p {
@@ -202,7 +207,7 @@ h2 {
 }
 
 .column-right h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 1.8rem;
   margin-bottom: 0.5rem;
 }
@@ -212,20 +217,39 @@ h2 {
 }
 
 .column-right h4 {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .column-right h5 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.column-right strong {
+  font-size: 1.1rem;
+}
+
+.column-right p {
+  font-size: 1.1rem;
   margin-bottom: 0.25rem;
 }
 
 .column-right ul {
   padding-left: 1.5rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0.2rem 1.2rem 0.2rem;
+  font-size: 1.1rem;
+}
+
+.small-two-col {
+  display: flex;
+  gap: 2rem;
+}
+
+.small-two-col > div {
+  flex: 1;
 }
 
 .tabs-row {
@@ -327,4 +351,11 @@ h2 {
 
 .references a:hover {
   text-decoration: underline;
+}
+
+
+hr {
+  border: none;
+  border-top: 1px dotted #ccc;
+  margin: 0.75rem 0;
 }

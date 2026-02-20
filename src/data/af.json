@@ -1,0 +1,720 @@
+{
+  "topic": {
+    "en": "Atrial Fibrillation (AF)",
+    "zh": "心房顫動"
+  },
+  "definition": {
+    "en": "Atrial fibrillation is a supraventricular tachyarrhythmia characterized by uncoordinated atrial activation and ineffective atrial contraction. It is the most common type of cardiac arrhythmia encountered in clinical practice.",
+    "zh": "心房顫動是一種室上性快速心律不整，特徵為不協調的心房活化及無效的心房收縮。是臨床上最常見的心律不整類型。"
+  },
+  "ecg_characteristics": {
+    "en": "ECG Characteristics",
+    "zh": "心電圖特徵",
+    "hallmarks": {
+      "en": "Hallmark Features",
+      "zh": "典型特徵",
+      "items": [
+        {
+          "en": "Absent P waves: Cannot identify normal, regular P waves; replaced by fibrillatory (f) waves — irregular, chaotic baseline oscillations at 350-600/min",
+          "zh": "無明顯 P 波：無法辨識出正常、規則的 P 波；取代 P 波的是細碎、鋸齒狀的顫動波 (f waves)，頻率約 350-600/min"
+        },
+        {
+          "en": "Irregularly irregular R-R intervals: QRS complexes occur at completely irregular intervals with no pattern to ventricular response (unless concurrent AV block)",
+          "zh": "絕對不規則的心室反應：QRS 波群出現的間隔 (RR interval) 完全沒有規律性（除非同時有 AV block）"
+        },
+        {
+          "en": "Narrow QRS complex: Usually <120 ms (unless bundle branch block or aberrant conduction)",
+          "zh": "窄 QRS 波：通常 <120 ms（除非同時有 bundle branch block 或異常傳導）"
+        }
+      ]
+    },
+    "ventricular_rate": {
+      "title": {
+        "en": "Ventricular Rate",
+        "zh": "心室率"
+      },
+      "content": {
+        "en": "Variable ventricular rate: Typically 100-160 bpm if untreated (rapid ventricular response); <100 bpm with rate control or AV nodal disease",
+        "zh": "心室率變化大：未治療時通常 100-160 bpm（快速心室反應）；經控制或有房室結病變時 <100 bpm"
+      }
+    },
+    "fibrillatory_waves": {
+      "en": "Fibrillatory Wave Types",
+      "zh": "顫動波類型",
+      "types": [
+        {
+          "type": "coarse",
+          "name": {
+            "en": "Coarse AF",
+            "zh": "粗顫動"
+          },
+          "description": {
+            "en": "Larger f waves (>1 mm), often seen in early/paroxysmal AF; may indicate better response to cardioversion",
+            "zh": "較大的 f 波 (>1 mm)，常見於早期或陣發性 AF；可能對電擊復律反應較好"
+          }
+        },
+        {
+          "type": "fine",
+          "name": {
+            "en": "Fine AF",
+            "zh": "細顫動"
+          },
+          "description": {
+            "en": "Smaller f waves, associated with longer-standing AF and more extensive atrial remodeling",
+            "zh": "較小的 f 波，與長期 AF 及較嚴重的心房重塑相關"
+          }
+        }
+      ]
+    }
+  },
+  "pathophysiology": {
+    "en": "Pathophysiology",
+    "zh": "發病機制",
+    "triggers": {
+      "en": "Triggers (Initiation)",
+      "zh": "觸發因子（啟動）",
+      "description": {
+        "en": "Abnormal electrical signals that initiate AF episodes",
+        "zh": "異常的電氣訊號，啟動 AF 發作"
+      },
+      "pulmonary_veins": {
+        "en": "Pulmonary Veins (Primary Trigger)",
+        "zh": "肺靜脈（最主要的觸發點）",
+        "description": {
+          "en": "Myocardial sleeves at the pulmonary vein-left atrial junction contain cells prone to ectopic firing. When these generate abnormal signals that propagate into the atrium, they can initiate AF.",
+          "zh": "肺靜脈與左心房交界處有一層延伸的心肌袖 (myocardial sleeves)，這些細胞容易產生異常的快速放電 (ectopic firing)。當這些異常訊號傳入心房，就會誘發心律不整。"
+        }
+      },
+      "other_sites": {
+        "en": "Non-pulmonary Vein Triggers (Less Common)",
+        "zh": "非肺靜脈觸發點（較少見）",
+        "items": [
+          {
+            "en": "Superior vena cava",
+            "zh": "上腔靜脈"
+          },
+          {
+            "en": "Coronary sinus",
+            "zh": "冠狀竇"
+          },
+          {
+            "en": "Left atrial posterior wall",
+            "zh": "左心房後壁"
+          },
+          {
+            "en": "Crista terminalis",
+            "zh": "界嵴"
+          }
+        ]
+      }
+    },
+    "substrate": {
+      "en": "Substrate (Maintenance)",
+      "zh": "基質異常（維持）",
+      "structural_remodeling": {
+        "en": "Structural Remodeling",
+        "zh": "結構重塑",
+        "description": {
+          "en": "Fibrosis from long-term pressure (hypertension, heart failure) causes atrial dilation, myocyte death, and replacement by fibrous tissue. This impedes electrical conduction, slows signal transmission, disrupts conduction pathways, and facilitates reentry circuits.",
+          "zh": "纖維化：長期的壓力（如高血壓、心衰竭）會導致心房擴大，心肌細胞死亡並被纖維組織取代。這些纖維組織會阻礙傳導，導致訊號傳導變慢或路徑破碎，容易形成「迴路 (Reentry)」。"
+        }
+      },
+      "electrical_remodeling": {
+        "en": "Electrical Remodeling",
+        "zh": "電氣重塑",
+        "description": {
+          "en": "Ion channel changes (calcium and potassium channels) shorten the refractory period. The longer AF persists, the more atrial electrical properties adapt to this chaotic rhythm, making termination increasingly difficult — 'AF begets AF'.",
+          "zh": "離子通道改變：心房細胞的鈣離子與鉀離子通道發生變化，導致不反應期 (refractory period) 縮短。而且 AF 發作越久，心房的電氣性質就越適應這種亂跳的狀態，使得 AF 更難停止。"
+        }
+      }
+    },
+    "modulators": {
+      "en": "Modulators",
+      "zh": "調節因子",
+      "autonomic": {
+        "en": "Autonomic Nervous System",
+        "zh": "交感神經與副交感神經失衡",
+        "description": {
+          "en": "Sympathetic-parasympathetic imbalance (exercise-induced sympathetic activation or post-meal/sleep vagal predominance) can alter atrial electrical properties and trigger AF.",
+          "zh": "自律神經的過度活化（例如運動時的交感神經興奮，或飯後/睡眠時的迷走神經興奮）都可能改變心房的電氣特性，進而誘發 AF。"
+        }
+      },
+      "ganglionated_plexi": {
+        "en": "Ganglionated Plexi",
+        "zh": "神經節叢",
+        "description": {
+          "en": "Overactive ganglionated plexi surrounding the heart may also initiate AF episodes.",
+          "zh": "心臟周圍的神經節若過度活躍，也可能會觸發 AF。"
+        }
+      }
+    }
+  },
+  "clinical_presentation": {
+    "en": "Clinical Presentation",
+    "zh": "臨床表現",
+    "asymptomatic": {
+      "en": "Asymptomatic (Silent AF)",
+      "zh": "無症狀（沉默型 AF）",
+      "description": {
+        "en": "Up to 30% of patients are asymptomatic. AF is discovered incidentally during routine examinations or, unfortunately, only after a stroke occurs.",
+        "zh": "許多病人完全沒有感覺，常在健康檢查或甚至是發生中風後才被診斷出來。"
+      }
+    },
+    "symptoms": {
+      "en": "Common Symptoms",
+      "zh": "常見症狀",
+      "items": [
+        {
+          "en": "Fatigue: Most common nonspecific symptom",
+          "zh": "疲倦：最常見的非特異性症狀"
+        },
+        {
+          "en": "Palpitations: Sensation of rapid or irregular heartbeats",
+          "zh": "心悸：感覺心跳快速或不規則"
+        },
+        {
+          "en": "Exercise intolerance: From loss of atrial contribution to cardiac output",
+          "zh": "運動耐受度下降：因心房對心輸出量的貢獻喪失"
+        },
+        {
+          "en": "Dyspnea: Especially with rapid ventricular response or underlying heart failure",
+          "zh": "呼吸困難：尤其在快速心室反應或合併心衰竭時"
+        },
+        {
+          "en": "Chest discomfort: May mimic angina",
+          "zh": "胸悶或胸痛：可能類似心絞痛"
+        },
+        {
+          "en": "Dizziness/Presyncope: From reduced cardiac output or pauses",
+          "zh": "頭暈：因心輸出量減少或心跳暫停"
+        }
+      ]
+    },
+    "serious_presentations": {
+      "en": "Serious Presentations",
+      "zh": "嚴重表現",
+      "items": [
+        {
+          "en": "Stroke/TIA: May be first presentation in ~25% of AF-related strokes",
+          "zh": "中風/暫時性腦缺血：約 25% 的 AF 相關中風為首次表現"
+        },
+        {
+          "en": "Heart failure: Acute decompensation or new-onset tachycardia-induced cardiomyopathy",
+          "zh": "心衰竭：急性惡化或新發生的心搏過速性心肌病變"
+        }
+      ]
+    }
+  },
+  "classification": {
+    "en": "Classification & Staging",
+    "zh": "分類與分期",
+    "staging_overview": {
+      "en": "The ACC/AHA/ACCP/HRS staging system views AF as a continuous disease spectrum rather than isolated events. Early intervention on risk factors may prevent or delay AF onset, and even permanent AF requires ongoing anticoagulation and risk factor management.",
+      "zh": "ACC/AHA/ACCP/HRS 分期系統將 AF 視為一個連續的疾病光譜，不只是單一事件。早期介入危險因子可能預防或延緩 AF 發生，即使是「Permanent AF」也需要持續抗凝和危險因子管理。"
+    },
+    "stages": [
+      {
+        "stage": "1",
+        "name": {
+          "en": "Stage 1: At Risk for AF",
+          "zh": "第 1 期：AF 風險期"
+        },
+        "description": {
+          "en": "Presence of modifiable and nonmodifiable risk factors associated with AF, but no AF detected.",
+          "zh": "本身有危險因子（如高血壓、肥胖、糖尿病），但尚未發生 AF。"
+        },
+        "risk_factors": {
+          "modifiable": {
+            "en": "Modifiable Risk Factors",
+            "zh": "可調控危險因子",
+            "items": [
+              { "en": "Obesity", "zh": "肥胖" },
+              { "en": "Lack of fitness", "zh": "缺乏運動" },
+              { "en": "Hypertension", "zh": "高血壓" },
+              { "en": "Sleep apnea", "zh": "睡眠呼吸中止症" },
+              { "en": "Alcohol", "zh": "飲酒" },
+              { "en": "Diabetes", "zh": "糖尿病" }
+            ]
+          },
+          "nonmodifiable": {
+            "en": "Nonmodifiable Risk Factors",
+            "zh": "不可調控危險因子",
+            "items": [
+              { "en": "Genetics", "zh": "遺傳" },
+              { "en": "Male sex", "zh": "男性" },
+              { "en": "Age", "zh": "年齡" }
+            ]
+          }
+        }
+      },
+      {
+        "stage": "2",
+        "name": {
+          "en": "Stage 2: Pre-AF",
+          "zh": "第 2 期：AF 前期"
+        },
+        "description": {
+          "en": "Evidence of structural or electrical findings predisposing to AF (atrial enlargement, frequent atrial ectopy, short bursts of atrial tachycardia, atrial flutter), but no clinical AF yet.",
+          "zh": "出現心臟結構上或電氣上的異常（如心房擴大、心房異位搏動），未來高機率會發展成真正的 AF。"
+        }
+      },
+      {
+        "stage": "3",
+        "name": {
+          "en": "Stage 3: AF",
+          "zh": "第 3 期：確診 AF"
+        },
+        "description": {
+          "en": "Confirmed AF with substages based on duration and pattern. Patients may transition among different substages.",
+          "zh": "確診 AF，依持續時間和模式分為不同亞期。病人可能在不同亞期之間轉換。"
+        },
+        "substages": [
+          {
+            "substage": "3A",
+            "name": {
+              "en": "Paroxysmal AF",
+              "zh": "陣發性 AF"
+            },
+            "description": {
+              "en": "Intermittent AF that terminates within ≤7 days of onset",
+              "zh": "通常在發作後 7 天內終止"
+            }
+          },
+          {
+            "substage": "3B",
+            "name": {
+              "en": "Persistent AF",
+              "zh": "持續性 AF"
+            },
+            "description": {
+              "en": "Continuous AF that sustains for >7 days and requires intervention",
+              "zh": "持續超過 7 天，需要介入治療"
+            }
+          },
+          {
+            "substage": "3C",
+            "name": {
+              "en": "Long-standing Persistent AF",
+              "zh": "長期持續性 AF"
+            },
+            "description": {
+              "en": "Continuous AF for >12 months in duration",
+              "zh": "持續超過 12 個月"
+            }
+          },
+          {
+            "substage": "3D",
+            "name": {
+              "en": "Successful AF Ablation",
+              "zh": "消融術後成功治癒"
+            },
+            "description": {
+              "en": "Freedom from AF after percutaneous or surgical intervention to eliminate AF",
+              "zh": "經消融手術成功治癒 AF"
+            }
+          }
+        ]
+      },
+      {
+        "stage": "4",
+        "name": {
+          "en": "Stage 4: Permanent AF",
+          "zh": "第 4 期：永久性 AF"
+        },
+        "description": {
+          "en": "No further attempts at rhythm control after discussion between patient and clinician. Focus shifts to rate control and stroke prevention.",
+          "zh": "病人與醫師討論後決定不再嘗試控制心律，轉為著重心率控制和預防中風。"
+        }
+      }
+    ]
+  },
+  "treatment": {
+    "en": "Treatment",
+    "zh": "治療",
+    "overview": {
+      "en": "Management Frameworks",
+      "zh": "治療策略框架",
+      "description": {
+        "en": "The 2020 ESC guidelines introduced the ABC pathway (Anticoagulation, Better symptom control, Cardiovascular risk). The 2024 ESC guidelines updated this to the AF-CARE pathway (Comorbidities, Avoid stroke, Reduce symptoms, Evaluation). The 2023 ACC/AHA guidelines organize management into similar domains without a specific acronym.",
+        "zh": "2020 ESC 指引提出 ABC pathway（抗凝、症狀控制、心血管風險）。2024 ESC 指引更新為 AF-CARE pathway（共病管理、預防中風、症狀控制、評估）。2023 ACC/AHA 指引則以類似架構組織治療，但未使用特定縮寫。"
+      }
+    },
+    "anticoagulation": {
+      "en": "A – Avoid Stroke and Thromboembolism",
+      "zh": "A – 預防中風與血栓栓塞",
+      "risk_assessment": {
+        "en": "Stroke Risk Assessment",
+        "zh": "中風風險評估",
+        "acc_aha_2023": {
+          "en": "2023 ACC/AHA Guidelines",
+          "zh": "2023 ACC/AHA 指引",
+          "description": {
+            "en": "Recommend anticoagulation based on annual stroke risk ≥2%, which corresponds to CHA₂DS₂-VASc ≥2 in men and ≥3 in women. Female sex is treated as a risk modifier rather than independent risk factor.",
+            "zh": "建議根據年中風風險 ≥2% 給予抗凝，對應 CHA₂DS₂-VASc 男性 ≥2 分、女性 ≥3 分。女性被視為風險調節因子而非獨立風險因子。"
+          }
+        },
+        "esc_2024": {
+          "en": "2024 ESC Guidelines",
+          "zh": "2024 ESC 指引",
+          "description": {
+            "en": "Adopted CHA₂DS₂-VA score (sex category removed). Anticoagulation recommended for all patients with CHA₂DS₂-VA ≥2 regardless of sex. Score of 1 = Class IIa recommendation (may be considered).",
+            "zh": "採用 CHA₂DS₂-VA 評分（移除性別類別）。CHA₂DS₂-VA ≥2 分者建議抗凝，不分性別。1 分為 Class IIa 建議（可考慮使用）。"
+          }
+        }
+      },
+      "anticoagulant_choice": {
+        "en": "Anticoagulant Selection",
+        "zh": "抗凝劑選擇",
+        "doacs": {
+          "en": "DOACs (Preferred)",
+          "zh": "DOACs（首選）",
+          "description": {
+            "en": "Direct oral anticoagulants have lower intracranial bleeding risk compared to warfarin.",
+            "zh": "新型口服抗凝劑的顱內出血風險比 Warfarin 低。"
+          },
+          "agents": [
+            { "drug": "Dabigatran" },
+            { "drug": "Rivaroxaban" },
+            { "drug": "Apixaban" },
+            { "drug": "Edoxaban" }
+          ]
+        },
+        "warfarin": {
+          "en": "Warfarin (VKA)",
+          "zh": "Warfarin（維生素 K 拮抗劑）",
+          "description": {
+            "en": "Target INR 2.0-3.0. Remains appropriate for mechanical heart valves or moderate-to-severe mitral stenosis.",
+            "zh": "監測 INR 值（目標 2.0-3.0）。適用於裝有機械式瓣膜或患有中重度二尖瓣狹窄的 AF 病人。"
+          }
+        }
+      },
+      "key_points": {
+        "en": "Key Points",
+        "zh": "重要原則",
+        "items": [
+          {
+            "en": "Antiplatelet therapy is NOT an alternative to anticoagulation (Class III)",
+            "zh": "抗血小板藥物不能替代抗凝治療（Class III）"
+          },
+          {
+            "en": "Temporal pattern of AF (paroxysmal vs persistent) does NOT affect anticoagulation decisions — paroxysmal AF carries similar stroke risk",
+            "zh": "AF 的時間模式（陣發性 vs 持續性）不影響抗凝決策 — 陣發性 AF 的中風風險相似"
+          }
+        ]
+      }
+    },
+    "rate_control": {
+      "en": "R – Rate Control",
+      "zh": "R – 心率控制",
+      "goal": {
+        "en": "Prevent tachycardia-induced cardiomyopathy with target heart rate <100-110 bpm for most patients. Stricter control (<80 bpm at rest, <110 during exercise) may be appropriate for patients with heart failure or suspected AF-induced cardiomyopathy.",
+        "zh": "預防心搏過速引起的心肌病變，目標心率 <100-110 bpm。合併心衰竭或疑似 AF 誘發心肌病變者可能需要更嚴格的控制（休息時 <80 bpm，運動時 <110 bpm）。"
+      },
+      "agents": {
+        "beta_blockers": {
+          "en": "Beta-blockers (First-line)",
+          "zh": "Beta-blockers（首選）",
+          "drugs": [
+            { "drug": "Bisoprolol" },
+            { "drug": "Carvedilol" },
+            { "drug": "Metoprolol" },
+            { "drug": "Nebivolol" }
+          ],
+          "caution": {
+            "en": "Use cautiously in asthma patients",
+            "zh": "氣喘病人需謹慎使用"
+          }
+        },
+        "non_dhp_ccbs": {
+          "en": "Non-DHP Calcium Channel Blockers",
+          "zh": "非二氫吡啶類鈣離子阻斷劑",
+          "drugs": [
+            { "drug": "Diltiazem" },
+            { "drug": "Verapamil" }
+          ],
+          "contraindication": {
+            "en": "Contraindicated in HFrEF due to negative inotropic effects",
+            "zh": "禁用於 HFrEF，因為會抑制心臟收縮力"
+          }
+        },
+        "digoxin": {
+          "en": "Digoxin",
+          "zh": "Digoxin",
+          "description": {
+            "en": "Adjunctive agent, particularly for sedentary elderly patients or those with heart failure",
+            "zh": "通常作為輔助用藥，適用於活動量低的老年人或合併心衰竭的病人"
+          }
+        }
+      }
+    },
+    "rhythm_control": {
+      "en": "R – Rhythm Control",
+      "zh": "R – 心律控制",
+      "goal": {
+        "en": "Restore and maintain sinus rhythm",
+        "zh": "恢復並維持正常竇性心律 (Sinus Rhythm)"
+      },
+      "catheter_ablation": {
+        "en": "Catheter Ablation",
+        "zh": "導管消融手術",
+        "description": {
+          "en": "For selected patients with symptomatic paroxysmal AF (generally younger with few comorbidities), catheter ablation is recommended as first-line therapy (Class I). For broader population of symptomatic paroxysmal or persistent AF, catheter ablation as first-line therapy can be useful (Class IIa).",
+          "zh": "對於陣發性 AF 病人，導管消融手術 (catheter ablation) 為第一線治療方案。對於特定病人（通常較年輕、共病少）為 Class I 建議；對於較廣泛族群為 Class IIa 建議。"
+        }
+      },
+      "antiarrhythmic_drugs": {
+        "en": "Long-term Antiarrhythmic Drug Selection",
+        "zh": "長期維持的藥物選擇",
+        "by_condition": [
+          {
+            "condition": "no_structural_heart_disease",
+            "name": {
+              "en": "No Structural Heart Disease",
+              "zh": "無結構性心臟病"
+            },
+            "drugs": [
+              {
+                "drug": "Flecainide",
+                "class": "Ic",
+                "notes": {
+                  "en": "When using Class Ic drugs, concurrent beta-blocker use is advised to prevent potential atrial flutter with rapid ventricular response",
+                  "zh": "使用 Class Ic 藥物時，建議合併使用 Beta-blockers，以預防藥物可能誘發的心房撲動 (Atrial Flutter)"
+                }
+              },
+              {
+                "drug": "Propafenone",
+                "class": "Ic",
+                "notes": {
+                  "en": "Same precaution as Flecainide",
+                  "zh": "注意事項同 Flecainide"
+                }
+              },
+              {
+                "drug": "Dronedarone",
+                "class": "III",
+                "notes": {
+                  "en": "Alternative option",
+                  "zh": "替代選擇"
+                }
+              }
+            ]
+          },
+          {
+            "condition": "cad",
+            "name": {
+              "en": "Coronary Artery Disease (CAD)",
+              "zh": "冠狀動脈疾病 (CAD)"
+            },
+            "drugs": [
+              {
+                "drug": "Dronedarone",
+                "notes": {
+                  "en": "Preferred for favorable side effect profile",
+                  "zh": "首選，副作用較少"
+                }
+              },
+              {
+                "drug": "Sotalol",
+                "notes": {
+                  "en": "Requires QT monitoring",
+                  "zh": "需監測 QT"
+                }
+              },
+              {
+                "drug": "Amiodarone",
+                "notes": {
+                  "en": "Last resort due to long-term toxicity",
+                  "zh": "最後手段，因長期副作用多"
+                }
+              }
+            ],
+            "contraindicated": {
+              "en": "Flecainide/Propafenone contraindicated due to proarrhythmic risk",
+              "zh": "禁用 Flecainide/Propafenone，會增加致死性心律不整的風險"
+            }
+          },
+          {
+            "condition": "heart_failure",
+            "name": {
+              "en": "Heart Failure (especially HFrEF)",
+              "zh": "心衰竭（特別是 HFrEF）"
+            },
+            "drugs": [
+              {
+                "drug": "Amiodarone",
+                "notes": {
+                  "en": "Primary option for HFrEF",
+                  "zh": "HFrEF 的主要選擇"
+                }
+              }
+            ],
+            "contraindicated": {
+              "en": "Dronedarone contraindicated — increases mortality (ANDROMEDA trial)",
+              "zh": "禁用 Dronedarone，會增加死亡率（ANDROMEDA 試驗）"
+            }
+          }
+        ],
+        "dronedarone_warning": {
+          "en": "Important: Dronedarone is also contraindicated in permanent AF (PALLAS trial showed increased cardiovascular events)",
+          "zh": "重要：Dronedarone 也禁用於永久性 AF（PALLAS 試驗顯示心血管事件增加）"
+        }
+      },
+      "acute_cardioversion": {
+        "en": "Acute Pharmacological Cardioversion",
+        "zh": "急性藥物轉律",
+        "stable_no_shd": {
+          "en": "Hemodynamically stable, no structural heart disease",
+          "zh": "血壓穩定且無結構性心臟病",
+          "drugs": {
+            "en": "Flecainide or Propafenone (PO or IV)",
+            "zh": "Flecainide 或 Propafenone（口服或靜脈注射）"
+          }
+        },
+        "pill_in_pocket": {
+          "en": "Pill-in-the-Pocket Strategy",
+          "zh": "口袋藥丸策略",
+          "description": {
+            "en": "For select patients with paroxysmal AF and no structural heart disease: after initial safety evaluation in a monitored setting, patients may self-administer a single high dose of Flecainide or Propafenone at episode onset.",
+            "zh": "針對陣發性 AF 且無結構性心臟病的病人，可經醫師評估安全性後，隨身攜帶單次高劑量的 Flecainide 或 Propafenone，於發作時自行服用以轉律。"
+          }
+        },
+        "with_shd_or_hf": {
+          "en": "Structural heart disease or heart failure",
+          "zh": "有結構性心臟病或心衰竭",
+          "drugs": {
+            "en": "Amiodarone (IV): Slower onset but safer cardioversion",
+            "zh": "Amiodarone（靜脈注射）：起效較慢（需數小時至數天），但最安全"
+          }
+        }
+      }
+    },
+    "comorbidity_management": {
+      "en": "C – Comorbidity and Risk Factor Management",
+      "zh": "C – 共病與危險因子管理",
+      "targets": [
+        {
+          "condition": "hypertension",
+          "name": {
+            "en": "Hypertension",
+            "zh": "高血壓"
+          },
+          "target": {
+            "en": "BP target 120-129/70-79 mmHg",
+            "zh": "目標血壓 120-129/70-79 mmHg"
+          }
+        },
+        {
+          "condition": "obesity",
+          "name": {
+            "en": "Obesity",
+            "zh": "肥胖"
+          },
+          "target": {
+            "en": "Weight reduction ≥10% for BMI ≥30",
+            "zh": "針對 BMI ≥30，減重幅度目標 ≥10%"
+          }
+        },
+        {
+          "condition": "alcohol",
+          "name": {
+            "en": "Alcohol",
+            "zh": "飲酒"
+          },
+          "target": {
+            "en": "≤30 g/week, complete abstinence preferred",
+            "zh": "酒精含量 ≤30 g/week，最好完全戒酒"
+          }
+        },
+        {
+          "condition": "diabetes_hf",
+          "name": {
+            "en": "Diabetes / Heart Failure",
+            "zh": "糖尿病 / 心衰竭"
+          },
+          "target": {
+            "en": "Prioritize SGLT2 inhibitors",
+            "zh": "合併 HF 或 DM：優先使用 SGLT2 inhibitors"
+          }
+        },
+        {
+          "condition": "sleep_apnea",
+          "name": {
+            "en": "Obstructive Sleep Apnea",
+            "zh": "阻塞性睡眠呼吸中止症"
+          },
+          "target": {
+            "en": "Management to minimize apneic episodes",
+            "zh": "積極治療以減少呼吸中止發作"
+          }
+        },
+        {
+          "condition": "exercise",
+          "name": {
+            "en": "Physical Activity",
+            "zh": "身體活動"
+          },
+          "target": {
+            "en": "Tailored exercise programme for regular moderate/vigorous activity",
+            "zh": "規劃適合的運動計畫，維持規律中等至高強度活動"
+          }
+        }
+      ]
+    }
+  },
+  "monitoring": {
+    "en": "Monitoring & Follow-up",
+    "zh": "監測與追蹤",
+    "evaluation": {
+      "en": "E – Evaluation and Dynamic Reassessment",
+      "zh": "E – 評估與動態再評估",
+      "timeline": {
+        "en": "Initial comprehensive evaluation 6 months after diagnosis, then at least annually. Immediate evaluation if stroke, bleeding, or hospitalization for cardiac issues occurs.",
+        "zh": "診斷後 6 個月進行第一次全面重新評估，之後每年至少評估一次。但當發生中風、出血、因心臟問題住院或症狀惡化時，則需立即評估。"
+      },
+      "assessment_items": {
+        "en": "Assessment Items",
+        "zh": "評估項目",
+        "items": [
+          {
+            "en": "Stroke and bleeding risk",
+            "zh": "中風與出血風險"
+          },
+          {
+            "en": "Symptom and treatment efficacy",
+            "zh": "症狀與治療效果"
+          },
+          {
+            "en": "Comorbidity control",
+            "zh": "共病的控制"
+          },
+          {
+            "en": "Disease progression",
+            "zh": "病程的進展"
+          }
+        ]
+      }
+    },
+    "key_principles": {
+      "en": "Key Clinical Principles",
+      "zh": "關鍵臨床原則",
+      "items": [
+        {
+          "en": "AF is a dynamic disease spectrum requiring individualized, multidisciplinary care",
+          "zh": "AF 是一個動態的疾病光譜，需要個體化、多專科團隊照護"
+        },
+        {
+          "en": "Temporal pattern (paroxysmal, persistent, permanent) guides symptom management but does NOT determine anticoagulation needs",
+          "zh": "時間模式（陣發性、持續性、永久性）指引症狀管理，但不決定抗凝需求"
+        },
+        {
+          "en": "Risk factor modification remains crucial across all stages — even permanent AF patients benefit from aggressive management of hypertension, obesity, sleep apnea",
+          "zh": "危險因子修正在所有階段都至關重要 — 即使永久性 AF 病人也能從積極管理高血壓、肥胖、睡眠呼吸中止症中獲益"
+        },
+        {
+          "en": "Integrated management through collaboration among primary care, cardiology, pharmacy, nursing optimizes outcomes through patient-centered shared decision-making",
+          "zh": "透過基層醫療、心臟科、藥學、護理等多專科合作的整合管理，以病人為中心的共同決策可優化治療結果"
+        }
+      ]
+    }
+  }
+}

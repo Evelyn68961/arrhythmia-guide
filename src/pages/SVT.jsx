@@ -245,17 +245,56 @@ export default function SVT() {
 
                 <h5>{data.treatment.stable_treatment.cardioversion[lang]}</h5>
                 <p>{data.treatment.stable_treatment.cardioversion.description[lang]}</p>
-
-
-
-
-
-
-
               </div>
 
+              {/* Tab 3: Long-term Prevention */}
+              <div className={`tab-content ${activeTab === 3 ? 'active' : ''}`}>
+                <h3>{data.prevention[lang]}</h3>
+                <h4>{data.prevention.catheter_ablation[lang]}</h4>
+                <p>{data.prevention.catheter_ablation[lang]}</p>
+                <h5>{data.prevention.catheter_ablation.techniquesTitle[lang]}</h5>
+                {data.prevention.catheter_ablation.techniques.map((item, index) => (
+                  <p key={index}>
+                    <strong>{item.name[lang]}</strong> — {item.description[lang]}
+                  </p>
+                ))}
+                <h5>{data.prevention.catheter_ablation.indicationsTitle[lang]}</h5>
+                <ul>
+                  {data.prevention.catheter_ablation.indications.map((s, index) => (
+                    <li key={index}>
+                      {s[lang]}
+                    </li>
+                  ))}
+                </ul>
+                <h5>{data.prevention.catheter_ablation.complications.title[lang]}</h5>
+                <p>{data.prevention.catheter_ablation.complications.content[lang]}</p>
+                <h4>{data.prevention.pharmacotherapy[lang]}</h4>
+                <p>{data.prevention.pharmacotherapy.note[lang]}</p>
+                {data.prevention.pharmacotherapy.agents.map((item) => (
+                  <div key={item.drug} >
+                    <h5>{item.drug}</h5>
+                    <p>{item.role[lang]}</p>
+                    <p>{item.considerations[lang]}</p>
+                  </div>
+                ))}
+
+                <h3>{data.special_considerations.title[lang]}</h3>
+                <h4>{data.special_considerations.wpw_and_preexcited_af[lang]}</h4>
+                <p>{data.special_considerations.wpw_and_preexcited_af.definition[lang]}</p>
+                <p>{data.special_considerations.wpw_and_preexcited_af.danger[lang]}</p>
+                <h5>{data.special_considerations.wpw_and_preexcited_af.management.title[lang]}</h5>
+                <ul>
+                  {data.special_considerations.wpw_and_preexcited_af.management.items.map((s, index) => (
+                    <li key={index}>
+                      {s[lang]}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              
             </div>
           </div>
         </div>
-      )
+  )
 } 

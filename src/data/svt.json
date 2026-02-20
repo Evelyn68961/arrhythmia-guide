@@ -553,29 +553,10 @@
         "en": "Catheter ablation is the most effective long-term treatment for recurrent SVT, offering potential cure. It is recommended as first-line therapy for symptomatic, recurrent SVT (Class I recommendation). Single-procedure success rate: 94-98.5% overall. Ablation is superior to long-term pharmacotherapy (drug efficacy only 30-50%).",
         "zh": "導管消融術是復發性 SVT 最有效的長期治療方式，可望達到根治。對於有症狀且反覆發作的 SVT，建議作為第一線治療（Class I 建議）。單次手術成功率：整體 94-98.5%。消融術優於長期藥物治療（藥物有效率僅 30-50%）。"
       },
-      "success_rates": [
-        {
-          "type": "AVNRT",
-          "rate": {
-            "en": "Long-term arrhythmia-free survival ~97-98%. Recurrence rate 3-7%.",
-            "zh": "長期無心律不整存活率約 97-98%。復發率 3-7%。"
-          }
-        },
-        {
-          "type": "AVRT",
-          "rate": {
-            "en": "Long-term arrhythmia-free survival ~92%. Eliminates both SVT and risk of rapid accessory pathway conduction during AF.",
-            "zh": "長期無心律不整存活率約 92%。可同時消除 SVT 及心房顫動時經副傳導路徑快速傳導的風險。"
-          }
-        },
-        {
-          "type": "Focal AT",
-          "rate": {
-            "en": "Long-term arrhythmia-free survival ~80%. Success depends on accurate focus localization.",
-            "zh": "長期無心律不整存活率約 80%。成功與否取決於準確定位病灶。"
-          }
-        }
-      ],
+      "techniquesTitle": {
+        "en": "Ablation Techniques",
+        "zh": "消融技術"
+      },      
       "techniques": [
         {
           "name": {
@@ -598,6 +579,10 @@
           }
         }
       ],
+      "indicationsTitle": {
+        "en": "Indications for Ablation",
+        "zh": "消融適應症"
+      },      
       "indications": [
         {
           "en": "Symptomatic recurrent SVT refractory to or intolerant of medications",
@@ -621,8 +606,14 @@
         }
       ],
       "complications": {
-        "en": "Complication rate < 2%. Major complications include: AV block requiring pacemaker (0.8-1.0% for AVNRT), cardiac perforation/tamponade, vascular access complications. Mortality extremely low: AVNRT 0.01%, AVRT 0.1%.",
-        "zh": "併發症率 < 2%。主要併發症包括：需植入心律調節器的房室傳導阻斷（AVNRT 為 0.8-1.0%）、心臟穿孔/心包填塞、血管通路併發症。死亡率極低：AVNRT 0.01%、AVRT 0.1%。"
+        "title": {
+          "en": "Complications & Safety Profile",
+          "zh": "併發症與安全性"
+        },
+        "content": {
+          "en": "Complication rate < 2%. Major complications include: AV block requiring pacemaker (0.8-1.0% for AVNRT), cardiac perforation/tamponade, vascular access complications. Mortality extremely low: AVNRT 0.01%, AVRT 0.1%.",
+          "zh": "併發症率 < 2%。主要併發症包括：需植入心律調節器的房室傳導阻斷（AVNRT 為 0.8-1.0%）、心臟穿孔/心包填塞、血管通路併發症。死亡率極低：AVNRT 0.01%、AVRT 0.1%。"
+        }
       }
     },
     "pharmacotherapy": {
@@ -681,6 +672,10 @@
     }
   },
   "special_considerations": {
+    "title": {
+      "en": "Special Considerations",
+      "zh": "特殊考量"
+    },
     "wpw_and_preexcited_af": {
       "en": "WPW Syndrome & Pre-excited AF",
       "zh": "WPW 症候群與預激性心房顫動",
@@ -692,50 +687,30 @@
         "en": "Pre-excited AF is a life-threatening emergency. Rapid conduction through the accessory pathway during AF can lead to ventricular fibrillation and sudden cardiac death.",
         "zh": "預激性心房顫動為危及生命的緊急狀況。心房顫動時經副傳導路徑快速傳導可導致心室顫動及心因性猝死。"
       },
-      "management": [
-        {
-          "en": "AVOID ALL AV nodal blockers: adenosine, verapamil, diltiazem, beta-blockers, digoxin, amiodarone",
-          "zh": "禁用所有房室結阻斷劑：adenosine、verapamil、diltiazem、β 阻斷劑、digoxin、amiodarone"
+      "management": {
+        "title": {
+          "en": "Management of Pre-excited AF",
+          "zh": "預激性心房顫動處置"
         },
-        {
-          "en": "Stable: Procainamide IV or Ibutilide IV",
-          "zh": "穩定：靜脈 Procainamide 或 Ibutilide"
-        },
-        {
-          "en": "Unstable: Immediate synchronized cardioversion",
-          "zh": "不穩定：立即同步電擊整流"
-        },
-        {
-          "en": "All WPW patients should be referred for electrophysiology study and ablation evaluation",
-          "zh": "所有 WPW 患者均應轉介電生理檢查及消融評估"
-        }
-      ]
-    },
-    "pregnancy": {
-      "en": "SVT in Pregnancy",
-      "zh": "孕期 SVT",
-      "management": [
-        {
-          "en": "Vagal maneuvers: First-line, safe in pregnancy",
-          "zh": "迷走神經刺激術：第一線，孕期安全"
-        },
-        {
-          "en": "Adenosine: Safe in pregnancy (does not cross placenta significantly)",
-          "zh": "Adenosine：孕期安全（不顯著穿越胎盤）"
-        },
-        {
-          "en": "Metoprolol or Propranolol: Preferred beta-blockers in pregnancy for ongoing management. Avoid atenolol (associated with fetal growth restriction).",
-          "zh": "Metoprolol 或 Propranolol：孕期持續管理的首選 β 阻斷劑。避免 Atenolol（與胎兒生長遲滯相關）。"
-        },
-        {
-          "en": "Avoid all antiarrhythmic drugs during first trimester if possible (2019 ESC)",
-          "zh": "第一孕期盡可能避免所有抗心律不整藥物（2019 ESC）"
-        },
-        {
-          "en": "Synchronized cardioversion is safe in pregnancy when indicated",
-          "zh": "有適應症時，同步電擊整流在孕期是安全的"
-        }
-      ]
+        "items": [
+          {
+            "en": "AVOID ALL AV nodal blockers: adenosine, verapamil, diltiazem, beta-blockers, digoxin, amiodarone",
+            "zh": "禁用所有房室結阻斷劑：adenosine、verapamil、diltiazem、β 阻斷劑、digoxin、amiodarone"
+          },
+          {
+            "en": "Stable: Procainamide IV or Ibutilide IV",
+            "zh": "穩定：靜脈 Procainamide 或 Ibutilide"
+          },
+          {
+            "en": "Unstable: Immediate synchronized cardioversion",
+            "zh": "不穩定：立即同步電擊整流"
+          },
+          {
+            "en": "All WPW patients should be referred for electrophysiology study and ablation evaluation",
+            "zh": "所有 WPW 患者均應轉介電生理檢查及消融評估"
+          }
+        ]
+      }
     }
   },
   "summary_table": {

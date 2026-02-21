@@ -372,12 +372,7 @@
             "en": "Direct oral anticoagulants have lower intracranial bleeding risk compared to warfarin.",
             "zh": "新型口服抗凝劑的顱內出血風險比 Warfarin 低。"
           },
-          "agents": [
-            { "drug": "Dabigatran" },
-            { "drug": "Rivaroxaban" },
-            { "drug": "Apixaban" },
-            { "drug": "Edoxaban" }
-          ]
+        "agents": ["Dabigatran", "Rivaroxaban", "Apixaban", "Edoxaban"]
         },
         "warfarin": {
           "en": "Warfarin (VKA)",

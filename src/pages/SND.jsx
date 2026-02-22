@@ -6,9 +6,8 @@ import saBlockImg from '../assets/images/SND-extra-SAblock.png'
 import acuteImg from '../assets/images/SND-acute-management.png'
 import longtermImg from '../assets/images/SND-longterm-treatment.png'
 
-export default function SND() {
+export default function SND({ lang }) {  // Receive lang as prop
 
-  const [lang, setLang] = useState('en')
   const [activeTab, setActiveTab] = useState(0)
   const [subTab, setSubTab] = useState(0)
 
@@ -21,21 +20,6 @@ export default function SND() {
 
   return (
     <div className="content">
-      {/* Language Toggle */}
-      <div className="lang-toggle">
-        <button 
-          className={lang === 'en' ? 'active' : ''} 
-          onClick={() => setLang('en')}
-        >
-          Eng
-        </button>
-        <button 
-          className={lang === 'zh' ? 'active' : ''} 
-          onClick={() => setLang('zh')}
-        >
-          中文
-        </button>
-      </div>
 
       {/* Title */}
       <h2>{data.topic[lang]}</h2>

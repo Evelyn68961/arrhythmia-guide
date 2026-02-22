@@ -4,8 +4,7 @@ import introImg from '../assets/images/VT-intro.png'
 import treatImg from '../assets/images/VT-acute-treatment.png'
 import preventImg from '../assets/images/VT-longterm-prevention.png'
 
-export default function VT() {
-  const [lang, setLang] = useState('en')
+export default function VT({ lang }) {
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [
@@ -18,21 +17,6 @@ export default function VT() {
 
   return (
     <div className="content">
-      {/* Language Toggle */}
-      <div className="lang-toggle">
-        <button 
-          className={lang === 'en' ? 'active' : ''} 
-          onClick={() => setLang('en')}
-        >
-          Eng
-        </button>
-        <button 
-          className={lang === 'zh' ? 'active' : ''} 
-          onClick={() => setLang('zh')}
-        >
-          中文
-        </button>
-      </div>
 
       {/* Title */}
       <h2>{data.topic[lang]}</h2>

@@ -5,8 +5,7 @@ import ecgImg from '../assets/images/SVT-ecg-path.png'
 import treatImg from '../assets/images/SVT-treatment.png'
 import preventImg from '../assets/images/SVT-prevention.png'
 
-export default function SVT() {
-  const [lang, setLang] = useState('en')
+export default function SVT({ lang }) {
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [
@@ -18,21 +17,6 @@ export default function SVT() {
 
   return (
         <div className="content">
-          {/* Language Toggle */}
-          <div className="lang-toggle">
-            <button 
-              className={lang === 'en' ? 'active' : ''} 
-              onClick={() => setLang('en')}
-            >
-              Eng
-            </button>
-            <button 
-              className={lang === 'zh' ? 'active' : ''} 
-              onClick={() => setLang('zh')}
-            >
-              中文
-            </button>
-          </div>
 
           {/* Title */}
           <h2>{data.topic[lang]}</h2>

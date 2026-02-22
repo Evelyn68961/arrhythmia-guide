@@ -4,8 +4,7 @@ import introImg from '../assets/images/AF-intro.png'
 import classImg from '../assets/images/AF-clinc-class.png'
 import treatImg from '../assets/images/AF-treat.png'
 
-export default function AF() {
-  const [lang, setLang] = useState('en')
+export default function AF({ lang }) {
   const [activeTab, setActiveTab] = useState(0)
   const [careTab, setCareTab] = useState(0)
 
@@ -24,21 +23,6 @@ export default function AF() {
 
   return (
         <div className="content">
-          {/* Language Toggle */}
-          <div className="lang-toggle">
-            <button 
-              className={lang === 'en' ? 'active' : ''} 
-              onClick={() => setLang('en')}
-            >
-              Eng
-            </button>
-            <button 
-              className={lang === 'zh' ? 'active' : ''} 
-              onClick={() => setLang('zh')}
-            >
-              中文
-            </button>
-          </div>
 
           {/* Title */}
           <h2>{data.topic[lang]}</h2>
@@ -327,7 +311,30 @@ export default function AF() {
                     <p>{data.treatment.rhythm_control.acute_cardioversion.with_shd_or_hf.drugs[lang]}</p>
                   </div>
                 )} 
+                
+                {careTab === 3 && (
+                  <div>
+                    <h4>{data.monitoring.evaluation[lang]}</h4>
+                    <p>{data.monitoring.evaluation.timeline[lang]}</p>
+                    <h5>{data.monitoring.evaluation.assessment_items[lang]}</h5>
+                    <ul>
+                      {data.monitoring.evaluation.assessment_items.items.map((item, index) => (
+                        <li key={index}>
+                          {item[lang]}
+                        </li>
+                      ))}
+                    </ul> 
+                    <h4>{data.monitoring.key_principles[lang]}</h4>
+                    <ul>
+                      {data.monitoring.key_principles.items.map((item, index) => (
+                        <li key={index}>
+                          {item[lang]}
+                        </li>
+                      ))}
+                    </ul> 
+                  </div>
                
+                )}
               </div>
 
 

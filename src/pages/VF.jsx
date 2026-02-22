@@ -4,8 +4,7 @@ import introImg from '../assets/images/VF-intro.png'
 import treatImg from '../assets/images/VF-management.png'
 import preventImg from '../assets/images/VF-prevention.png'
 
-export default function VF() {
-  const [lang, setLang] = useState('en')
+export default function VF({ lang }) {
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [
@@ -17,21 +16,6 @@ export default function VF() {
 
   return (
     <div className="content">
-      {/* Language Toggle */}
-      <div className="lang-toggle">
-        <button 
-          className={lang === 'en' ? 'active' : ''} 
-          onClick={() => setLang('en')}
-        >
-          Eng
-        </button>
-        <button 
-          className={lang === 'zh' ? 'active' : ''} 
-          onClick={() => setLang('zh')}
-        >
-          中文
-        </button>
-      </div>
 
       {/* Title */}
       <h2>{data.topic[lang]}</h2>

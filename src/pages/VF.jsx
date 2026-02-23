@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import data from '../data/vf.json'
 import introImg from '../assets/images/VF-intro.png'
+import etiImg from '../assets/images/VF-etiology.png'
 import treatImg from '../assets/images/VF-management.png'
 import preventImg from '../assets/images/VF-prevention.png'
 
@@ -9,7 +10,7 @@ export default function VF({ lang }) {
 
   const tabs = [
     { label: { en: 'Overview', zh: '概述' }, img: introImg },
-    { label: { en: 'Etiology', zh: '病因' }, img: introImg },
+    { label: { en: 'Etiology', zh: '病因' }, img: etiImg },
     { label: { en: 'Treatment', zh: '治療' }, img: treatImg },
     { label: { en: 'Prevention', zh: '預防' }, img: preventImg }
   ]
@@ -40,7 +41,7 @@ export default function VF({ lang }) {
             <img src={introImg} alt="VF Overview" />
           </div>
           <div className={`tab-content ${activeTab === 1 ? 'active' : ''}`}>
-            <img src={introImg} alt="VF Etiology" />
+            <img src={etiImg} alt="VF Etiology" />
           </div>
           <div className={`tab-content ${activeTab === 2 ? 'active' : ''}`}>
             <img src={treatImg} alt="VF Treatment" />

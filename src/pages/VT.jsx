@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import data from '../data/vt.json'
 import introImg from '../assets/images/VT-intro.png'
+import etiImg from '../assets/images/VT-etiology.png'
+import classImg from '../assets/images/VT-classification.png'
 import treatImg from '../assets/images/VT-acute-treatment.png'
 import preventImg from '../assets/images/VT-longterm-prevention.png'
 
@@ -9,8 +11,8 @@ export default function VT({ lang }) {
 
   const tabs = [
     { label: { en: 'Overview', zh: '概述' }, img: introImg },
-    { label: { en: 'Etiology', zh: '病因' }, img: introImg },
-    { label: { en: 'Classification', zh: '分類' }, img: introImg },
+    { label: { en: 'Etiology', zh: '病因' }, img: etiImg },
+    { label: { en: 'Classification', zh: '分類' }, img: classImg },
     { label: { en: 'Treatment', zh: '治療' }, img: treatImg },
     { label: { en: 'Prevention', zh: '預防' }, img: preventImg }
   ]
@@ -41,10 +43,10 @@ export default function VT({ lang }) {
             <img src={introImg} alt="VT Overview" />
           </div>
           <div className={`tab-content ${activeTab === 1 ? 'active' : ''}`}>
-            <img src={introImg} alt="VT Etiology" />
+            <img src={etiImg} alt="VT Etiology" />
           </div>
           <div className={`tab-content ${activeTab === 2 ? 'active' : ''}`}>
-            <img src={introImg} alt="VT Classification" />
+            <img src={classImg} alt="VT Classification" />
           </div>
           <div className={`tab-content ${activeTab === 3 ? 'active' : ''}`}>
             <img src={treatImg} alt="VT Treatment" />

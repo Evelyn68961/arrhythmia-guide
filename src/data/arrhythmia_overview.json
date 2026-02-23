@@ -1,0 +1,778 @@
+{
+  "topic": {
+    "en": "Cardiac Arrhythmia Overview",
+    "zh": "心律不整概論"
+  },
+  "definition": {
+    "en": "Cardiac arrhythmia refers to any irregular rate or rhythm in the electrical activity of the heart. Arrhythmias result from abnormalities in impulse generation (automaticity), impulse conduction, or both. They range from benign (e.g., sinus arrhythmia) to life-threatening (e.g., ventricular fibrillation).",
+    "zh": "心律不整是指心臟電氣活動的任何不規則頻率或節律。心律不整源於電訊號產生（自動性）、電訊號傳導或兩者的異常。從良性（如竇性心律不整）到危及生命（如心室顫動）不等。"
+  },
+  "normal_vs_arrhythmia": {
+    "title": {
+      "en": "Normal Heart Rhythm vs. Arrhythmia",
+      "zh": "心臟節律對比：正常 vs. 心律不整"
+    },
+    "normal_heart": {
+      "en": "Normal Heart",
+      "zh": "正常心臟",
+      "characteristics": [
+        {
+          "en": "Sinus node generates regular impulses at 60-100 bpm",
+          "zh": "竇房結以 60-100 bpm 的頻率發出規律訊號"
+        },
+        {
+          "en": "Signals propagate steadily to AV node",
+          "zh": "訊號穩定傳導至房室結"
+        },
+        {
+          "en": "Coordinated atrial and ventricular contraction",
+          "zh": "確保心房與心室協調收縮"
+        },
+        {
+          "en": "Regular R-R intervals on ECG",
+          "zh": "ECG 上 R-R 間距規則"
+        }
+      ]
+    },
+    "arrhythmia": {
+      "en": "Arrhythmia",
+      "zh": "心律不整",
+      "characteristics": [
+        {
+          "en": "Chaotic or abnormal signal generation",
+          "zh": "出現混亂訊號或異常訊號產生"
+        },
+        {
+          "en": "Multiple abnormal impulses (as in AF)",
+          "zh": "多個異常電訊號（如心房顫動）"
+        },
+        {
+          "en": "Ineffective atrial contraction",
+          "zh": "心房無法有效收縮"
+        },
+        {
+          "en": "Irregular ventricular response",
+          "zh": "進而影響心室脈衝的規律性"
+        }
+      ],
+      "example_af": {
+        "en": "Example: Atrial Fibrillation",
+        "zh": "範例：心房顫動",
+        "description": {
+          "en": "In atrial fibrillation, the atria have numerous chaotic impulses (atrial fibrillation impulses), preventing effective atrial contraction and causing irregular ventricular response.",
+          "zh": "以心房顫動為例，心房內有無數混亂脈衝（atrial fibrillation impulses），導致心房無法有效收縮，進而影響心室脈衝的規律性。"
+        }
+      }
+    }
+  },
+  "classification": {
+    "title": {
+      "en": "Classification of Arrhythmias",
+      "zh": "心律不整分類"
+    },
+    "by_rate": {
+      "en": "By Heart Rate",
+      "zh": "依心率分類",
+      "categories": [
+        {
+          "category": {
+            "en": "Bradyarrhythmias (HR < 60 bpm)",
+            "zh": "心搏過緩（HR < 60 bpm）"
+          },
+          "examples": [
+            {
+              "en": "Sinus bradycardia",
+              "zh": "竇性心搏過緩"
+            },
+            {
+              "en": "Sinus node dysfunction (Sick Sinus Syndrome)",
+              "zh": "竇房結功能異常（病竇症候群）"
+            },
+            {
+              "en": "AV blocks (1st, 2nd, 3rd degree)",
+              "zh": "房室阻滯（第一、二、三度）"
+            },
+            {
+              "en": "Junctional/ventricular escape rhythms",
+              "zh": "交界性/心室逸搏節律"
+            }
+          ]
+        },
+        {
+          "category": {
+            "en": "Tachyarrhythmias (HR > 100 bpm)",
+            "zh": "心搏過速（HR > 100 bpm）"
+          },
+          "examples": [
+            {
+              "en": "Sinus tachycardia",
+              "zh": "竇性心搏過速"
+            },
+            {
+              "en": "Supraventricular tachycardia (SVT): AVNRT, AVRT, AT",
+              "zh": "心室上頻脈（SVT）：AVNRT、AVRT、AT"
+            },
+            {
+              "en": "Atrial fibrillation / Atrial flutter",
+              "zh": "心房顫動/心房撲動"
+            },
+            {
+              "en": "Ventricular tachycardia (VT)",
+              "zh": "心室頻脈（VT）"
+            },
+            {
+              "en": "Ventricular fibrillation (VF)",
+              "zh": "心室顫動（VF）"
+            }
+          ]
+        }
+      ]
+    },
+    "by_origin": {
+      "en": "By Origin",
+      "zh": "依起源分類",
+      "categories": [
+        {
+          "category": {
+            "en": "Supraventricular (Above ventricles)",
+            "zh": "心室上（心室以上）"
+          },
+          "qrs_width": {
+            "en": "Usually narrow QRS (< 120 ms)",
+            "zh": "通常窄 QRS（< 120 ms）"
+          },
+          "examples": [
+            {
+              "en": "Sinus arrhythmias",
+              "zh": "竇性心律不整"
+            },
+            {
+              "en": "Atrial arrhythmias (AF, AFL, AT, MAT)",
+              "zh": "心房心律不整（AF、AFL、AT、MAT）"
+            },
+            {
+              "en": "Junctional arrhythmias (AVNRT)",
+              "zh": "交界性心律不整（AVNRT）"
+            },
+            {
+              "en": "Accessory pathway-mediated (AVRT)",
+              "zh": "副傳導路徑相關（AVRT）"
+            }
+          ]
+        },
+        {
+          "category": {
+            "en": "Ventricular (From ventricles)",
+            "zh": "心室（來自心室）"
+          },
+          "qrs_width": {
+            "en": "Wide QRS (≥ 120 ms)",
+            "zh": "寬 QRS（≥ 120 ms）"
+          },
+          "examples": [
+            {
+              "en": "Premature ventricular contractions (PVCs)",
+              "zh": "早發性心室收縮（PVCs）"
+            },
+            {
+              "en": "Ventricular tachycardia (VT)",
+              "zh": "心室頻脈（VT）"
+            },
+            {
+              "en": "Ventricular fibrillation (VF)",
+              "zh": "心室顫動（VF）"
+            },
+            {
+              "en": "Idioventricular rhythm",
+              "zh": "自發性心室節律"
+            }
+          ]
+        }
+      ]
+    },
+    "by_mechanism": {
+      "en": "By Mechanism",
+      "zh": "依機轉分類",
+      "mechanisms": [
+        {
+          "mechanism": {
+            "en": "Abnormal Automaticity",
+            "zh": "異常自動性"
+          },
+          "description": {
+            "en": "Enhanced or abnormal spontaneous depolarization of pacemaker or non-pacemaker cells",
+            "zh": "起搏細胞或非起搏細胞的自發去極化增強或異常"
+          },
+          "examples": {
+            "en": "Sinus tachycardia, ectopic atrial tachycardia, accelerated idioventricular rhythm",
+            "zh": "竇性心搏過速、異位心房頻脈、加速性自發心室節律"
+          }
+        },
+        {
+          "mechanism": {
+            "en": "Reentry",
+            "zh": "折返"
+          },
+          "description": {
+            "en": "Electrical impulse circulates in a closed loop due to dual pathways with different conduction velocities and refractory periods",
+            "zh": "電訊號因存在具不同傳導速度及不反應期的雙路徑而在封閉迴路中循環"
+          },
+          "requirements": [
+            {
+              "en": "Two distinct pathways",
+              "zh": "兩條不同的路徑"
+            },
+            {
+              "en": "Unidirectional block in one pathway",
+              "zh": "其中一條路徑單向阻滯"
+            },
+            {
+              "en": "Slow conduction in alternate pathway",
+              "zh": "替代路徑傳導緩慢"
+            }
+          ],
+          "examples": {
+            "en": "AVNRT, AVRT, atrial flutter, scar-related VT, most AF",
+            "zh": "AVNRT、AVRT、心房撲動、疤痕相關 VT、大多數 AF"
+          }
+        },
+        {
+          "mechanism": {
+            "en": "Triggered Activity",
+            "zh": "觸發活動"
+          },
+          "description": {
+            "en": "Afterdepolarizations trigger abnormal impulses",
+            "zh": "後去極化觸發異常電訊號"
+          },
+          "subtypes": [
+            {
+              "type": {
+                "en": "Early Afterdepolarizations (EADs)",
+                "zh": "早期後去極化（EADs）"
+              },
+              "phase": {
+                "en": "Phase 2/3",
+                "zh": "Phase 2/3"
+              },
+              "cause": {
+                "en": "Prolonged action potential (long QT)",
+                "zh": "動作電位延長（長 QT）"
+              },
+              "example": {
+                "en": "Torsades de Pointes",
+                "zh": "尖端扭轉型心室頻脈"
+              }
+            },
+            {
+              "type": {
+                "en": "Delayed Afterdepolarizations (DADs)",
+                "zh": "延遲後去極化（DADs）"
+              },
+              "phase": {
+                "en": "Phase 4",
+                "zh": "Phase 4"
+              },
+              "cause": {
+                "en": "Intracellular Ca²⁺ overload",
+                "zh": "細胞內 Ca²⁺ 過載"
+              },
+              "example": {
+                "en": "Digitalis toxicity, CPVT",
+                "zh": "毛地黃中毒、CPVT"
+              }
+            }
+          ]
+        },
+        {
+          "mechanism": {
+            "en": "Conduction Abnormalities",
+            "zh": "傳導異常"
+          },
+          "description": {
+            "en": "Block or delay in normal conduction pathways",
+            "zh": "正常傳導路徑的阻滯或延遲"
+          },
+          "examples": {
+            "en": "SA exit block, AV blocks (1st, 2nd, 3rd degree), bundle branch blocks",
+            "zh": "SA 出口阻滯、AV 阻滯（第一、二、三度）、束支傳導阻滯"
+          }
+        }
+      ]
+    }
+  },
+  "etiology": {
+    "title": {
+      "en": "Common Causes of Arrhythmias",
+      "zh": "心律不整常見病因"
+    },
+    "categories": [
+      {
+        "category": {
+          "en": "Structural Heart Disease",
+          "zh": "結構性心臟疾病"
+        },
+        "causes": [
+          {
+            "en": "Coronary artery disease / Myocardial infarction",
+            "zh": "冠狀動脈疾病/心肌梗塞"
+          },
+          {
+            "en": "Cardiomyopathy (dilated, hypertrophic, arrhythmogenic)",
+            "zh": "心肌病變（擴張性、肥厚性、致心律失常性）"
+          },
+          {
+            "en": "Valvular heart disease",
+            "zh": "瓣膜性心臟病"
+          },
+          {
+            "en": "Congenital heart disease",
+            "zh": "先天性心臟病"
+          },
+          {
+            "en": "Heart failure",
+            "zh": "心衰竭"
+          }
+        ]
+      },
+      {
+        "category": {
+          "en": "Electrolyte Abnormalities",
+          "zh": "電解質異常"
+        },
+        "causes": [
+          {
+            "en": "Hypokalemia / Hyperkalemia",
+            "zh": "低血鉀/高血鉀"
+          },
+          {
+            "en": "Hypomagnesemia",
+            "zh": "低血鎂"
+          },
+          {
+            "en": "Hypocalcemia / Hypercalcemia",
+            "zh": "低血鈣/高血鈣"
+          }
+        ]
+      },
+      {
+        "category": {
+          "en": "Medications & Toxins",
+          "zh": "藥物與毒素"
+        },
+        "causes": [
+          {
+            "en": "QT-prolonging drugs (antipsychotics, antibiotics, antiarrhythmics)",
+            "zh": "延長 QT 的藥物（抗精神病藥、抗生素、抗心律不整藥）"
+          },
+          {
+            "en": "Digitalis toxicity",
+            "zh": "毛地黃中毒"
+          },
+          {
+            "en": "Sympathomimetics (cocaine, amphetamines)",
+            "zh": "擬交感神經藥（古柯鹼、安非他命）"
+          },
+          {
+            "en": "Alcohol (holiday heart syndrome)",
+            "zh": "酒精（假日心臟症候群）"
+          }
+        ]
+      },
+      {
+        "category": {
+          "en": "Metabolic & Endocrine",
+          "zh": "代謝與內分泌"
+        },
+        "causes": [
+          {
+            "en": "Hyperthyroidism / Hypothyroidism",
+            "zh": "甲狀腺亢進/甲狀腺功能低下"
+          },
+          {
+            "en": "Hypoxia",
+            "zh": "缺氧"
+          },
+          {
+            "en": "Acidosis",
+            "zh": "酸中毒"
+          },
+          {
+            "en": "Fever / Sepsis",
+            "zh": "發燒/敗血症"
+          }
+        ]
+      },
+      {
+        "category": {
+          "en": "Autonomic",
+          "zh": "自律神經"
+        },
+        "causes": [
+          {
+            "en": "Increased sympathetic tone (stress, pain, anxiety)",
+            "zh": "交感神經張力增加（壓力、疼痛、焦慮）"
+          },
+          {
+            "en": "Increased vagal tone (athletes, sleep)",
+            "zh": "迷走神經張力增加（運動員、睡眠）"
+          }
+        ]
+      },
+      {
+        "category": {
+          "en": "Genetic / Channelopathies",
+          "zh": "遺傳/離子通道病變"
+        },
+        "causes": [
+          {
+            "en": "Long QT syndrome",
+            "zh": "長 QT 症候群"
+          },
+          {
+            "en": "Brugada syndrome",
+            "zh": "布魯格達症候群"
+          },
+          {
+            "en": "Catecholaminergic polymorphic VT (CPVT)",
+            "zh": "兒茶酚胺敏感性多型性 VT（CPVT）"
+          },
+          {
+            "en": "Wolff-Parkinson-White syndrome",
+            "zh": "沃爾夫-帕金森-懷特症候群（WPW）"
+          }
+        ]
+      },
+      {
+        "category": {
+          "en": "Other",
+          "zh": "其他"
+        },
+        "causes": [
+          {
+            "en": "Idiopathic fibrosis of conduction system (aging)",
+            "zh": "傳導系統特發性纖維化（老化）"
+          },
+          {
+            "en": "Inflammatory (myocarditis, pericarditis)",
+            "zh": "發炎性（心肌炎、心包膜炎）"
+          },
+          {
+            "en": "Infiltrative (amyloidosis, sarcoidosis)",
+            "zh": "浸潤性（澱粉樣變性、結節病）"
+          },
+          {
+            "en": "Post-cardiac surgery",
+            "zh": "心臟手術後"
+          }
+        ]
+      }
+    ]
+  },
+  "clinical_presentation": {
+    "title": {
+      "en": "Clinical Presentation",
+      "zh": "臨床表現"
+    },
+    "symptoms": {
+      "en": "Common Symptoms",
+      "zh": "常見症狀",
+      "items": [
+        {
+          "symptom": {
+            "en": "Palpitations",
+            "zh": "心悸"
+          },
+          "description": {
+            "en": "Sensation of rapid, fluttering, or pounding heartbeat",
+            "zh": "感覺心跳快速、顫動或猛烈跳動"
+          }
+        },
+        {
+          "symptom": {
+            "en": "Dizziness / Lightheadedness",
+            "zh": "頭暈/頭輕感"
+          },
+          "description": {
+            "en": "Due to reduced cardiac output",
+            "zh": "因心輸出量減少"
+          }
+        },
+        {
+          "symptom": {
+            "en": "Syncope / Near-syncope",
+            "zh": "昏厥/近乎昏厥"
+          },
+          "description": {
+            "en": "Transient loss of consciousness from cerebral hypoperfusion",
+            "zh": "因腦部灌流不足導致短暫意識喪失"
+          }
+        },
+        {
+          "symptom": {
+            "en": "Dyspnea",
+            "zh": "呼吸困難"
+          },
+          "description": {
+            "en": "Shortness of breath, especially with exertion or rapid rates",
+            "zh": "呼吸短促，尤其在活動或心率過快時"
+          }
+        },
+        {
+          "symptom": {
+            "en": "Chest discomfort",
+            "zh": "胸部不適"
+          },
+          "description": {
+            "en": "May mimic angina, especially with rapid ventricular rates",
+            "zh": "可能類似心絞痛，尤其在心室率過快時"
+          }
+        },
+        {
+          "symptom": {
+            "en": "Fatigue",
+            "zh": "疲倦"
+          },
+          "description": {
+            "en": "From reduced cardiac efficiency; common in chronic AF",
+            "zh": "因心臟效率降低；常見於慢性心房顫動"
+          }
+        }
+      ]
+    },
+    "serious_presentations": {
+      "en": "Serious/Emergency Presentations",
+      "zh": "嚴重/緊急表現",
+      "items": [
+        {
+          "presentation": {
+            "en": "Hemodynamic instability",
+            "zh": "血流動力學不穩定"
+          },
+          "features": {
+            "en": "Hypotension (SBP < 90 mmHg), altered mental status, signs of shock",
+            "zh": "低血壓（收縮壓 < 90 mmHg）、意識改變、休克徵象"
+          }
+        },
+        {
+          "presentation": {
+            "en": "Acute heart failure",
+            "zh": "急性心衰竭"
+          },
+          "features": {
+            "en": "Pulmonary edema, severe dyspnea, tachycardia-induced cardiomyopathy",
+            "zh": "肺水腫、嚴重呼吸困難、心搏過速誘發的心肌病變"
+          }
+        },
+        {
+          "presentation": {
+            "en": "Stroke / TIA",
+            "zh": "中風/暫時性腦缺血發作"
+          },
+          "features": {
+            "en": "Thromboembolism from AF; may be first presentation",
+            "zh": "心房顫動的血栓栓塞；可能為首次表現"
+          }
+        },
+        {
+          "presentation": {
+            "en": "Cardiac arrest",
+            "zh": "心臟停止"
+          },
+          "features": {
+            "en": "Pulseless VT, VF, asystole, PEA",
+            "zh": "無脈搏 VT、VF、心搏停止、無脈性電氣活動"
+          }
+        }
+      ]
+    },
+    "asymptomatic": {
+      "en": "Asymptomatic Arrhythmias",
+      "zh": "無症狀心律不整",
+      "description": {
+        "en": "Many arrhythmias are discovered incidentally during routine examinations or monitoring. Silent AF affects up to 30% of patients and may only be diagnosed after stroke.",
+        "zh": "許多心律不整是在常規檢查或監測時意外發現。沉默型心房顫動影響多達 30% 的患者，可能僅在中風後才被診斷。"
+      }
+    }
+  },
+  "diagnostic_approach": {
+    "title": {
+      "en": "Diagnostic Approach",
+      "zh": "診斷方法"
+    },
+    "modalities": [
+      {
+        "modality": {
+          "en": "12-Lead ECG",
+          "zh": "12 導程心電圖"
+        },
+        "role": {
+          "en": "First-line diagnostic tool; captures rhythm at single time point",
+          "zh": "第一線診斷工具；捕捉單一時間點的節律"
+        }
+      },
+      {
+        "modality": {
+          "en": "Continuous Monitoring (Holter, Event Recorder, Loop Recorder)",
+          "zh": "連續監測（Holter、事件記錄器、迴路記錄器）"
+        },
+        "role": {
+          "en": "For paroxysmal arrhythmias; correlate symptoms with rhythm",
+          "zh": "用於陣發性心律不整；將症狀與節律關聯"
+        }
+      },
+      {
+        "modality": {
+          "en": "Electrophysiology Study (EPS)",
+          "zh": "電生理檢查（EPS）"
+        },
+        "role": {
+          "en": "Invasive assessment of conduction system; guides ablation",
+          "zh": "傳導系統的侵入性評估；指導消融治療"
+        }
+      },
+      {
+        "modality": {
+          "en": "Laboratory Tests",
+          "zh": "實驗室檢查"
+        },
+        "role": {
+          "en": "Electrolytes (K⁺, Mg²⁺, Ca²⁺), thyroid function, troponin, BNP",
+          "zh": "電解質（K⁺、Mg²⁺、Ca²⁺）、甲狀腺功能、troponin、BNP"
+        }
+      },
+      {
+        "modality": {
+          "en": "Echocardiography",
+          "zh": "心臟超音波"
+        },
+        "role": {
+          "en": "Assess structural heart disease, LV function, valve disease, LA size",
+          "zh": "評估結構性心臟病、左心室功能、瓣膜疾病、左心房大小"
+        }
+      }
+    ]
+  },
+  "management_principles": {
+    "title": {
+      "en": "General Management Principles",
+      "zh": "一般處置原則"
+    },
+    "acute_management": {
+      "en": "Acute Management",
+      "zh": "急性處置",
+      "steps": [
+        {
+          "step": 1,
+          "action": {
+            "en": "Assess hemodynamic stability",
+            "zh": "評估血流動力學穩定性"
+          },
+          "details": {
+            "en": "Unstable patients require immediate intervention (cardioversion/defibrillation)",
+            "zh": "不穩定患者需立即介入（電擊整流/電擊去顫）"
+          }
+        },
+        {
+          "step": 2,
+          "action": {
+            "en": "Identify and treat reversible causes",
+            "zh": "識別並治療可逆性原因"
+          },
+          "details": {
+            "en": "Electrolytes, ischemia, drugs, hypoxia, acid-base status",
+            "zh": "電解質、缺血、藥物、缺氧、酸鹼狀態"
+          }
+        },
+        {
+          "step": 3,
+          "action": {
+            "en": "Rate vs. rhythm control decision",
+            "zh": "心率控制 vs. 節律控制決策"
+          },
+          "details": {
+            "en": "Based on arrhythmia type, symptoms, hemodynamics, and patient factors",
+            "zh": "基於心律不整類型、症狀、血流動力學及患者因素"
+          }
+        },
+        {
+          "step": 4,
+          "action": {
+            "en": "Specific pharmacological or electrical intervention",
+            "zh": "特定藥物或電氣介入"
+          },
+          "details": {
+            "en": "Drug selection based on arrhythmia mechanism and patient comorbidities",
+            "zh": "藥物選擇基於心律不整機轉及患者共病"
+          }
+        }
+      ]
+    },
+    "long_term_management": {
+      "en": "Long-term Management",
+      "zh": "長期處置",
+      "components": [
+        {
+          "component": {
+            "en": "Risk stratification",
+            "zh": "風險分層"
+          },
+          "details": {
+            "en": "Assess stroke risk (CHA₂DS₂-VASc for AF), sudden cardiac death risk",
+            "zh": "評估中風風險（AF 的 CHA₂DS₂-VASc）、心因性猝死風險"
+          }
+        },
+        {
+          "component": {
+            "en": "Anticoagulation",
+            "zh": "抗凝血治療"
+          },
+          "details": {
+            "en": "For AF/AFL based on stroke risk; DOACs preferred over warfarin in most cases",
+            "zh": "AF/AFL 基於中風風險；大多數情況下 DOACs 優於 warfarin"
+          }
+        },
+        {
+          "component": {
+            "en": "Antiarrhythmic drug therapy",
+            "zh": "抗心律不整藥物治療"
+          },
+          "details": {
+            "en": "Selection based on Vaughan-Williams classification and patient factors",
+            "zh": "選擇基於 Vaughan-Williams 分類及患者因素"
+          }
+        },
+        {
+          "component": {
+            "en": "Catheter ablation",
+            "zh": "導管消融術"
+          },
+          "details": {
+            "en": "Curative for many SVTs; increasingly used for AF and VT",
+            "zh": "對許多 SVT 可治癒；越來越多用於 AF 及 VT"
+          }
+        },
+        {
+          "component": {
+            "en": "Device therapy",
+            "zh": "裝置治療"
+          },
+          "details": {
+            "en": "Pacemakers for bradyarrhythmias; ICDs for VT/VF prevention",
+            "zh": "起搏器用於心搏過緩；ICD 用於 VT/VF 預防"
+          }
+        },
+        {
+          "component": {
+            "en": "Risk factor modification",
+            "zh": "危險因子調整"
+          },
+          "details": {
+            "en": "Hypertension, obesity, sleep apnea, alcohol, diabetes management",
+            "zh": "高血壓、肥胖、睡眠呼吸中止症、酒精、糖尿病管理"
+          }
+        }
+      ]
+    }
+  }
+}

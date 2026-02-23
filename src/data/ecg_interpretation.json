@@ -1,0 +1,649 @@
+{
+  "topic": {
+    "en": "ECG Interpretation Fundamentals",
+    "zh": "心電圖判讀基礎"
+  },
+  "overview": {
+    "en": "The electrocardiogram (ECG) is the cornerstone diagnostic tool for cardiac arrhythmias. Mastery requires understanding basic ECG components and intervals, followed by a systematic approach to rhythm interpretation. This foundation enables accurate diagnosis and appropriate treatment selection.",
+    "zh": "心電圖（ECG）是診斷心律不整的基石工具。精通 ECG 需要理解基本的 ECG 組成與間期，並運用系統性的節律判讀方法。此基礎使得準確診斷與適當治療選擇成為可能。"
+  },
+  "basic_ecg_components": {
+    "title": {
+      "en": "Basic ECG Components & Intervals",
+      "zh": "基本 ECG 組成與間期"
+    },
+    "waves_and_segments": {
+      "en": "Waves and Segments",
+      "zh": "波形與節段",
+      "components": [
+        {
+          "component": {
+            "en": "P Wave",
+            "zh": "P 波"
+          },
+          "represents": {
+            "en": "Atrial depolarization",
+            "zh": "心房去極化"
+          },
+          "normal_characteristics": {
+            "en": "Upright in leads I, II, aVF; duration < 120 ms; amplitude < 2.5 mm",
+            "zh": "在 I、II、aVF 導程為正向；時間 < 120 ms；振幅 < 2.5 mm"
+          },
+          "clinical_relevance": {
+            "en": "Absent in AF; abnormal morphology indicates atrial enlargement; inverted P waves suggest ectopic atrial focus or retrograde conduction",
+            "zh": "心房顫動時消失；形態異常提示心房擴大；倒置 P 波提示異位心房起搏點或逆行傳導"
+          }
+        },
+        {
+          "component": {
+            "en": "PR Segment",
+            "zh": "PR 節段"
+          },
+          "represents": {
+            "en": "AV nodal conduction delay (isoelectric period from end of P to start of QRS)",
+            "zh": "AV 結傳導延遲（從 P 波結束到 QRS 起始的等電位期）"
+          },
+          "clinical_relevance": {
+            "en": "Allows atrial contraction to complete before ventricular filling",
+            "zh": "讓心房收縮在心室填充前完成"
+          }
+        },
+        {
+          "component": {
+            "en": "QRS Complex",
+            "zh": "QRS 波群"
+          },
+          "represents": {
+            "en": "Ventricular depolarization",
+            "zh": "心室去極化"
+          },
+          "normal_characteristics": {
+            "en": "Duration < 120 ms (< 3 small boxes)",
+            "zh": "時間 < 120 ms（< 3 小格）"
+          },
+          "clinical_relevance": {
+            "en": "Wide QRS (≥ 120 ms) seen in: bundle branch block, hyperkalemia, Na⁺ channel blocker toxicity, ventricular origin rhythms, pre-excitation (WPW)",
+            "zh": "寬 QRS（≥ 120 ms）見於：束支傳導阻滯、高血鉀、Na⁺ 通道阻斷劑毒性、心室起源節律、預激（WPW）"
+          }
+        },
+        {
+          "component": {
+            "en": "ST Segment",
+            "zh": "ST 節段"
+          },
+          "represents": {
+            "en": "Early ventricular repolarization (isoelectric period from end of QRS to start of T)",
+            "zh": "早期心室再極化（從 QRS 結束到 T 波起始的等電位期）"
+          },
+          "clinical_relevance": {
+            "en": "Elevation indicates acute MI (STEMI) or pericarditis; depression indicates ischemia or reciprocal changes",
+            "zh": "抬高提示急性心肌梗塞（STEMI）或心包膜炎；壓低提示缺血或對應性改變"
+          }
+        },
+        {
+          "component": {
+            "en": "T Wave",
+            "zh": "T 波"
+          },
+          "represents": {
+            "en": "Ventricular repolarization",
+            "zh": "心室再極化"
+          },
+          "normal_characteristics": {
+            "en": "Upright in most leads; inverted in aVR; variable in III, aVL, V1",
+            "zh": "大多數導程為正向；aVR 導程為倒置；III、aVL、V1 可變化"
+          },
+          "clinical_relevance": {
+            "en": "Peaked T waves suggest hyperkalemia; inverted T waves indicate ischemia; T wave changes seen in electrolyte abnormalities",
+            "zh": "尖峰 T 波提示高血鉀；倒置 T 波提示缺血；電解質異常會造成 T 波改變"
+          }
+        },
+        {
+          "component": {
+            "en": "U Wave",
+            "zh": "U 波"
+          },
+          "represents": {
+            "en": "Late repolarization (possibly Purkinje fibers or M cells)",
+            "zh": "晚期再極化（可能為浦金氏纖維或 M 細胞）"
+          },
+          "normal_characteristics": {
+            "en": "Small positive deflection after T wave; most prominent in V2-V4",
+            "zh": "T 波後的小正向偏折；在 V2-V4 最明顯"
+          },
+          "clinical_relevance": {
+            "en": "Prominent U waves suggest hypokalemia; may be seen with bradycardia",
+            "zh": "明顯的 U 波提示低血鉀；可見於心搏過緩"
+          }
+        }
+      ]
+    },
+    "key_intervals": {
+      "en": "Key Intervals",
+      "zh": "關鍵間期",
+      "intervals": [
+        {
+          "interval": {
+            "en": "PR Interval",
+            "zh": "PR 間期"
+          },
+          "measures": {
+            "en": "Atria → AV node → ventricles conduction time (P wave onset to QRS onset)",
+            "zh": "心房 → AV 結 → 心室傳導時間（P 波起始至 QRS 起始）"
+          },
+          "normal_value": {
+            "en": "120-200 ms (3-5 small boxes)",
+            "zh": "120-200 ms（3-5 小格）"
+          },
+          "prolonged_by": {
+            "en": "Beta-blockers, CCBs (verapamil, diltiazem), digoxin, amiodarone, 1st degree AV block",
+            "zh": "β 阻斷劑、CCBs（verapamil、diltiazem）、digoxin、amiodarone、第一度 AV 阻滯"
+          },
+          "clinical_consequence": {
+            "en": "Prolonged PR (> 200 ms) = 1st degree AV block; shortened PR (< 120 ms) with delta wave = WPW",
+            "zh": "PR 延長（> 200 ms）= 第一度 AV 阻滯；PR 縮短（< 120 ms）合併 delta 波 = WPW"
+          }
+        },
+        {
+          "interval": {
+            "en": "QRS Duration",
+            "zh": "QRS 時間"
+          },
+          "measures": {
+            "en": "Ventricular depolarization speed",
+            "zh": "心室去極化速度"
+          },
+          "normal_value": {
+            "en": "< 120 ms (< 3 small boxes)",
+            "zh": "< 120 ms（< 3 小格）"
+          },
+          "prolonged_by": {
+            "en": "Class IC agents (flecainide, propafenone), TCAs, severe hyperkalemia, bundle branch block",
+            "zh": "IC 類藥物（flecainide、propafenone）、三環抗憂鬱劑、嚴重高血鉀、束支傳導阻滯"
+          },
+          "clinical_consequence": {
+            "en": "Widened QRS indicates conduction delay or ventricular origin; increases risk of VT in structural heart disease",
+            "zh": "QRS 變寬表示傳導延遲或心室起源；在結構性心臟病中增加 VT 風險"
+          }
+        },
+        {
+          "interval": {
+            "en": "QT Interval",
+            "zh": "QT 間期"
+          },
+          "measures": {
+            "en": "Total ventricular electrical activity (depolarization + repolarization)",
+            "zh": "總心室電氣活動（去極化 + 再極化）"
+          },
+          "normal_value": {
+            "en": "Heart rate-dependent; must use corrected QT (QTc)",
+            "zh": "與心率相關；須使用校正 QT（QTc）"
+          },
+          "calculation": {
+            "en": "Bazett formula: QTc = QT ÷ √RR (RR in seconds)",
+            "zh": "Bazett 公式：QTc = QT ÷ √RR（RR 以秒為單位）"
+          },
+          "prolonged_by": {
+            "en": "Antipsychotics, fluoroquinolones, macrolides, antiarrhythmics (Class Ia, III), antiemetics, hypokalemia, hypomagnesemia, hypocalcemia",
+            "zh": "抗精神病藥、氟喹諾酮類、大環內酯類、抗心律不整藥（Ia 類、III 類）、止吐藥、低血鉀、低血鎂、低血鈣"
+          },
+          "clinical_consequence": {
+            "en": "Prolonged QTc increases Torsades de Pointes risk; risk significantly elevated when QTc > 500 ms",
+            "zh": "QTc 延長增加尖端扭轉型心室頻脈風險；QTc > 500 ms 時風險顯著升高"
+          }
+        },
+        {
+          "interval": {
+            "en": "QTc (Corrected QT)",
+            "zh": "QTc（校正 QT）"
+          },
+          "measures": {
+            "en": "QT interval corrected for heart rate",
+            "zh": "經心率校正的 QT 間期"
+          },
+          "normal_value": {
+            "en": "< 450 ms (men), < 460 ms (women); some guidelines use < 470 ms for women",
+            "zh": "< 450 ms（男性）、< 460 ms（女性）；部分指引對女性使用 < 470 ms"
+          },
+          "clinical_consequence": {
+            "en": "QTc > 500 ms = high risk for Torsades de Pointes; triggers immediate review of QT-prolonging medications",
+            "zh": "QTc > 500 ms = 尖端扭轉型心室頻脈高風險；應立即檢視延長 QT 的藥物"
+          }
+        }
+      ]
+    }
+  },
+  "systematic_ecg_interpretation": {
+    "title": {
+      "en": "Systematic Approach to Reading an ECG: The R-R-P-Q-I Method",
+      "zh": "系統性 ECG 判讀方法：R-R-P-Q-I 法"
+    },
+    "description": {
+      "en": "A systematic approach ensures no critical findings are missed. The R-R-P-Q-I method provides a structured framework: Rate → Rhythm → P waves → QRS width → Intervals.",
+      "zh": "系統性方法確保不遺漏任何關鍵發現。R-R-P-Q-I 方法提供結構化框架：Rate（心率）→ Rhythm（節律）→ P waves（P 波）→ QRS width（QRS 寬度）→ Intervals（間期）。"
+    },
+    "steps": [
+      {
+        "step": 1,
+        "name": {
+          "en": "Step 1: Calculate Rate",
+          "zh": "步驟一：計算心率"
+        },
+        "methods": [
+          {
+            "method": {
+              "en": "Method 1: For Regular Rhythms (300 Rule)",
+              "zh": "方法一：規則節律（300 法則）"
+            },
+            "technique": {
+              "en": "Count large boxes between two R waves; divide 300 by that number",
+              "zh": "計算兩個 R 波之間的大格數；用 300 除以該數字"
+            },
+            "quick_reference": {
+              "en": "1 box = 300 bpm, 2 = 150, 3 = 100, 4 = 75, 5 = 60",
+              "zh": "1 格 = 300 bpm、2 格 = 150、3 格 = 100、4 格 = 75、5 格 = 60"
+            }
+          },
+          {
+            "method": {
+              "en": "Method 2: For Irregular Rhythms (6-Second Method)",
+              "zh": "方法二：不規則節律（6 秒法）"
+            },
+            "technique": {
+              "en": "Count QRS complexes in 6 seconds (30 large boxes) and multiply by 10",
+              "zh": "計算 6 秒內（30 大格）的 QRS 波群數量並乘以 10"
+            }
+          }
+        ],
+        "interpretation": {
+          "normal": {
+            "en": "60-100 bpm",
+            "zh": "60-100 bpm"
+          },
+          "bradycardia": {
+            "en": "< 60 bpm",
+            "zh": "< 60 bpm"
+          },
+          "tachycardia": {
+            "en": "> 100 bpm",
+            "zh": "> 100 bpm"
+          }
+        }
+      },
+      {
+        "step": 2,
+        "name": {
+          "en": "Step 2: Assess Rhythm",
+          "zh": "步驟二：評估節律"
+        },
+        "technique": {
+          "en": "Examine R-R intervals for regularity",
+          "zh": "檢視 R-R 間距的規則性"
+        },
+        "interpretations": [
+          {
+            "finding": {
+              "en": "Regular",
+              "zh": "規則"
+            },
+            "description": {
+              "en": "Consistent R-R intervals throughout",
+              "zh": "R-R 間距始終一致"
+            },
+            "common_rhythms": {
+              "en": "Sinus rhythm, SVT (AVNRT, AVRT), atrial flutter with fixed block, VT",
+              "zh": "竇性節律、SVT（AVNRT、AVRT）、固定傳導比的心房撲動、VT"
+            }
+          },
+          {
+            "finding": {
+              "en": "Irregularly Irregular",
+              "zh": "絕對不規則"
+            },
+            "description": {
+              "en": "R-R intervals vary without any pattern",
+              "zh": "R-R 間距變化無任何規律"
+            },
+            "think": {
+              "en": "Think Atrial Fibrillation (AF)",
+              "zh": "考慮心房顫動（AF）"
+            }
+          },
+          {
+            "finding": {
+              "en": "Regularly Irregular",
+              "zh": "規則性不規則"
+            },
+            "description": {
+              "en": "Predictable pattern of irregularity",
+              "zh": "不規則性有可預測的模式"
+            },
+            "common_rhythms": {
+              "en": "2nd degree AV block (Mobitz I), PACs/PVCs in bigeminy",
+              "zh": "第二度 AV 阻滯（Mobitz I）、雙聯 PACs/PVCs"
+            }
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "name": {
+          "en": "Step 3: Examine P Waves",
+          "zh": "步驟三：檢視 P 波"
+        },
+        "questions": [
+          {
+            "question": {
+              "en": "Present?",
+              "zh": "是否存在？"
+            },
+            "assessment": {
+              "en": "Is there a P wave before every QRS?",
+              "zh": "每個 QRS 前是否都有 P 波？"
+            },
+            "interpretation": {
+              "en": "Absent P waves: AF, junctional rhythm, or ventricular rhythm",
+              "zh": "P 波消失：AF、交界性節律或心室節律"
+            }
+          },
+          {
+            "question": {
+              "en": "Upright?",
+              "zh": "是否正向？"
+            },
+            "assessment": {
+              "en": "Is P wave upright in lead II? (indicates normal sinus origin)",
+              "zh": "P 波在 II 導程是否正向？（表示正常竇性起源）"
+            },
+            "interpretation": {
+              "en": "Inverted P in II: ectopic atrial rhythm or retrograde conduction",
+              "zh": "II 導程 P 波倒置：異位心房節律或逆行傳導"
+            }
+          },
+          {
+            "question": {
+              "en": "Consistent?",
+              "zh": "是否一致？"
+            },
+            "assessment": {
+              "en": "Is P wave morphology the same throughout?",
+              "zh": "P 波形態是否全程一致？"
+            },
+            "interpretation": {
+              "en": "Variable P morphology: wandering atrial pacemaker or multifocal atrial tachycardia (MAT)",
+              "zh": "P 波形態變化：遊走性心房起搏點或多源性心房頻脈（MAT）"
+            }
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "name": {
+          "en": "Step 4: Measure QRS Width",
+          "zh": "步驟四：測量 QRS 寬度"
+        },
+        "categories": [
+          {
+            "finding": {
+              "en": "Narrow (< 120 ms, < 3 small boxes)",
+              "zh": "窄（< 120 ms、< 3 小格）"
+            },
+            "interpretation": {
+              "en": "Supraventricular origin — impulse travels normally through His-Purkinje system",
+              "zh": "心室上起源 — 電訊號經 His-Purkinje 系統正常傳導"
+            }
+          },
+          {
+            "finding": {
+              "en": "Wide (≥ 120 ms, ≥ 3 small boxes)",
+              "zh": "寬（≥ 120 ms、≥ 3 小格）"
+            },
+            "interpretation": {
+              "en": "Ventricular origin OR supraventricular with aberrancy/pre-excitation",
+              "zh": "心室起源或心室上起源合併傳導異常/預激"
+            },
+            "clinical_rule": {
+              "en": "ASSUME VT until proven otherwise (safer approach for wide complex tachycardia)",
+              "zh": "假設為 VT 直到證明為其他（對寬 QRS 波心搏過速較安全的作法）"
+            }
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "name": {
+          "en": "Step 5: Measure Intervals",
+          "zh": "步驟五：測量間期"
+        },
+        "intervals": [
+          {
+            "interval": {
+              "en": "PR Interval",
+              "zh": "PR 間期"
+            },
+            "measures": {
+              "en": "P start → QRS start",
+              "zh": "P 波起始 → QRS 起始"
+            },
+            "assess_for": {
+              "en": "AV conduction — prolonged suggests AV block; shortened with delta wave suggests pre-excitation",
+              "zh": "AV 傳導 — 延長提示 AV 阻滯；縮短合併 delta 波提示預激"
+            }
+          },
+          {
+            "interval": {
+              "en": "QT/QTc Interval",
+              "zh": "QT/QTc 間期"
+            },
+            "measures": {
+              "en": "QRS start → T wave end",
+              "zh": "QRS 起始 → T 波結束"
+            },
+            "assess_for": {
+              "en": "Repolarization — prolonged QTc increases Torsades risk; important for drug safety monitoring",
+              "zh": "再極化 — QTc 延長增加 Torsades 風險；對藥物安全監測很重要"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "tachyarrhythmia_recognition": {
+    "title": {
+      "en": "Tachyarrhythmias Recognition (HR > 100 bpm)",
+      "zh": "心搏過速辨識（HR > 100 bpm）"
+    },
+    "classification_table": [
+      {
+        "ecg_finding": {
+          "en": "Narrow QRS, regular, no visible P",
+          "zh": "窄 QRS、規則、P 波不可見"
+        },
+        "likely_arrhythmia": {
+          "en": "AVNRT",
+          "zh": "房室結折返性心動過速（AVNRT）"
+        },
+        "key_features": {
+          "en": "P buried in QRS; rate 150-250 bpm; pseudo r' in V1 or pseudo S in inferior leads",
+          "zh": "P 波埋在 QRS 中；心率 150-250 bpm；V1 可見偽 r' 波或下壁導程可見偽 S 波"
+        }
+      },
+      {
+        "ecg_finding": {
+          "en": "Narrow QRS, regular, retrograde P",
+          "zh": "窄 QRS、規則、逆行 P 波"
+        },
+        "likely_arrhythmia": {
+          "en": "AVRT",
+          "zh": "房室折返性心動過速（AVRT）"
+        },
+        "key_features": {
+          "en": "P wave after QRS; possible delta wave on baseline ECG (WPW); RP interval > 70 ms",
+          "zh": "P 波在 QRS 後方；基礎 ECG 可能有 delta 波（WPW）；RP 間期 > 70 ms"
+        }
+      },
+      {
+        "ecg_finding": {
+          "en": "Narrow QRS, irregularly irregular, no P",
+          "zh": "窄 QRS、絕對不規則、無 P 波"
+        },
+        "likely_arrhythmia": {
+          "en": "Atrial Fibrillation",
+          "zh": "心房顫動"
+        },
+        "key_features": {
+          "en": "Chaotic fibrillatory baseline; completely variable R-R intervals; no identifiable P waves",
+          "zh": "混亂的顫動基線；R-R 間距完全不規則；無法辨識的 P 波"
+        }
+      },
+      {
+        "ecg_finding": {
+          "en": "Narrow QRS, sawtooth pattern",
+          "zh": "窄 QRS、鋸齒狀"
+        },
+        "likely_arrhythmia": {
+          "en": "Atrial Flutter",
+          "zh": "心房撲動"
+        },
+        "key_features": {
+          "en": "Flutter waves (F waves) at 250-350/min; typically 2:1 block → ventricular rate ~150 bpm; variable rate possible",
+          "zh": "撲動波（F 波）頻率 250-350/min；典型 2:1 傳導 → 心室率約 150 bpm；可有變動傳導比"
+        }
+      },
+      {
+        "ecg_finding": {
+          "en": "Wide QRS, regular",
+          "zh": "寬 QRS、規則"
+        },
+        "likely_arrhythmia": {
+          "en": "VT or SVT with aberrancy",
+          "zh": "VT 或 SVT 合併傳導異常"
+        },
+        "key_features": {
+          "en": "ASSUME VT (safer); AV dissociation, fusion/capture beats favor VT; Brugada criteria help differentiate",
+          "zh": "假設為 VT（較安全）；AV 分離、融合波/擷取波支持 VT；Brugada 準則協助鑑別"
+        }
+      },
+      {
+        "ecg_finding": {
+          "en": "Wide QRS, irregular, varying morphology",
+          "zh": "寬 QRS、不規則、形態多變"
+        },
+        "likely_arrhythmia": {
+          "en": "Pre-excited AF (WPW)",
+          "zh": "預激性心房顫動（WPW）"
+        },
+        "key_features": {
+          "en": "DANGER — Avoid AV nodal blockers (adenosine, verapamil, diltiazem, digoxin, beta-blockers); may degenerate to VF",
+          "zh": "危險 — 禁用 AV 結阻斷劑（adenosine、verapamil、diltiazem、digoxin、β 阻斷劑）；可能惡化為 VF"
+        }
+      }
+    ]
+  },
+  "bradyarrhythmia_recognition": {
+    "title": {
+      "en": "Bradyarrhythmias Recognition (HR < 60 bpm)",
+      "zh": "心搏過緩辨識（HR < 60 bpm）"
+    },
+    "classification_table": [
+      {
+        "ecg_finding": {
+          "en": "Normal P-QRS-T, slow rate",
+          "zh": "正常 P-QRS-T、慢速率"
+        },
+        "likely_arrhythmia": {
+          "en": "Sinus Bradycardia",
+          "zh": "竇性心搏過緩"
+        },
+        "key_features": {
+          "en": "P before every QRS; PR interval normal (120-200 ms); physiological in athletes or during sleep",
+          "zh": "每個 QRS 前都有 P 波；PR 間期正常（120-200 ms）；運動員或睡眠時可為生理性"
+        }
+      },
+      {
+        "ecg_finding": {
+          "en": "Prolonged PR (> 200 ms), all P conducted",
+          "zh": "PR 延長（> 200 ms）、所有 P 波均傳導"
+        },
+        "likely_arrhythmia": {
+          "en": "1st Degree AV Block",
+          "zh": "第一度 AV 阻滯"
+        },
+        "key_features": {
+          "en": "Benign; monitor for drug causes (beta-blockers, CCBs, digoxin, amiodarone); no dropped beats",
+          "zh": "良性；監測藥物原因（β 阻斷劑、CCBs、digoxin、amiodarone）；無 QRS 脫落"
+        }
+      },
+      {
+        "ecg_finding": {
+          "en": "Progressive PR lengthening → dropped QRS",
+          "zh": "PR 逐漸延長 → QRS 脫落"
+        },
+        "likely_arrhythmia": {
+          "en": "2nd Degree Mobitz I (Wenckebach)",
+          "zh": "第二度 Mobitz I（Wenckebach）"
+        },
+        "key_features": {
+          "en": "Often benign; commonly vagal tone or drug-induced; grouped beating; R-R intervals progressively shorten before pause",
+          "zh": "通常良性；常為迷走神經張力或藥物引起；心搏成組；暫停前 R-R 間距逐漸縮短"
+        }
+      },
+      {
+        "ecg_finding": {
+          "en": "Constant PR with intermittent dropped QRS",
+          "zh": "PR 固定但間歇性 QRS 脫落"
+        },
+        "likely_arrhythmia": {
+          "en": "2nd Degree Mobitz II",
+          "zh": "第二度 Mobitz II"
+        },
+        "key_features": {
+          "en": "More serious; infranodal block; risk of progression to complete heart block; often requires pacemaker",
+          "zh": "較嚴重；結下阻滯；有進展為完全心臟阻滯的風險；通常需要起搏器"
+        }
+      },
+      {
+        "ecg_finding": {
+          "en": "P and QRS dissociated, slow ventricular rate",
+          "zh": "P 波與 QRS 分離、心室率慢"
+        },
+        "likely_arrhythmia": {
+          "en": "3rd Degree (Complete) AV Block",
+          "zh": "第三度（完全）AV 阻滯"
+        },
+        "key_features": {
+          "en": "Atria and ventricles beat independently (AV dissociation); escape rhythm determines rate; often requires permanent pacemaker",
+          "zh": "心房與心室獨立跳動（AV 分離）；逸搏節律決定心率；通常需要永久性起搏器"
+        }
+      },
+      {
+        "ecg_finding": {
+          "en": "No P waves, slow irregularly irregular rhythm",
+          "zh": "無 P 波、慢且絕對不規則節律"
+        },
+        "likely_arrhythmia": {
+          "en": "Slow Atrial Fibrillation",
+          "zh": "慢速心房顫動"
+        },
+        "key_features": {
+          "en": "Assess for drug toxicity (digoxin, beta-blockers, CCBs); may indicate AV node disease or excessive rate control",
+          "zh": "評估藥物毒性（digoxin、β 阻斷劑、CCBs）；可能表示 AV 結疾病或過度心率控制"
+        }
+      },
+      {
+        "ecg_finding": {
+          "en": "No P waves, slow regular rhythm",
+          "zh": "無 P 波、慢且規則節律"
+        },
+        "likely_arrhythmia": {
+          "en": "Junctional Escape Rhythm",
+          "zh": "交界性逸搏節律"
+        },
+        "key_features": {
+          "en": "Rate 40-60 bpm; assess for drug toxicity; may occur with SA node dysfunction",
+          "zh": "心率 40-60 bpm；評估藥物毒性；可發生於竇房結功能異常"
+        }
+      }
+    ]
+  }
+}

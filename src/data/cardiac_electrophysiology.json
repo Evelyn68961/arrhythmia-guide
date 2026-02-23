@@ -1,0 +1,594 @@
+{
+  "topic": {
+    "en": "Foundational Cardiac Electrophysiology Concepts",
+    "zh": "心臟電生理學基礎概念"
+  },
+  "overview": {
+    "en": "Understanding cardiac arrhythmias requires mastery of three foundational concepts: the cardiac conduction system anatomy, cardiac action potential and ion channel physiology, and the Vaughan-Williams classification of antiarrhythmic drugs. These concepts directly correlate with ECG findings and guide pharmacological management.",
+    "zh": "理解心律不整需要掌握三個基礎概念：心臟傳導系統解剖、心臟動作電位與離子通道生理學、以及 Vaughan-Williams 抗心律不整藥物分類。這些概念直接與心電圖表現相關，並指導藥物治療。"
+  },
+  "cardiac_conduction_system": {
+    "title": {
+      "en": "1. Cardiac Conduction System",
+      "zh": "1. 心臟傳導系統"
+    },
+    "description": {
+      "en": "The heart's electrical conduction pathway determines cardiac rhythm and sequence. Electrical impulses originate from the SA node and propagate through a specialized conduction network to coordinate atrial and ventricular contraction.",
+      "zh": "心臟的電力傳導路徑決定了心臟跳動的節律與順序。電訊號源自竇房結，並經由專門的傳導網絡傳播，以協調心房與心室的收縮。"
+    },
+    "conduction_pathway": {
+      "en": "Conduction Pathway Sequence",
+      "zh": "傳導路徑順序",
+      "sequence": [
+        {
+          "structure": {
+            "en": "SA Node (Sinoatrial Node)",
+            "zh": "竇房結（SA node）"
+          },
+          "role": {
+            "en": "Primary Pacemaker",
+            "zh": "第一線節律點"
+          },
+          "intrinsic_rate": {
+            "en": "60-100 bpm",
+            "zh": "60-100 bpm"
+          },
+          "description": {
+            "en": "The SA node is the heart's natural pacemaker, located at the junction of the superior vena cava and right atrium. It generates spontaneous electrical impulses that initiate each heartbeat.",
+            "zh": "竇房結是心臟的自然起搏點，位於上腔靜脈與右心房交界處。它產生自發性電訊號以啟動每一次心跳。"
+          }
+        },
+        {
+          "structure": {
+            "en": "Atria",
+            "zh": "心房"
+          },
+          "role": {
+            "en": "Impulse Propagation",
+            "zh": "訊號傳播"
+          },
+          "description": {
+            "en": "Electrical impulses spread through atrial muscle, causing atrial depolarization and contraction. This corresponds to the P wave on ECG.",
+            "zh": "電訊號經心房肌傳播，引起心房去極化與收縮。對應心電圖上的 P 波。"
+          }
+        },
+        {
+          "structure": {
+            "en": "AV Node (Atrioventricular Node)",
+            "zh": "房室結（AV node）"
+          },
+          "role": {
+            "en": "Impulse Delay & Backup Pacemaker",
+            "zh": "延遲衝動及備用節律點"
+          },
+          "intrinsic_rate": {
+            "en": "40-60 bpm",
+            "zh": "40-60 bpm"
+          },
+          "description": {
+            "en": "The AV node delays impulse transmission to allow complete atrial contraction before ventricular filling. It also protects ventricles from excessively rapid atrial rates and serves as a backup pacemaker if SA node fails.",
+            "zh": "房室結負責「延遲衝動」以確保心室有時間填充血液。它同時保護心室免受過快的心房頻率影響，並在竇房結失效時作為備用起搏點。"
+          }
+        },
+        {
+          "structure": {
+            "en": "Bundle of His",
+            "zh": "希氏束（Bundle of His）"
+          },
+          "role": {
+            "en": "Ventricular Conduction Initiation",
+            "zh": "心室傳導起始"
+          },
+          "description": {
+            "en": "The Bundle of His transmits impulses from the AV node to the bundle branches.",
+            "zh": "希氏束將電訊號從房室結傳至束支。"
+          }
+        },
+        {
+          "structure": {
+            "en": "Bundle Branches (Right & Left)",
+            "zh": "左右束支"
+          },
+          "role": {
+            "en": "Rapid Ventricular Activation",
+            "zh": "快速啟動心室收縮"
+          },
+          "description": {
+            "en": "The left bundle branch divides into anterior and posterior fascicles. Bundle branch block results in widened QRS complexes.",
+            "zh": "左束支分為前分支與後分支。束支傳導阻滯會導致 QRS 波群變寬。"
+          }
+        },
+        {
+          "structure": {
+            "en": "Purkinje Fibers",
+            "zh": "浦金氏纖維（Purkinje fibers）"
+          },
+          "role": {
+            "en": "Final Ventricular Activation & Last-resort Pacemaker",
+            "zh": "最終心室活化及最後防線起搏點"
+          },
+          "intrinsic_rate": {
+            "en": "20-40 bpm",
+            "zh": "20-40 bpm"
+          },
+          "description": {
+            "en": "Purkinje fibers rapidly conduct impulses throughout ventricular myocardium, enabling synchronized ventricular contraction. They can serve as an escape pacemaker at very slow rates.",
+            "zh": "浦金氏纖維快速將電訊號傳遍心室肌，使心室同步收縮。在上層節律點失效時，可作為逸搏起搏點，但頻率僅 20-40 bpm。"
+          }
+        },
+        {
+          "structure": {
+            "en": "Ventricles",
+            "zh": "心室"
+          },
+          "role": {
+            "en": "Ventricular Contraction",
+            "zh": "心室收縮"
+          },
+          "description": {
+            "en": "Ventricular depolarization and contraction corresponds to the QRS complex on ECG.",
+            "zh": "心室去極化與收縮對應心電圖上的 QRS 波群。"
+          }
+        }
+      ]
+    },
+    "key_concept": {
+      "en": "Key Concept: Pacemaker Hierarchy",
+      "zh": "核心觀念：節律點階層",
+      "description": {
+        "en": "If a higher pacemaker fails, lower sites take over at progressively slower rates. This hierarchy ensures cardiac rhythm continuity: SA node (60-100 bpm) → AV node (40-60 bpm) → His-Purkinje (20-40 bpm). The escape rhythm rate depends on the level of the backup pacemaker.",
+        "zh": "若高等級的節律點失效，下方的節律點會接手，但心跳會明顯變慢。此階層確保心臟節律的連續性：竇房結（60-100 bpm）→ 房室結（40-60 bpm）→ 希氏-浦金氏系統（20-40 bpm）。逸搏節律的頻率取決於備用起搏點的層級。"
+      }
+    }
+  },
+  "action_potential_and_ion_channels": {
+    "title": {
+      "en": "2. Action Potential & Ion Channels",
+      "zh": "2. 動作電位與離子通道"
+    },
+    "description": {
+      "en": "Ion movement across cardiac cell membranes generates the action potential, which directly correlates with ECG waveforms. Understanding ion channel function explains both normal cardiac electrophysiology and the mechanisms of antiarrhythmic drugs.",
+      "zh": "心肌細胞內的離子流動直接反映在心電圖（ECG）的波形上。理解離子通道功能可解釋正常心臟電生理學以及抗心律不整藥物的機轉。"
+    },
+    "action_potential_phases": {
+      "en": "Ventricular Cardiomyocyte Action Potential Phases",
+      "zh": "心室心肌細胞動作電位相位",
+      "phases": [
+        {
+          "phase": "4",
+          "name": {
+            "en": "Resting Phase",
+            "zh": "靜止期"
+          },
+          "voltage": {
+            "en": "-90 mV",
+            "zh": "-90 mV"
+          },
+          "ion_movement": {
+            "en": "K⁺ leak channels maintain resting potential",
+            "zh": "K⁺ 漏洩通道維持靜止電位"
+          },
+          "description": {
+            "en": "The cell is at rest with stable membrane potential maintained by outward K⁺ current (IK1).",
+            "zh": "細胞處於靜止狀態，膜電位由外向 K⁺ 電流（IK1）維持穩定。"
+          }
+        },
+        {
+          "phase": "0",
+          "name": {
+            "en": "Rapid Depolarization",
+            "zh": "快速去極化"
+          },
+          "voltage": {
+            "en": "-90 mV → +20 mV",
+            "zh": "-90 mV → +20 mV"
+          },
+          "ion_movement": {
+            "en": "Na⁺ influx (INa) through voltage-gated Na⁺ channels",
+            "zh": "Na⁺ 經電壓門控 Na⁺ 通道流入（INa）"
+          },
+          "ecg_correlation": {
+            "en": "Corresponds to QRS complex (ventricular depolarization)",
+            "zh": "對應 ECG 的 QRS 波群（心室去極化）"
+          },
+          "clinical_significance": {
+            "en": "Sodium channel blockade (Class I drugs) slows depolarization speed and widens QRS duration.",
+            "zh": "鈉離子通道阻斷（第一類藥物）會減慢去極化速度並加寬 QRS 寬度。"
+          }
+        },
+        {
+          "phase": "1",
+          "name": {
+            "en": "Early Repolarization",
+            "zh": "早期再極化"
+          },
+          "voltage": {
+            "en": "+20 mV → +10 mV",
+            "zh": "+20 mV → +10 mV"
+          },
+          "ion_movement": {
+            "en": "Transient outward K⁺ current (Ito)",
+            "zh": "短暫外向 K⁺ 電流（Ito）"
+          },
+          "description": {
+            "en": "Brief initial repolarization creating the action potential 'notch'.",
+            "zh": "短暫的初期再極化，形成動作電位的「切跡」。"
+          }
+        },
+        {
+          "phase": "2",
+          "name": {
+            "en": "Plateau Phase",
+            "zh": "平台期"
+          },
+          "voltage": {
+            "en": "~0 mV (sustained)",
+            "zh": "~0 mV（維持）"
+          },
+          "ion_movement": {
+            "en": "Ca²⁺ influx (ICa-L) balanced by K⁺ efflux",
+            "zh": "Ca²⁺ 流入（ICa-L）與 K⁺ 流出平衡"
+          },
+          "ecg_correlation": {
+            "en": "Corresponds to ST segment (early ventricular repolarization)",
+            "zh": "對應 ECG 的 ST 段（早期心室再極化）"
+          },
+          "clinical_significance": {
+            "en": "Calcium influx triggers cardiac muscle contraction (excitation-contraction coupling). Calcium channel blockade (Class IV drugs) reduces contractility and slows conduction in SA/AV nodes.",
+            "zh": "鈣離子流入觸發心肌收縮（興奮-收縮偶合）。鈣離子通道阻斷（第四類藥物）會降低收縮力並減緩 SA/AV 結傳導。"
+          }
+        },
+        {
+          "phase": "3",
+          "name": {
+            "en": "Repolarization",
+            "zh": "再極化"
+          },
+          "voltage": {
+            "en": "0 mV → -90 mV",
+            "zh": "0 mV → -90 mV"
+          },
+          "ion_movement": {
+            "en": "K⁺ efflux (IKr, IKs) through delayed rectifier K⁺ channels",
+            "zh": "K⁺ 經延遲整流 K⁺ 通道流出（IKr、IKs）"
+          },
+          "ecg_correlation": {
+            "en": "Corresponds to T wave (ventricular repolarization)",
+            "zh": "對應 ECG 的 T 波（心室再極化）"
+          },
+          "clinical_significance": {
+            "en": "Potassium channel blockade (Class III drugs) prolongs repolarization time and extends QT interval. Excessive QT prolongation increases risk of Torsades de Pointes.",
+            "zh": "鉀離子通道阻斷（第三類藥物）會延長再極化時間並延長 QT 間期。QT 過度延長會增加尖端扭轉型心室頻脈（Torsades de Pointes）的風險。"
+          }
+        }
+      ]
+    },
+    "key_concepts": {
+      "en": "Key Concepts: Ion Channels and ECG",
+      "zh": "關鍵觀念：離子通道與 ECG 的對應",
+      "correlations": [
+        {
+          "ion_channel": {
+            "en": "Na⁺ channels",
+            "zh": "鈉離子通道"
+          },
+          "effect_on_ap": {
+            "en": "Depolarization speed",
+            "zh": "去極化速度"
+          },
+          "ecg_parameter": {
+            "en": "QRS width",
+            "zh": "QRS 寬度"
+          },
+          "clinical_note": {
+            "en": "Na⁺ channel blockers widen QRS; severe hyperkalemia also affects Na⁺ channels",
+            "zh": "Na⁺ 通道阻斷劑加寬 QRS；嚴重高血鉀也會影響 Na⁺ 通道"
+          }
+        },
+        {
+          "ion_channel": {
+            "en": "Ca²⁺ channels (L-type)",
+            "zh": "鈣離子通道（L-型）"
+          },
+          "effect_on_ap": {
+            "en": "Plateau duration & SA/AV node conduction",
+            "zh": "平台期持續時間及 SA/AV 結傳導"
+          },
+          "ecg_parameter": {
+            "en": "Heart rate, PR interval",
+            "zh": "心率、PR 間期"
+          },
+          "clinical_note": {
+            "en": "Ca²⁺ channel blockers slow HR and prolong PR interval",
+            "zh": "Ca²⁺ 通道阻斷劑減慢心率並延長 PR 間期"
+          }
+        },
+        {
+          "ion_channel": {
+            "en": "K⁺ channels (IKr, IKs)",
+            "zh": "鉀離子通道（IKr、IKs）"
+          },
+          "effect_on_ap": {
+            "en": "Repolarization time",
+            "zh": "再極化時間"
+          },
+          "ecg_parameter": {
+            "en": "QT interval",
+            "zh": "QT 間期"
+          },
+          "clinical_note": {
+            "en": "K⁺ channel blockers prolong QT; hypokalemia also prolongs QT by reducing IKr",
+            "zh": "K⁺ 通道阻斷劑延長 QT；低血鉀也會因減少 IKr 而延長 QT"
+          }
+        }
+      ]
+    }
+  },
+  "vaughan_williams_classification": {
+    "title": {
+      "en": "3. Vaughan-Williams Classification",
+      "zh": "3. Vaughan-Williams 分類"
+    },
+    "description": {
+      "en": "The Vaughan-Williams classification categorizes antiarrhythmic drugs by their primary mechanism of action on cardiac ion channels. Understanding this classification helps predict ECG effects and clinical applications of each drug class.",
+      "zh": "Vaughan-Williams 分類依據抗心律不整藥物對心臟離子通道的主要作用機轉進行分類。了解此分類有助於預測各類藥物的 ECG 效應與臨床應用。"
+    },
+    "classes": [
+      {
+        "class": "I",
+        "name": {
+          "en": "Class I: Sodium Channel Blockers",
+          "zh": "第一類：鈉離子通道阻斷劑"
+        },
+        "mechanism": {
+          "en": "Block voltage-gated Na⁺ channels, reducing phase 0 depolarization velocity",
+          "zh": "阻斷電壓門控 Na⁺ 通道，減少 Phase 0 去極化速度"
+        },
+        "ecg_effect": {
+          "en": "↑ QRS duration (widening)",
+          "zh": "↑ QRS 寬度（變寬）"
+        },
+        "subclasses": [
+          {
+            "subclass": "Ia",
+            "mechanism": {
+              "en": "Moderate Na⁺ block + K⁺ block (prolongs AP duration)",
+              "zh": "中度 Na⁺ 阻斷 + K⁺ 阻斷（延長動作電位持續時間）"
+            },
+            "examples": {
+              "en": "Quinidine, Procainamide, Disopyramide",
+              "zh": "Quinidine、Procainamide、Disopyramide"
+            },
+            "ecg_effect": {
+              "en": "↑ QRS + ↑ QT",
+              "zh": "↑ QRS + ↑ QT"
+            }
+          },
+          {
+            "subclass": "Ib",
+            "mechanism": {
+              "en": "Weak Na⁺ block (shortens AP duration in ischemic tissue)",
+              "zh": "弱 Na⁺ 阻斷（縮短缺血組織的動作電位持續時間）"
+            },
+            "examples": {
+              "en": "Lidocaine, Mexiletine",
+              "zh": "Lidocaine、Mexiletine"
+            },
+            "ecg_effect": {
+              "en": "Minimal QRS effect",
+              "zh": "對 QRS 影響極小"
+            }
+          },
+          {
+            "subclass": "Ic",
+            "mechanism": {
+              "en": "Strong Na⁺ block (no effect on AP duration)",
+              "zh": "強 Na⁺ 阻斷（不影響動作電位持續時間）"
+            },
+            "examples": {
+              "en": "Flecainide, Propafenone",
+              "zh": "Flecainide、Propafenone"
+            },
+            "ecg_effect": {
+              "en": "Marked ↑ QRS",
+              "zh": "明顯 ↑ QRS"
+            },
+            "warning": {
+              "en": "Contraindicated in structural heart disease (proarrhythmic risk)",
+              "zh": "結構性心臟病禁用（有致心律不整風險）"
+            }
+          }
+        ]
+      },
+      {
+        "class": "II",
+        "name": {
+          "en": "Class II: Beta-Adrenergic Blockers",
+          "zh": "第二類：β 受體阻斷劑"
+        },
+        "mechanism": {
+          "en": "Block β-adrenergic receptors, reducing sympathetic stimulation and slowing SA/AV node conduction",
+          "zh": "阻斷 β 腎上腺素受體，減少交感神經刺激並減緩 SA/AV 結傳導"
+        },
+        "ecg_effect": {
+          "en": "↓ Heart rate, ↑ PR interval",
+          "zh": "↓ 心率、↑ PR 間期"
+        },
+        "examples": {
+          "en": "Metoprolol, Atenolol, Propranolol, Esmolol, Carvedilol, Bisoprolol",
+          "zh": "Metoprolol、Atenolol、Propranolol、Esmolol、Carvedilol、Bisoprolol"
+        },
+        "clinical_applications": {
+          "en": "Rate control in AF, SVT prevention, post-MI mortality reduction, HFrEF",
+          "zh": "心房顫動的心率控制、SVT 預防、心肌梗塞後降低死亡率、HFrEF"
+        }
+      },
+      {
+        "class": "III",
+        "name": {
+          "en": "Class III: Potassium Channel Blockers",
+          "zh": "第三類：鉀離子通道阻斷劑"
+        },
+        "mechanism": {
+          "en": "Block K⁺ channels (primarily IKr), prolonging phase 3 repolarization and refractory period",
+          "zh": "阻斷 K⁺ 通道（主要為 IKr），延長 Phase 3 再極化及不反應期"
+        },
+        "ecg_effect": {
+          "en": "↑ QT interval (prolongation)",
+          "zh": "↑ QT 間期（延長）"
+        },
+        "examples": {
+          "en": "Amiodarone, Sotalol, Dofetilide, Ibutilide, Dronedarone",
+          "zh": "Amiodarone、Sotalol、Dofetilide、Ibutilide、Dronedarone"
+        },
+        "warning": {
+          "en": "Risk of Torsades de Pointes with excessive QT prolongation. Monitor QTc and electrolytes (K⁺, Mg²⁺).",
+          "zh": "QT 過度延長有尖端扭轉型心室頻脈風險。需監測 QTc 及電解質（K⁺、Mg²⁺）。"
+        },
+        "special_note": {
+          "en": "Amiodarone has properties of all four classes; associated with multiple organ toxicities (thyroid, pulmonary, hepatic, corneal).",
+          "zh": "Amiodarone 具有四類藥物的特性；與多器官毒性相關（甲狀腺、肺部、肝臟、角膜）。"
+        }
+      },
+      {
+        "class": "IV",
+        "name": {
+          "en": "Class IV: Calcium Channel Blockers",
+          "zh": "第四類：鈣離子通道阻斷劑"
+        },
+        "mechanism": {
+          "en": "Block L-type Ca²⁺ channels, reducing phase 2 plateau and slowing SA/AV node conduction",
+          "zh": "阻斷 L-型 Ca²⁺ 通道，減少 Phase 2 平台期並減緩 SA/AV 結傳導"
+        },
+        "ecg_effect": {
+          "en": "↓ Heart rate, ↑ PR interval",
+          "zh": "↓ 心率、↑ PR 間期"
+        },
+        "examples": {
+          "en": "Verapamil, Diltiazem (non-dihydropyridines)",
+          "zh": "Verapamil、Diltiazem（非二氫吡啶類）"
+        },
+        "clinical_applications": {
+          "en": "Rate control in AF, SVT termination, SVT prevention",
+          "zh": "心房顫動的心率控制、SVT 終止、SVT 預防"
+        },
+        "contraindications": {
+          "en": "Pre-excited AF (WPW), HFrEF, hypotension, concurrent beta-blocker IV use",
+          "zh": "預激性心房顫動（WPW）、HFrEF、低血壓、同時靜脈使用 β 阻斷劑"
+        }
+      },
+      {
+        "class": "V",
+        "name": {
+          "en": "Class V: Other Mechanisms (Miscellaneous)",
+          "zh": "第五類：其他機轉（混合類）"
+        },
+        "description": {
+          "en": "Agents that do not fit classic Class I-IV categories, including adenosine, digoxin, and magnesium.",
+          "zh": "不屬於經典第一至四類的藥物，包括 Adenosine、Digoxin 及 Magnesium。"
+        },
+        "examples": [
+          {
+            "drug": "Adenosine",
+            "mechanism": {
+              "en": "Activates A1 receptors → opens K⁺ channels → hyperpolarization of SA/AV nodes",
+              "zh": "活化 A1 受體 → 開啟 K⁺ 通道 → SA/AV 結過極化"
+            },
+            "use": {
+              "en": "Acute SVT termination (first-line for stable regular narrow-complex tachycardia)",
+              "zh": "急性 SVT 終止（穩定規則窄 QRS 波心搏過速的第一線用藥）"
+            }
+          },
+          {
+            "drug": "Digoxin",
+            "mechanism": {
+              "en": "Inhibits Na⁺/K⁺-ATPase → increases vagal tone → slows AV nodal conduction",
+              "zh": "抑制 Na⁺/K⁺-ATPase → 增加迷走神經張力 → 減緩 AV 結傳導"
+            },
+            "use": {
+              "en": "Rate control in AF (especially with HFrEF)",
+              "zh": "心房顫動的心率控制（尤其合併 HFrEF）"
+            }
+          },
+          {
+            "drug": "Magnesium Sulfate",
+            "mechanism": {
+              "en": "Stabilizes cell membranes, suppresses early afterdepolarizations",
+              "zh": "穩定細胞膜，抑制早期後去極化"
+            },
+            "use": {
+              "en": "First-line for Torsades de Pointes",
+              "zh": "尖端扭轉型心室頻脈的第一線用藥"
+            }
+          }
+        ]
+      }
+    ],
+    "summary_table": {
+      "en": "Vaughan-Williams Classification Quick Reference",
+      "zh": "Vaughan-Williams 分類快速參考",
+      "table": [
+        {
+          "class": "I",
+          "target": {
+            "en": "Na⁺ channels",
+            "zh": "Na⁺ 通道"
+          },
+          "primary_ecg_effect": {
+            "en": "↑ QRS",
+            "zh": "↑ QRS"
+          },
+          "clinical_use": {
+            "en": "AF/Flutter cardioversion, VT",
+            "zh": "AF/Flutter 電復律、VT"
+          }
+        },
+        {
+          "class": "II",
+          "target": {
+            "en": "β-receptors",
+            "zh": "β 受體"
+          },
+          "primary_ecg_effect": {
+            "en": "↓ HR, ↑ PR",
+            "zh": "↓ HR、↑ PR"
+          },
+          "clinical_use": {
+            "en": "Rate control, SVT prevention",
+            "zh": "心率控制、SVT 預防"
+          }
+        },
+        {
+          "class": "III",
+          "target": {
+            "en": "K⁺ channels",
+            "zh": "K⁺ 通道"
+          },
+          "primary_ecg_effect": {
+            "en": "↑ QT",
+            "zh": "↑ QT"
+          },
+          "clinical_use": {
+            "en": "AF rhythm control, VT prevention",
+            "zh": "AF 節律控制、VT 預防"
+          }
+        },
+        {
+          "class": "IV",
+          "target": {
+            "en": "Ca²⁺ channels",
+            "zh": "Ca²⁺ 通道"
+          },
+          "primary_ecg_effect": {
+            "en": "↓ HR, ↑ PR",
+            "zh": "↓ HR、↑ PR"
+          },
+          "clinical_use": {
+            "en": "Rate control, SVT termination",
+            "zh": "心率控制、SVT 終止"
+          }
+        }
+      ]
+    }
+  }
+}

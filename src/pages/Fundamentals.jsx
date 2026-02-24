@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import cardiac_electro from './CardiacElectro'
-import ecg_interpret from './ECGInterpret'
-import arrhy_overview from './ArrhyOverview'
+import CardiacElectro from './CardiacElectro'
+import ECGInterpret from './ECGInterpret'
+import ArrhyOverview from './ArrhyOverview'
 
 
 export default function Fundamentals() {

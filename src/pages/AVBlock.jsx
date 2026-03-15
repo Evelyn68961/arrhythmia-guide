@@ -66,6 +66,7 @@ export default function AVBlock({ lang }) {  // Receive lang as prop
           <div className={`tab-content ${activeTab === 0 ? 'active' : ''}`}>
               <h3>{lang === 'zh' ? '定義' : 'Definition'}</h3>
               <p>{data.definition[lang]}</p>
+              <hr />
 
               <h3>{data.etiology[lang]}</h3>
               <ul>
@@ -75,6 +76,7 @@ export default function AVBlock({ lang }) {  // Receive lang as prop
                   </li>
                 ))}
               </ul>
+              <hr />
 
               <h3>{data.classification[lang]}</h3>
               {data.classification.types.map((type) => (

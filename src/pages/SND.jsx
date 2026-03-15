@@ -114,15 +114,16 @@ export default function SND({ lang }) {  // Receive lang as prop
           <div className={`tab-content ${activeTab === 0 ? 'active' : ''}`}>
             <h3>{lang === 'en' ? 'Definition' : '定義'}</h3>
             <p>{data.definition[lang]}</p>
+            <hr />
 
             <h3>{data.etiology[lang]}</h3>
-
             <h4>{data.etiology.intrinsic_causes[lang]}</h4>
             <ul>
               {data.etiology.intrinsic_causes.items.map((item, index) => (
                 <li key={index}>{item[lang]}</li>
               ))}
             </ul>
+            <hr />
 
             <h4>{data.etiology.extrinsic_causes[lang]}</h4>
             {data.etiology.extrinsic_causes.items.map((group, index) => (
@@ -172,14 +173,16 @@ export default function SND({ lang }) {  // Receive lang as prop
 
           {/* Tab 2: Acute Management */}
           <div className={`tab-content ${activeTab === 2 ? 'active' : ''}`}>
-            <h3>{data.treatment.acute_management.reversible_causes[lang]}</h3>
+            <h3>{data.treatment.acute_management[lang]}</h3>
+            <h4>{data.treatment.acute_management.reversible_causes[lang]}</h4>
             <ul>
               {data.treatment.acute_management.reversible_causes.items.map((item, index) => (
                 <li key={index}>{item[lang]}</li>
               ))}
             </ul>
+            <hr />
 
-            <h3>{data.treatment.acute_management.pharmacotherapy[lang]}</h3>
+            <h4>{data.treatment.acute_management.pharmacotherapy[lang]}</h4>
             <ul>
               {data.treatment.acute_management.pharmacotherapy.agents.map((agent, index) => (
                 <li key={index}>
@@ -187,8 +190,9 @@ export default function SND({ lang }) {  // Receive lang as prop
                 </li>
               ))}
             </ul>
+            <hr />
 
-            <h3>{data.treatment.acute_management.temporary_pacing[lang]}</h3>
+            <h4>{data.treatment.acute_management.temporary_pacing[lang]}</h4>
             <p><strong>{lang === 'en' ? 'Indications:' : '適應症：'}</strong></p>
             <ul>
               {data.treatment.acute_management.temporary_pacing.indications.map((item, index) => (
@@ -222,7 +226,7 @@ export default function SND({ lang }) {  // Receive lang as prop
               ))}
             </ul>
 
-            <h3>{data.treatment.pacemaker_decision[lang]}</h3>
+            <h4>{data.treatment.pacemaker_decision[lang]}</h4>
             <p>✔ <strong>{lang === 'en' ? 'Yes:' : '需要：'}</strong> {data.treatment.pacemaker_decision.yes_criteria[lang]}</p>
             <p>✗ <strong>{lang === 'en' ? 'No:' : '不需要：'}</strong> {data.treatment.pacemaker_decision.no_criteria[lang]}</p>
           </div>

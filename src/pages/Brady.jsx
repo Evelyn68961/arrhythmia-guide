@@ -28,7 +28,7 @@ export default function Brady() {
   return (
     <div>
       <div className="section-header">
-        <h1>Bradyarrhythmias</h1>
+        <h1>{lang === 'en' ? 'Bradyarrhythmias' : '慢速心律不整'}</h1>
         
         {/* Single language toggle for the whole page */}
         <div className="lang-toggle">

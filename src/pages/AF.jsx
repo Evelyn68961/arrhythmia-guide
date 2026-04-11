@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { useLanguage } from '../context/LanguageContext'
 import data from '../data/af.json'
 import introImg from '../assets/images/AF-intro.png'
 import classImg from '../assets/images/AF-clinc-class.png'
 import treatImg from '../assets/images/AF-treat.png'
 
-export default function AF({ lang }) {
+export default function AF() {
+  const { lang } = useLanguage()
   const [activeTab, setActiveTab] = useState(0)
   const [careTab, setCareTab] = useState(0)
 

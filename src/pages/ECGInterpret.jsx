@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLanguage } from '../context/LanguageContext'
 import data from '../data/ecg_interpretation.json'
 import wavesImg from '../assets/images/ecg-waves.png'
 import intervalsImg  from '../assets/images/ecg-intervals.png'
@@ -6,7 +7,8 @@ import systematicImg from '../assets/images/ecg-systematic.png'
 import tachyImg from '../assets/images/ecg-tachy.png'
 import bradyImg from '../assets/images/ecg-brady.png'
 
-export default function ECGInterpret({ lang }) {
+export default function ECGInterpret() {
+  const { lang } = useLanguage()
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [

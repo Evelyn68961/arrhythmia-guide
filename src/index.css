@@ -15,10 +15,16 @@ body {
   background: #2c3e50;
   padding: 1rem 2rem;
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  justify-content: space-between; /* links on left, lang toggle on right */
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+.main-nav .nav-links {
+  display: flex;
+  gap: 2rem;
 }
 
 .main-nav a {
@@ -146,10 +152,6 @@ h2 {
 .lang-toggle {
   display: flex;
   gap: 0.5rem;
-  justify-content: flex-end;
-  position: absolute;
-  top: 0.5rem;
-  right: 2rem;
 }
 
 .lang-toggle button {

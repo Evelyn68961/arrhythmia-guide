@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 import SVT from './SVT'
 import AF from './AF'
 import VT from './VT'
@@ -7,7 +8,8 @@ import VF from './VF'
 
 export default function Tachy() {
   const location = useLocation()
-  const [lang, setLang] = useState('en') 
+  // Read shared language from context instead of owning local state.
+  const { lang } = useLanguage()
 
   // Scroll to section when hash exists on page load
   useEffect(() => {
@@ -31,22 +33,6 @@ export default function Tachy() {
     <div>
       <div className="section-header">
         <h1>{lang === 'en' ? 'Tachyarrhythmias' : '快速心律不整'}</h1>
-        
-        {/* Single language toggle */}
-        <div className="lang-toggle">
-          <button 
-            className={lang === 'en' ? 'active' : ''} 
-            onClick={() => setLang('en')}
-          >
-            Eng
-          </button>
-          <button 
-            className={lang === 'zh' ? 'active' : ''} 
-            onClick={() => setLang('zh')}
-          >
-            中文
-          </button>
-        </div>
 
         <nav className="section-nav">
           <button onClick={() => scrollToSection('svt')}>
@@ -64,20 +50,21 @@ export default function Tachy() {
         </nav>
       </div>
 
+      {/* Children read `lang` from context directly — no prop-drilling. */}
       <section id="svt" className="section-wrapper">
-        <SVT lang={lang} />
+        <SVT />
       </section>
 
       <section id="af" className="section-wrapper">
-        <AF lang={lang} />
+        <AF />
       </section>
 
       <section id="vt" className="section-wrapper">
-        <VT lang={lang} />
+        <VT />
       </section>
 
       <section id="vf" className="section-wrapper">
-        <VF lang={lang} />
+        <VF />
       </section>
     </div>
   )

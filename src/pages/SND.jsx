@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLanguage } from '../context/LanguageContext'
 import data from '../data/snd.json'
 import introImg from '../assets/images/SND-intro.png'
 import classificationImg from '../assets/images/SND-classification.png'
@@ -6,8 +7,8 @@ import saBlockImg from '../assets/images/SND-extra-SAblock.png'
 import acuteImg from '../assets/images/SND-acute-management.png'
 import longtermImg from '../assets/images/SND-longterm-treatment.png'
 
-export default function SND({ lang }) {  // Receive lang as prop
-
+export default function SND() {
+  const { lang } = useLanguage()
   const [activeTab, setActiveTab] = useState(0)
   const [subTab, setSubTab] = useState(0)
 

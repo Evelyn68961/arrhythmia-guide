@@ -1,11 +1,13 @@
 import { useState } from 'react'
+import { useLanguage } from '../context/LanguageContext'
 import data from '../data/vf.json'
 import introImg from '../assets/images/VF-intro.png'
 import etiImg from '../assets/images/VF-etiology.png'
 import treatImg from '../assets/images/VF-management.png'
 import preventImg from '../assets/images/VF-prevention.png'
 
-export default function VF({ lang }) {
+export default function VF() {
+  const { lang } = useLanguage()
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [

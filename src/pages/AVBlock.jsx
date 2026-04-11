@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import { useLanguage } from '../context/LanguageContext'
 import data from '../data/avblock.json'
 import introImg from '../assets/images/AVBlock-intro.png'
 import strategyImg from '../assets/images/AVBlock-treatment-strategy.png'
 import classificationImg from '../assets/images/AVBlock-treatment-classification.png'
 
-export default function AVBlock({ lang }) {  // Receive lang as prop
-
+export default function AVBlock() {
+  const { lang } = useLanguage()
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [

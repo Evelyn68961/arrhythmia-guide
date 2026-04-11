@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 import SND from './SND'
 import AVBlock from './AVBlock'
 
 export default function Brady() {
   const location = useLocation()
-  const [lang, setLang] = useState('en')  // Shared language state
+  // Read shared language from context instead of owning local state.
+  const { lang } = useLanguage()
 
   // Scroll to section when hash exists on page load
   useEffect(() => {
@@ -29,22 +31,6 @@ export default function Brady() {
     <div>
       <div className="section-header">
         <h1>{lang === 'en' ? 'Bradyarrhythmias' : '慢速心律不整'}</h1>
-        
-        {/* Single language toggle for the whole page */}
-        <div className="lang-toggle">
-          <button 
-            className={lang === 'en' ? 'active' : ''} 
-            onClick={() => setLang('en')}
-          >
-            Eng
-          </button>
-          <button 
-            className={lang === 'zh' ? 'active' : ''} 
-            onClick={() => setLang('zh')}
-          >
-            中文
-          </button>
-        </div>
 
         <nav className="section-nav">
           <button onClick={() => scrollToSection('snd')}>
@@ -56,12 +42,13 @@ export default function Brady() {
         </nav>
       </div>
 
+      {/* Children read `lang` from context directly — no prop-drilling. */}
       <section id="snd" className="section-wrapper">
-        <SND lang={lang} />
+        <SND />
       </section>
 
       <section id="avblock" className="section-wrapper">
-        <AVBlock lang={lang} />
+        <AVBlock />
       </section>
     </div>
   )

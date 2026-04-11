@@ -1,23 +1,15 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Home() {
-  const [lang, setLang] = useState('en')
+  // Read lang from the shared context. No local useState, no setLang here —
+  // Home never changes the language, it only displays translated content.
+  const { lang } = useLanguage()
 
   return (
     <div className="home-page">
       <div className="section-header">
         <h1>{lang === 'en' ? 'Arrhythmia Guide' : '心律不整指南'}</h1>
-        <div className="lang-toggle">
-          <button 
-            className={lang === 'en' ? 'active' : ''} 
-            onClick={() => setLang('en')}
-          >Eng</button>
-          <button 
-            className={lang === 'zh' ? 'active' : ''} 
-            onClick={() => setLang('zh')}
-          >中文</button>
-        </div>
       </div>
 
       <div className="home">

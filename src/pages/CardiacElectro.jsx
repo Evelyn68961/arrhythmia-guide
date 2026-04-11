@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { useLanguage } from '../context/LanguageContext'
 import data from '../data/cardiac_electrophysiology.json'
 import conductionImg from '../assets/images/CardiacElectro-cardiac-conduction.png'
 import actionPotentialImg from '../assets/images/CardiacElectro-action-potential.png'
 import drugClassImg from '../assets/images/CardiacElectro-drug-classification.png'
 
-export default function CardiacElectro({ lang }) {
+export default function CardiacElectro() {
+  const { lang } = useLanguage()
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [

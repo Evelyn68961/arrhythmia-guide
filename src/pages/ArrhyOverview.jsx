@@ -1,11 +1,13 @@
 import { useState } from 'react'
+import { useLanguage } from '../context/LanguageContext'
 import data from '../data/arrhythmia_overview.json'
 // Import your images
 import introImg from '../assets/images/arrhy-intro.png'
 import classImg from '../assets/images/arrhy-class.png'
 import managementImg from '../assets/images/arrhy-management.png'
 
-export default function ArrhyOverview({ lang }) {
+export default function ArrhyOverview() {
+  const { lang } = useLanguage()
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [

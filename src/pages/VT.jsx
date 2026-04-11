@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLanguage } from '../context/LanguageContext'
 import data from '../data/vt.json'
 import introImg from '../assets/images/VT-intro.png'
 import etiImg from '../assets/images/VT-etiology.png'
@@ -6,7 +7,8 @@ import classImg from '../assets/images/VT-classification.png'
 import treatImg from '../assets/images/VT-acute-treatment.png'
 import preventImg from '../assets/images/VT-longterm-prevention.png'
 
-export default function VT({ lang }) {
+export default function VT() {
+  const { lang } = useLanguage()
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [

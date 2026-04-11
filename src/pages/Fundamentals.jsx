@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import { useLanguage } from '../context/LanguageContext'
 import CardiacElectro from './CardiacElectro'
 import ECGInterpret from './ECGInterpret'
 import ArrhyOverview from './ArrhyOverview'
@@ -7,7 +8,8 @@ import ArrhyOverview from './ArrhyOverview'
 
 export default function Fundamentals() {
   const location = useLocation()
-  const [lang, setLang] = useState('en')  // Shared language state
+  // Read shared language from context instead of owning local state.
+  const { lang } = useLanguage()
 
   // Scroll to section when hash exists on page load
   useEffect(() => {
@@ -31,21 +33,6 @@ export default function Fundamentals() {
     <div>
       <div className="section-header">
         <h1>{lang === 'en' ? 'Fundamentals' : '基礎知識'}</h1>
-        
-        <div className="lang-toggle">
-          <button 
-            className={lang === 'en' ? 'active' : ''} 
-            onClick={() => setLang('en')}
-          >
-            Eng
-          </button>
-          <button 
-            className={lang === 'zh' ? 'active' : ''} 
-            onClick={() => setLang('zh')}
-          >
-            中文
-          </button>
-        </div>
 
         <nav className="section-nav">
           <button onClick={() => scrollToSection('cardiac-electro')}>
@@ -60,16 +47,18 @@ export default function Fundamentals() {
         </nav>
       </div>
 
+      {/* Children no longer need `lang` as a prop — they read it from
+          context directly via useLanguage(). */}
       <section id="cardiac-electro" className="section-wrapper">
-        <CardiacElectro lang={lang} />
+        <CardiacElectro />
       </section>
 
       <section id="ecg-interpret" className="section-wrapper">
-        <ECGInterpret lang={lang} />
+        <ECGInterpret />
       </section>
 
       <section id="arrhy-overview" className="section-wrapper">
-        <ArrhyOverview lang={lang} />
+        <ArrhyOverview />
       </section>
     </div>
   )

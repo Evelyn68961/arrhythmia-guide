@@ -1,11 +1,13 @@
 import { useState } from 'react'
+import { useLanguage } from '../context/LanguageContext'
 import data from '../data/svt.json'
 import introImg from '../assets/images/SVT-intro.png'
 import ecgImg from '../assets/images/SVT-ecg-path.png'
 import treatImg from '../assets/images/SVT-treatment.png'
 import preventImg from '../assets/images/SVT-prevention.png'
 
-export default function SVT({ lang }) {
+export default function SVT() {
+  const { lang } = useLanguage()
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [

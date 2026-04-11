@@ -22,11 +22,10 @@ export default function SND() {
   return (
     <div className="content">
 
-      {/* Title */}
-      <h2>{data.topic[lang]}</h2>
+      {/* Title + tabs in one row */}
+      <div className="content-header">
+        <h2>{data.topic[lang]}</h2>
 
-      {/* Tabs Row */}
-      <div className="tabs-row">
         <div className="section-tabs">
           {/* Overview */}
           <button
@@ -41,16 +40,16 @@ export default function SND() {
             className={activeTab === 1 && subTab === 0 ? 'active' : ''}
             onClick={() => { setActiveTab(1); setSubTab(0); }}
           >
-            {lang === 'en' ? 'Classification' : '分類'}
+            {lang === 'en' ? 'Classes' : '分類'}
           </button>
 
-          {/* SA Exit Block - only show when Tab 1 is active */}
+          {/* SA Exit Block — only show when Classification tab is active */}
           {activeTab === 1 && (
             <button
               className={subTab === 1 ? 'active' : ''}
               onClick={() => setSubTab(1)}
             >
-              {lang === 'en' ? 'SA Block (more info)' : '竇房出口阻滯'}
+              {lang === 'en' ? 'SA Block' : '竇房出口阻滯'}
             </button>
           )}
 
@@ -59,7 +58,7 @@ export default function SND() {
             className={activeTab === 2 ? 'active' : ''}
             onClick={() => { setActiveTab(2); setSubTab(0); }}
           >
-            {lang === 'en' ? 'Acute Management' : '急性處置'}
+            {lang === 'en' ? 'Acute' : '急性'}
           </button>
 
           {/* Long-term Treatment */}
@@ -67,7 +66,7 @@ export default function SND() {
             className={activeTab === 3 ? 'active' : ''}
             onClick={() => { setActiveTab(3); setSubTab(0); }}
           >
-            {lang === 'en' ? 'Long-term Treatment' : '長期治療'}
+            {lang === 'en' ? 'Long-term' : '長期'}
           </button>
         </div>
       </div>

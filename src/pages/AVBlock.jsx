@@ -18,20 +18,21 @@ export default function AVBlock() {
   return (
     <div className="content">
 
-      {/* Title */}
-      <h2>{data.topic[lang]}</h2>
+      {/* Title + tabs in one row */}
+      <div className="content-header">
+        <h2>{data.topic[lang]}</h2>
 
-      {/* Section Tabs */}
-      <div className="section-tabs">
-        {tabs.map((tab, index) => (
-          <button
-            key={index}
-            className={activeTab === index ? 'active' : ''}
-            onClick={() => setActiveTab(index)}
-          >
-            {tab.label[lang]}
-          </button>
-        ))}
+        <div className="section-tabs">
+          {tabs.map((tab, index) => (
+            <button
+              key={index}
+              className={activeTab === index ? 'active' : ''}
+              onClick={() => setActiveTab(index)}
+            >
+              {tab.label[lang]}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Two Column Layout */}

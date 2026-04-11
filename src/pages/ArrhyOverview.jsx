@@ -19,20 +19,21 @@ export default function ArrhyOverview() {
   return (
     <div className="content">
 
-      {/* Title */}
-      <h2>{data.topic[lang]}</h2>
+      {/* Title + tabs in one row */}
+      <div className="content-header">
+        <h2>{data.topic[lang]}</h2>
 
-      {/* Section Tabs */}
-      <div className="section-tabs">
-        {tabs.map((tab, index) => (
-          <button
-            key={index}
-            className={activeTab === index ? 'active' : ''}
-            onClick={() => setActiveTab(index)}
-          >
-            {tab.label[lang]}
-          </button>
-        ))}
+        <div className="section-tabs">
+          {tabs.map((tab, index) => (
+            <button
+              key={index}
+              className={activeTab === index ? 'active' : ''}
+              onClick={() => setActiveTab(index)}
+            >
+              {tab.label[lang]}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Two Column Layout */}
@@ -148,14 +149,21 @@ export default function ArrhyOverview() {
             {/* By Origin */}
             <h4>{data.classification.by_origin[lang]}</h4>
             {data.classification.by_origin.categories.map((cat, index) => (
-              <div key={index}>
-                <h5>{cat.category[lang]}</h5>
-                <p><strong>{lang === 'en' ? 'QRS Width' : 'QRS 寬度'}:</strong> {cat.qrs_width[lang]}</p>
-                <ul>
-                  {cat.examples.map((ex, exIndex) => (
-                    <li key={exIndex}>{ex[lang]}</li>
-                  ))}
-                </ul>
+              <div key={index} className="drug-card">
+                <div className="drug-name">{cat.category[lang]}</div>
+                <dl className="detail-grid">
+                  <dt>{lang === 'en' ? 'QRS Width' : 'QRS 寬度'}</dt>
+                  <dd>{cat.qrs_width[lang]}</dd>
+
+                  <dt>{lang === 'en' ? 'Examples' : '範例'}</dt>
+                  <dd>
+                    <ul>
+                      {cat.examples.map((ex, exIndex) => (
+                        <li key={exIndex}>{ex[lang]}</li>
+                      ))}
+                    </ul>
+                  </dd>
+                </dl>
               </div>
             ))}
             <hr />
@@ -180,11 +188,18 @@ export default function ArrhyOverview() {
                 {mech.subtypes && (
                   <>
                     {mech.subtypes.map((sub, subIndex) => (
-                      <div key={subIndex}>
-                        <h6>{sub.type[lang]}</h6>
-                        <p><strong>{lang === 'en' ? 'Phase' : '相位'}:</strong> {sub.phase[lang]}</p>
-                        <p><strong>{lang === 'en' ? 'Cause' : '原因'}:</strong> {sub.cause[lang]}</p>
-                        <p><strong>{lang === 'en' ? 'Example' : '範例'}:</strong> {sub.example[lang]}</p>
+                      <div key={subIndex} className="drug-card">
+                        <div className="drug-name">{sub.type[lang]}</div>
+                        <dl className="detail-grid">
+                          <dt>{lang === 'en' ? 'Phase' : '相位'}</dt>
+                          <dd>{sub.phase[lang]}</dd>
+
+                          <dt>{lang === 'en' ? 'Cause' : '原因'}</dt>
+                          <dd>{sub.cause[lang]}</dd>
+
+                          <dt>{lang === 'en' ? 'Example' : '範例'}</dt>
+                          <dd>{sub.example[lang]}</dd>
+                        </dl>
                       </div>
                     ))}
                   </>

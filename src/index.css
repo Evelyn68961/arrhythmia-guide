@@ -107,7 +107,7 @@ body {
 
 .sidebar-layout {
   display: grid;
-  grid-template-columns: 260px 1fr; /* fixed sidebar, flexible content */
+  grid-template-columns: 220px 1fr; /* fixed sidebar, flexible content */
   gap: 2rem;
   padding: 2rem;
   align-items: start;
@@ -292,6 +292,27 @@ h2 {
   line-height: 1.35;
 }
 
+/* .major-section — modifier for h4s that act as "section banners" above
+   groups of sibling h4s (e.g. "Rate Control" / "Rhythm Control" in AF
+   management, where each wraps three method-level h4s underneath).
+   Uppercase + letter-spacing gives them a "banner label" feel that's
+   clearly above normal h4s without competing with h3s. */
+.content h4.major-section {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* First banner in a tab gets a smaller top margin so it sits close to
+   the top edge instead of pushing the content down. */
+.content .tab-content > .major-section:first-child,
+.content h4.major-section:first-child {
+  margin-top: 0.75rem;
+}
+
 /* H5/H6 are REAL sub-headings, not captions. SVT's Acute tab uses them
    for numbered treatment steps like "1. Vagal Maneuvers" — demoting them
    to tiny caption text inverted the hierarchy and made them look smaller
@@ -334,6 +355,56 @@ h2 {
   margin: 0.2rem 0;
   line-height: 1.6;
   font-size: 0.9rem;
+}
+
+/* ==================== */
+/* Tables — used for tabular comparisons (e.g. Vaughan-Williams summary).
+   Default browser tables have no padding, no header distinction, and no
+   row separators. These rules give a clean clinical-reference look. */
+/* ==================== */
+
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.25rem 0;
+  font-size: 0.9rem;
+  background: white;
+  border: 1px solid rgba(44, 62, 80, 0.1);
+  border-radius: 6px;
+  overflow: hidden;        /* clips rounded corners against the inner cells */
+}
+
+.content table thead {
+  background: #f0f3f6;
+}
+
+.content table th {
+  text-align: left;
+  padding: 0.65rem 0.9rem;
+  font-weight: 700;
+  color: #2c3e50;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(44, 62, 80, 0.15);
+}
+
+.content table td {
+  padding: 0.6rem 0.9rem;
+  color: #2c3e50;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(44, 62, 80, 0.06);
+  line-height: 1.5;
+}
+
+/* No bottom border on the last row — the table's outer border handles it */
+.content table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Subtle hover for scanning across rows */
+.content table tbody tr:hover {
+  background: rgba(52, 152, 219, 0.05);
 }
 
 /* The horizontal rules act as section breaks — keep them subtle */
@@ -615,6 +686,22 @@ h2 {
 
 .care-subtabs button.active {
   background: #3498db;
+  color: white;
+}
+
+/* The first character of each label — styled as the CARE mnemonic letter.
+   Larger, heavier, and accent-colored so the C-A-R-E progression reads
+   at a glance. Color flips to white when the button is active/hover so
+   it stays legible on the blue background. */
+.care-subtabs button .care-letter {
+  font-size: 1.15em;
+  font-weight: 800;
+  color: #1f4e79;
+  margin-right: 0.04em;
+}
+
+.care-subtabs button.active .care-letter,
+.care-subtabs button:hover .care-letter {
   color: white;
 }
 

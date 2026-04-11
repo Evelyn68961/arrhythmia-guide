@@ -101,6 +101,104 @@ body {
   margin-bottom: 2rem;
 }
 
+/* ==================== */
+/* Sidebar Layout (nested routes) */
+/* ==================== */
+
+.sidebar-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr; /* fixed sidebar, flexible content */
+  gap: 2rem;
+  padding: 2rem;
+  align-items: start;
+}
+
+.condition-sidebar {
+  /* Sticky: stays on screen as the content column scrolls.
+     `top` matches the height of the sticky navbar so the sidebar
+     doesn't tuck under it. */
+  position: sticky;
+  top: 5rem;
+  background: #f8f9fb;
+  border: 1px solid rgba(225, 230, 237, 0.5);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.sidebar-title {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  padding: 0 0 0.75rem 0;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(44, 62, 80, 0.15);
+}
+
+.condition-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.condition-link {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  color: #2c3e50;
+  text-decoration: none;
+  line-height: 1.3;
+  transition: background 0.15s, color 0.15s;
+}
+
+/* Primary label — the abbreviation. Always one line, bold, easy to scan. */
+.condition-link__abbr {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Secondary label — the full name. Smaller and muted so it reads as a
+   subtitle. Truncates with ellipsis instead of wrapping to keep rows even. */
+.condition-link__full {
+  display: block;
+  font-size: 0.78rem;
+  color: #7a8896;
+  margin-top: 0.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.condition-link:hover {
+  background: rgba(52, 152, 219, 0.08);
+  color: #3498db;
+}
+
+.condition-link:hover .condition-link__full {
+  color: #3498db;
+}
+
+/* NavLink automatically gets .active when its `to` matches the URL. */
+.condition-link.active {
+  background: #3498db;
+  color: white;
+}
+
+/* When active, the subtitle needs to stay readable on the blue background. */
+.condition-link.active .condition-link__full {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.condition-content {
+  min-width: 0; /* prevents grid blowout when content has long unbreakable strings */
+  background: #f8f9fb;
+  border: 1px solid rgba(225, 230, 237, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  padding: 0.5rem 1rem;
+}
+
 
 main,
 .content,
@@ -113,10 +211,12 @@ h1 {
 }
 
 h2 {
-  color: #34495e;
-  padding: 1rem 0;
+  color: #2c3e50;
+  padding: 0;
   text-align: left;
   font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .content {
@@ -134,19 +234,235 @@ h2 {
   margin: 2rem 0;
 }
 
+/* ==================== */
+/* Heading hierarchy — three clearly distinct levels */
+/* H2: condition title (top of page)                  */
+/* H3: major section ("Clinical Presentation")        */
+/* H4: sub-section ("Demographics", "Symptoms")       */
+/* H5/H6: demoted to small uppercase labels —         */
+/*   kept for backwards compat with existing content  */
+/* ==================== */
+
+/* H3 uses a subtle bottom border rather than a left border — the left
+   border competed visually with drug-card left borders, giving the page
+   too many vertical strokes. A bottom border puts H3 on a different
+   visual axis (horizontal section divider) so drug cards can own the
+   vertical-accent vocabulary. */
 .content h3 {
   color: #2c3e50;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  padding: 0 0 0.5rem 0;
+  /* width: fit-content makes the block shrink to its text width so
+     the underline only spans the heading text, not the full column. */
+  width: fit-content;
+  /* Underline is a blurred pseudo-element, not a border — borders are
+     always sharp-edged, but filter: blur() on a pseudo gives a genuine
+     fuzzy/soft edge. */
+  position: relative;
+  line-height: 1.3;
+}
+
+.content h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: rgba(133, 193, 233, 0.7);
+  filter: blur(2px);
+  border-radius: 2px;
+}
+
+/* Don't stack an extra gap on the very first H3 after the header */
+.content h3:first-child,
+.content .tab-content > h3:first-child {
+  margin-top: 0.75rem;
 }
 
 .content h4 {
-  font-size: 1.25rem;
+  color: #2c3e50;           /* dark navy — same as H3, reads as "section" */
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.35;
+}
+
+/* H5/H6 are REAL sub-headings, not captions. SVT's Acute tab uses them
+   for numbered treatment steps like "1. Vagal Maneuvers" — demoting them
+   to tiny caption text inverted the hierarchy and made them look smaller
+   than the body paragraphs below. Keep them as descending bold headings.
+   The size difference between H4 and H5 is small (13%), so the hierarchy
+   is reinforced by a color descent instead: H4 dark navy → H5 slate →
+   H6 lighter slate. The eye reads "less prominent" from color alone. */
+.content h5 {
+  color: #6b7a8a;           /* slate gray — clearly "sub" of H4's navy */
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.35;
+}
+
+.content h6 {
+  color: #8a95a3;           /* lighter slate — bottom of the hierarchy */
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 0.9rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.35;
 }
 
 .content p {
-  margin: 0.75rem 0;
-  line-height: 1.8;
+  margin: 0.4rem 0;
+  line-height: 1.65;
+  font-size: 0.9rem;
+}
+
+/* Lists: tighter gaps and consistent indentation */
+.content ul,
+.content ol {
+  padding-left: 1.25rem;
+  margin: 0.4rem 0 1rem 0;
+}
+
+.content li {
+  margin: 0.2rem 0;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* The horizontal rules act as section breaks — keep them subtle */
+.content hr {
+  border: none;
+  border-top: 1px solid rgba(44, 62, 80, 0.1);
+  margin: 1.75rem 0 0.75rem 0;
+}
+
+/* ==================== */
+/* Detail grid: reusable labeled key/value layout                      */
+/* Used bare (e.g. ECG characteristics) or wrapped in .drug-card       */
+/* (e.g. second-line drugs). Two-column grid where the label column    */
+/* auto-sizes to its widest label and the value column takes the rest. */
+/*   <dl class="detail-grid">                                          */
+/*     <dt>Rate</dt><dd>150–250 bpm</dd>                               */
+/*     <dt class="caution">Cautions</dt><dd class="caution">…</dd>     */
+/*   </dl>                                                             */
+/* ==================== */
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.4rem 0.9rem;
+  margin: 0.4rem 0 1rem 0;
+}
+
+.detail-grid dt {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #6b7a8a;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  align-self: start;
+  padding-top: 0.2rem;   /* align to the cap-height of the dd next to it */
+  margin: 0;
+}
+
+.detail-grid dd {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #2c3e50;
+}
+
+/* When a <dd> contains a <ul> (e.g. a list of cautions), tighten the
+   default list spacing so the nested list sits flush against its label. */
+.detail-grid dd > ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.detail-grid dd > ul > li {
+  margin: 0.15rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Warnings get amber treatment so the eye catches them when skimming */
+.detail-grid dt.caution {
+  color: #b8860b;
+}
+
+.detail-grid dd.caution {
+  color: #7a5a08;
+  font-weight: 500;
+}
+
+/* Amber cascades into a nested <ul> inside a caution <dd> */
+.detail-grid dd.caution > ul > li {
+  color: #7a5a08;
+}
+
+/* ==================== */
+/* Drug card: wraps a detail-grid with header + chrome for drug-info   */
+/* blocks (drug name, soft background, gray left border).              */
+/*   <div class="drug-card">                                           */
+/*     <div class="drug-name">Verapamil</div>                          */
+/*     <dl class="detail-grid"> … </dl>                                */
+/*   </div>                                                            */
+/* ==================== */
+
+.drug-card {
+  margin: 0.6rem 0 1rem 0;
+  padding: 0.7rem 1rem 0.8rem 1rem;
+  background: #fafbfc;
+  border-left: 3px solid #cbd5dd;
+  border-radius: 0 6px 6px 0;
+}
+
+.drug-card .drug-name {
+  /* Overrides the slate H6 color inside drug cards — the drug name
+     is the primary item in the card and should read dark. */
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+/* When a drug-card holds a detail-grid, reset the grid's top margin
+   since the card already provides padding. */
+.drug-card .detail-grid {
+  margin: 0;
+}
+
+/* ==================== */
+/* Content header: title + tabs in one row */
+/* ==================== */
+
+.content-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* No space-between — title and tabs sit flush with a gap so they read
+     as one visual group instead of being flung to opposite corners. */
+  gap: 0.75rem 2rem;
+  padding: 0.75rem 0 1.25rem 0;
+  border-bottom: 1px solid rgba(44, 62, 80, 0.08);
+  margin-bottom: 1rem;
+}
+
+.content-header h2 {
+  flex: 0 1 auto;
+  margin: 0;
+}
+
+.content-header .section-tabs {
+  flex: 0 1 auto;
 }
 
 .lang-toggle {
@@ -208,54 +524,9 @@ h2 {
   box-shadow: none;
 }
 
-.column-right h3 {
-  font-size: 1.75rem;
-  margin-top: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.column-right h3:first-child {
-  margin-top: 0;
-}
-
-.column-right h4 {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.column-right h5 {
-  font-size: 1.25rem;
-  margin-top: 0.75rem;
-  margin-bottom: 0.25rem;
-}
-
-.column-right h6 {
-  font-size: 1.1rem;
-  margin-top: 0.75rem;
-  margin-bottom: 0.25rem;
-}
-
-.column-right strong {
-  font-size: 1.05rem;
-}
-
-.column-right p {
-  font-size: 1.02rem;
-  margin-bottom: 0.25rem;
-}
-
-.column-right ul {
-  padding-left: 1.25rem;
-  margin: 0.5rem 0.2rem 1.2rem 0.2rem;
-  font-size: 1.1rem;
-}
-
-.column-right ol {
-  padding-left: 1.25rem;
-  margin: 0.5rem 0.2rem 1.2rem 0.2rem;
-  font-size: 1.1rem;
-}
+/* .column-right inherits its heading/paragraph/list styles from the
+   global .content h2/h3/... rules above. Keeping this block empty on
+   purpose so the single source of truth for hierarchy is one place. */
 
 .small-two-col {
   display: flex;

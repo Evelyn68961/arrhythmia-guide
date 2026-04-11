@@ -11,9 +11,9 @@ export default function AF() {
   const [careTab, setCareTab] = useState(0)
 
   const tabs = [
-    { label: { en: 'Overview', zh: '概述' }, img: introImg },
-    { label: { en: 'Clinical Profile', zh: '臨床表徵 & 分類' }, img: classImg },
-    { label: { en: 'Management', zh: '治療策略' }, img: treatImg },
+    { label: { en: 'Overview',   zh: '概述' }, img: introImg },
+    { label: { en: 'Clinical',   zh: '臨床' }, img: classImg },
+    { label: { en: 'Management', zh: '治療' }, img: treatImg },
   ]
 
   const careSubtabs = [
@@ -26,40 +26,37 @@ export default function AF() {
   return (
         <div className="content">
 
-          {/* Title */}
-          <h2>{data.topic[lang]}</h2>
+          {/* Title + main tabs in one row */}
+          <div className="content-header">
+            <h2>{data.topic[lang]}</h2>
 
-          {/* Section Tabs */}
-          <div className="section-tabs">
-            {tabs.map((tab, index) => (
-              <button
-                key={index}
-                className={activeTab === index ? 'active' : ''}
-                onClick={() => setActiveTab(index)}
-              >
-                {tab.label[lang]}
-              </button>
-            ))}
-          
-            {/* CARE subtabs - only show when Management tab is active */}
-            {activeTab === 2 && (
-              <div className="care-subtabs">
-                {careSubtabs.map((subtab, index) => (
-                  <button
-                    key={subtab.key}
-                    className={careTab === index ? 'active' : ''}
-                    onClick={() => setCareTab(index)}
-                  >
-                    {subtab.key}: {subtab.label[lang]}
-                  </button>
-                ))}
-              </div>
-            )}  
-        </div>         
-                  
+            <div className="section-tabs">
+              {tabs.map((tab, index) => (
+                <button
+                  key={index}
+                  className={activeTab === index ? 'active' : ''}
+                  onClick={() => setActiveTab(index)}
+                >
+                  {tab.label[lang]}
+                </button>
+              ))}
+            </div>
+          </div>
 
-
-
+          {/* CARE subtabs — own row below header, only when Management is active */}
+          {activeTab === 2 && (
+            <div className="care-subtabs">
+              {careSubtabs.map((subtab, index) => (
+                <button
+                  key={subtab.key}
+                  className={careTab === index ? 'active' : ''}
+                  onClick={() => setCareTab(index)}
+                >
+                  {subtab.key}: {subtab.label[lang]}
+                </button>
+              ))}
+            </div>
+          )}
 
           {/* Two Column Layout */}
           <div className="two-column">

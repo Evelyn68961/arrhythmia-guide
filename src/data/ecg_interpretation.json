@@ -215,8 +215,8 @@
   },
   "systematic_ecg_interpretation": {
     "title": {
-      "en": "Systematic Approach to Reading an ECG: The R-R-P-Q-I Method",
-      "zh": "系統性 ECG 判讀方法：R-R-P-Q-I 法"
+      "en": "The R-R-P-Q-I Method",
+      "zh": "R-R-P-Q-I 判讀法"
     },
     "description": {
       "en": "A systematic approach ensures no critical findings are missed. The R-R-P-Q-I method provides a structured framework: Rate → Rhythm → P waves → QRS width → Intervals.",
@@ -450,8 +450,8 @@
   },
   "tachyarrhythmia_recognition": {
     "title": {
-      "en": "Tachyarrhythmias Recognition (HR > 100 bpm)",
-      "zh": "心搏過速辨識（HR > 100 bpm）"
+      "en": "Tachyarrhythmia Recognition",
+      "zh": "心搏過速辨識"
     },
     "classification_table": [
       {
@@ -542,8 +542,8 @@
   },
   "bradyarrhythmia_recognition": {
     "title": {
-      "en": "Bradyarrhythmias Recognition (HR < 60 bpm)",
-      "zh": "心搏過緩辨識（HR < 60 bpm）"
+      "en": "Bradyarrhythmia Recognition",
+      "zh": "心搏過緩辨識"
     },
     "classification_table": [
       {

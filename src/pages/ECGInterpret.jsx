@@ -22,20 +22,21 @@ export default function ECGInterpret() {
   return (
     <div className="content">
 
-      {/* Title */}
-      <h2>{data.topic[lang]}</h2>
+      {/* Title + tabs in one row */}
+      <div className="content-header">
+        <h2>{data.topic[lang]}</h2>
 
-      {/* Section Tabs */}
-      <div className="section-tabs">
-        {tabs.map((tab, index) => (
-          <button
-            key={index}
-            className={activeTab === index ? 'active' : ''}
-            onClick={() => setActiveTab(index)}
-          >
-            {tab.label[lang]}
-          </button>
-        ))}
+        <div className="section-tabs">
+          {tabs.map((tab, index) => (
+            <button
+              key={index}
+              className={activeTab === index ? 'active' : ''}
+              onClick={() => setActiveTab(index)}
+            >
+              {tab.label[lang]}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Two Column Layout */}
@@ -82,13 +83,22 @@ export default function ECGInterpret() {
 
             <h4>{data.basic_ecg_components.waves_and_segments[lang]}</h4>
             {data.basic_ecg_components.waves_and_segments.components.map((item, index) => (
-              <div key={index}>
-                <h5>{item.component[lang]}</h5>
-                <p><strong>{lang === 'en' ? 'Represents' : '代表'}:</strong> {item.represents[lang]}</p>
-                {item.normal_characteristics && (
-                  <p><strong>{lang === 'en' ? 'Normal' : '正常值'}:</strong> {item.normal_characteristics[lang]}</p>
-                )}
-                <p><strong>{lang === 'en' ? 'Clinical Relevance' : '臨床意義'}:</strong> {item.clinical_relevance[lang]}</p>
+              <div key={index} className="drug-card">
+                <div className="drug-name">{item.component[lang]}</div>
+                <dl className="detail-grid">
+                  <dt>{lang === 'en' ? 'Represents' : '代表'}</dt>
+                  <dd>{item.represents[lang]}</dd>
+
+                  {item.normal_characteristics && (
+                    <>
+                      <dt>{lang === 'en' ? 'Normal' : '正常'}</dt>
+                      <dd>{item.normal_characteristics[lang]}</dd>
+                    </>
+                  )}
+
+                  <dt>{lang === 'en' ? 'Clinical' : '臨床'}</dt>
+                  <dd>{item.clinical_relevance[lang]}</dd>
+                </dl>
               </div>
             ))}
           </div>
@@ -101,17 +111,32 @@ export default function ECGInterpret() {
 
             <h4>{data.basic_ecg_components.key_intervals[lang]}</h4>
             {data.basic_ecg_components.key_intervals.intervals.map((item, index) => (
-              <div key={index}>
-                <h5>{item.interval[lang]}</h5>
-                <p><strong>{lang === 'en' ? 'Measures' : '測量'}:</strong> {item.measures[lang]}</p>
-                <p><strong>{lang === 'en' ? 'Normal Value' : '正常值'}:</strong> {item.normal_value[lang]}</p>
-                {item.calculation && (
-                  <p><strong>{lang === 'en' ? 'Calculation' : '計算'}:</strong> {item.calculation[lang]}</p>
-                )}
-                {item.prolonged_by && (
-                  <p><strong>{lang === 'en' ? 'Prolonged By' : '延長因素'}:</strong> {item.prolonged_by[lang]}</p>
-                )}
-                <p><strong>{lang === 'en' ? 'Clinical Consequence' : '臨床影響'}:</strong> {item.clinical_consequence[lang]}</p>
+              <div key={index} className="drug-card">
+                <div className="drug-name">{item.interval[lang]}</div>
+                <dl className="detail-grid">
+                  <dt>{lang === 'en' ? 'Measures' : '測量'}</dt>
+                  <dd>{item.measures[lang]}</dd>
+
+                  <dt>{lang === 'en' ? 'Normal' : '正常'}</dt>
+                  <dd>{item.normal_value[lang]}</dd>
+
+                  {item.calculation && (
+                    <>
+                      <dt>{lang === 'en' ? 'Calc' : '計算'}</dt>
+                      <dd>{item.calculation[lang]}</dd>
+                    </>
+                  )}
+
+                  {item.prolonged_by && (
+                    <>
+                      <dt>{lang === 'en' ? 'Prolonged by' : '延長因素'}</dt>
+                      <dd>{item.prolonged_by[lang]}</dd>
+                    </>
+                  )}
+
+                  <dt>{lang === 'en' ? 'Clinical' : '臨床'}</dt>
+                  <dd>{item.clinical_consequence[lang]}</dd>
+                </dl>
               </div>
             ))}
           </div>

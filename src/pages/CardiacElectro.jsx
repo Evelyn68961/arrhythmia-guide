@@ -18,20 +18,21 @@ export default function CardiacElectro() {
   return (
     <div className="content">
 
-      {/* Title */}
-      <h2>{data.topic[lang]}</h2>
+      {/* Title + tabs in one row */}
+      <div className="content-header">
+        <h2>{data.topic[lang]}</h2>
 
-      {/* Section Tabs */}
-      <div className="section-tabs">
-        {tabs.map((tab, index) => (
-          <button
-            key={index}
-            className={activeTab === index ? 'active' : ''}
-            onClick={() => setActiveTab(index)}
-          >
-            {tab.label[lang]}
-          </button>
-        ))}
+        <div className="section-tabs">
+          {tabs.map((tab, index) => (
+            <button
+              key={index}
+              className={activeTab === index ? 'active' : ''}
+              onClick={() => setActiveTab(index)}
+            >
+              {tab.label[lang]}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Two Column Layout */}
@@ -72,13 +73,20 @@ export default function CardiacElectro() {
 
             <h4>{data.cardiac_conduction_system.conduction_pathway[lang]}</h4>
             {data.cardiac_conduction_system.conduction_pathway.sequence.map((item, index) => (
-              <div key={index}>
-                <h5>{item.structure[lang]}</h5>
-                <p><strong>{lang === 'en' ? 'Role' : '角色'}:</strong> {item.role[lang]}</p>
-                {item.intrinsic_rate && (
-                  <p><strong>{lang === 'en' ? 'Intrinsic Rate' : '固有頻率'}:</strong> {item.intrinsic_rate[lang]}</p>
-                )}
-                <p>{item.description[lang]}</p>
+              <div key={index} className="drug-card">
+                <div className="drug-name">{item.structure[lang]}</div>
+                <dl className="detail-grid">
+                  <dt>{lang === 'en' ? 'Role' : '角色'}</dt>
+                  <dd>{item.role[lang]}</dd>
+
+                  {item.intrinsic_rate && (
+                    <>
+                      <dt>{lang === 'en' ? 'Rate' : '頻率'}</dt>
+                      <dd>{item.intrinsic_rate[lang]}</dd>
+                    </>
+                  )}
+                </dl>
+                {item.description && <p>{item.description[lang]}</p>}
               </div>
             ))}
             <hr />
@@ -95,19 +103,32 @@ export default function CardiacElectro() {
 
             <h4>{data.action_potential_and_ion_channels.action_potential_phases[lang]}</h4>
             {data.action_potential_and_ion_channels.action_potential_phases.phases.map((phase, index) => (
-              <div key={index}>
-                <h5>{lang === 'en' ? 'Phase' : '相位'} {phase.phase}: {phase.name[lang]}</h5>
-                <p><strong>{lang === 'en' ? 'Voltage' : '電壓'}:</strong> {phase.voltage[lang]}</p>
-                <p><strong>{lang === 'en' ? 'Ion Movement' : '離子流動'}:</strong> {phase.ion_movement[lang]}</p>
-                {phase.ecg_correlation && (
-                  <p><strong>{lang === 'en' ? 'ECG Correlation' : 'ECG 對應'}:</strong> {phase.ecg_correlation[lang]}</p>
-                )}
-                {phase.clinical_significance && (
-                  <p><strong>{lang === 'en' ? 'Clinical Significance' : '臨床意義'}:</strong> {phase.clinical_significance[lang]}</p>
-                )}
-                {phase.description && (
-                  <p>{phase.description[lang]}</p>
-                )}
+              <div key={index} className="drug-card">
+                <div className="drug-name">
+                  {lang === 'en' ? 'Phase' : '相位'} {phase.phase}: {phase.name[lang]}
+                </div>
+                <dl className="detail-grid">
+                  <dt>{lang === 'en' ? 'Voltage' : '電壓'}</dt>
+                  <dd>{phase.voltage[lang]}</dd>
+
+                  <dt>{lang === 'en' ? 'Ions' : '離子'}</dt>
+                  <dd>{phase.ion_movement[lang]}</dd>
+
+                  {phase.ecg_correlation && (
+                    <>
+                      <dt>{lang === 'en' ? 'ECG' : '心電圖'}</dt>
+                      <dd>{phase.ecg_correlation[lang]}</dd>
+                    </>
+                  )}
+
+                  {phase.clinical_significance && (
+                    <>
+                      <dt>{lang === 'en' ? 'Clinical' : '臨床'}</dt>
+                      <dd>{phase.clinical_significance[lang]}</dd>
+                    </>
+                  )}
+                </dl>
+                {phase.description && <p>{phase.description[lang]}</p>}
               </div>
             ))}
           </div>
@@ -121,54 +142,99 @@ export default function CardiacElectro() {
             {data.vaughan_williams_classification.classes.map((drugClass, index) => (
               <div key={index}>
                 <h4>{drugClass.name[lang]}</h4>
-                
-                {/* For Class I with subclasses */}
+
+                {/* Branch 1: Class I with subclasses (Ia / Ib / Ic).
+                    Intro paragraph, then one drug-card per subclass. */}
                 {drugClass.subclasses ? (
                   <>
                     <p>{drugClass.mechanism[lang]}</p>
                     {drugClass.subclasses.map((sub, subIndex) => (
-                      <div key={subIndex}>
-                        <h5>{lang === 'en' ? 'Class' : '類別'} {sub.subclass}</h5>
-                        <p><strong>{lang === 'en' ? 'Mechanism' : '機轉'}:</strong> {sub.mechanism[lang]}</p>
-                        <p><strong>{lang === 'en' ? 'Examples' : '藥物'}:</strong> {sub.examples[lang]}</p>
-                        <p><strong>{lang === 'en' ? 'ECG Effect' : 'ECG 影響'}:</strong> {sub.ecg_effect[lang]}</p>
-                        {sub.warning && (
-                          <p><strong>{lang === 'en' ? 'Warning' : '警告'}:</strong> {sub.warning[lang]}</p>
-                        )}
+                      <div key={subIndex} className="drug-card">
+                        <div className="drug-name">
+                          {lang === 'en' ? 'Class' : '類別'} {sub.subclass}
+                        </div>
+                        <dl className="detail-grid">
+                          <dt>{lang === 'en' ? 'Mechanism' : '機轉'}</dt>
+                          <dd>{sub.mechanism[lang]}</dd>
+
+                          <dt>{lang === 'en' ? 'Drugs' : '藥物'}</dt>
+                          <dd>{sub.examples[lang]}</dd>
+
+                          <dt>{lang === 'en' ? 'ECG' : '心電圖'}</dt>
+                          <dd>{sub.ecg_effect[lang]}</dd>
+
+                          {sub.warning && (
+                            <>
+                              <dt className="caution">{lang === 'en' ? 'Warning' : '警告'}</dt>
+                              <dd className="caution">{sub.warning[lang]}</dd>
+                            </>
+                          )}
+                        </dl>
                       </div>
                     ))}
                   </>
                 ) : drugClass.examples && Array.isArray(drugClass.examples) ? (
-                  /* For Class V with array of drug examples */
+                  /* Branch 2: Class V with an array of drug examples.
+                     Intro paragraph, then one drug-card per drug. */
                   <>
                     <p>{drugClass.description[lang]}</p>
                     {drugClass.examples.map((drug, drugIndex) => (
-                      <div key={drugIndex}>
-                        <h5>{drug.drug}</h5>
-                        <p><strong>{lang === 'en' ? 'Mechanism' : '機轉'}:</strong> {drug.mechanism[lang]}</p>
-                        <p><strong>{lang === 'en' ? 'Use' : '用途'}:</strong> {drug.use[lang]}</p>
+                      <div key={drugIndex} className="drug-card">
+                        <div className="drug-name">{drug.drug}</div>
+                        <dl className="detail-grid">
+                          <dt>{lang === 'en' ? 'Mechanism' : '機轉'}</dt>
+                          <dd>{drug.mechanism[lang]}</dd>
+
+                          <dt>{lang === 'en' ? 'Use' : '用途'}</dt>
+                          <dd>{drug.use[lang]}</dd>
+                        </dl>
                       </div>
                     ))}
                   </>
                 ) : (
-                  /* For Classes II, III, IV */
-                  <>
-                    <p><strong>{lang === 'en' ? 'Mechanism' : '機轉'}:</strong> {drugClass.mechanism[lang]}</p>
-                    <p><strong>{lang === 'en' ? 'Examples' : '藥物'}:</strong> {drugClass.examples[lang]}</p>
-                    <p><strong>{lang === 'en' ? 'ECG Effect' : 'ECG 影響'}:</strong> {drugClass.ecg_effect[lang]}</p>
-                    {drugClass.clinical_applications && (
-                      <p><strong>{lang === 'en' ? 'Clinical Applications' : '臨床應用'}:</strong> {drugClass.clinical_applications[lang]}</p>
-                    )}
-                    {drugClass.warning && (
-                      <p><strong>{lang === 'en' ? 'Warning' : '警告'}:</strong> {drugClass.warning[lang]}</p>
-                    )}
-                    {drugClass.special_note && (
-                      <p><strong>{lang === 'en' ? 'Special Note' : '特別注意'}:</strong> {drugClass.special_note[lang]}</p>
-                    )}
-                    {drugClass.contraindications && (
-                      <p><strong>{lang === 'en' ? 'Contraindications' : '禁忌症'}:</strong> {drugClass.contraindications[lang]}</p>
-                    )}
-                  </>
+                  /* Branch 3: Classes II / III / IV — the class itself is the
+                     entity. Drug-card without a .drug-name header since the
+                     h4 above already identifies the class. */
+                  <div className="drug-card">
+                    <dl className="detail-grid">
+                      <dt>{lang === 'en' ? 'Mechanism' : '機轉'}</dt>
+                      <dd>{drugClass.mechanism[lang]}</dd>
+
+                      <dt>{lang === 'en' ? 'Drugs' : '藥物'}</dt>
+                      <dd>{drugClass.examples[lang]}</dd>
+
+                      <dt>{lang === 'en' ? 'ECG' : '心電圖'}</dt>
+                      <dd>{drugClass.ecg_effect[lang]}</dd>
+
+                      {drugClass.clinical_applications && (
+                        <>
+                          <dt>{lang === 'en' ? 'Use' : '用途'}</dt>
+                          <dd>{drugClass.clinical_applications[lang]}</dd>
+                        </>
+                      )}
+
+                      {drugClass.special_note && (
+                        <>
+                          <dt>{lang === 'en' ? 'Note' : '備註'}</dt>
+                          <dd>{drugClass.special_note[lang]}</dd>
+                        </>
+                      )}
+
+                      {drugClass.warning && (
+                        <>
+                          <dt className="caution">{lang === 'en' ? 'Warning' : '警告'}</dt>
+                          <dd className="caution">{drugClass.warning[lang]}</dd>
+                        </>
+                      )}
+
+                      {drugClass.contraindications && (
+                        <>
+                          <dt className="caution">{lang === 'en' ? 'Avoid' : '禁用'}</dt>
+                          <dd className="caution">{drugClass.contraindications[lang]}</dd>
+                        </>
+                      )}
+                    </dl>
+                  </div>
                 )}
                 <hr />
               </div>

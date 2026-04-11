@@ -43,7 +43,10 @@ export default function AF() {
             </div>
           </div>
 
-          {/* CARE subtabs — own row below header, only when Management is active */}
+          {/* CARE subtabs — own row below header, only when Management is active.
+              First character of each label is wrapped in a .care-letter span so
+              it can be styled as the mnemonic (C-A-R-E in English). Avoids the
+              "C: Comorbidities" duplication where the key letter appeared twice. */}
           {activeTab === 2 && (
             <div className="care-subtabs">
               {careSubtabs.map((subtab, index) => (
@@ -52,7 +55,8 @@ export default function AF() {
                   className={careTab === index ? 'active' : ''}
                   onClick={() => setCareTab(index)}
                 >
-                  {subtab.key}: {subtab.label[lang]}
+                  <span className="care-letter">{subtab.label[lang].charAt(0)}</span>
+                  {subtab.label[lang].slice(1)}
                 </button>
               ))}
             </div>
@@ -105,10 +109,9 @@ export default function AF() {
                 <p>{data.ecg_characteristics.ventricular_rate.content[lang]}</p>
                 <h5>{data.ecg_characteristics.fibrillatory_waves[lang]}</h5>
                 {data.ecg_characteristics.fibrillatory_waves.types.map((item) => (
-                  <div key={item.type} >
-                    <h5>{item.name[lang]}</h5>
-                    <p>{item.description[lang]}</p>
-                  </div>
+                  <p key={item.type}>
+                    <strong>{item.name[lang]}</strong> — {item.description[lang]}
+                  </p>
                 ))}
                 <hr />
                 <h4>{data.pathophysiology[lang]}</h4>
@@ -201,13 +204,13 @@ export default function AF() {
               {/* Tab 2: Management */}
               <div className={`tab-content ${activeTab === 2 ? 'active' : ''}`}>
                 <h3>{data.treatment[lang]}</h3>
-                <h6>{data.treatment.overview[lang]}</h6>
+                <h4>{data.treatment.overview[lang]}</h4>
                 <p>{data.treatment.overview.description[lang]}</p>
                 <hr />
               
                 {careTab === 0 && (
                   <div>
-                    <h4>{data.treatment.comorbidity_management[lang]}</h4>
+                    <h4 className="major-section">{data.treatment.comorbidity_management[lang]}</h4>
                     {data.treatment.comorbidity_management.targets.map((item) => (
                       <div key={item.condition} >
                         <h5>{item.name[lang]}</h5>
@@ -219,23 +222,47 @@ export default function AF() {
 
                 {careTab === 1 && (
                   <div>
-                    <h4>{data.treatment.anticoagulation[lang]}</h4>
+                    <h4 className="major-section">{data.treatment.anticoagulation[lang]}</h4>
+
+                    {/* Risk Assessment — two guideline frameworks as comparable cards */}
                     <h5>{data.treatment.anticoagulation.risk_assessment[lang]}</h5>
-                    <h6>{data.treatment.anticoagulation.risk_assessment.acc_aha_2023[lang]}</h6>
-                    <p>{data.treatment.anticoagulation.risk_assessment.acc_aha_2023.description[lang]}</p>
-                    <h6>{data.treatment.anticoagulation.risk_assessment.esc_2024[lang]}</h6>
-                    <p>{data.treatment.anticoagulation.risk_assessment.esc_2024.description[lang]}</p>
+
+                    <div className="drug-card">
+                      <div className="drug-name">
+                        {data.treatment.anticoagulation.risk_assessment.acc_aha_2023[lang]}
+                      </div>
+                      <p>{data.treatment.anticoagulation.risk_assessment.acc_aha_2023.description[lang]}</p>
+                    </div>
+
+                    <div className="drug-card">
+                      <div className="drug-name">
+                        {data.treatment.anticoagulation.risk_assessment.esc_2024[lang]}
+                      </div>
+                      <p>{data.treatment.anticoagulation.risk_assessment.esc_2024.description[lang]}</p>
+                    </div>
+
+                    {/* Anticoagulant Choice — DOACs (with drug list) and Warfarin */}
                     <h5>{data.treatment.anticoagulation.anticoagulant_choice[lang]}</h5>
-                    <h6>{data.treatment.anticoagulation.anticoagulant_choice.doacs[lang]}</h6>
-                    <ul>
-                      {data.treatment.anticoagulation.anticoagulant_choice.doacs.agents.map((s, index) => (
-                        <li key={index}>
-                          {s}
-                        </li>
-                      ))}
-                    </ul> 
-                    <h6>{data.treatment.anticoagulation.anticoagulant_choice.warfarin[lang]}</h6>
-                    <p>{data.treatment.anticoagulation.anticoagulant_choice.warfarin.description[lang]}</p>
+
+                    <div className="drug-card">
+                      <div className="drug-name">
+                        {data.treatment.anticoagulation.anticoagulant_choice.doacs[lang]}
+                      </div>
+                      {/* Previously missing from the JSX — description was in the JSON but never rendered */}
+                      <p>{data.treatment.anticoagulation.anticoagulant_choice.doacs.description[lang]}</p>
+                      <dl className="detail-grid">
+                        <dt>{lang === 'en' ? 'Drugs' : '藥物'}</dt>
+                        <dd>{data.treatment.anticoagulation.anticoagulant_choice.doacs.agents.join(', ')}</dd>
+                      </dl>
+                    </div>
+
+                    <div className="drug-card">
+                      <div className="drug-name">
+                        {data.treatment.anticoagulation.anticoagulant_choice.warfarin[lang]}
+                      </div>
+                      <p>{data.treatment.anticoagulation.anticoagulant_choice.warfarin.description[lang]}</p>
+                    </div>
+
                     <h5>{data.treatment.anticoagulation.key_points[lang]}</h5>
                     <ul>
                       {data.treatment.anticoagulation.key_points.items.map((s, index) => (
@@ -245,85 +272,111 @@ export default function AF() {
                       ))}
                     </ul>
                   </div>
-                )}                    
+                )}
 
                 {careTab === 2 && (
                   <div>
-                    <h4>{data.treatment.rate_control[lang]}</h4>
+                    <h4 className="major-section">{data.treatment.rate_control[lang]}</h4>
                     <p>{data.treatment.rate_control.goal[lang]}</p>
-                    <h6>
-                      {data.treatment.rate_control.agents.beta_blockers[lang]}
-                      <span style={{ fontWeight: 'normal', fontStyle: 'italic', marginLeft: '0.5rem', fontSize: '0.9em' }}>
-                        — {data.treatment.rate_control.agents.beta_blockers.caution[lang]}
-                      </span>
-                    </h6>                    
-                    <ul>
-                      {data.treatment.rate_control.agents.beta_blockers.drugs.map((item, index) => (
-                        <li key={index}>
-                          {item.drug}
-                        </li>
-                      ))}
-                    </ul> 
-                    <h6>
-                      {data.treatment.rate_control.agents.non_dhp_ccbs[lang]}
-                      <span style={{ fontWeight: 'normal', fontStyle: 'italic', marginLeft: '0.5rem', fontSize: '0.9em' }}>
-                        — {data.treatment.rate_control.agents.non_dhp_ccbs.contraindication[lang]}
-                      </span>
-                    </h6>                      
-                    <ul>
-                      {data.treatment.rate_control.agents.non_dhp_ccbs.drugs.map((item, index) => (
-                        <li key={index}>
-                          {item.drug}
-                        </li>
-                      ))}
-                    </ul>  
-                    <h6>{data.treatment.rate_control.agents.digoxin[lang]}</h6>
-                    <p>{data.treatment.rate_control.agents.digoxin.description[lang]}</p>
-                    <hr />
+                    {/* Beta-Blockers */}
+                    <div className="drug-card">
+                      <div className="drug-name">{data.treatment.rate_control.agents.beta_blockers[lang]}</div>
+                      <dl className="detail-grid">
+                        <dt>{lang === 'en' ? 'Drugs' : '藥物'}</dt>
+                        <dd>{data.treatment.rate_control.agents.beta_blockers.drugs.map(d => d.drug).join(', ')}</dd>
+
+                        <dt className="caution">{lang === 'en' ? 'Caution' : '注意'}</dt>
+                        <dd className="caution">{data.treatment.rate_control.agents.beta_blockers.caution[lang]}</dd>
+                      </dl>
+                    </div>
+
+                    {/* Non-DHP CCBs */}
+                    <div className="drug-card">
+                      <div className="drug-name">{data.treatment.rate_control.agents.non_dhp_ccbs[lang]}</div>
+                      <dl className="detail-grid">
+                        <dt>{lang === 'en' ? 'Drugs' : '藥物'}</dt>
+                        <dd>{data.treatment.rate_control.agents.non_dhp_ccbs.drugs.map(d => d.drug).join(', ')}</dd>
+
+                        <dt className="caution">{lang === 'en' ? 'Avoid' : '禁用'}</dt>
+                        <dd className="caution">{data.treatment.rate_control.agents.non_dhp_ccbs.contraindication[lang]}</dd>
+                      </dl>
+                    </div>
+
+                    {/* Digoxin */}
+                    <div className="drug-card">
+                      <div className="drug-name">{data.treatment.rate_control.agents.digoxin[lang]}</div>
+                      <dl className="detail-grid">
+                        <dt>{lang === 'en' ? 'Notes' : '備註'}</dt>
+                        <dd>{data.treatment.rate_control.agents.digoxin.description[lang]}</dd>
+                      </dl>
+                    </div>
                     <hr />
 
-                    <h4>{data.treatment.rhythm_control[lang]}</h4>
+                    <h4 className="major-section">{data.treatment.rhythm_control[lang]}</h4>
                     <p>{data.treatment.rhythm_control.goal[lang]}</p>
-                    <h5>{data.treatment.rhythm_control.catheter_ablation[lang]}</h5>
+
+                    {/* Catheter Ablation — promoted from h5 to h4 */}
+                    <h4>{data.treatment.rhythm_control.catheter_ablation[lang]}</h4>
                     <p>{data.treatment.rhythm_control.catheter_ablation.description[lang]}</p>
-                    <hr />
-                    <h5>{data.treatment.rhythm_control.antiarrhythmic_drugs[lang]}</h5>
+
+                    {/* Long-term Antiarrhythmic Drug Selection — promoted to h4 */}
+                    <h4>{data.treatment.rhythm_control.antiarrhythmic_drugs[lang]}</h4>
                     {data.treatment.rhythm_control.antiarrhythmic_drugs.by_condition.map((condition) => (
                       <div key={condition.condition}>
                         <h6>{condition.name[lang]}</h6>
                         <ul>
                           {condition.drugs.map((drug, index) => (
                             <li key={index}>
-                              <p><strong>{drug.drug}</strong> — {drug.notes[lang]}</p>
+                              <strong>{drug.drug}</strong> — {drug.notes[lang]}
                             </li>
                           ))}
                         </ul>
                       </div>
                     ))}
-                    <hr />   
-                    <h5>{data.treatment.rhythm_control.acute_cardioversion[lang]}</h5>
-                    <h6>{data.treatment.rhythm_control.acute_cardioversion.stable_no_shd[lang]}</h6>
-                    <p>{data.treatment.rhythm_control.acute_cardioversion.stable_no_shd.drugs[lang]}</p>
-                    <h6>{data.treatment.rhythm_control.acute_cardioversion.pill_in_pocket[lang]}</h6>
-                    <p>{data.treatment.rhythm_control.acute_cardioversion.pill_in_pocket.description[lang]}</p>
-                    <h6>{data.treatment.rhythm_control.acute_cardioversion.with_shd_or_hf[lang]}</h6>
-                    <p>{data.treatment.rhythm_control.acute_cardioversion.with_shd_or_hf.drugs[lang]}</p>
+
+                    {/* Acute Pharmacological Cardioversion — promoted to h4.
+                        Each scenario becomes its own drug-card: the scenario
+                        name goes in the card header (no space-eating side
+                        label), and the drug recommendation gets full width
+                        below. */}
+                    <h4>{data.treatment.rhythm_control.acute_cardioversion[lang]}</h4>
+
+                    <div className="drug-card">
+                      <div className="drug-name">
+                        {data.treatment.rhythm_control.acute_cardioversion.stable_no_shd[lang]}
+                      </div>
+                      <p>{data.treatment.rhythm_control.acute_cardioversion.stable_no_shd.drugs[lang]}</p>
+                    </div>
+
+                    <div className="drug-card">
+                      <div className="drug-name">
+                        {data.treatment.rhythm_control.acute_cardioversion.pill_in_pocket[lang]}
+                      </div>
+                      <p>{data.treatment.rhythm_control.acute_cardioversion.pill_in_pocket.description[lang]}</p>
+                    </div>
+
+                    <div className="drug-card">
+                      <div className="drug-name">
+                        {data.treatment.rhythm_control.acute_cardioversion.with_shd_or_hf[lang]}
+                      </div>
+                      <p>{data.treatment.rhythm_control.acute_cardioversion.with_shd_or_hf.drugs[lang]}</p>
+                    </div>
                   </div>
                 )} 
                 
                 {careTab === 3 && (
                   <div>
-                    <h4>{data.monitoring.evaluation[lang]}</h4>
+                    <h4 className="major-section">{data.monitoring.evaluation[lang]}</h4>
                     <p>{data.monitoring.evaluation.timeline[lang]}</p>
-                    <h5>{data.monitoring.evaluation.assessment_items[lang]}</h5>
+                    <h4>{data.monitoring.evaluation.assessment_items[lang]}</h4>
                     <ul>
                       {data.monitoring.evaluation.assessment_items.items.map((item, index) => (
                         <li key={index}>
                           {item[lang]}
                         </li>
                       ))}
-                    </ul> 
-                    <h4>{data.monitoring.key_principles[lang]}</h4>
+                    </ul>
+                    <h4 className="major-section">{data.monitoring.key_principles[lang]}</h4>
                     <ul>
                       {data.monitoring.key_principles.items.map((item, index) => (
                         <li key={index}>

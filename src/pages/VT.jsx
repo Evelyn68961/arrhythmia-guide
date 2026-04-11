@@ -76,82 +76,117 @@ export default function VT() {
         <div className="column-right">
           {/* Tab 0: Overview */}
           <div className={`tab-content ${activeTab === 0 ? 'active' : ''}`}>
-              <h3>{lang === 'zh' ? '定義' : 'Definition'}</h3>
+              {/* Opening definition paragraph — no heading, since the first
+                  paragraph of an Overview tab is self-evidently the definition. */}
               <p>{data.definition[lang]}</p>
-              
-              <h3>{data.clinical_presentation[lang]}</h3>
-              <h4>{data.clinical_presentation.hemodynamically_stable[lang]}</h4>
-              <ul>
-                {data.clinical_presentation.hemodynamically_stable.symptoms.map((s, index) => (
-                  <li key={index}>
-                    {s[lang]}
-                  </li>
-                ))}
-              </ul>
-              <h4>{data.clinical_presentation.hemodynamically_unstable[lang]}</h4>
-              <ul>
-                {data.clinical_presentation.hemodynamically_unstable.symptoms.map((s, index) => (
-                  <li key={index}>
-                    {s[lang]}
-                  </li>
-                ))}
-              </ul>
-              <h4>{data.clinical_presentation.pulseless_vt[lang]}</h4>
-              <p>{data.clinical_presentation.pulseless_vt.warning[lang]}</p>
-              <ul>
-                {data.clinical_presentation.pulseless_vt.signs.map((s, index) => (
-                  <li key={index}>
-                    {s[lang]}
-                  </li>
-                ))}
-              </ul>
 
-              <h3>{data.ecg_characteristics[lang]}</h3>
-              <ul>
-                <li>{data.ecg_characteristics.general.rate[lang]}</li>
-                <li>{data.ecg_characteristics.general.rhythm[lang]}</li>
-                <li>{data.ecg_characteristics.general.qrs_complex[lang]}</li>
-              </ul>
+              <h4>{data.clinical_presentation[lang]}</h4>
+              {/* Three clinical states as detail-grid rows. Labels are
+                  hardcoded short forms to keep the label column narrow — the
+                  full JSON labels ("Hemodynamically Stable", etc.) are too
+                  wide for the grid. The Pulseless row gets amber caution
+                  treatment because it's a cardiac arrest emergency. */}
+              <dl className="detail-grid">
+                <dt>{lang === 'en' ? 'Stable' : '穩定'}</dt>
+                <dd>
+                  <ul>
+                    {data.clinical_presentation.hemodynamically_stable.symptoms.map((s, index) => (
+                      <li key={index}>{s[lang]}</li>
+                    ))}
+                  </ul>
+                </dd>
+
+                <dt>{lang === 'en' ? 'Unstable' : '不穩定'}</dt>
+                <dd>
+                  <ul>
+                    {data.clinical_presentation.hemodynamically_unstable.symptoms.map((s, index) => (
+                      <li key={index}>{s[lang]}</li>
+                    ))}
+                  </ul>
+                </dd>
+
+                <dt className="caution">{lang === 'en' ? 'Pulseless' : '無脈搏'}</dt>
+                <dd className="caution">
+                  <strong>{data.clinical_presentation.pulseless_vt.warning[lang]}</strong>
+                  <ul>
+                    {data.clinical_presentation.pulseless_vt.signs.map((s, index) => (
+                      <li key={index}>{s[lang]}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </dl>
+
+              <h4>{data.ecg_characteristics[lang]}</h4>
+              {/* Bare detail-grid — no card wrapper because the h4 above heads
+                  the block; these are just labeled observations, not an entity
+                  with attributes. Same pattern as SVT's ECG characteristics. */}
+              <dl className="detail-grid">
+                <dt>{lang === 'en' ? 'Rate' : '心率'}</dt>
+                <dd>{data.ecg_characteristics.general.rate[lang]}</dd>
+
+                <dt>{lang === 'en' ? 'Rhythm' : '節律'}</dt>
+                <dd>{data.ecg_characteristics.general.rhythm[lang]}</dd>
+
+                <dt>QRS</dt>
+                <dd>{data.ecg_characteristics.general.qrs_complex[lang]}</dd>
+              </dl>
           </div>
 
           {/* Tab 1: Etiology & Pathophysiology */}
           <div className={`tab-content ${activeTab === 1 ? 'active' : ''}`}>
-              <h3>{data.etiology[lang]}</h3>
-              <h4>{data.etiology.structural_heart_disease[lang]}</h4>
-              <ul>
-                {data.etiology.structural_heart_disease.items.map((cause, index) => (
-                  <li key={index}>{cause[lang]}</li>
-                ))}
-              </ul>
-              <h4>{data.etiology.idiopathic_channelopathies.idiopathic_vt[lang]}</h4>
-              <ul>
-                {data.etiology.idiopathic_channelopathies.idiopathic_vt.items.map((cause, index) => (
-                  <li key={index}>{cause[lang]}</li>
-                ))}
-              </ul>
-              <h4>{data.etiology.idiopathic_channelopathies.channelopathies[lang]}</h4>
-              <ul>
-                {data.etiology.idiopathic_channelopathies.channelopathies.items.map((cause, index) => (
-                  <li key={index}>{cause[lang]}</li>
-                ))}
-              </ul>
-              <h4>{data.etiology.idiopathic_channelopathies.reversible_causes[lang]}</h4>
-              <ul>
-                {data.etiology.idiopathic_channelopathies.reversible_causes.items.map((cause, index) => (
-                  <li key={index}>{cause[lang]}</li>
-                ))}
-              </ul>
+              <h4>{data.etiology[lang]}</h4>
+              {/* Four etiology categories as detail-grid rows. Short labels
+                  hardcoded so the label column stays narrow; the surrounding
+                  h4 "Etiology" provides the context for interpretation. */}
+              <dl className="detail-grid">
+                <dt>{lang === 'en' ? 'Structural' : '結構性'}</dt>
+                <dd>
+                  <ul>
+                    {data.etiology.structural_heart_disease.items.map((cause, index) => (
+                      <li key={index}>{cause[lang]}</li>
+                    ))}
+                  </ul>
+                </dd>
 
-              <h3>{data.pathophysiology[lang]}</h3>
+                <dt>{lang === 'en' ? 'Idiopathic' : '特發性'}</dt>
+                <dd>
+                  <ul>
+                    {data.etiology.idiopathic_channelopathies.idiopathic_vt.items.map((cause, index) => (
+                      <li key={index}>{cause[lang]}</li>
+                    ))}
+                  </ul>
+                </dd>
+
+                <dt>{lang === 'en' ? 'Channelopathy' : '離子通道病'}</dt>
+                <dd>
+                  <ul>
+                    {data.etiology.idiopathic_channelopathies.channelopathies.items.map((cause, index) => (
+                      <li key={index}>{cause[lang]}</li>
+                    ))}
+                  </ul>
+                </dd>
+
+                <dt>{lang === 'en' ? 'Reversible' : '可逆性'}</dt>
+                <dd>
+                  <ul>
+                    {data.etiology.idiopathic_channelopathies.reversible_causes.items.map((cause, index) => (
+                      <li key={index}>{cause[lang]}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </dl>
+
+              <h4>{data.pathophysiology[lang]}</h4>
               {data.pathophysiology.mechanisms.map((mech, index) => (
                 <div key={index}>
-                  <h4>{mech.name[lang]}</h4>
+                  <h5>{mech.name[lang]}</h5>
                   {mech.description && <p>{mech.description[lang]}</p>}
+                  {/* Subtypes: 2-field (name + description) — use bold-inline
+                      pattern rather than heavy h5+p blocks with inline style. */}
                   {mech.subtypes && mech.subtypes.map((sub, i) => (
-                    <div key={i} style={{ marginLeft: '1rem' }}>
-                      <h5>{sub.name[lang]}</h5>
-                      <p>{sub.description[lang]}</p>
-                    </div>
+                    <p key={i}>
+                      <strong>{sub.name[lang]}</strong> — {sub.description[lang]}
+                    </p>
                   ))}
                 </div>
               ))}
@@ -159,29 +194,77 @@ export default function VT() {
 
           {/* Tab 2: Classification */}
           <div className={`tab-content ${activeTab === 2 ? 'active' : ''}`}>
-              <h3>{data.classification.by_duration[lang]}</h3>
+              {/* Temporal Classification: 2 types with asymmetric fields.
+                  NSVT has definition + prognostic_value; Sustained VT has
+                  definition + therapeutic_implications. The JSX renders
+                  whichever optional field is present for each type. */}
+              <h4>{data.classification.by_duration[lang]}</h4>
+              <p className="section-subtitle">
+                {data.classification.by_duration.subtitle[lang]}
+              </p>
               {data.classification.by_duration.types.map((item) => (
-                <div key={item.type} >
-                  <h4>{item.name[lang]}</h4>
-                  <p>{item.description[lang]}</p>
+                <div key={item.type} className="drug-card">
+                  <div className="drug-name">{item.name[lang]}</div>
+                  <dl className="detail-grid">
+                    <dt>{lang === 'en' ? 'Definition' : '定義'}</dt>
+                    <dd>{item.definition[lang]}</dd>
+
+                    {item.prognostic_value && (
+                      <>
+                        <dt>{lang === 'en' ? 'Prognosis' : '預後意義'}</dt>
+                        <dd>{item.prognostic_value[lang]}</dd>
+                      </>
+                    )}
+
+                    {item.therapeutic_implications && (
+                      <>
+                        <dt>{lang === 'en' ? 'Implications' : '治療意義'}</dt>
+                        <dd>{item.therapeutic_implications[lang]}</dd>
+                      </>
+                    )}
+                  </dl>
                 </div>
               ))}
-              <h3>{data.classification.by_morphology[lang]}</h3>
+
+              {/* Morphological Classification: 3 types with uniform fields
+                  (characteristics + mechanism + implications). */}
+              <h4>{data.classification.by_morphology[lang]}</h4>
+              <p className="section-subtitle">
+                {data.classification.by_morphology.subtitle[lang]}
+              </p>
               {data.classification.by_morphology.types.map((item) => (
-                <div key={item.type} >
-                  <h4>{item.name[lang]}</h4>
-                  <p>{item.description[lang]}</p>
+                <div key={item.type} className="drug-card">
+                  <div className="drug-name">{item.name[lang]}</div>
+                  <dl className="detail-grid">
+                    <dt>{lang === 'en' ? 'Characteristics' : '特徵'}</dt>
+                    <dd>{item.characteristics[lang]}</dd>
+
+                    <dt>{lang === 'en' ? 'Mechanism' : '機轉'}</dt>
+                    <dd>{item.mechanism[lang]}</dd>
+
+                    <dt>{lang === 'en' ? 'Implications' : '意義'}</dt>
+                    <dd>{item.implications[lang]}</dd>
+                  </dl>
                 </div>
               ))}
           </div>
 
           {/* Tab 3: Treatment */}
           <div className={`tab-content ${activeTab === 3 ? 'active' : ''}`}>
-          
-              <h3>{data.treatment.overview[lang]}</h3>
+              {/* Opening paragraph — no h3 wrapper, matches the other VT tabs'
+                  structure (Overview / Etiology / Types all open with prose
+                  or h4 directly, no tab-level h3 heading). */}
               <p>{data.treatment.fundamental_principle[lang]}</p>
 
+              {/* Pulseless or Unstable VT — merged from two previously
+                  separate JSON branches (pulseless_or_unstable has the ACLS
+                  protocol steps; pulseless_vt_acls has the pharmacotherapy).
+                  Now rendered as one h4 section with two h5 subsections so
+                  the actions and drugs for the same clinical scenario are
+                  together. Moved to the top of the tab since this is the
+                  emergency case readers need to find fastest. */}
               <h4>{data.treatment.pulseless_or_unstable[lang]}</h4>
+
               <h5>{data.treatment.pulseless_or_unstable.acls_protocol[lang]}</h5>
               <ul>
                 {data.treatment.pulseless_or_unstable.acls_protocol.steps.map((item, index) => (
@@ -189,13 +272,29 @@ export default function VT() {
                 ))}
               </ul>
 
+              <h5>{data.treatment.pulseless_vt_acls.pharmacotherapy[lang]}</h5>
+              {/* Drug + dose only (1 labeled field) — bold-inline pattern.
+                  Fixes the previously nested h4-in-h4 bug. */}
+              {data.treatment.pulseless_vt_acls.pharmacotherapy.agents.map((item) => (
+                <p key={item.drug}>
+                  <strong>{item.drug}</strong> — {item.dose[lang]}
+                </p>
+              ))}
+
               <h4>{data.treatment.stable_sustained_vt[lang]}</h4>
               <h5>{data.treatment.stable_sustained_vt.approach[lang]}</h5>
+              {/* Drug + dose + notes (2 labeled fields) — drug-cards.
+                  Fixes the previously nested h4-in-h4 bug. */}
               {data.treatment.stable_sustained_vt.agents.map((item) => (
-                <div key={item.drug} >
-                  <h4>{item.drug}</h4>
-                  <p>{item.dose[lang]}</p>
-                  <p>{item.notes[lang]}</p>
+                <div key={item.drug} className="drug-card">
+                  <div className="drug-name">{item.drug}</div>
+                  <dl className="detail-grid">
+                    <dt>{lang === 'en' ? 'Dose' : '劑量'}</dt>
+                    <dd>{item.dose[lang]}</dd>
+
+                    <dt>{lang === 'en' ? 'Notes' : '備註'}</dt>
+                    <dd>{item.notes[lang]}</dd>
+                  </dl>
                 </div>
               ))}
 
@@ -218,22 +317,11 @@ export default function VT() {
                 {data.treatment.address_reversible_factors.drug_selection_considerations.items.map((item, index) => (
                   <li key={index}>{item[lang]}</li>
                 ))}
-              </ul>   
-              
-              <h4>{data.treatment.pulseless_vt_acls[lang]}</h4>
-              <h5>{data.treatment.pulseless_vt_acls.pharmacotherapy[lang]}</h5>
-              {data.treatment.pulseless_vt_acls.pharmacotherapy.agents.map((item) => (
-                <div key={item.drug} >
-                  <h4>{item.drug}</h4>
-                  <p>{item.dose[lang]}</p>
-                </div>
-              ))}              
+              </ul>
           </div>
 
           {/* Tab 4: Prevention */}
           <div className={`tab-content ${activeTab === 4 ? 'active' : ''}`}>
-            <h3>{data.prevention[lang]}</h3>
-            
             <h4>{data.prevention.icd[lang]}</h4>
             <p>{data.prevention.icd.purpose[lang]}</p>
             <h5>{data.prevention.icd.primary_prevention[lang]}</h5>
@@ -251,12 +339,17 @@ export default function VT() {
 
             <h4>{data.prevention.antiarrhythmic_drug_therapy[lang]}</h4>
             {data.prevention.antiarrhythmic_drug_therapy.agents.map((item) => (
-              <div key={item.drug} >
-                <h4>{item.drug}</h4>
-                <p>{item.role[lang]}</p>
-                <p>{item.considerations[lang]}</p>
+              <div key={item.drug} className="drug-card">
+                <div className="drug-name">{item.drug}</div>
+                <dl className="detail-grid">
+                  <dt>{lang === 'en' ? 'Role' : '角色'}</dt>
+                  <dd>{item.role[lang]}</dd>
+
+                  <dt>{lang === 'en' ? 'Notes' : '備註'}</dt>
+                  <dd>{item.considerations[lang]}</dd>
+                </dl>
               </div>
-            ))}  
+            ))}
 
             <h4>{data.prevention.catheter_ablation[lang]}</h4>
             <p>{data.prevention.catheter_ablation.description[lang]}</p>
@@ -268,20 +361,50 @@ export default function VT() {
             </ul>
 
             <h4>{data.prevention.novel_refractory_management[lang]}</h4>
-            <h5>{data.prevention.novel_refractory_management.star.name[lang]}</h5>
-            <p>{data.prevention.novel_refractory_management.star.description[lang]}</p>
-            <ul>
-              {data.prevention.novel_refractory_management.star.indications.map((item, index) => (
-                <li key={index}>{item[lang]}</li>
-              ))}
-            </ul>
-            <h5>{data.prevention.novel_refractory_management.lcsd.name[lang]}</h5>
-            <p>{data.prevention.novel_refractory_management.lcsd.description[lang]}</p>
-            <ul>
-              {data.prevention.novel_refractory_management.lcsd.indications.map((item, index) => (
-                <li key={index}>{item[lang]}</li>
-              ))}
-            </ul>
+
+            {/* STAR and LCSD rendered as drug-cards. Each has:
+                  MECHANISM row — the description (how the technique works)
+                  INDICATIONS row — nested <ul> of clinical uses
+                The two entities are stored as named objects (.star / .lcsd)
+                rather than an array, so they're rendered with two explicit
+                blocks rather than a map. */}
+            <div className="drug-card">
+              <div className="drug-name">
+                {data.prevention.novel_refractory_management.star.name[lang]}
+              </div>
+              <dl className="detail-grid">
+                <dt>{lang === 'en' ? 'Mechanism' : '機轉'}</dt>
+                <dd>{data.prevention.novel_refractory_management.star.description[lang]}</dd>
+
+                <dt>{lang === 'en' ? 'Indications' : '適應症'}</dt>
+                <dd>
+                  <ul>
+                    {data.prevention.novel_refractory_management.star.indications.map((item, index) => (
+                      <li key={index}>{item[lang]}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+
+            <div className="drug-card">
+              <div className="drug-name">
+                {data.prevention.novel_refractory_management.lcsd.name[lang]}
+              </div>
+              <dl className="detail-grid">
+                <dt>{lang === 'en' ? 'Mechanism' : '機轉'}</dt>
+                <dd>{data.prevention.novel_refractory_management.lcsd.description[lang]}</dd>
+
+                <dt>{lang === 'en' ? 'Indications' : '適應症'}</dt>
+                <dd>
+                  <ul>
+                    {data.prevention.novel_refractory_management.lcsd.indications.map((item, index) => (
+                      <li key={index}>{item[lang]}</li>
+                    ))}
+                  </ul>
+                </dd>
+              </dl>
+            </div>
           </div>
         </div>
       </div>

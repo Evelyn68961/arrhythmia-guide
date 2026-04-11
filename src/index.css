@@ -313,6 +313,20 @@ h2 {
   margin-top: 0.75rem;
 }
 
+/* .section-subtitle — small uppercase muted-slate label that sits directly
+   under an h4 to give it a secondary description (e.g. "Prognostic
+   Implications" under "Temporal Classification" in VT). No top margin so
+   it hugs the heading above; bottom margin adds space before the content. */
+.content .section-subtitle {
+  color: #6b7a8a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 1.25rem 0;
+  line-height: 1.3;
+}
+
 /* H5/H6 are REAL sub-headings, not captions. SVT's Acute tab uses them
    for numbered treatment steps like "1. Vagal Maneuvers" — demoting them
    to tiny caption text inverted the hierarchy and made them look smaller

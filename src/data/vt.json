@@ -27,8 +27,12 @@
   },
   "classification": {
     "by_duration": {
-      "en": "Classification by Duration",
-      "zh": "依持續時間分類",
+      "en": "Temporal Classification",
+      "zh": "時間分類",
+      "subtitle": {
+        "en": "Prognostic Implications",
+        "zh": "預後意義"
+      },
       "types": [
         {
           "type": "nsvt",
@@ -36,9 +40,13 @@
             "en": "Non-Sustained VT (NSVT)",
             "zh": "非持續性心室頻脈（NSVT）"
           },
-          "description": {
-            "en": "Duration < 30 seconds, self-terminating. May be asymptomatic; marker of risk.",
-            "zh": "持續時間 < 30 秒，可自行終止。可能無症狀；為風險標記。"
+          "definition": {
+            "en": "Episodes lasting < 30 seconds, terminate spontaneously.",
+            "zh": "發作持續時間 < 30 秒，可自行終止。"
+          },
+          "prognostic_value": {
+            "en": "Important risk marker for sudden cardiac death in structural heart disease (e.g., post-MI, reduced EF). May guide Electrophysiology (EP) testing for ICD implantation.",
+            "zh": "結構性心臟病（如心肌梗塞後、射出分率降低）患者猝死的重要風險指標。可作為電生理檢查與 ICD 植入評估的依據。"
           }
         },
         {
@@ -47,16 +55,24 @@
             "en": "Sustained VT",
             "zh": "持續性心室頻脈"
           },
-          "description": {
-            "en": "Duration ≥ 30 seconds OR requires intervention due to hemodynamic instability.",
-            "zh": "持續時間 ≥ 30 秒，或因血流動力學不穩定而需介入處理。"
+          "definition": {
+            "en": "Lasting ≥ 30 seconds OR requiring intervention due to hemodynamic compromise.",
+            "zh": "持續 ≥ 30 秒，或因血流動力學不穩定而需介入處理。"
+          },
+          "therapeutic_implications": {
+            "en": "Invariably demands treatment and comprehensive evaluation for underlying substrate and prevention strategies.",
+            "zh": "皆需接受治療並進行全面評估，以釐清潛在病因並制定預防策略。"
           }
         }
       ]
     },
     "by_morphology": {
-      "en": "Classification by Morphology",
-      "zh": "依形態分類",
+      "en": "Morphological Classification",
+      "zh": "形態分類",
+      "subtitle": {
+        "en": "Mechanistic Insights",
+        "zh": "機轉解析"
+      },
       "types": [
         {
           "type": "monomorphic_vt",
@@ -64,9 +80,17 @@
             "en": "Monomorphic VT",
             "zh": "單型性心室頻脈"
           },
-          "description": {
-            "en": "Uniform QRS morphology. Usually reentry around scar tissue.",
-            "zh": "QRS 形態一致。通常為疤痕組織周圍的折返性機轉。"
+          "characteristics": {
+            "en": "Uniform QRS complexes.",
+            "zh": "QRS 波形一致。"
+          },
+          "mechanism": {
+            "en": "Stable reentrant circuit around fixed anatomical substrate (e.g., post-infarction scar).",
+            "zh": "圍繞固定解剖基質（如心肌梗塞後疤痕）形成的穩定折返迴路。"
+          },
+          "implications": {
+            "en": "Better hemodynamic tolerance. Amenable to catheter ablation.",
+            "zh": "血流動力學耐受性較佳；適合接受導管消融治療。"
           }
         },
         {
@@ -75,9 +99,17 @@
             "en": "Polymorphic VT",
             "zh": "多型性心室頻脈"
           },
-          "description": {
-            "en": "Varying QRS morphology. Often ischemia or channelopathy related.",
-            "zh": "QRS 形態不一致。常與缺血或離子通道病變相關。"
+          "characteristics": {
+            "en": "Continuously varying QRS morphology.",
+            "zh": "QRS 形態持續變化。"
+          },
+          "mechanism": {
+            "en": "Functional reentry, acute ischemia, channelopathy, or electrolyte derangement.",
+            "zh": "功能性折返、急性缺血、離子通道病變或電解質異常。"
+          },
+          "implications": {
+            "en": "Indicates acute instability, requires immediate treatment of underlying cause.",
+            "zh": "代表急性不穩定狀態，需立即治療潛在原因。"
           }
         },
         {
@@ -86,9 +118,17 @@
             "en": "Torsades de Pointes",
             "zh": "尖端扭轉型心室頻脈（Torsades de Pointes）"
           },
-          "description": {
-            "en": "Twisting QRS around baseline. QT prolongation-related.",
-            "zh": "QRS 波繞基線扭轉。與 QT 延長相關。"
+          "characteristics": {
+            "en": "Sinusoidal twisting of QRS complexes around the baseline.",
+            "zh": "QRS 波呈正弦波狀圍繞基線扭轉。"
+          },
+          "mechanism": {
+            "en": "Pathognomonic of QT prolongation (congenital or acquired causes).",
+            "zh": "QT 間期延長的特徵性表現（先天性或後天性原因）。"
+          },
+          "implications": {
+            "en": "Life-threatening, requires magnesium and treatment of QT prolongation.",
+            "zh": "危及生命，需給予鎂劑並治療 QT 間期延長。"
           }
         }
       ]
@@ -317,8 +357,8 @@
       "zh": "當診斷不確定時，將寬 QRS 波快速節律當作 VT 處理（無論 VT 是否已確診）。"
     },
     "pulseless_or_unstable": {
-      "en": "1. Pulseless VT or Hemodynamically Unstable",
-      "zh": "1. 無脈搏 VT 或血流動力學不穩定",
+      "en": "Pulseless or Unstable VT",
+      "zh": "無脈搏或血流動力學不穩定心室頻脈",
       "acls_protocol": {
         "en": "Immediate ACLS Protocol",
         "zh": "緊急 ACLS 流程",
@@ -339,8 +379,8 @@
       }
     },
     "stable_sustained_vt": {
-      "en": "2. Stable but Sustained VT (Hemodynamically Stable with Pulse)",
-      "zh": "2. 穩定但持續性 VT（血流動力學穩定且有脈搏）",
+      "en": "Stable but Sustained VT (Hemodynamically Stable with Pulse)",
+      "zh": "穩定但持續性 VT（血流動力學穩定且有脈搏）",
       "approach": {
         "en": "Intravenous Antiarrhythmic Therapy",
         "zh": "靜脈抗心律不整藥物治療"
@@ -382,8 +422,8 @@
       ]
     },
     "electrical_cardioversion": {
-      "en": "3. Electrical Cardioversion for Stable VT",
-      "zh": "3. 穩定 VT 的電擊心律轉復",
+      "en": "Electrical Cardioversion for Stable VT",
+      "zh": "穩定 VT 的電擊心律轉復",
       "description": {
         "en": "Preferred over medications in some situations",
         "zh": "某些情況下優於藥物治療"
@@ -400,8 +440,8 @@
       ]
     },
     "address_reversible_factors": {
-      "en": "4. Address Electrolytes and Reversible Factors",
-      "zh": "4. 評估電解質與可逆因素",
+      "en": "Address Electrolytes and Reversible Factors",
+      "zh": "評估電解質與可逆因素",
       "critical_corrections": [
         {
           "factor": "hypokalemia",
@@ -479,8 +519,8 @@
     "en": "Long-Term Prevention of Ventricular Tachycardia",
     "zh": "心室頻脈的長期預防",
     "icd": {
-      "en": "1. Implantable Cardioverter-Defibrillator (ICD)",
-      "zh": "1. 植入式心律去顫器（ICD）",
+      "en": "Implantable Cardioverter-Defibrillator (ICD)",
+      "zh": "植入式心律去顫器（ICD）",
       "purpose": {
         "en": "Reduce sudden cardiac death risk by providing immediate defibrillation",
         "zh": "提供即時電擊去顫，降低心因性猝死風險"
@@ -519,8 +559,8 @@
       }
     },
     "antiarrhythmic_drug_therapy": {
-      "en": "2. Antiarrhythmic Drug Therapy",
-      "zh": "2. 抗心律不整藥物治療",
+      "en": "Antiarrhythmic Drug Therapy",
+      "zh": "抗心律不整藥物治療",
       "agents": [
         {
           "drug": "Amiodarone",
@@ -569,8 +609,8 @@
       ]
     },
     "catheter_ablation": {
-      "en": "3. Catheter Ablation",
-      "zh": "3. 導管消融術",
+      "en": "Catheter Ablation",
+      "zh": "導管消融術",
       "description": {
         "en": "Highly effective for VT with identifiable foci",
         "zh": "對於具有明確病灶的 VT 療效佳"
@@ -599,8 +639,8 @@
       }
     },
     "novel_refractory_management": {
-      "en": "4. Novel & Refractory VT Management",
-      "zh": "4. 新式療法及難治性 VT 處置",
+      "en": "Novel & Refractory VT Management",
+      "zh": "新式療法及難治性 VT 處置",
       "star": {
         "name": {
           "en": "Stereotactic Arrhythmia Radioablation (STAR)",

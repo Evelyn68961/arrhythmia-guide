@@ -93,7 +93,6 @@ export default function AF() {
             <div className="column-right">
               {/* Tab 0: Overview */}
               <div className={`tab-content ${activeTab === 0 ? 'active' : ''}`}>
-                <h3>{data.topic[lang]}</h3>
                 <p>{data.definition[lang]}</p>
                 <hr />
                 <h4>{data.ecg_characteristics[lang]}</h4>

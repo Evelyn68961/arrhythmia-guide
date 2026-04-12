@@ -71,7 +71,6 @@ export default function VF() {
         <div className="column-right">
           {/* Tab 0: Overview */}
           <div className={`tab-content ${activeTab === 0 ? 'active' : ''}`}>
-              <h3>{data.topic[lang]}</h3>
               <p>{data.definition[lang]}</p>
               <hr />
               
@@ -111,7 +110,7 @@ export default function VF() {
                   </li>
                 ))}
               </ul>
-              <hr />              
+              <br />              
               <h4>{data.etiology.secondary[lang]}</h4>
               <h5>{data.etiology.secondary.structural_heart_disease[lang]}</h5>
               <ul>
@@ -150,7 +149,7 @@ export default function VF() {
                 </li>
               ))}
             </ul>              
-            <hr /> 
+            <br /> 
 
             <h4>{data.treatment.defibrillation[lang]}</h4>
             <div className='small-two-col'>
@@ -172,11 +171,8 @@ export default function VF() {
                 </ul>               
               </div>              
             </div>
-
- 
-            <hr /> 
-
-            
+            <br /> 
+           
             <h4>{data.treatment.high_quality_cpr[lang]}</h4>
             <ul>
               {data.treatment.high_quality_cpr.parameters.map((s, index) => (
@@ -185,37 +181,50 @@ export default function VF() {
                 </li>
               ))}
             </ul> 
-            <hr />  
+            <br />  
             
             <h4>{data.treatment.pharmacotherapy[lang]}</h4>
             {data.treatment.pharmacotherapy.agents.map((item) => (
-              <div key={item.drug} >
-                <h5>{item.drug}</h5>
-                <p>{`dose: ${item.dose[lang]}`}</p>
-                <p>{`timing: ${item.timing[lang]}`}</p>
+              <div key={item.drug} className="drug-card">
+                <div className="drug-name">{item.drug}</div>
+                <dl className="detail-grid">
+                  <dt>{lang === 'en' ? 'Dose' : '劑量'}</dt>
+                  <dd>{item.dose[lang]}</dd>
+
+                  <dt>{lang === 'en' ? 'Timing' : '時機'}</dt>
+                  <dd>{item.timing[lang]}</dd>
+
+                  {item.note && (
+                    <>
+                      <dt>{lang === 'en' ? 'Notes' : '備註'}</dt>
+                      <dd>{item.note[lang]}</dd>
+                    </>
+                  )}
+                </dl>
               </div>
             ))} 
-            <hr /> 
+            <br /> 
             
             <h4>{data.treatment.reversible_causes[lang]}</h4>
-            <div className='small-two-col'>
-              <div>
-                <h5>{data.treatment.reversible_causes.h_causes[lang]}</h5>
-                <ul>
-                  {data.treatment.reversible_causes.h_causes.items.map((s, index) => (
-                    <li key={index}>{s[lang]}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h5>{data.treatment.reversible_causes.t_causes[lang]}</h5>
-                <ul>
-                  {data.treatment.reversible_causes.t_causes.items.map((s, index) => (
-                    <li key={index}>{s[lang]}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            <table className="info-table">
+              <thead>
+                <tr>
+                  <th>{data.treatment.reversible_causes.h_causes[lang]}</th>
+                  <th>{data.treatment.reversible_causes.t_causes[lang]}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Array.from({ length: Math.max(
+                  data.treatment.reversible_causes.h_causes.items.length,
+                  data.treatment.reversible_causes.t_causes.items.length
+                ) }).map((_, i) => (
+                  <tr key={i}>
+                    <td>{data.treatment.reversible_causes.h_causes.items[i]?.[lang] ?? ''}</td>
+                    <td>{data.treatment.reversible_causes.t_causes.items[i]?.[lang] ?? ''}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
 
           {/* Tab 3: Prevention */}
@@ -233,7 +242,7 @@ export default function VF() {
                 </li>
               ))}
             </ul> 
-            <hr /> 
+            <br /> 
 
             <h4>{data.prevention.secondary_prevention[lang]}</h4>
             <p>{data.prevention.secondary_prevention.goal[lang]}</p>
@@ -245,19 +254,27 @@ export default function VF() {
                 </li>
               ))}
             </ul> 
-            <hr /> 
+            <br /> 
 
             <h4>{data.prevention.antiarrhythmic_therapy[lang]}</h4>
             <p>{data.prevention.antiarrhythmic_therapy.note[lang]}</p>
-            <h5>{data.prevention.antiarrhythmic_therapy.agents_title[lang]}</h5>
             {data.prevention.antiarrhythmic_therapy.agents.map((item) => (
-              <div key={item.drug}>
-                <p><strong>{item.drug}</strong>{":  "}{item.efficacy[lang]}</p>
+              <div key={item.drug} className="drug-card">
+                <div className="drug-name">{item.drug}</div>
+                <dl className="detail-grid">
+                  <dt>{lang === 'en' ? 'Role' : '角色'}</dt>
+                  <dd>{item.role[lang]}</dd>
+
+                  <dt>{lang === 'en' ? 'Efficacy' : '療效'}</dt>
+                  <dd>{item.efficacy[lang]}</dd>
+
+                  <dt>{lang === 'en' ? 'Notes' : '備註'}</dt>
+                  <dd>{item.notes[lang]}</dd>
+                </dl>
               </div>
             ))}  
             
           </div>
-
         </div>  
 
 

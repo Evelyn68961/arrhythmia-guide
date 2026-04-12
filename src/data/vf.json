@@ -438,8 +438,8 @@
       ]
     },
     "antiarrhythmic_therapy": {
-      "en": "Antiarrhythmic Medications for Long-term VF Prevention (Chronic Oral Therapy)",
-      "zh": "用於長期預防 VF 的抗心律不整藥物（慢性口服治療）",
+      "en": "Long-term Antiarrhythmic Therapy",
+      "zh": "長期抗心律不整藥物治療",
       "note": {
         "en": "These agents are used chronically to reduce recurrent VF episodes — NOT for acute VF termination",
         "zh": "此處藥物用於長期減少 VF 復發，而非用於急性 VF 發作的即時終止"
@@ -451,23 +451,47 @@
       "agents": [
         {
           "drug": "Amiodarone",
+          "role": {
+            "en": "First-line agent for long-term VF suppression",
+            "zh": "長期抑制 VF 的首選藥物"
+          },
           "efficacy": {
-            "en": "Most effective for long-term VF suppression; also used IV acutely in ACLS",
-            "zh": "長期抑制 VF 最有效；急性期亦可靜脈注射用於 ACLS"
+            "en": "Most effective antiarrhythmic for preventing recurrent VF",
+            "zh": "預防 VF 復發最有效的抗心律不整藥物"
+          },
+          "notes": {
+            "en": "Also used IV acutely in ACLS; monitor for thyroid, pulmonary, and hepatic toxicity with chronic use",
+            "zh": "急性期亦可靜脈注射用於 ACLS；長期使用需監測甲狀腺、肺部及肝臟毒性"
           }
         },
         {
           "drug": "Sotalol",
+          "role": {
+            "en": "Alternative when amiodarone is not tolerated",
+            "zh": "Amiodarone 不耐受時的替代選擇"
+          },
           "efficacy": {
-            "en": "Moderate long-term efficacy; risk of QT prolongation and Torsades de Pointes (TdP)",
-            "zh": "中等長期效果；有 QT 延長及尖端扭轉型心室頻脈（TdP）風險"
+            "en": "Moderate long-term efficacy",
+            "zh": "中等長期療效"
+          },
+          "notes": {
+            "en": "Risk of QT prolongation and Torsades de Pointes (TdP); requires renal dose adjustment",
+            "zh": "有 QT 延長及尖端扭轉型心室頻脈（TdP）風險；需依腎功能調整劑量"
           }
         },
         {
           "drug": "Beta-blockers",
+          "role": {
+            "en": "Adjunct therapy, not standalone VF prevention",
+            "zh": "輔助治療，非單獨預防 VF 的首選"
+          },
           "efficacy": {
-            "en": "Reduces sympathetic triggers; adjunct therapy, not standalone VF prevention",
-            "zh": "減少交感神經觸發；為輔助治療，非單獨預防 VF 的首選"
+            "en": "Reduces sympathetic triggers for VF",
+            "zh": "減少交感神經觸發 VF"
+          },
+          "notes": {
+            "en": "Often combined with ICD or amiodarone; particularly beneficial in ischemic cardiomyopathy",
+            "zh": "常與 ICD 或 amiodarone 合併使用；對缺血性心肌病尤其有益"
           }
         }
       ]

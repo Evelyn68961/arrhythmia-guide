@@ -526,6 +526,33 @@ h2 {
 }
 
 /* ==================== */
+/* Info table (e.g. H's and T's)          */
+/* ==================== */
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0 1rem;
+  font-size: 0.92rem;
+}
+
+.info-table th,
+.info-table td {
+  border: 1px solid rgba(44, 62, 80, 0.12);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.info-table th {
+  background: rgba(44, 62, 80, 0.05);
+  font-weight: 600;
+}
+
+.info-table tr:hover {
+  background: rgba(44, 62, 80, 0.02);
+}
+
+/* ==================== */
 /* Content header: title + tabs in one row */
 /* ==================== */
 
@@ -587,6 +614,7 @@ h2 {
   flex-direction: column;
   align-items: flex-start;
   height: 100%;  /* Fill the container */
+  padding-top: 2rem;
 }
 
 .column-left img {

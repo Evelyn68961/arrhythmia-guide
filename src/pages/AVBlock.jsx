@@ -66,11 +66,11 @@ export default function AVBlock() {
         <div className="column-right">
           {/* Tab 0: Overview */}
           <div className={`tab-content ${activeTab === 0 ? 'active' : ''}`}>
-              <h3>{lang === 'zh' ? '定義' : 'Definition'}</h3>
+              <h4>{lang === 'zh' ? '定義' : 'Definition'}</h4>
               <p>{data.definition[lang]}</p>
-              <hr />
+              <br />
 
-              <h3>{data.etiology[lang]}</h3>
+              <h4>{data.etiology[lang]}</h4>
               <ul>
                 {data.etiology.causes.map((cause, index) => (
                   <li key={index}>
@@ -78,13 +78,16 @@ export default function AVBlock() {
                   </li>
                 ))}
               </ul>
-              <hr />
+              <br />
 
-              <h3>{data.classification[lang]}</h3>
+              <h4>{data.classification[lang]}</h4>
               {data.classification.types.map((type) => (
-                <div key={type.degree} >
-                  <h4>{type.name[lang]}</h4>
-                  <p>{type.description[lang]}</p>
+                <div key={type.degree} className="drug-card">
+                  <div className="drug-name">{type.name[lang]}</div>
+                  <dl className="detail-grid">
+                    <dt>{lang === 'en' ? 'Description' : '描述'}</dt>
+                    <dd>{type.description[lang]}</dd>
+                  </dl>
                 </div>
               ))}
           </div>
@@ -94,32 +97,82 @@ export default function AVBlock() {
           
               <h3>{data.treatment.overview[lang]}</h3>
               <p>{data.treatment.core_approach[lang]}</p>
-
+              <br />
               <h4>{data.treatment.reversible_causes[lang]}</h4>
               <ul>
                 {data.treatment.reversible_causes.items.map((item, index) => (
                   <li key={index}>{item[lang]}</li>
                 ))}
               </ul>
+              <br />
 
               <h4>{data.treatment.pacemaker_decision[lang]}</h4>
-              <p>✓ {data.treatment.pacemaker_decision.yes_criteria[lang]}</p>
-              <p>✗ {data.treatment.pacemaker_decision.no_criteria[lang]}</p>
+              <table className="info-table">
+                <thead>
+                  <tr>
+                    <th>✓ {lang === 'en' ? 'Yes' : '需要'}</th>
+                    <th>✗ {lang === 'en' ? 'No' : '不需要'}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{data.treatment.pacemaker_decision.yes_criteria[lang]}</td>
+                    <td>{data.treatment.pacemaker_decision.no_criteria[lang]}</td>
+                  </tr>
+                </tbody>
+              </table>
           </div>
 
           {/* Tab 2: Management */}
           <div className={`tab-content ${activeTab === 2 ? 'active' : ''}`}>
-              <h3>{lang === 'zh' ? '依分類治療' : 'Treatment by Classification'}</h3>
+              <h4 className="major-section">{lang === 'zh' ? '依分類治療' : 'Treatment by Classification'}</h4>
               {data.treatment.by_classification.map((item) => (
-                <div key={item.degree} >
-                  <h4>{item.name[lang]}</h4>
-                  {item.management.acute && <p>{item.management.acute[lang]}</p>}
-                  {item.management.long_term && <p>{item.management.long_term[lang]}</p>}
-                  {item.management.asymptomatic && <p>{item.management.asymptomatic[lang]}</p>}
-                  {item.management.symptomatic && <p>{item.management.symptomatic[lang]}</p>}
-                  {item.management.hemodynamically_stable && <p>{item.management.hemodynamically_stable[lang]}</p>}
-                  {item.management.hemodynamically_unstable && <p>{item.management.hemodynamically_unstable[lang]}</p>}
-                  {item.key_point && <p><strong>{item.key_point[lang]}</strong></p>}
+                <div key={item.degree} className="drug-card">
+                  <div className="drug-name">{item.name[lang]}</div>
+                  <dl className="detail-grid">
+                    {item.management.acute && (
+                      <>
+                        <dt>{lang === 'en' ? 'Acute' : '急性處置'}</dt>
+                        <dd>{item.management.acute[lang]}</dd>
+                      </>
+                    )}
+                    {item.management.long_term && (
+                      <>
+                        <dt>{lang === 'en' ? 'Long-term' : '長期處置'}</dt>
+                        <dd>{item.management.long_term[lang]}</dd>
+                      </>
+                    )}
+                    {item.management.asymptomatic && (
+                      <>
+                        <dt>{lang === 'en' ? 'Asymptomatic' : '無症狀'}</dt>
+                        <dd>{item.management.asymptomatic[lang]}</dd>
+                      </>
+                    )}
+                    {item.management.symptomatic && (
+                      <>
+                        <dt>{lang === 'en' ? 'Symptomatic' : '有症狀'}</dt>
+                        <dd>{item.management.symptomatic[lang]}</dd>
+                      </>
+                    )}
+                    {item.management.hemodynamically_stable && (
+                      <>
+                        <dt>{lang === 'en' ? 'Stable' : '穩定'}</dt>
+                        <dd>{item.management.hemodynamically_stable[lang]}</dd>
+                      </>
+                    )}
+                    {item.management.hemodynamically_unstable && (
+                      <>
+                        <dt>{lang === 'en' ? 'Unstable' : '不穩定'}</dt>
+                        <dd>{item.management.hemodynamically_unstable[lang]}</dd>
+                      </>
+                    )}
+                    {item.key_point && (
+                      <>
+                        <dt className="caution">{lang === 'en' ? 'Key Point' : '重點'}</dt>
+                        <dd className="caution">{item.key_point[lang]}</dd>
+                      </>
+                    )}
+                  </dl>
                 </div>
               ))}
           </div>

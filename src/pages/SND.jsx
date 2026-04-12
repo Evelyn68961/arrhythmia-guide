@@ -37,21 +37,11 @@ export default function SND() {
 
           {/* Classification */}
           <button
-            className={activeTab === 1 && subTab === 0 ? 'active' : ''}
+            className={activeTab === 1 ? 'active' : ''}
             onClick={() => { setActiveTab(1); setSubTab(0); }}
           >
-            {lang === 'en' ? 'Classes' : '分類'}
+            {lang === 'en' ? 'Classification' : '分類'}
           </button>
-
-          {/* SA Exit Block — only show when Classification tab is active */}
-          {activeTab === 1 && (
-            <button
-              className={subTab === 1 ? 'active' : ''}
-              onClick={() => setSubTab(1)}
-            >
-              {lang === 'en' ? 'SA Block' : '竇房出口阻滯'}
-            </button>
-          )}
 
           {/* Acute Management */}
           <button
@@ -123,7 +113,7 @@ export default function SND() {
                 <li key={index}>{item[lang]}</li>
               ))}
             </ul>
-            <hr />
+            <br />
 
             <h4>{data.etiology.extrinsic_causes[lang]}</h4>
             {data.etiology.extrinsic_causes.items.map((group, index) => (
@@ -140,9 +130,23 @@ export default function SND() {
 
           {/* Tab 1: Classification */}
           <div className={`tab-content ${activeTab === 1 ? 'active' : ''}`}>
+            <div className="section-tabs" style={{ marginBottom: '1rem' }}>
+              <button
+                className={subTab === 0 ? 'active' : ''}
+                onClick={() => setSubTab(0)}
+              >
+                {lang === 'en' ? 'All Classes' : '所有分類'}
+              </button>
+              <button
+                className={subTab === 1 ? 'active' : ''}
+                onClick={() => setSubTab(1)}
+              >
+                {lang === 'en' ? 'More info of SA Block' : '竇房出口阻滯 (更多資訊)'}
+              </button>
+            </div>
+
             {subTab === 0 && (
               <div>
-                <h3>{data.classification[lang]}</h3>
                 {data.classification.types.map((type, index) => (
                   <div key={index}>
                     <h4>{type.name[lang]}</h4>
@@ -154,7 +158,6 @@ export default function SND() {
 
             {subTab === 1 && (
               <div>
-                <h3>{lang === 'en' ? 'SA Exit Block' : '竇房出口阻滯'}</h3>
                 {data.classification.types
                   .filter(type => type.subtypes)
                   .map((type, index) => (
@@ -183,13 +186,18 @@ export default function SND() {
             <hr />
 
             <h4>{data.treatment.acute_management.pharmacotherapy[lang]}</h4>
-            <ul>
-              {data.treatment.acute_management.pharmacotherapy.agents.map((agent, index) => (
-                <li key={index}>
-                  <strong>{agent.agent}</strong>: {agent.dose[lang]} — {agent.notes[lang]}
-                </li>
-              ))}
-            </ul>
+            {data.treatment.acute_management.pharmacotherapy.agents.map((agent, index) => (
+              <div key={index} className="drug-card">
+                <div className="drug-name">{agent.agent}</div>
+                <dl className="detail-grid">
+                  <dt>{lang === 'en' ? 'Dose' : '劑量'}</dt>
+                  <dd>{agent.dose[lang]}</dd>
+
+                  <dt>{lang === 'en' ? 'Notes' : '備註'}</dt>
+                  <dd>{agent.notes[lang]}</dd>
+                </dl>
+              </div>
+            ))}
             <hr />
 
             <h4>{data.treatment.acute_management.temporary_pacing[lang]}</h4>

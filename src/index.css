@@ -825,6 +825,21 @@ hr {
   margin-bottom: 2rem;
 }
 
+.home-search {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid rgba(44, 62, 80, 0.15);
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 1.25rem;
+  transition: border-color 0.2s ease;
+}
+
+.home-search:focus {
+  border-color: #3498db;
+}
+
 .home-cards {
   display: flex;
   flex-direction: column;
@@ -832,66 +847,67 @@ hr {
 }
 
 .home-card {
-  display: block;
   background: white;
   border-radius: 10px;
   padding: 1.5rem 2rem;
-  text-decoration: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   border-left: 4px solid #3498db;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
-.home-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
+.home-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
 .home-card h2 {
   color: #2c3e50;
   font-size: 1.4rem;
-  margin: 0 0 0.25rem 0;
+  margin: 0;
   padding: 0;
   text-align: left;
+}
+
+.home-card-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.home-tab {
+  background: #ecf0f1;
+  color: #2c3e50;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.home-tab:hover {
+  background: #3498db;
+  color: white;
+}
+
+.abbr-letter {
+  color: #3498db;
+  font-weight: 700;
+}
+
+.home-tab:hover .abbr-letter {
+  color: white;
 }
 
 .home-card .card-summary {
   color: #7f8c8d;
   font-size: 0.95rem;
-  margin: 0;
+  margin: 0.5rem 0 0 0;
 }
 
-.card-details {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
-}
-
-.home-card:hover .card-details {
-  max-height: 300px;
-  opacity: 1;
-}
-
-.card-details ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.75rem 0 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.card-details li {
-  background: #ecf0f1;
-  color: #2c3e50;
-  padding: 0.35rem 0.75rem;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
-.card-details li:hover {
-  background: #3498db;
-  color: white;
+.no-results {
+  color: #7f8c8d;
+  text-align: center;
+  padding: 2rem 0;
 }

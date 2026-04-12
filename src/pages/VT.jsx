@@ -22,7 +22,6 @@ export default function VT() {
   return (
     <div className="content">
 
-      {/* Title + tabs in one row */}
       <div className="content-header">
         <h2>{data.topic[lang]}</h2>
 

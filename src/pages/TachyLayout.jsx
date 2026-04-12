@@ -51,11 +51,11 @@ export default function TachyLayout() {
 
   return (
     <div className="sidebar-layout">
-      <aside className="condition-sidebar">
+      <aside className="condition-sidebar" aria-label={lang === 'en' ? 'Tachyarrhythmia conditions' : '快速心律不整項目'}>
         <h2 className="sidebar-title">
           {lang === 'en' ? 'Tachyarrhythmias' : '快速心律不整'}
         </h2>
-        <nav>
+        <nav aria-label={lang === 'en' ? 'Condition navigation' : '項目導覽'}>
           {conditions.map((c) => (
             // NavLink automatically adds the `active` class when its `to`
             // matches the current URL. No manual activeTab state needed.

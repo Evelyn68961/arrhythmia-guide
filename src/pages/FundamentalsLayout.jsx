@@ -32,11 +32,11 @@ export default function FundamentalsLayout() {
 
   return (
     <div className="sidebar-layout">
-      <aside className="condition-sidebar">
+      <aside className="condition-sidebar" aria-label={lang === 'en' ? 'Fundamentals topics' : '基礎知識項目'}>
         <h2 className="sidebar-title">
           {lang === 'en' ? 'Fundamentals' : '基礎知識'}
         </h2>
-        <nav>
+        <nav aria-label={lang === 'en' ? 'Topic navigation' : '項目導覽'}>
           {topics.map((t) => (
             <NavLink key={t.path} to={t.path} className="condition-link">
               <span className="condition-link__abbr">{t.abbr}</span>

@@ -23,11 +23,11 @@ export default function BradyLayout() {
 
   return (
     <div className="sidebar-layout">
-      <aside className="condition-sidebar">
+      <aside className="condition-sidebar" aria-label={lang === 'en' ? 'Bradyarrhythmia conditions' : '慢速心律不整項目'}>
         <h2 className="sidebar-title">
           {lang === 'en' ? 'Bradyarrhythmias' : '慢速心律不整'}
         </h2>
-        <nav>
+        <nav aria-label={lang === 'en' ? 'Condition navigation' : '項目導覽'}>
           {conditions.map((c) => (
             <NavLink key={c.path} to={c.path} className="condition-link">
               <span className="condition-link__abbr">{c.abbr}</span>

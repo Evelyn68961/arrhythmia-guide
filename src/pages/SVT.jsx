@@ -183,7 +183,8 @@ export default function SVT() {
                 </ul>
                 <h5>{data.treatment.hemodynamic_assessment.unstable_treatment[lang]}</h5>
                 <p>{data.treatment.hemodynamic_assessment.unstable_treatment.action[lang]}</p>
-                <hr />
+                <br />
+
                 <h4>{data.treatment.stable_treatment[lang]}</h4>
                 <h5>{data.treatment.stable_treatment.vagal_maneuvers[lang]}</h5>
                 {data.treatment.stable_treatment.vagal_maneuvers.methods.map((item) => (
@@ -192,7 +193,7 @@ export default function SVT() {
                     <p>{item.description[lang]}</p>
                   </div>
                 ))}
-                <hr />
+                <br />
 
                 <h5>{data.treatment.stable_treatment.first_line_drug[lang]}</h5>
                 <p>{data.treatment.stable_treatment.first_line_drug.description[lang]}</p>
@@ -223,7 +224,7 @@ export default function SVT() {
                     </dd>
                   </dl>
                 </div>
-                <hr />
+                <br />
 
                 <h5>{data.treatment.stable_treatment.second_line_drugs[lang]}</h5>
 
@@ -260,7 +261,7 @@ export default function SVT() {
                     </dl>
                   </div>
                 ))}
-                <hr />
+                <br />
 
                 <h5>{data.treatment.stable_treatment.cardioversion[lang]}</h5>
                 <p>{data.treatment.stable_treatment.cardioversion.description[lang]}</p>
@@ -287,6 +288,8 @@ export default function SVT() {
                 </ul>
                 <h5>{data.prevention.catheter_ablation.complications.title[lang]}</h5>
                 <p>{data.prevention.catheter_ablation.complications.content[lang]}</p>
+                <br />
+                
                 <h4>{data.prevention.pharmacotherapy[lang]}</h4>
                 <p>{data.prevention.pharmacotherapy.note[lang]}</p>
                 {data.prevention.pharmacotherapy.agents.map((item) => (

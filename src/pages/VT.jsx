@@ -175,7 +175,7 @@ export default function VT() {
                   </ul>
                 </dd>
               </dl>
-
+              <br />
               <h4>{data.pathophysiology[lang]}</h4>
               {data.pathophysiology.mechanisms.map((mech, index) => (
                 <div key={index}>
@@ -184,9 +184,13 @@ export default function VT() {
                   {/* Subtypes: 2-field (name + description) — use bold-inline
                       pattern rather than heavy h5+p blocks with inline style. */}
                   {mech.subtypes && mech.subtypes.map((sub, i) => (
-                    <p key={i}>
-                      <strong>{sub.name[lang]}</strong> — {sub.description[lang]}
-                    </p>
+                    <div key={i} className="drug-card">
+                      <div className="drug-name">{sub.name[lang]}</div>
+                      <dl className="detail-grid">
+                        <dt>{lang === 'en' ? 'Description' : '描述'}</dt>
+                        <dd>{sub.description[lang]}</dd>
+                      </dl>
+                    </div>
                   ))}
                 </div>
               ))}
@@ -280,7 +284,7 @@ export default function VT() {
                   <strong>{item.drug}</strong> — {item.dose[lang]}
                 </p>
               ))}
-
+              <br />
               <h4>{data.treatment.stable_sustained_vt[lang]}</h4>
               <h5>{data.treatment.stable_sustained_vt.approach[lang]}</h5>
               {/* Drug + dose + notes (2 labeled fields) — drug-cards.
@@ -297,7 +301,6 @@ export default function VT() {
                   </dl>
                 </div>
               ))}
-
               <h4>{data.treatment.electrical_cardioversion[lang]}</h4>
               <p>{data.treatment.electrical_cardioversion.description[lang]}</p>
               <ul>
@@ -305,7 +308,7 @@ export default function VT() {
                   <li key={index}>{item[lang]}</li>
                 ))}
               </ul>
-
+              <br />   
               <h4>{data.treatment.address_reversible_factors[lang]}</h4>
               <ul>
                 {data.treatment.address_reversible_factors.critical_corrections.map((item, index) => (
@@ -336,6 +339,7 @@ export default function VT() {
                 <li key={index}>{item[lang]}</li>
               ))}
             </ul> 
+            <br />
 
             <h4>{data.prevention.antiarrhythmic_drug_therapy[lang]}</h4>
             {data.prevention.antiarrhythmic_drug_therapy.agents.map((item) => (
@@ -350,7 +354,7 @@ export default function VT() {
                 </dl>
               </div>
             ))}
-
+            <br />
             <h4>{data.prevention.catheter_ablation[lang]}</h4>
             <p>{data.prevention.catheter_ablation.description[lang]}</p>
             <h5>{data.prevention.catheter_ablation.indications[lang]}</h5>
@@ -359,7 +363,7 @@ export default function VT() {
                 <li key={index}>{item[lang]}</li>
               ))}
             </ul>
-
+            <br />
             <h4>{data.prevention.novel_refractory_management[lang]}</h4>
 
             {/* STAR and LCSD rendered as drug-cards. Each has:
